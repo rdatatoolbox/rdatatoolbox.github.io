@@ -1,5 +1,5 @@
 ---
-title: "Data Toolbox for Reproducible Research in Computational Ecology"
+title: "Data Toolbox for Reproducible Research in Ecology"
 description: "FRB-CESAB & GdR EcoStat Workshop"
 author:
   - name: "Nicolas Casajus"

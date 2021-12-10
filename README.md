@@ -2,7 +2,7 @@
 
 ![](https://raw.githubusercontent.com/rdatatoolbox/rdatatoolbox.github.io/main/img/banner-rdatatoolbox_150dpi.png)
 
-Website of the workshop **_Data Toolbox for Reproducible Research in Computational Ecology_**
+Website of the workshop **_Data Toolbox for Reproducible Research in Ecology_**
 co-organized by the
 [FRB-CESAB](https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/)
 and the

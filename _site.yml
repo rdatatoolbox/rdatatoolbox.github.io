@@ -1,7 +1,7 @@
 name: "rdatatoolbox"
-title: "Data Toolbox for Reproducible Research in Computational Ecology"
+title: "Data Toolbox for Reproducible Research in Ecology"
 description: |
-  Data Toolbox for Reproducible Research in Computational Ecology Workshop
+  Data Toolbox for Reproducible Research in Ecology Workshop
 base_url: https://rdatatoolbox.github.io
 favicon: img/favicon.png
 output_dir: "."
