@@ -1,0 +1,39 @@
+{
+  "articles": [
+    {
+      "path": "index.html",
+      "title": "Data Toolbox for Reproducible Research in Computational Ecology",
+      "description": "FRB-CESAB & GdR EcoStat Workshop",
+      "author": [
+        {
+          "name": "Nicolas Casajus",
+          "url": "https://nicolascasajus.fr"
+        },
+        {
+          "name": "Stéphane Dray",
+          "url": "https://lbbe.univ-lyon1.fr/fr/annuaires-des-membres/dray-stephane"
+        },
+        {
+          "name": "Olivier Gimenez",
+          "url": "https://oliviergimenez.github.io"
+        },
+        {
+          "name": "Loreleï Guéry",
+          "url": "https://orcid.org/0000-0003-3004-8462"
+        },
+        {
+          "name": "François Guilhaumon",
+          "url": "https://fguilhaumon.gitlab.io/"
+        },
+        {
+          "name": "Nina Schiettekatte",
+          "url": "http://www.criobe.pf/pro/personnel/doctorants/nina-schiettekatte/"
+        }
+      ],
+      "date": "`r format(Sys.Date(), '%m-%d-%Y')`",
+      "contents": "\n\n\nThe objective of this five-day workshop, co-organized by the FRB-CESAB and the GdR EcoStat, is to train young researchers in reproducibility, software development and version management tools (e.g. R, git, Rmarkdown, tidyverse, docker), applied to biodiversity research.\n\nProgram\nDay 1\n       Icebreaker and introduction of the week        Open science and Reproducible research        Research compendium        Version control (git) and collaboration (GitHub)\nDay 2\n       Data handling (dplyr)        Data visualization (ggplot2)        Literate programming (rmarkdown)\nDay 3\n       Optimization and pipeline toolkit (targets)        Dealing with R package versions (renv)        Containerization (Docker)        Building R packages\nDay 4\n       Subgroups projects\nDay 5\n       Subgroups projects\n\nPré-requis\nThe following software must be installed before the workshop: R (latest version), RStudio et git. Follow this tutorial to install your working environment.\nYou also need to create an account (free) on GitHub.\nCorrections\nIf you see mistakes or want to suggest changes, please Create an issue on the source repository.\nReuse\nThe material of this website is licensed under Creative Commons Attribution CC BY 4.0. Source code is available at https://github.com/rdatatoolbox/rdatatoolbox.github.io/.\nCitation\nCasajus N, Dray S, Gimenez O, Guéry L, Guilhaumon F & Schiettekatte NMD (2021) Workshop FRB-CESAB & GdR EcoStat: Data Toolbox for Reproducible Research in Computational Ecology (Edition 2021). Zenodo. http://doi.org/10.5281/zenodo.4262978.\n\n\n\n",
+      "last_modified": "2021-12-10T11:09:36+01:00"
+    }
+  ],
+  "collections": []
+}

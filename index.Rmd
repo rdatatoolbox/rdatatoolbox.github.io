@@ -1,0 +1,164 @@
+---
+title: "Data Toolbox for Reproducible Research in Computational Ecology"
+description: "FRB-CESAB & GdR EcoStat Workshop"
+author:
+  - name: "Nicolas Casajus"
+    url: https://nicolascasajus.fr
+    affiliation: FRB-CESAB
+    affiliation_url: https://www.fondationbiodiversite.fr/la-fondation/le-cesab/
+    orcid_id: 0000-0002-5537-5294
+  - name: "Stéphane Dray"
+    url: https://lbbe.univ-lyon1.fr/fr/annuaires-des-membres/dray-stephane
+    affiliation: CNRS LBBE
+    affiliation_url: https://lbbe.univ-lyon1.fr/fr
+    orcid_id: 0000-0003-0153-1105
+  - name: "Olivier Gimenez"
+    url: https://oliviergimenez.github.io
+    affiliation: CNRS CEFE
+    affiliation_url: https://www.cefe.cnrs.fr/fr/
+    orcid_id: 0000-0001-7001-5142
+  - name: "Loreleï Guéry"
+    url: https://orcid.org/0000-0003-3004-8462
+    affiliation: CIRAD PHIM
+    affiliation_url: https://umr-phim.cirad.fr/
+    orcid_id: 0000-0003-3004-8462
+  - name: "François Guilhaumon"
+    url: https://fguilhaumon.gitlab.io/
+    affiliation: IRD MARBEC
+    affiliation_url: https://umr-marbec.fr/
+    orcid_id: 0000-0003-4707-8932
+  - name: "Nina Schiettekatte"
+    url: http://www.criobe.pf/pro/personnel/doctorants/nina-schiettekatte/
+    affiliation: EPHE CRIOBE
+    affiliation_url: http://www.criobe.pf/
+    orcid_id: 0000-0002-1925-3484
+date: "`r format(Sys.Date(), '%m-%d-%Y')`"
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
+![](img/banner-rdatatoolbox_150dpi.png)
+
+
+
+<br />
+
+
+
+The objective of this five-day workshop, co-organized by the 
+[FRB-CESAB](https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/)
+and the
+[GdR EcoStat](https://sites.google.com/site/gdrecostat/), 
+is to train young researchers in reproducibility, software development and 
+version management tools (e.g. `R`, `git`, `Rmarkdown`, `tidyverse`, `docker`), 
+applied to biodiversity research.
+
+
+<br />
+
+
+
+## Program
+
+
+
+**Day 1**
+
+&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
+Icebreaker and introduction of the week
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
+Open science and Reproducible research
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
+Research compendium
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
+Version control (`git`) and collaboration (GitHub)
+
+
+
+**Day 2**
+
+&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
+Data handling (`dplyr`)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
+Data visualization (`ggplot2`)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
+Literate programming (`rmarkdown`)
+
+
+
+**Day 3**
+
+&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
+Optimization and pipeline toolkit (`targets`)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
+Dealing with R package versions (`renv`)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
+Containerization (`Docker`)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
+Building R packages
+
+
+
+**Day 4**
+
+&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
+Subgroups projects
+
+
+
+**Day 5**
+
+&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
+Subgroups projects
+
+
+
+
+<br/>
+
+
+
+## Pré-requis
+
+
+The following software must be installed before the workshop:
+[R](https://cran.r-project.org/) (latest version), 
+[RStudio](https://rstudio.com/products/rstudio/download/) et 
+[git](https://git-scm.com/downloads).
+Follow this [tutorial](instructions.html) to install your working environment.
+
+You also need to create an account (free) on [GitHub](https://github.com/signup).
+
+
+
+## Corrections {.appendix}
+
+
+If you see mistakes or want to suggest changes, please 
+[Create an issue](https://github.com/rdatatoolbox/rdatatoolbox.github.io/issues)
+on the source repository.
+
+
+
+## Reuse {.appendix}
+
+
+
+The material of this website is licensed under Creative Commons Attribution 
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+Source code is available at https://github.com/rdatatoolbox/rdatatoolbox.github.io/.
+
+
+## Citation {.appendix}
+
+
+
+Casajus N, Dray S, Gimenez O, Guéry L, Guilhaumon F & Schiettekatte NMD (2021) 
+Workshop FRB-CESAB & GdR EcoStat: Data Toolbox for Reproducible Research in 
+Computational Ecology (Edition 2021). 
+Zenodo. <http://doi.org/10.5281/zenodo.4262978>.

@@ -1,0 +1,68 @@
+name: "rdatatoolbox"
+title: "Data Toolbox for Reproducible Research in Computational Ecology"
+description: |
+  Data Toolbox for Reproducible Research in Computational Ecology Workshop
+base_url: https://rdatatoolbox.github.io
+favicon: img/favicon.png
+output_dir: "."
+navbar:
+  logo:
+    image: img/logo-rdatatoolbox_150dpi.png
+    href: https://github.com/rdatatoolbox
+  source_url: true
+  right:
+    - icon: fa fa-home
+      href: index.html
+    - text: "Instructions"
+      href: instructions.html
+    - text: "Courses"
+      menu:
+      - text: "Course 1. Reproductible research"
+        href: ""
+      - text: "Course 2. Research compendium"
+        href: ""
+      - text: "Course 3. Version control"
+        href: ""
+      - text: "Course 4. Data handling"
+        href: ""
+      - text: "Course 5. Literate programming"
+        href: ""
+      - text: "Course 6. Pipeline toolkits"
+        href: ""
+      - text: "Course 7. Package renv"
+        href: ""
+      - text: "Course 8. Docker"
+        href: ""
+      - text: "Course 9. R Package"
+        href: ""
+      - text: "Take home message"
+        href: ""
+    - text: "Exercises"
+      menu:
+      - text: "Exercise 1. Research compendium"
+        href: ""
+      - text: "Exercise 2. Git & GitHub"
+        href: ""
+      - text: "Exercise 3. dplyr"
+        href: ""
+      - text: "Exercise 4. ggplot2"
+        href: ""
+      - text: "Exercise 5. rmarkdown"
+        href: ""
+      - text: "Exercise 6. targets"
+        href: ""
+      - text: "Exercise 7. renv"
+        href: ""
+      - text: "Exercise 8. R package"
+        href: ""
+    - text: "Resources"
+      href: "img/the_degrees_of_reproductibility.pdf"
+    - text: "Archives"
+      menu:
+      - text: "API & Webscraping"
+        href: ""
+      - text: "Spatial analysis with R"
+        href: ""
+    - icon: fab fa-github
+      href: https://github.com/rdatatoolbox
+output: distill::distill_article
