@@ -32,7 +32,7 @@ navbar:
       - text: "Course 7. Package renv"
         href: ""
       - text: "Course 8. Docker"
-        href: ""
+        href: "https://rdatatoolbox.github.io/course-docker"
       - text: "Course 9. R Package"
         href: ""
       - text: "Take home message"
