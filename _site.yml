@@ -60,7 +60,7 @@ navbar:
     - text: "Archives"
       menu:
       - text: "API & Webscraping"
-        href: ""
+        href: "https://rdatatoolbox.github.io/course-api"
       - text: "Spatial analysis with R"
         href: ""
     - icon: fab fa-github
