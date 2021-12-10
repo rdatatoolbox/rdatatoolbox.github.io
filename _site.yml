@@ -8,7 +8,7 @@ output_dir: "."
 navbar:
   logo:
     image: img/logo-rdatatoolbox_150dpi.png
-    href: https://github.com/rdatatoolbox
+    href: https://rdatatoolbox.github.io
   source_url: true
   right:
     - icon: fa fa-home
@@ -64,5 +64,5 @@ navbar:
       - text: "Spatial analysis with R"
         href: ""
     - icon: fab fa-github
-      href: https://github.com/rdatatoolbox
+      href: https://github.com/rdatatoolbox/rdatatoolbox.github.io/
 output: distill::distill_article
