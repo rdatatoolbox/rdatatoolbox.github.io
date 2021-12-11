@@ -18,11 +18,11 @@ navbar:
     - text: "Courses"
       menu:
       - text: "Course 1. Reproductible research"
-        href: ""
+        href: "https://rdatatoolbox.github.io/course-opensci"
       - text: "Course 2. Research compendium"
         href: ""
       - text: "Course 3. Version control"
-        href: ""
+        href: "https://rdatatoolbox.github.io/course-git"
       - text: "Course 4. Data handling"
         href: ""
       - text: "Course 5. Literate programming"
