@@ -1,5 +1,5 @@
 ---
-title: "Installation de R, RStudio et git"
+title: "Installation of R, RStudio and git"
 output: 
   distill::distill_article:
     toc: true
@@ -12,11 +12,11 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 
-**N.B.** Les numéros de versions sont donnés à titre indicatif. Il est cependant important
-d'installer une version de `r fontawesome::fa_i("r-project")` supérieure ou égale
-à **`4.0`**. Si vous avez une ancienne version de `r fontawesome::fa_i("r-project")`,
-il est recommendé de la désinstaller (vous devrez réinstaller vos packages favoris).
+**Please install the latest versions of `r fontawesome::fa_i("r-project")`,
+RStudio, and `git`.**
 
+`r fontawesome::fa_i("lightbulb")`
+**Having an up-to-date environment is the first good practice.**
 
 
 <br/>
@@ -31,17 +31,17 @@ il est recommendé de la désinstaller (vous devrez réinstaller vos packages fa
 
 
 
-1. Téléchargez `r fontawesome::fa_i("r-project")` à cette adresse :<br/>
+1. Download `r fontawesome::fa_i("r-project")` at:<br/>
 [https://cran.r-project.org/](https://cran.r-project.org/)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Cliquez sur _Download R for Windows_
+Click on _Download R for Windows_
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Cliquez sur _base_
+Click on _base_
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Cliquez sur _Download R 4.1.1 for Windows_
+Click on _Download R 4.1.2 for Windows_
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Lancez l'exécutable _R-4.1.1-win.exe_ et suivez les instructions
+Open _R-4.1.2-win.exe_ and follow instructions
 
 
 
@@ -49,20 +49,20 @@ Lancez l'exécutable _R-4.1.1-win.exe_ et suivez les instructions
 
 
 
-2. Téléchargez **`RStudio Desktop`** à cette adresse :<br/>
+2. Download **`RStudio Desktop`** at:<br/>
 [https://www.rstudio.com/products/rstudio/download/#download](https://www.rstudio.com/products/rstudio/download/#download)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Téléchargez la version pour Windows 10 (le **.exe** et non pas le **.zip**)
+Download the version for Windows 10 (the **.exe** and not the **.zip**)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Lancez l'exécutable _RStudio-2021.09.0-351.exe_ et suivez les instructions
+Open _RStudio-2021.09.0-351.exe_ and follow instructions
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Vérifiez que **`RStudio`** est bien connecté à `r fontawesome::fa_i("r-project")`. 
-Ouvrez **`RStudio`** et tapez :
+Check if **`RStudio`** has found `r fontawesome::fa_i("r-project")`. 
+Launch **`RStudio`** and run:
 
 ```{r echo=TRUE, eval=FALSE}
 R.version.string
-## [1] "R version 4.1.1 (2021-08-10)"
+## [1] "R version 4.1.2 (2021-11-01)"
 ```
 
 
@@ -70,67 +70,61 @@ R.version.string
 
 
 
-3. Téléchargez **`git`** à cette adresse :<br/>
+3. Download **`git`** at:<br/>
 [https://git-scm.com/downloads](https://git-scm.com/downloads)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Téléchargez la version 64-bit pour Windows
+Download the 64-bit version for Windows
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Lancez l'exécutable _Git-2.33.1-64-bit.exe_ et suivez les instructions
+Open _Git-2.33.1-64-bit.exe_ and follow instructions
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Vérifiez que **`RStudio`** trouve bien **`git`**. Ouvrez **`RStudio`** et tapez :
+Check if **`RStudio`** has found **`git`**.
+Launch **`RStudio`** and run:
 
 ```{r echo=TRUE, eval=FALSE}
 Sys.which("git")
 ## C:/Program Files/Git/bin/git.exe
 ```
 
-Ou dans la barre des menus de **`RStudio`**, cliquez sur _Tools_ et _Global options_
-et affichez les paramètres de _Git/SVN_. Le chemin d'accès à **`git`** doit 
-correspondre à : `C:/Program Files/Git/bin/git.exe`
-
 
 <br/>
 
 
 
-4. Télécharger **`Rtools4`** à cette adresse :<br/>
+4. Download **`Rtools4`** at:<br/>
 [https://cran.r-project.org/bin/windows/Rtools/](https://cran.r-project.org/bin/windows/Rtools/)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Téléchargez la version 64-bit pour Windows
+Download the 64-bit version for Windows
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Lancez l'exécutable _rtools40v2-x86_64.exe_ et suivez les instructions
+Open _rtools40v2-x86_64.exe_ and follow instructions
 
-L'installation de **`Rtools4`** est optionnelle, mais ce logiciel est
-requis pour installer des packages (depuis les sources) qui contiennent du code 
-C/C++/Fortran nécessitant d'être compilé. **`Rtools4`** inclut en particulier 
-l'utilitaire `make`.
+The installation of **`Rtools4`** is optional, but this software is required
+to install packages (from sources) containing compiled code (C/C++/Fortran). 
+**`Rtools4`** contains in particular the utility `make`.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Une fois installé, il faut dire à `r fontawesome::fa_i("r-project")` où trouver
-les utilitaires **`Rtools4`**. Ouvrez **`RStudio`** et tapez cette ligne de code :
+Once **`Rtools4`** is installed, you need to tell `r fontawesome::fa_i("r-project")` 
+where to find **`Rtools4`** utilities.
+Open **`RStudio`** et run:
 
 
 ```{r echo=TRUE, eval=FALSE}
 cat("PATH='${RTOOLS40_HOME}\\usr\\bin;${PATH}'\r\n", file = "~/.Renviron", append = TRUE)
 ```
 
-Un fichier caché `.Renviron` a été créé (ou amendé) dans votre dossier personnel et contient
-la ligne `PATH='${RTOOLS40_HOME}\\usr\\bin;${PATH}'` (le chemin d'accès aux 
-utilitaires **`Rtools4`**). A chaque ouverture, `r fontawesome::fa_i("r-project")`
-lira le contenu de ce fichier.
+An hidden file `.Renviron` has been created (or modified) in you personal folder
+and contains the line `PATH='${RTOOLS40_HOME}\\usr\\bin;${PATH}'` (the path to **`Rtools4`**). 
+At each start `r fontawesome::fa_i("r-project")` will read this file.
 
-Redémarrez **`RStudio`** et vérifiez que 
-`r fontawesome::fa_i("r-project")` trouve bien l'utilitaire `make` :
+Restart **`RStudio`** and check that `r fontawesome::fa_i("r-project")` find `make`:
 
 ```{r echo=TRUE, eval=FALSE}
 Sys.which("make")
 ## "C:/rtools40/usr/bin/make.exe"
 ```
 
-Normalement, vous devriez pouvoir installer des packages `r fontawesome::fa_i("r-project")`
-depuis les sources :
+Now you can install packages from sources:
 
 
 ```{r echo=TRUE, eval=FALSE}
@@ -142,41 +136,26 @@ install.packages("jsonlite", type = "source")
 
 
 
-5. Installez **`pandoc`**
+5. Install **`pandoc`**
 
-Le package **`rmarkdown`** nécessite le logiciel **`pandoc`** qui permet de passer
-d'un format de fichier (ex. `.Rmd`) à un autre (ex. `.html`).
+The package **`rmarkdown`** requires the software **`pandoc`** to convert document
+from one format (e.g. `.Rmd`) to another (e.g. `.html`).
 
-Normalement, l'installation de **RStudio Desktop** installe également ce logiciel.
-Vérifiez en ouvrant **`RStudio`** et tapez :
-
-```{r echo=TRUE, eval=FALSE}
-Sys.which("pandoc")
-## "C:/Program Files/RStudio/bin/pandoc"
-```
-
-Si cette fonction ne retourne rien, vous devez installer manuellement **`pandoc`**
-en le téléchargeant à cette adresse :  [https://github.com/jgm/pandoc/releases/tag/2.16.1](https://github.com/jgm/pandoc/releases/tag/2.16.1)
-
-Après avoir installé **`pandoc`**, redémarrez **`RStudio`** et vérifiez que **`RStudio`**
-trouve bien **`pandoc`** :
-
-```{r echo=TRUE, eval=FALSE}
-Sys.which("pandoc")
-## C:/Program Files/Pandoc/bin/pandoc
-```
+Download **`pandoc`** at:
+[https://github.com/jgm/pandoc/releases/tag/2.16.1](https://github.com/jgm/pandoc/releases/tag/2.16.1),
+and follow instructions.
 
 
 <br/>
 
 
 
-6. Installez une version minimale de **`LaTeX`**
+6. Install a **`LaTeX`** distribution
 
-Si vous souhaitez convertir des documents `.Rmd` en `.pdf`, vous aurez besoin
-de **`LaTeX`**. Pour cela, vous allez installer le package `r fontawesome::fa_i("r-project")`
-[**`tinytex`**](https://yihui.org/tinytex/), qui installe une version légère de **`LaTeX`**.
-Ouvrez **`RStudio`** et tapez les deux commandes suivantes : 
+If you want to convert documents from `.Rmd` to `.pdf`, you will need **`LaTeX`**. 
+You can install a lightened distribution using the `r fontawesome::fa_i("r-project")`
+package [**`tinytex`**](https://yihui.org/tinytex/).
+Open **`RStudio`** and run: 
 
 ```{r echo=TRUE, eval=FALSE}
 ## Install tinytex ----
@@ -186,7 +165,7 @@ install.packages("tinytex")
 tinytex::install_tinytex()
 ```
 
-
+**N.B.** If you already have a **`LaTeX`** distribution, do not install `tinytex`.
 
 <br/>
 
@@ -195,22 +174,20 @@ tinytex::install_tinytex()
 ### `r fontawesome::fa_i("apple")` &nbsp;macOS
 
 
+Th easiest way to set up your environment is by using the package manager for macOS
+[**`Homebrew`**](https://brew.sh). With this tool you can install (and update) your
+software directly from the terminal. First you need to install the Apple software
+_Command Line Tools for Xcode_.
 
-La manière la plus simple d'installer l'environnement de travail est d'utiliser
-le gestionnaire de paquets [**`Homebrew`**](https://brew.sh). Celui-ci permet 
-d'installer (et de mettre à jour) des logiciels en ligne de commande. Pour 
-fonctionner, vous devez avoir installé le logiciel _Command Line Tools for Xcode_ 
-d'Apple. 
-
-Dans un [terminal](https://support.apple.com/fr-fr/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac), 
-tapez cette ligne de code et acceptez la licence :
+Open a [terminal](https://support.apple.com/en-gb/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac), 
+run this line and accept the license:
 
 ```sh
 ## Install Xcode Command Line Tools ----
 sudo xcode-select --install
 ```
 
-Vous pouvez ensuite installer **`Homebrew`** :
+Then you can install **`Homebrew`**:
 
 ```sh
 ## Install Homebrew ----
@@ -218,20 +195,19 @@ Vous pouvez ensuite installer **`Homebrew`** :
 
 ## Check installation ----
 brew --version
-## Homebrew 3.2.16
+## Homebrew 3.3.8
 
-## Update repositories ----
+## Update repositories (list of available software) ----
 brew update
 ```
 
 
-En quelques lignes de code, vous pouvez maintenant installer l'environnement de
-travail :
+Follow these lines to install your environment:
 
 ```sh
 ## Install utilities for R ----
 brew install --cask xquartz     ## Graphical window system
-brew install gfortran           ## Fortran compiler for GCC
+brew install gfortran           ## FORTRAN compiler for GCC
 
 ## Install R ----
 brew install --cask r
@@ -246,11 +222,11 @@ brew install git
 brew install pandoc             ## Convert documents (Rmd, html, etc.)
 ```
 
-Vous pouvez maitenant lancer **`RStudio`** et vérifier votre installation :
+Open **`RStudio`** and check your installation:
 
 ```{r echo=TRUE, eval=FALSE}
 R.version.string
-## "R version 4.1.1 (2021-08-10)"
+## "R version 4.1.2 (2021-11-01)"
 
 Sys.which("git")
 ##            git
@@ -267,10 +243,10 @@ Sys.which("pandoc")
 
 <br/>
 
-Si vous souhaitez convertir des documents `.Rmd` en `.pdf`, vous aurez besoin
-de **`LaTeX`**. Pour cela, vous allez installer le package `r fontawesome::fa_i("r-project")`
-[**`tinytex`**](https://yihui.org/tinytex/), qui installe une version légère de **`LaTeX`**.
-Ouvrez **`RStudio`** et tapez les deux commandes suivantes : 
+If you want to convert documents from `.Rmd` to `.pdf`, you will need **`LaTeX`**. 
+You can install a lightened distribution using the `r fontawesome::fa_i("r-project")`
+package [**`tinytex`**](https://yihui.org/tinytex/).
+Open **`RStudio`** and run: 
 
 ```{r echo=TRUE, eval=FALSE}
 ## Install tinytex ----
@@ -285,8 +261,9 @@ tinytex::install_tinytex()
 
 
 `r fontawesome::fa_i("lightbulb")` &nbsp;
-Votre environnement de travail est opérationnel. Les lignes suivantes permettent
-d'installer des utilitaires requis pour certains packages (`sf`, `sp`, `rgdal`,
+Congrats! You have successfully install your environment. 
+The following commands will install system libraries (software) required by
+some `r fontawesome::fa_i("r-project")` packages (`sf`, `sp`, `rgdal`,
 `rgeos`, `raster`, `terra`, `xml`, etc.).
 
 
@@ -298,7 +275,7 @@ brew install poppler
 brew install geos gdal netcdf proj udunits
 ```
 
-N'oubliez pas de mettre régulièrement à jour votre environnement de travail :
+To keep your system up-to-date run frequently:
 
 
 ```sh
@@ -315,7 +292,7 @@ brew update && brew upgrade --greedy
 
 
 
-Ouvrez un terminal et mettez à jour votre système :
+To keep your system up-to-date, do not forget to frequently run:
 
 ```sh
 ## System update ----
@@ -326,7 +303,7 @@ sudo apt update && sudo apt upgrade
 <br/>
 
 
-Avant d'aller plus loin, identifiez votre version d'Ubuntu :
+Then check your version of Ubuntu:
 
 
 ```sh
@@ -344,12 +321,12 @@ cat /etc/issue
 | 20.04 LTS | Focal Fossa    | https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/   |
 | 18.04 LTS | Bionic Beaver  | https://cloud.r-project.org/bin/linux/ubuntu bionic-cran40/  |
 | 16.04 LTS | Xenial Xerus   | https://cloud.r-project.org/bin/linux/ubuntu xenial-cran40/  |
-: Tableau 1. Liste des dépôts CRAN pour différentes versions d'Ubuntu
+: Table 1. List of CRAN repositories for different versions of Ubuntu
 
 <br/>
 
-Installez `r fontawesome::fa_i("r-project")` en suivant ces étapes (adaptez l'URL du dépôt en
-fonction de votre version d'Ubuntu, cf. Tableau 1) :
+Install `r fontawesome::fa_i("r-project")` by following these steps 
+(change the URL below by the one specific to your version of Ubuntu, cf. Table 1) :
 
 ```sh
 ## Install APT utilities ----
@@ -376,18 +353,18 @@ sudo apt install r-base-dev
 <br/>
 
 
-Pour installer **`RStudio Desktop`** visitez cette page : 
-https://www.rstudio.com/products/rstudio/download/#download, téléchargez le fichier
-`.deb` pour Ubuntu 18/Debian 10 et installez-le. Si vous avez la version 16.04
-d'Ubuntu, visitez cette page : https://www.rstudio.com/products/rstudio/older-versions/
+To install **`RStudio Desktop`** visit this page: 
+https://www.rstudio.com/products/rstudio/download/#download, download the
+`.deb` file for Ubuntu 18/Debian 10 et install it. If you have an older version 
+of Ubuntu (16.04), visit this page: https://www.rstudio.com/products/rstudio/older-versions/
 
-Ou dans un terminal : 
+Alternatively, you can install **`RStudio Desktop`** from the terminal: 
 
 ```sh
 ## Install wget utility ----
 sudo apt install wget
 
-## Download RStudio Desktop installer (Ubuntu 18.04 and olders) ----
+## Download RStudio Desktop installer (Ubuntu >= 18.04) ----
 wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2021.09.0-351-amd64.deb
 
 ## Download RStudio Desktop installer (Ubuntu 16.04 only) ----
@@ -404,13 +381,13 @@ rm rstudio-2021.09.0-351-amd64.deb
 
 <br/>
 
-Maintenant, installez **`git`** comme suit : 
+Now let's install **`git`**: 
 
 ```sh
 sudo apt install git
 ```
 
-Finalement, vous aurez besoin de **`pandoc`** pour convertir des documents texte :
+Finally, install **`pandoc`** (to convert documents using `rmarkdown`):
 
 ```sh
 sudo apt install pandoc
@@ -420,11 +397,11 @@ sudo apt install pandoc
 <br/>
 
 
-Vous pouvez maitenant lancer **`RStudio`** et vérifier votre installation :
+Open **`RStudio`** and check your installation:
 
 ```{r echo=TRUE, eval=FALSE}
 R.version.string
-## "R version 4.1.1 (2021-08-10)"
+## "R version 4.1.2 (2021-11-01)"
 
 Sys.which("git")
 ##            git
@@ -441,10 +418,10 @@ Sys.which("pandoc")
 
 <br/>
 
-Si vous souhaitez convertir des documents `.Rmd` en `.pdf`, vous aurez besoin
-de **`LaTeX`**. Pour cela, vous allez installer le package `r fontawesome::fa_i("r-project")`
-[**`tinytex`**](https://yihui.org/tinytex/), qui installe une version légère de **`LaTeX`**.
-Ouvrez **`RStudio`** et tapez les deux commandes suivantes : 
+If you want to convert documents from `.Rmd` to `.pdf`, you will need **`LaTeX`**. 
+You can install a lightened distribution using the `r fontawesome::fa_i("r-project")`
+package [**`tinytex`**](https://yihui.org/tinytex/).
+Open **`RStudio`** and run: 
 
 ```{r echo=TRUE, eval=FALSE}
 ## Install tinytex ----
@@ -455,14 +432,14 @@ tinytex::install_tinytex()
 ```
 
 
-
 <br />
 
 
 `r fontawesome::fa_i("lightbulb")` &nbsp;
-Votre environnement de travail est opérationnel. Les lignes suivantes permettent
-d'installer des utilitaires requis pour certains packages (`sf`, `sp`, `rgdal`,
-`rgeos`, `raster`, `terra`, etc.).
+Congrats! You have successfully install your environment. 
+The following commands will install system libraries (software) required by
+some `r fontawesome::fa_i("r-project")` packages (`sf`, `sp`, `rgdal`,
+`rgeos`, `raster`, `terra`, `xml`, etc.).
 
 
 ```sh
@@ -472,7 +449,7 @@ sudo apt install libcairo2-dev libmagick++-dev
 sudo apt install libpoppler-cpp-dev
 ```
 
-N'oubliez pas de mettre régulièrement à jour votre environnement de travail :
+To keep your system up-to-date, do not forget to frequently run:
 
 
 ```sh
@@ -491,37 +468,26 @@ sudo apt update && sudo apt upgrade
 ### `git`
 
 
-Afin de pouvoir utiliser **`git`**, vous devez renseigner
-votre nom et votre email qui seront utilisés pour vos commits. Dans un terminal,
-tapez les deux lignes suivantes :
+To use **`git`**, you need to store your credentials (user name and email)
+that will be added to all your commits.
+Open a terminal (you can use the terminal of **RStudio**) and run:
 
 ```sh
 git config --global user.name  "Jane Doe"
 git config --global user.email "jane.doe@mail.com"
 ```
 
+When you create a new git project the default branch will be named _master_. 
+It's recommended to replace _master_ by _main_ (for more information read this
+[article](https://www.zdnet.com/article/github-to-replace-master-with-alternative-term-to-avoid-slavery-references/)).
 
-Ou sous `r fontawesome::fa_i("r-project")` :
+On a terminal, run:
 
-
-```{r echo=TRUE, eval=FALSE}
-## Install gert package ----
-install.packages("gert")
-
-## Store your Git credentials (globally) ----
-gert::git_config_global_set("user.name",  "Jane Doe")
-gert::git_config_global_set("user.email", "jane.doe@mail.com")
-
-## Check ----
-gert::git_config_global()
-##  A tibble: 2 × 3
-##   name         value                     level 
-## * <chr>        <chr>                     <chr> 
-## 1 user.name    Jane Doe                  global
-## 2 user.email   jane.doe@mail.com         global
+```sh
+git config --global init.defaultBranch "main"
 ```
 
-Un fichier `.gitconfig` a été créé dans votre dossier personnel.
+From now when you will initialize `git` in a new project the default branch will be **main**.
 
 
 <br/>
@@ -529,48 +495,74 @@ Un fichier `.gitconfig` a été créé dans votre dossier personnel.
 
 ### `r fontawesome::fa_i("github")`&nbsp;GitHub SSH keys
 
+To communicate with [GitHub](https://github.com), you can use the protocol HTTPS (default)
+or the protocol SSH (recommended). The protocol SSH is a more secure method of 
+logging into a remote server (GitHub). To use this protocol, you need to generate 
+an SSH keys pair that consists in creating two long strings of characters: a **public key**
+and a **private key**. You can place the public key on any server (for instance GitHub), 
+and then connect to the server using a device (your laptop) that has access to the private key.
 
-Pour communiquer avec GitHub, vous pouvez utiliser le protocole HTTPS ou le
-protocole SSH (recommendé). Pour ce dernier, vous devez générer
-une paire de clés SSH qui consiste en une clé privée (localisée sur votre 
-ordinateur) et une clé publique qui sera hébergée sur votre espace GitHub.
 
-Procédez comme suit : 
+To generate a new SSH keys pair proceed as follow: 
 
 &nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Créez-vous un compte **GitHub** à cette adresse [https://github.com/signup](https://github.com/signup)
+Create an account on **GitHub** at [https://github.com/signup](https://github.com/signup)
 <br/>&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Dans **`RStudio`**, cliquez sur : `Tools > Global options > Git/SVN`
+Open **`RStudio`** and click on: `Tools > Global options > Git/SVN`
 <br/>&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Cliquez sur **Create RSA Key** et cliquez sur **Create** 
-(vous pouvez omettre la phrase secrète)
+Click on **Create RSA Key** and then click on **Create** 
+(you can omit the passphrase). This new SSH keys pair has been stored in `~/.ssh/`.
 <br/>&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Redémarrer **`RStudio`** et cliquez sur : `Tools > Global options > Git/SVN`
+Click on **View public key** and copy it
 <br/>&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Cliquez sur **View public key** et copiez la clé publique
+Go to the page [https://github.com/settings/keys](https://github.com/settings/keys)
+and click on **New SSH key**
 <br/>&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Visitez la page [https://github.com/settings/keys](https://github.com/settings/keys)
-et cliquez sur **New SSH key**
+Choose a name for your key (e.g. your laptop name) and paste your public key.
 <br/>&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Donnez un titre à votre nouvelle clé et collez le contenu de votre clé publique.
-Puis, cliquez sur **Add SSH key**
+Finally click on **Add SSH key**
 
-Votre nouvelle paire de clés SSH est maintenant déployée et la communication avec GitHub
-au travers du protocole SSH est effective. Vous n'aurez plus besoin de renseigner
-de mot de passe pour puller/pusher. Lorsque vous clonerez un dépôt GitHub ou
-ajouterez une _remote_ à un dépôt local, assurez-vous d'utiliser l'URL SSH
-et non pas HTTPS.
+<br />
+
+`r fontawesome::fa_i("ubuntu")` &nbsp; If you are on Ubuntu you need to install the
+following utility: 
+
+```sh
+sudo apt install ssh-askpass
+```
+
+
+<br />
+
+Let's test the SSH connection with GitHub. Open a terminal and run (you need to accept
+the fingerprint, just enter `yes`):
+
+```sh
+ssh -T git@github.com
+```
+
+Congrats! You can now communicate with GitHub using the SSH protocol.
+
+<br />
+
+`r fontawesome::fa_i("exclamation-triangle")` &nbsp; From now, you need to
+use the SSH URL when connecting a new GitHub project (named `remote`).
+
 
 ```sh
 ## URL HTTPS ----
 https://github.com/frbcesab/datatoolbox.git
 
-## URL SSH (à utiliser) ----
+## URL SSH (use this one) ----
 git@github.com:frbcesab/datatoolbox.git
 ```
 
-**Attention :** si vous perdez votre clé privée, vous devrez générer une nouvelle
-paire de clés SSH et stocker votre nouvelle clé publique sur GitHub.
+<br />
+
+`r fontawesome::fa_i("exclamation-triangle")` &nbsp; 
+If you lose your private SSH key you won't be able to establish
+a connection with GitHub. You'll need to delete your SSH key
+on GitHub and to create a new one.
 
 
 <br/>
@@ -578,23 +570,22 @@ paire de clés SSH et stocker votre nouvelle clé publique sur GitHub.
 
 ### `r fontawesome::fa_i("github")`&nbsp;GitHub PAT
 
-Finalement, si vous voulez contrôler GitHub à partir de `r fontawesome::fa_i("r-project")`
-(création de dépôts, de branches distantes, etc.), notamment avec le package 
-**`usethis`** (qui repose en partie sur l'API GitHub), vous aurez besoin de 
-créer un GitHub Personal Access Token (PAT).
+If you want to use the GitHub API, essentially with the `r fontawesome::fa_i("r-project")` package
+[`usethis`](https://usethis.r-lib.org/),
+you need to create a GitHub Personal Access Token (PAT).
 
-Rendez-vous sur ce site [https://github.com/settings/tokens](https://github.com/settings/tokens)
+Go to [https://github.com/settings/tokens](https://github.com/settings/tokens)
 
 &nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Cliquez sur **Generate new token**
+Click on **Generate new token**
 <br/>&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Donnez un nom à votre nouveau token (par ex. le nom de votre ordinateur)
+Choose a name for your new token (e.g. your laptop name)
 <br/>&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Dans les _scopes_, sélectionnez au moins **repo** et **workflow**
+In the section _scopes_, select at least **repo** and **workflow**
 <br/>&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Copiez le token. Vous allez le stocker dans le fichier `~/.Renviron`
+Copy this token.
 
-Sous **`RStudio`** : 
+Then open **`RStudio`** and run: 
 
 ```{r echo = TRUE, eval = FALSE}
 ## Install usethis package ----
@@ -606,7 +597,26 @@ usethis::edit_r_environ()
 ## • Restart R for changes to take effect
 ```
 
-Ajoutez la ligne suivante : `GITHUB_PAT='XXX'` où `XXX` correspond à votre token.
+In the `~/.Renviron` file, add this new line: `GITHUB_PAT='XXX'` where `XXX` is your token.
+Do not forget to restart `r fontawesome::fa_i("r-project")`.
+
+<br />
+
+Finally let's tell `usethis` to use the SSH protocol. Open **RStudio** and run:
+
+```{r echo = TRUE, eval = FALSE}
+## Install usethis package ----
+install.packages("usethis")
+
+## Open ~/.Rprofile file ----
+usethis::edit_r_profile()
+## • Modify '~/.Rprofile'
+## • Restart R for changes to take effect
+```
+
+In the `~/.Rprofile` file, add this new line: `options(usethis.protocol = "ssh")`.
+Do not forget to restart `r fontawesome::fa_i("r-project")`.
+
 
 
 ## Corrections {.appendix}
