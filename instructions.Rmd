@@ -569,7 +569,7 @@ sudo apt update && sudo apt upgrade
 ## Configuration
 
 
-### `git`
+### `r fontawesome::fa_i("github")`&nbsp;`git`
 
 
 To use **`git`**, you need to store your credentials (user name and email)
