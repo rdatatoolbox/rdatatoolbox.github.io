@@ -2193,69 +2193,40 @@ Archives
 </nav>
 </div>
 <p><br/></p>
-<p><i class="fa fa-hand-point-right" role="presentation" aria-label="hand-point-right icon"></i>  <strong>Please install the latest versions of <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i> RStudio, and <code>git</code>.</strong></p>
-<p><i class="fa fa-lightbulb" role="presentation" aria-label="lightbulb icon"></i> <strong>Having an up-to-date environment is the first good practice.</strong></p>
+<p><i class="fa fa-hand-point-right" role="presentation" aria-label="hand-point-right icon"></i>  <strong>Please install the latest versions of <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i>, RStudio, and <code>git</code></strong></p>
+<p><i class="fa fa-lightbulb" role="presentation" aria-label="lightbulb icon"></i>  <strong>Having an up-to-date environment is the first good practice</strong></p>
 <p><br/></p>
 <h2 id="installation">Installation</h2>
 <h3 id="windows"><i class="fab fa-windows" role="presentation" aria-label="windows icon"></i>  Windows</h3>
 <ol type="1">
 <li>Download <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i> at:<br/> <a href="https://cran.r-project.org/">https://cran.r-project.org/</a></li>
 </ol>
-<p>      <i class="fa fa-caret-right" role="presentation" aria-label="caret-right icon"></i>   Click on <em>Download R for Windows</em> <br/>      <i class="fa fa-caret-right" role="presentation" aria-label="caret-right icon"></i>   Click on <em>base</em> <br/>      <i class="fa fa-caret-right" role="presentation" aria-label="caret-right icon"></i>   Click on <em>Download R 4.2.0 for Windows</em> <br/>      <i class="fa fa-caret-right" role="presentation" aria-label="caret-right icon"></i>   Open <em>R-4.2.0-win.exe</em> and follow instructions</p>
+<p>      <i class="fa fa-caret-right" role="presentation" aria-label="caret-right icon"></i>   Click on <em>Download R for Windows</em> <br/>      <i class="fa fa-caret-right" role="presentation" aria-label="caret-right icon"></i>   Click on <em>base</em> <br/>      <i class="fa fa-caret-right" role="presentation" aria-label="caret-right icon"></i>   Click on <em>Download R 4.2.0 for Windows</em> <br/>      <i class="fa fa-caret-right" role="presentation" aria-label="caret-right icon"></i>   Open <em>R-4.2.0-win.exe</em> and follow instructions.</p>
 <p><br/></p>
 <ol start="2" type="1">
 <li>Download <strong><code>RStudio Desktop</code></strong> at:<br/> <a href="https://www.rstudio.com/products/rstudio/download/#download">https://www.rstudio.com/products/rstudio/download/#download</a></li>
 </ol>
-<p>      <i class="fa fa-caret-right" role="presentation" aria-label="caret-right icon"></i>   Download the version for Windows 10/11 (the <strong>.exe</strong> and not the <strong>.zip</strong>) <br/>      <i class="fa fa-caret-right" role="presentation" aria-label="caret-right icon"></i>   Open <em>RStudio-2022.02.2-485.exe</em> and follow instructions <br/>      <i class="fa fa-caret-right" role="presentation" aria-label="caret-right icon"></i>   Check if <strong><code>RStudio</code></strong> has found <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i>. Launch <strong><code>RStudio</code></strong> and run:</p>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>R.version.string</span>
-<span class='co'>## [1] "R version 4.2.0 (2022-04-22)"</span>
-</code></pre>
-</div>
-</div>
+<p>      <i class="fa fa-caret-right" role="presentation" aria-label="caret-right icon"></i>   Download the version for Windows 10/11 (the <strong>.exe</strong> and not the <strong>.zip</strong>) <br/>      <i class="fa fa-caret-right" role="presentation" aria-label="caret-right icon"></i>   Open <em>RStudio-2022.02.3-492.exe</em> and follow instructions <br/>      <i class="fa fa-caret-right" role="presentation" aria-label="caret-right icon"></i>  </p>
 <p><br/></p>
 <ol start="3" type="1">
 <li>Download <strong><code>Rtools4.2</code></strong> at:<br/> <a href="https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html">https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html</a></li>
 </ol>
 <p>      <i class="fa fa-caret-right" role="presentation" aria-label="caret-right icon"></i>   Download the 64-bit version for Windows <br/>      <i class="fa fa-caret-right" role="presentation" aria-label="caret-right icon"></i>   Open <em>rtools42-5253-5107.exe</em> and follow instructions</p>
 <p>The installation of <strong><code>Rtools4.2</code></strong> is strongly recommended to install some packages from sources. <strong><code>Rtools4.2</code></strong> contains in particular the utility <code>make</code>.</p>
-<p>Restart <strong><code>RStudio</code></strong> and check that <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i> finds the utility <code>make</code>:</p>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/Sys.which.html'>Sys.which</a></span><span class='op'>(</span><span class='st'>"make"</span><span class='op'>)</span>
-<span class='co'>## "C:\\rtools42\\usr\\bin\\make.exe"</span>
-</code></pre>
-</div>
-</div>
-<p>Now you can install packages from sources:</p>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"jsonlite"</span>, type <span class='op'>=</span> <span class='st'>"source"</span><span class='op'>)</span>
-</code></pre>
-</div>
-</div>
 <p><br/></p>
 <ol start="4" type="1">
 <li>Download <strong><code>git</code></strong> at:<br/> <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></li>
 </ol>
-<p>      <i class="fa fa-caret-right" role="presentation" aria-label="caret-right icon"></i>   Download the 64-bit version for Windows <br/>      <i class="fa fa-caret-right" role="presentation" aria-label="caret-right icon"></i>   Open <em>Git-2.36.1-64-bit.exe</em> and follow instructions <br/>      <i class="fa fa-caret-right" role="presentation" aria-label="caret-right icon"></i>   Check if <strong><code>RStudio</code></strong> has found <strong><code>git</code></strong>. Launch <strong><code>RStudio</code></strong> and run:</p>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/Sys.which.html'>Sys.which</a></span><span class='op'>(</span><span class='st'>"git"</span><span class='op'>)</span>
-<span class='co'>## C:/Program Files/Git/bin/git.exe</span>
-</code></pre>
-</div>
-</div>
+<p>      <i class="fa fa-caret-right" role="presentation" aria-label="caret-right icon"></i>   Download the 64-bit version for Windows <br/>      <i class="fa fa-caret-right" role="presentation" aria-label="caret-right icon"></i>   Open <em>Git-2.36.1-64-bit.exe</em> and follow instructions <br/>      <i class="fa fa-caret-right" role="presentation" aria-label="caret-right icon"></i>  </p>
 <p><br/></p>
 <ol start="5" type="1">
-<li>Install <strong><code>pandoc</code></strong></li>
+<li>Install <strong><code>pandoc</code></strong><br/> <a href="https://pandoc.org/">https://pandoc.org/</a></li>
 </ol>
 <p>The package <strong><code>rmarkdown</code></strong> requires the software <strong><code>pandoc</code></strong> to convert document from one format (e.g. <code>.Rmd</code>) to another (e.g. <code>.html</code>).</p>
 <p>Download the latest version of <strong><code>pandoc</code></strong> (file with the extension <strong>.msi</strong>) at: <a href="https://github.com/jgm/pandoc/releases/">https://github.com/jgm/pandoc/releases/</a>, and follow instructions.</p>
 <p><br/></p>
 <ol start="6" type="1">
-<li>Install <strong><code>Quarto</code></strong></li>
+<li>Install <strong><code>Quarto</code></strong><br/> <a href="https://quarto.org/">https://quarto.org/</a></li>
 </ol>
 <p><strong><code>Quarto</code></strong> is a multi-language, next-generation version of R Markdown developed by RStudio, and includes dozens of new features and capabilities.</p>
 <p>Download the latest version of <strong><code>Quarto</code></strong> (file with the extension <strong>.msi</strong>) at: <a href="https://quarto.org/docs/get-started/">https://quarto.org/docs/get-started/</a>, and follow instructions.</p>
@@ -2283,6 +2254,35 @@ Archives
 </div>
 </div>
 <p><strong>N.B.</strong> If you already have a <strong><code>LaTeX</code></strong> distribution, do not install <code>tinytex</code>.</p>
+<p><br /></p>
+<p>Open <strong><code>RStudio</code></strong> and check your installation:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>R.version.string</span>
+<span class='co'>## "R version 4.2.0 (2022-04-22)"</span>
+
+<span class='fu'><a href='https://rdrr.io/r/base/Sys.which.html'>Sys.which</a></span><span class='op'>(</span><span class='st'>"git"</span><span class='op'>)</span>
+<span class='co'>##                  git</span>
+<span class='co'>## "C:/path/to/git.exe"</span>
+
+<span class='fu'><a href='https://rdrr.io/r/base/Sys.which.html'>Sys.which</a></span><span class='op'>(</span><span class='st'>"make"</span><span class='op'>)</span>
+<span class='co'>##                     make </span>
+<span class='co'>## "## C:/path/to/make.exe"</span>
+
+<span class='fu'><a href='https://rdrr.io/r/base/Sys.which.html'>Sys.which</a></span><span class='op'>(</span><span class='st'>"pandoc"</span><span class='op'>)</span>
+<span class='co'>##                 pandoc </span>
+<span class='co'>## "## C:/path/to/Pandoc"</span>
+
+<span class='fu'><a href='https://rdrr.io/r/base/Sys.which.html'>Sys.which</a></span><span class='op'>(</span><span class='st'>"Quarto"</span><span class='op'>)</span>
+<span class='co'>##                 Quarto </span>
+<span class='co'>## "## C:/path/to/Quarto"</span>
+
+<span class='fu'><a href='https://rdrr.io/r/base/Sys.which.html'>Sys.which</a></span><span class='op'>(</span><span class='st'>"pdflatex"</span><span class='op'>)</span>
+<span class='co'>##                  pdflatex </span>
+<span class='co'>## "/## C:/path/to/pdflatex" </span>
+</code></pre>
+</div>
+</div>
 <p><br/></p>
 <h3 id="macos"><i class="fab fa-apple" role="presentation" aria-label="apple icon"></i>  macOS</h3>
 <p>Th easiest way to set up your environment is by using the package manager for macOS <a href="https://brew.sh"><strong><code>Homebrew</code></strong></a>. With this tool you can install (and update) your software directly from the terminal. First you need to install the Apple software <em>Command Line Tools for Xcode</em>.</p>
@@ -2392,9 +2392,9 @@ Archives
 <table>
 <caption>Table 1. List of CRAN repositories for different versions of Ubuntu</caption>
 <colgroup>
-<col style="width: 11%" />
-<col style="width: 21%" />
-<col style="width: 66%" />
+<col style="width: 10%" />
+<col style="width: 19%" />
+<col style="width: 70%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -2405,22 +2405,22 @@ Archives
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">22.04 LTS</td>
+<td style="text-align: center;">22.04</td>
 <td style="text-align: left;">Jammy Jellyfish</td>
 <td style="text-align: left;"><a href="https://cloud.r-project.org/bin/linux/ubuntu" class="uri">https://cloud.r-project.org/bin/linux/ubuntu</a> jammy-cran40/</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">20.04 LTS</td>
+<td style="text-align: center;">20.04</td>
 <td style="text-align: left;">Focal Fossa</td>
 <td style="text-align: left;"><a href="https://cloud.r-project.org/bin/linux/ubuntu" class="uri">https://cloud.r-project.org/bin/linux/ubuntu</a> focal-cran40/</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">18.04 LTS</td>
+<td style="text-align: center;">18.04</td>
 <td style="text-align: left;">Bionic Beaver</td>
 <td style="text-align: left;"><a href="https://cloud.r-project.org/bin/linux/ubuntu" class="uri">https://cloud.r-project.org/bin/linux/ubuntu</a> bionic-cran40/</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">16.04 LTS</td>
+<td style="text-align: center;">16.04</td>
 <td style="text-align: left;">Xenial Xerus</td>
 <td style="text-align: left;"><a href="https://cloud.r-project.org/bin/linux/ubuntu" class="uri">https://cloud.r-project.org/bin/linux/ubuntu</a> xenial-cran40/</td>
 </tr>
@@ -2434,7 +2434,7 @@ Archives
 <span id="cb8-4"><a href="#cb8-4"></a><span class="co">## Add CRAN GPG key ----</span></span>
 <span id="cb8-5"><a href="#cb8-5"></a><span class="fu">sudo</span> apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9</span>
 <span id="cb8-6"><a href="#cb8-6"></a></span>
-<span id="cb8-7"><a href="#cb8-7"></a><span class="co">## Add CRAN repository to APT repositories list ----</span></span>
+<span id="cb8-7"><a href="#cb8-7"></a><span class="co">## Add CRAN repository (select the appropriate URL) to APT repositories list ----</span></span>
 <span id="cb8-8"><a href="#cb8-8"></a><span class="fu">sudo</span> add-apt-repository <span class="st">&#39;deb https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/&#39;</span></span>
 <span id="cb8-9"><a href="#cb8-9"></a></span>
 <span id="cb8-10"><a href="#cb8-10"></a><span class="co">## Update packages list ----</span></span>
@@ -2447,7 +2447,7 @@ Archives
 <span id="cb8-17"><a href="#cb8-17"></a><span class="fu">sudo</span> apt install build-essential</span>
 <span id="cb8-18"><a href="#cb8-18"></a><span class="fu">sudo</span> apt install r-base-dev</span></code></pre></div>
 <p><br/></p>
-<p>To install <strong><code>RStudio Desktop</code></strong> visit this page: <a href="https://www.rstudio.com/products/rstudio/download/#download" class="uri">https://www.rstudio.com/products/rstudio/download/#download</a>, download the <code>.deb</code> file for Ubuntu 18+/Debian 10+ and install it. If you have an older version of Ubuntu (16.04), visit this page: <a href="https://www.rstudio.com/products/rstudio/older-versions/" class="uri">https://www.rstudio.com/products/rstudio/older-versions/</a></p>
+<p>To install <strong><code>RStudio Desktop</code></strong> visit this page: <a href="https://www.rstudio.com/products/rstudio/download/#download" class="uri">https://www.rstudio.com/products/rstudio/download/#download</a>, download the <code>.deb</code> file for Ubuntu 22 or Ubuntu 18+/Debian 10+ and install it.</p>
 <p>Alternatively, you can install <strong><code>RStudio Desktop</code></strong> from the terminal:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="co">## Install wget utility ----</span></span>
 <span id="cb9-2"><a href="#cb9-2"></a><span class="fu">sudo</span> apt install wget</span>
@@ -2456,20 +2456,15 @@ Archives
 <span id="cb9-5"><a href="#cb9-5"></a><span class="fu">wget</span> https://download1.rstudio.org/desktop/jammy/amd64/rstudio-2022.02.3-492-amd64.deb</span>
 <span id="cb9-6"><a href="#cb9-6"></a></span>
 <span id="cb9-7"><a href="#cb9-7"></a><span class="co">## Download RStudio Desktop installer (Ubuntu &gt;= 18.04) ----</span></span>
-<span id="cb9-8"><a href="#cb9-8"></a><span class="co"># wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2022.02.1-461-amd64.deb</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a><span class="co"># wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2022.02.3-492-amd64.deb</span></span>
 <span id="cb9-9"><a href="#cb9-9"></a></span>
-<span id="cb9-10"><a href="#cb9-10"></a><span class="co">## Download RStudio Desktop installer (Ubuntu 16.04 only) ----</span></span>
-<span id="cb9-11"><a href="#cb9-11"></a><span class="co"># wget https://download1.rstudio.org/desktop/xenial/amd64/rstudio-1.4.1106-amd64.deb</span></span>
-<span id="cb9-12"><a href="#cb9-12"></a></span>
-<span id="cb9-13"><a href="#cb9-13"></a><span class="co">## Install RStudio Desktop ----</span></span>
-<span id="cb9-14"><a href="#cb9-14"></a><span class="fu">sudo</span> dpkg -i rstudio-2022.02.3-492-amd64.deb</span>
-<span id="cb9-15"><a href="#cb9-15"></a><span class="co"># sudo dpkg -i rstudio-2022.02.1-461-amd64.deb</span></span>
-<span id="cb9-16"><a href="#cb9-16"></a><span class="co"># sudo dpkg -i rstudio-1.4.1106-amd64.deb</span></span>
-<span id="cb9-17"><a href="#cb9-17"></a></span>
-<span id="cb9-18"><a href="#cb9-18"></a><span class="co">## Remove installer ----</span></span>
-<span id="cb9-19"><a href="#cb9-19"></a><span class="fu">rm</span> rstudio-2022.02.3-492-amd64.deb</span>
-<span id="cb9-20"><a href="#cb9-20"></a><span class="co"># rm rstudio-2022.02.1-461-amd64.deb</span></span>
-<span id="cb9-21"><a href="#cb9-21"></a><span class="co"># rm rstudio-1.4.1106-amd64.deb</span></span></code></pre></div>
+<span id="cb9-10"><a href="#cb9-10"></a><span class="co">## Install RStudio Desktop ----</span></span>
+<span id="cb9-11"><a href="#cb9-11"></a><span class="fu">sudo</span> dpkg -i rstudio-2022.02.3-492-amd64.deb</span>
+<span id="cb9-12"><a href="#cb9-12"></a><span class="co"># sudo dpkg -i rstudio-2022.02.3-492-amd64.deb</span></span>
+<span id="cb9-13"><a href="#cb9-13"></a></span>
+<span id="cb9-14"><a href="#cb9-14"></a><span class="co">## Remove installer ----</span></span>
+<span id="cb9-15"><a href="#cb9-15"></a><span class="fu">rm</span> rstudio-2022.02.3-492-amd64.deb</span>
+<span id="cb9-16"><a href="#cb9-16"></a><span class="co"># rm rstudio-2022.02.3-492-amd64.deb</span></span></code></pre></div>
 <p><br/></p>
 <p>Now let’s install <strong><code>git</code></strong>:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">sudo</span> apt install git</span></code></pre></div>
@@ -2567,10 +2562,10 @@ Archives
 <p><br /></p>
 <p><i class="fa fa-exclamation-triangle" role="presentation" aria-label="exclamation-triangle icon"></i>   From now, you need to use the SSH URL when connecting a new GitHub project (named <code>remote</code>).</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1"></a><span class="co">## URL HTTPS ----</span></span>
-<span id="cb19-2"><a href="#cb19-2"></a><span class="ex">https</span>://github.com/frbcesab/datatoolbox.git</span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="ex">https</span>://github.com/github_account/github_repo.git</span>
 <span id="cb19-3"><a href="#cb19-3"></a></span>
 <span id="cb19-4"><a href="#cb19-4"></a><span class="co">## URL SSH (use this one) ----</span></span>
-<span id="cb19-5"><a href="#cb19-5"></a><span class="ex">git@github.com</span>:frbcesab/datatoolbox.git</span></code></pre></div>
+<span id="cb19-5"><a href="#cb19-5"></a><span class="ex">git@github.com</span>:github_account/github_repo.git</span></code></pre></div>
 <p><br /></p>
 <p><i class="fa fa-exclamation-triangle" role="presentation" aria-label="exclamation-triangle icon"></i>   If you lose your private SSH key you won’t be able to establish a connection with GitHub. You’ll need to delete your SSH key on GitHub and to create a new one.</p>
 <p><br/></p>
@@ -2612,7 +2607,7 @@ Archives
 <h2 id="reuse" class="appendix">Reuse</h2>
 <p>The material of this website is licensed under Creative Commons Attribution <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Source code is available at <a href="https://github.com/rdatatoolbox/rdatatoolbox.github.io/" class="uri">https://github.com/rdatatoolbox/rdatatoolbox.github.io/</a>.</p>
 <h2 id="citation" class="appendix">Citation</h2>
-<p>Casajus N, Dray S, Gimenez O, Guéry L, Guilhaumon F &amp; Schiettekatte NMD (2021) Workshop FRB-CESAB &amp; GdR EcoStat: Data Toolbox for Reproducible Research in Ecology (Edition 2021). Zenodo. <a href="http://doi.org/10.5281/zenodo.4262978" class="uri">http://doi.org/10.5281/zenodo.4262978</a>.</p>
+<p>Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD &amp; Siberchicot A (2022) Workshop FRB-CESAB &amp; GdR EcoStat: Data Toolbox for Reproducible Research in Ecology (Edition 2022). Zenodo. <a href="http://doi.org/10.5281/zenodo.4262978" class="uri">http://doi.org/10.5281/zenodo.4262978</a>.</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
