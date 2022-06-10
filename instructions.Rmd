@@ -58,8 +58,7 @@ Open _R-4.2.0-win.exe_ and follow instructions.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
 Download the version for Windows 10/11 (the **.exe** and not the **.zip**)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Open _RStudio-2022.02.3-492.exe_ and follow instructions
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
+Open _RStudio-2022.02.3-492.exe_ and follow instructions.
 
 
 
@@ -91,7 +90,6 @@ from sources.
 Download the 64-bit version for Windows
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
 Open _Git-2.36.1-64-bit.exe_ and follow instructions
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
 
 
 
@@ -174,20 +172,20 @@ Sys.which("git")
 ## "C:/path/to/git.exe"
 
 Sys.which("make")
-##                     make 
-## "## C:/path/to/make.exe"
+##                  make 
+## "C:/path/to/make.exe"
 
 Sys.which("pandoc")
-##                 pandoc 
-## "## C:/path/to/Pandoc"
+##              pandoc 
+## "C:/path/to/Pandoc"
 
 Sys.which("Quarto")
-##                 Quarto 
-## "## C:/path/to/Quarto"
+##              Quarto 
+## "C:/path/to/Quarto"
 
 Sys.which("pdflatex")
-##                  pdflatex 
-## "/## C:/path/to/pdflatex" 
+##              pdflatex 
+## "C:/path/to/pdflatex" 
 ```
 
 
@@ -323,7 +321,7 @@ Sys.which("pdflatex")
 
 
 `r fontawesome::fa_i("lightbulb")` &nbsp;
-Congrats! You have successfully install your environment. 
+Congrats! You have successfully installed your environment. 
 The following commands will install system libraries (software) required by
 some `r fontawesome::fa_i("r-project")` packages (`sf`, `sp`, `rgdal`,
 `rgeos`, `raster`, `terra`, `xml`, etc.).
@@ -382,7 +380,7 @@ cat /etc/issue
 | 20.04   | Focal Fossa     | https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/   |
 | 18.04   | Bionic Beaver   | https://cloud.r-project.org/bin/linux/ubuntu bionic-cran40/  |
 | 16.04   | Xenial Xerus    | https://cloud.r-project.org/bin/linux/ubuntu xenial-cran40/  |
-: Table 1. List of CRAN repositories for different versions of Ubuntu
+: Table 1. List of CRAN repositories for different LTS versions of Ubuntu
 
 <br/>
 
@@ -459,7 +457,7 @@ sudo apt install pandoc
 
 
 Let's install the **Quarto** software, a multi-language, next-generation version of R Markdown developed 
-by RStudio, and includes dozens of new features and capabilities.
+by RStudio, that includes dozens of new features and capabilities.
 
 
 ```sh
@@ -543,7 +541,7 @@ Sys.which("pdflatex")
 
 
 `r fontawesome::fa_i("lightbulb")` &nbsp;
-Congrats! You have successfully install your environment. 
+Congrats! You have successfully installed your environment. 
 The following commands will install system libraries (software) required by
 some `r fontawesome::fa_i("r-project")` packages (`sf`, `sp`, `rgdal`,
 `rgeos`, `raster`, `terra`, `xml`, etc.).
@@ -657,10 +655,10 @@ use the SSH URL when connecting a new GitHub project (named `remote`).
 
 
 ```sh
-## URL HTTPS ----
+## HTTPS URL ----
 https://github.com/github_account/github_repo.git
 
-## URL SSH (use this one) ----
+## SSH URL (use this one) ----
 git@github.com:github_account/github_repo.git
 ```
 
