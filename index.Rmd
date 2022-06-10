@@ -7,6 +7,11 @@ author:
     affiliation: FRB-CESAB
     affiliation_url: https://www.fondationbiodiversite.fr/la-fondation/le-cesab/
     orcid_id: 0000-0002-5537-5294
+    - name: "Iago Bonnici"
+    url: https://isem-evolution.fr/en/membre/bonnici/
+    affiliation: CNRS ISEM
+    affiliation_url: https://isem-evolution.fr/en/
+    orcid_id: 0000-0003-2934-351X
   - name: "Stéphane Dray"
     url: https://lbbe.univ-lyon1.fr/fr/annuaires-des-membres/dray-stephane
     affiliation: CNRS LBBE
@@ -32,6 +37,11 @@ author:
     affiliation: EPHE CRIOBE
     affiliation_url: http://www.criobe.pf/
     orcid_id: 0000-0002-1925-3484
+  - name: "Aurélie Siberchicot"
+    url: https://lbbe.univ-lyon1.fr/fr/annuaires-des-membres/siberchicot-aurelie
+    affiliation: UCBL LBBE
+    affiliation_url: https://lbbe.univ-lyon1.fr/en
+    orcid_id: 0000-0002-7638-8318
 date: "`r format(Sys.Date(), '%m-%d-%Y')`"
 site: distill::distill_website
 ---
@@ -55,7 +65,7 @@ The objective of this five-day workshop, co-organized by the
 and the
 [GdR EcoStat](https://sites.google.com/site/gdrecostat/), 
 is to train young researchers in reproducibility, software development and 
-version management tools (e.g. `R`, `git`, `Rmarkdown`, `tidyverse`, `docker`), 
+version management tools (e.g. `Git`, `GitHub`, `R Markdown`, `Quarto`, `renv`, `docker`), 
 applied to biodiversity research.
 
 
@@ -74,33 +84,31 @@ Icebreaker and introduction of the week
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
 Open science and Reproducible research
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Research compendium
+Research compendium & good practices
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Version control (`git`) and collaboration (GitHub)
+Version control with `Git` & `GitHub`
 
 
 
 **Day 2**
 
 &nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Data handling (`dplyr`)
+Basics of `R Markdown`
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Data visualization (`ggplot2`)
+Introduction to `Quatro`
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Literate programming (`rmarkdown`)
+Pipeline toolkit with `targets`
 
 
 
 **Day 3**
 
 &nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Optimization and pipeline toolkit (`targets`)
+Dealing with R package versions with `renv`
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Dealing with R package versions (`renv`)
+Containerization with `Docker`
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Containerization (`Docker`)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Building R packages
+Building an R package
 
 
 
@@ -115,7 +123,8 @@ Subgroups projects
 
 &nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
 Subgroups projects
-
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
+Projects presentation
 
 
 
@@ -123,7 +132,7 @@ Subgroups projects
 
 
 
-## Pré-requis
+## Prerequisites
 
 
 The following software must be installed before the workshop:
@@ -158,7 +167,7 @@ Source code is available at https://github.com/rdatatoolbox/rdatatoolbox.github.
 
 
 
-Casajus N, Dray S, Gimenez O, Guéry L, Guilhaumon F & Schiettekatte NMD (2021) 
+Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD & Siberchicot A (2022) 
 Workshop FRB-CESAB & GdR EcoStat: Data Toolbox for Reproducible Research in 
-Ecology (Edition 2021). 
+Ecology (Edition 2022). 
 Zenodo. <http://doi.org/10.5281/zenodo.4262978>.

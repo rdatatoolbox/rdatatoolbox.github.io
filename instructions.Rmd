@@ -16,11 +16,10 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 `r fontawesome::fa_i("hand-point-right")`&nbsp;
-**Please install the latest versions of `r fontawesome::fa_i("r-project")`
-RStudio, and `git`.**
+**Please install the latest versions of `r fontawesome::fa_i("r-project")`, RStudio, and `git`**
 
-`r fontawesome::fa_i("lightbulb")`
-**Having an up-to-date environment is the first good practice.**
+`r fontawesome::fa_i("lightbulb")`&nbsp;
+**Having an up-to-date environment is the first good practice**
 
 
 <br/>
@@ -45,7 +44,7 @@ Click on _base_
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
 Click on _Download R 4.2.0 for Windows_
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Open _R-4.2.0-win.exe_ and follow instructions
+Open _R-4.2.0-win.exe_ and follow instructions.
 
 
 
@@ -59,15 +58,9 @@ Open _R-4.2.0-win.exe_ and follow instructions
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
 Download the version for Windows 10/11 (the **.exe** and not the **.zip**)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Open _RStudio-2022.02.2-485.exe_ and follow instructions
+Open _RStudio-2022.02.3-492.exe_ and follow instructions
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Check if **`RStudio`** has found `r fontawesome::fa_i("r-project")`. 
-Launch **`RStudio`** and run:
 
-```{r echo=TRUE, eval=FALSE}
-R.version.string
-## [1] "R version 4.2.0 (2022-04-22)"
-```
 
 
 <br/>
@@ -86,19 +79,6 @@ The installation of **`Rtools4.2`** is strongly recommended to install some pack
 from sources. 
 **`Rtools4.2`** contains in particular the utility `make`.
 
-Restart **`RStudio`** and check that `r fontawesome::fa_i("r-project")` finds the utility `make`:
-
-```{r echo=TRUE, eval=FALSE}
-Sys.which("make")
-## "C:\\rtools42\\usr\\bin\\make.exe"
-```
-
-Now you can install packages from sources:
-
-
-```{r echo=TRUE, eval=FALSE}
-install.packages("jsonlite", type = "source")
-```
 
 
 <br/>
@@ -112,20 +92,15 @@ Download the 64-bit version for Windows
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
 Open _Git-2.36.1-64-bit.exe_ and follow instructions
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Check if **`RStudio`** has found **`git`**.
-Launch **`RStudio`** and run:
 
-```{r echo=TRUE, eval=FALSE}
-Sys.which("git")
-## C:/Program Files/Git/bin/git.exe
-```
 
 
 <br/>
 
 
 
-5. Install **`pandoc`**
+5. Install **`pandoc`**<br/>
+[https://pandoc.org/](https://pandoc.org/)
 
 The package **`rmarkdown`** requires the software **`pandoc`** to convert document
 from one format (e.g. `.Rmd`) to another (e.g. `.html`).
@@ -140,7 +115,8 @@ and follow instructions.
 
 
 
-6. Install **`Quarto`**
+6. Install **`Quarto`**<br/>
+[https://quarto.org/](https://quarto.org/)
 
 **`Quarto`** is a multi-language, next-generation version of R Markdown developed 
 by RStudio, and includes dozens of new features and capabilities.
@@ -180,6 +156,39 @@ tinytex::install_tinytex()
 ```
 
 **N.B.** If you already have a **`LaTeX`** distribution, do not install `tinytex`.
+
+
+
+<br />
+
+
+
+Open **`RStudio`** and check your installation:
+
+```{r echo=TRUE, eval=FALSE}
+R.version.string
+## "R version 4.2.0 (2022-04-22)"
+
+Sys.which("git")
+##                  git
+## "C:/path/to/git.exe"
+
+Sys.which("make")
+##                     make 
+## "## C:/path/to/make.exe"
+
+Sys.which("pandoc")
+##                 pandoc 
+## "## C:/path/to/Pandoc"
+
+Sys.which("Quarto")
+##                 Quarto 
+## "## C:/path/to/Quarto"
+
+Sys.which("pdflatex")
+##                  pdflatex 
+## "/## C:/path/to/pdflatex" 
+```
 
 
 
@@ -367,12 +376,12 @@ cat /etc/issue
 
 <br/>
 
-| Release   | Release name       | Repository URL                                               |
-|:---------:|:-------------------|:-------------------------------------------------------------|
-| 22.04 LTS | Jammy Jellyfish    | https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/   |
-| 20.04 LTS | Focal Fossa        | https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/   |
-| 18.04 LTS | Bionic Beaver      | https://cloud.r-project.org/bin/linux/ubuntu bionic-cran40/  |
-| 16.04 LTS | Xenial Xerus       | https://cloud.r-project.org/bin/linux/ubuntu xenial-cran40/  |
+| Release | Release name    | Repository URL                                               |
+|:-------:|:----------------|:-------------------------------------------------------------|
+| 22.04   | Jammy Jellyfish | https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/   |
+| 20.04   | Focal Fossa     | https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/   |
+| 18.04   | Bionic Beaver   | https://cloud.r-project.org/bin/linux/ubuntu bionic-cran40/  |
+| 16.04   | Xenial Xerus    | https://cloud.r-project.org/bin/linux/ubuntu xenial-cran40/  |
 : Table 1. List of CRAN repositories for different versions of Ubuntu
 
 <br/>
@@ -387,7 +396,7 @@ sudo apt install software-properties-common
 ## Add CRAN GPG key ----
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 
-## Add CRAN repository to APT repositories list ----
+## Add CRAN repository (select the appropriate URL) to APT repositories list ----
 sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/'
 
 ## Update packages list ----
@@ -407,8 +416,7 @@ sudo apt install r-base-dev
 
 To install **`RStudio Desktop`** visit this page: 
 https://www.rstudio.com/products/rstudio/download/#download, download the
-`.deb` file for Ubuntu 18+/Debian 10+ and install it. If you have an older version 
-of Ubuntu (16.04), visit this page: https://www.rstudio.com/products/rstudio/older-versions/
+`.deb` file for Ubuntu 22 or Ubuntu 18+/Debian 10+ and install it.
 
 Alternatively, you can install **`RStudio Desktop`** from the terminal: 
 
@@ -420,20 +428,15 @@ sudo apt install wget
 wget https://download1.rstudio.org/desktop/jammy/amd64/rstudio-2022.02.3-492-amd64.deb
 
 ## Download RStudio Desktop installer (Ubuntu >= 18.04) ----
-# wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2022.02.1-461-amd64.deb
-
-## Download RStudio Desktop installer (Ubuntu 16.04 only) ----
-# wget https://download1.rstudio.org/desktop/xenial/amd64/rstudio-1.4.1106-amd64.deb
+# wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2022.02.3-492-amd64.deb
 
 ## Install RStudio Desktop ----
 sudo dpkg -i rstudio-2022.02.3-492-amd64.deb
-# sudo dpkg -i rstudio-2022.02.1-461-amd64.deb
-# sudo dpkg -i rstudio-1.4.1106-amd64.deb
+# sudo dpkg -i rstudio-2022.02.3-492-amd64.deb
 
 ## Remove installer ----
 rm rstudio-2022.02.3-492-amd64.deb
-# rm rstudio-2022.02.1-461-amd64.deb
-# rm rstudio-1.4.1106-amd64.deb
+# rm rstudio-2022.02.3-492-amd64.deb
 ```
 
 
@@ -655,10 +658,10 @@ use the SSH URL when connecting a new GitHub project (named `remote`).
 
 ```sh
 ## URL HTTPS ----
-https://github.com/frbcesab/datatoolbox.git
+https://github.com/github_account/github_repo.git
 
 ## URL SSH (use this one) ----
-git@github.com:frbcesab/datatoolbox.git
+git@github.com:github_account/github_repo.git
 ```
 
 <br />
@@ -745,7 +748,7 @@ Source code is available at https://github.com/rdatatoolbox/rdatatoolbox.github.
 
 
 
-Casajus N, Dray S, Gimenez O, Guéry L, Guilhaumon F & Schiettekatte NMD (2021) 
+Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD & Siberchicot A (2022) 
 Workshop FRB-CESAB & GdR EcoStat: Data Toolbox for Reproducible Research in 
-Ecology (Edition 2021). 
+Ecology (Edition 2022). 
 Zenodo. <http://doi.org/10.5281/zenodo.4262978>.
