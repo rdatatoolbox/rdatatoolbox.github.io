@@ -29,8 +29,8 @@ author:
     orcid_id: 0000-0003-3004-8462
   - name: "François Guilhaumon"
     url: https://fguilhaumon.gitlab.io/
-    affiliation: IRD MARBEC
-    affiliation_url: https://umr-marbec.fr/
+    affiliation: IRD ENTROPIE
+    affiliation_url: https://www.ird.fr/umr/entropie
     orcid_id: 0000-0003-4707-8932
   - name: "Nina Schiettekatte"
     url: http://www.criobe.pf/pro/personnel/doctorants/nina-schiettekatte/
@@ -95,7 +95,9 @@ Version control with `Git` & `GitHub`
 &nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
 Basics of `R Markdown`
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Introduction to `Quatro`
+Extending `R Markdown`: websites, slides and dashboards
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
+Introduction to `Quarto`
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
 Pipeline toolkit with `targets`
 
@@ -138,7 +140,7 @@ Projects presentation
 The following software must be installed before the workshop:
 [R](https://cran.r-project.org/) (latest version), 
 [RStudio](https://rstudio.com/products/rstudio/download/) et 
-[git](https://git-scm.com/downloads).
+[Git](https://git-scm.com/downloads).
 Follow this [tutorial](instructions.html) to install your working environment.
 
 You also need to create an account (free) on [GitHub](https://github.com/signup).
@@ -168,6 +170,5 @@ Source code is available at https://github.com/rdatatoolbox/rdatatoolbox.github.
 
 
 Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD & Siberchicot A (2022) 
-Workshop FRB-CESAB & GdR EcoStat: Data Toolbox for Reproducible Research in 
-Ecology (Edition 2022). 
+Workshop FRB-CESAB & GdR EcoStat: Data Toolbox for Reproducible Research in Computational Ecology. 
 Zenodo. <http://doi.org/10.5281/zenodo.4262978>.
