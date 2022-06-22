@@ -65,8 +65,10 @@ The objective of this five-day workshop, co-organized by the
 and the
 [GdR EcoStat](https://sites.google.com/site/gdrecostat/), 
 is to train young researchers in reproducibility, software development and 
-version management tools (e.g. `Git`, `GitHub`, `R Markdown`, `Quarto`, `renv`, `docker`), 
+version management tools (e.g. `Git`, `GitHub`, `R Markdown`, `Quarto`, `renv`, `Docker`), 
 applied to biodiversity research.
+
+More information available [here](https://www.fondationbiodiversite.fr/?post_type=evenement&p=16583)
 
 
 <br />
@@ -84,7 +86,7 @@ Icebreaker and introduction of the week
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
 Open science and Reproducible research
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Research compendium & good practices
+Research compendium & Good practices
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
 Version control with `Git` & `GitHub`
 
