@@ -42,9 +42,9 @@ Click on _Download R for Windows_
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
 Click on _base_
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Click on _Download R 4.2.0 for Windows_
+Click on _Download R 4.2.1 for Windows_
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Open _R-4.2.0-win.exe_ and follow instructions.
+Open _R-4.2.1-win.exe_ and follow instructions.
 
 
 
@@ -58,7 +58,7 @@ Open _R-4.2.0-win.exe_ and follow instructions.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
 Download the version for Windows 10/11 (the **.exe** and not the **.zip**)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Open _RStudio-2022.02.3-492.exe_ and follow instructions.
+Open _RStudio-2022.07.2-576.exe_ and follow instructions.
 
 
 
@@ -72,7 +72,7 @@ Open _RStudio-2022.02.3-492.exe_ and follow instructions.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
 Download the 64-bit version for Windows
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Open _rtools42-5253-5107.exe_ and follow instructions
+Open _rtools42-5253-5107-signed.exe_ and follow instructions
 
 The installation of **`Rtools4.2`** is strongly recommended to install some packages 
 from sources. 
@@ -89,7 +89,7 @@ from sources.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
 Download the 64-bit version for Windows
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Open _Git-2.36.1-64-bit.exe_ and follow instructions
+Open _Git-2.37.3-64-bit.exe_ and follow instructions
 
 
 
@@ -165,7 +165,7 @@ Open **`RStudio`** and check your installation:
 
 ```{r echo=TRUE, eval=FALSE}
 R.version.string
-## "R version 4.2.0 (2022-04-22)"
+## "R version 4.2.1 (2022-06-23)"
 
 Sys.which("git")
 ##                  git
@@ -218,7 +218,7 @@ Then you can install **`Homebrew`**:
 
 ## Check installation ----
 brew --version
-## Homebrew 3.5.1-36-ga5a5d92
+## Homebrew 3.6.3
 
 ## Update repositories (list of available software) ----
 brew update
@@ -291,7 +291,7 @@ Open **`RStudio`** and check your installation:
 
 ```{r echo=TRUE, eval=FALSE}
 R.version.string
-## "R version 4.2.0 (2022-04-22)"
+## "R version 4.2.1 (2022-06-23)"
 
 Sys.which("git")
 ##            git
@@ -379,7 +379,6 @@ cat /etc/issue
 | 22.04   | Jammy Jellyfish | https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/   |
 | 20.04   | Focal Fossa     | https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/   |
 | 18.04   | Bionic Beaver   | https://cloud.r-project.org/bin/linux/ubuntu bionic-cran40/  |
-| 16.04   | Xenial Xerus    | https://cloud.r-project.org/bin/linux/ubuntu xenial-cran40/  |
 : Table 1. List of CRAN repositories for different LTS versions of Ubuntu
 
 <br/>
@@ -423,18 +422,16 @@ Alternatively, you can install **`RStudio Desktop`** from the terminal:
 sudo apt install wget
 
 ## Download RStudio Desktop installer (Ubuntu 22.04) ----
-wget https://download1.rstudio.org/desktop/jammy/amd64/rstudio-2022.02.3-492-amd64.deb
+wget https://download1.rstudio.org/desktop/jammy/amd64/rstudio-2022.07.2-576-amd64.deb
 
 ## Download RStudio Desktop installer (Ubuntu >= 18.04) ----
-# wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2022.02.3-492-amd64.deb
+# wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2022.07.2-576-amd64.deb
 
 ## Install RStudio Desktop ----
-sudo dpkg -i rstudio-2022.02.3-492-amd64.deb
-# sudo dpkg -i rstudio-2022.02.3-492-amd64.deb
+sudo dpkg -i rstudio-2022.07.2-576-amd64.deb
 
 ## Remove installer ----
-rm rstudio-2022.02.3-492-amd64.deb
-# rm rstudio-2022.02.3-492-amd64.deb
+rm rstudio-2022.07.2-576-amd64.deb
 ```
 
 
@@ -462,13 +459,13 @@ by RStudio, that includes dozens of new features and capabilities.
 
 ```sh
 ## Download Quarto installer ----
-wget https://github.com/quarto-dev/quarto-cli/releases/download/v0.9.563/quarto-0.9.563-linux-amd64.deb
+wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.1.251/quarto-1.1.251-linux-amd64.deb
 
 ## Install Quarto ----
-sudo dpkg -i quarto-0.9.563-linux-amd64.deb
+sudo dpkg -i quarto-1.1.251-linux-amd64.deb
 
 ## Remove installer ----
-rm quarto-0.9.563-linux-amd64.deb
+rm quarto-1.1.251-linux-amd64.deb
 ```
 
 
@@ -511,7 +508,7 @@ Open **`RStudio`** and check your installation:
 
 ```{r echo=TRUE, eval=FALSE}
 R.version.string
-## "R version 4.2.0 (2022-04-22)"
+## "R version 4.2.1 (2022-06-23)"
 
 Sys.which("git")
 ##            git
