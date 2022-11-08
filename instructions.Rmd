@@ -42,9 +42,9 @@ Click on _Download R for Windows_
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
 Click on _base_
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Click on _Download R 4.2.1 for Windows_
+Click on _Download R 4.2.2 for Windows_
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Open _R-4.2.1-win.exe_ and follow instructions.
+Open _R-4.2.2-win.exe_ and follow instructions.
 
 
 
@@ -72,7 +72,7 @@ Open _RStudio-2022.07.2-576.exe_ and follow instructions.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
 Download the 64-bit version for Windows
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Open _rtools42-5253-5107-signed.exe_ and follow instructions
+Open _rtools42-5355-5357.exe_ and follow instructions
 
 The installation of **`Rtools4.2`** is strongly recommended to install some packages 
 from sources. 
@@ -89,7 +89,7 @@ from sources.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
 Download the 64-bit version for Windows
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Open _Git-2.37.3-64-bit.exe_ and follow instructions
+Open _Git-2.38.1-64-bit.exe_ and follow instructions
 
 
 
@@ -165,7 +165,7 @@ Open **`RStudio`** and check your installation:
 
 ```{r echo=TRUE, eval=FALSE}
 R.version.string
-## "R version 4.2.1 (2022-06-23)"
+## "R version 4.2.2 (2022-10-31)"
 
 Sys.which("git")
 ##                  git
@@ -218,7 +218,7 @@ Then you can install **`Homebrew`**:
 
 ## Check installation ----
 brew --version
-## Homebrew 3.6.3
+## Homebrew 3.6.9
 
 ## Update repositories (list of available software) ----
 brew update
@@ -291,7 +291,7 @@ Open **`RStudio`** and check your installation:
 
 ```{r echo=TRUE, eval=FALSE}
 R.version.string
-## "R version 4.2.1 (2022-06-23)"
+## "R version 4.2.2 (2022-10-31)"
 
 Sys.which("git")
 ##            git
@@ -459,13 +459,13 @@ by RStudio, that includes dozens of new features and capabilities.
 
 ```sh
 ## Download Quarto installer ----
-wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.1.251/quarto-1.1.251-linux-amd64.deb
+wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.2.267/quarto-1.2.267-linux-amd64.deb
 
 ## Install Quarto ----
-sudo dpkg -i quarto-1.1.251-linux-amd64.deb
+sudo dpkg -i quarto-1.2.267-linux-amd64.deb
 
 ## Remove installer ----
-rm quarto-1.1.251-linux-amd64.deb
+rm quarto-1.2.267-linux-amd64.deb
 ```
 
 
@@ -508,7 +508,7 @@ Open **`RStudio`** and check your installation:
 
 ```{r echo=TRUE, eval=FALSE}
 R.version.string
-## "R version 4.2.1 (2022-06-23)"
+## "R version 4.2.2 (2022-10-31)"
 
 Sys.which("git")
 ##            git
