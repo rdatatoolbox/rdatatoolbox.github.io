@@ -2187,6 +2187,9 @@ Archives
 <li><a href="#préambule" id="toc-préambule">Préambule</a></li>
 <li><a href="#projet-rstudio" id="toc-projet-rstudio">Projet RStudio</a></li>
 <li><a href="#fichier-description" id="toc-fichier-description">Fichier <code>DESCRIPTION</code></a></li>
+<li><a href="#choix-dune-licence" id="toc-choix-dune-licence">Choix d’une Licence</a></li>
+<li><a href="#ajout-du-compendium" id="toc-ajout-du-compendium">Ajout du compendium</a></li>
+<li><a href="#ajout-dun-readme" id="toc-ajout-dun-readme">Ajout d’un <code>README</code></a></li>
 <li><a href="#section" id="toc-section">——</a></li>
 <li><a href="#étape-1-récupération-du-dépôt-des-exercices" id="toc-étape-1-récupération-du-dépôt-des-exercices">Étape 1 : Récupération du dépôt des exercices</a></li>
 <li><a href="#étape-2-research-compendium" id="toc-étape-2-research-compendium">Étape 2 : research compendium</a></li>
@@ -2222,6 +2225,7 @@ spécifiques à un compendium/package. Le package <i class="fab fa-r-project" ro
 et repose sur le package <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i> <a href="https://usethis.r-lib.org/"><code>usethis</code></a>. Merci aux développeurs de ces packages.</p>
 <p><br /></p>
 <h2 id="préambule">Préambule</h2>
+<p>Installez le package <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i> <code>rcompendium</code> depuis le CRAN :</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>## Installation de 'rcompendium' ----</span></span>
@@ -2251,6 +2255,14 @@ fonction n’est à utiliser qu’une seule fois</strong>.</p>
 <span><span class='co'># [1] "jane.doe@mail.me"</span></span></code></pre>
 </div>
 </div>
+<p>Finalement, vérifiez que vous avez bien suivi les <a href="https://rdatatoolbox.github.io/instructions.html">instructions</a> pour configurer <strong>git</strong> en exécutant la commande <code>gh::gh_whoami()</code>. Vous devriez voir s’afficher :</p>
+<pre><code>{
+  &quot;name&quot;: &quot;Jane Doe&quot;,
+  &quot;login&quot;: &quot;jdoe&quot;,
+  &quot;html_url&quot;: &quot;https://github.com/jdoe&quot;,
+  &quot;scopes&quot;: &quot;admin:repo_hook, repo, workflow&quot;,
+  &quot;token&quot;: &quot;ghp_...ZZ9z&quot;
+} </code></pre>
 <p><br /></p>
 <h2 id="projet-rstudio">Projet RStudio</h2>
 <p>Créez un nouveau projet RStudio : <code>File &gt; New Project &gt; New Directory &gt; New Project</code></p>
@@ -2262,11 +2274,68 @@ fonction n’est à utiliser qu’une seule fois</strong>.</p>
 <div class="box-info">
 <p><i class="far fa-lightbulb" role="presentation" aria-label="lightbulb icon"></i> <strong>Bonne pratique #1</strong>
 <br/>
-Toujours travailler dans un <strong>Projet RStudio</strong>. Cela présente l’avantage de simplifier les chemins d’accès aux fichiers, notamment avec le package <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i> <a href="https://here.r-lib.org/"><code>here</code></a>. Les chemins d’accès seront toujours construits par rapport au dossier contenant le fichier <code>.Rproj</code> (racine du projet). On parle de <em>chemin relatif</em>.</p>
+Toujours travailler dans un <strong>Projet RStudio</strong>. Cela présente l’avantage de simplifier les chemins d’accès aux fichiers, notamment avec le package <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i> <a href="https://here.r-lib.org/"><code>here</code></a> et sa fonction <code>here()</code>. Les chemins d’accès seront toujours construits par rapport au dossier contenant le fichier <code>.Rproj</code> (racine du projet). On parle de <em>chemin relatif</em>. N’utilisez <strong>plus jamais</strong> la fonction <code>setwd()</code>.</p>
 </div>
 <p><br /></p>
 <h2 id="fichier-description">Fichier <code>DESCRIPTION</code></h2>
+<p>Le fichier <code>DESCRIPTION</code> décrit les métadonnées du projet (titre, auteur, description, packages requis, etc.). C’est un des éléments essentiels d’un package <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i>. Ici, nous allons le <em>détourner</em> pour l’utiliser dans le cadre d’un compendium afin de bénéficier des outils de développement de packages <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>## Ajout d'un fichier DESCRIPTION ----</span></span>
+<span><span class='fu'>rcompendium</span><span class='fu'>::</span><span class='fu'><a href='https://frbcesab.github.io/rcompendium/reference/add_description.html'>add_description</a></span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<p>Comme vous le voyez, ce fichier a été pré-rempli avec vos informations personnelles.
+Vous éditerez les champs <code>Title</code> et <code>Description</code> plus loin.</p>
+<div class="box-info">
+<p><i class="far fa-lightbulb" role="presentation" aria-label="lightbulb icon"></i> <strong>Bonne pratique #2</strong>
+<br/>
+Toujours ajouter un fichier <strong><code>DESCRIPTION</code></strong> à la racine du projet. En plus de la description du projet, il permet de lister les packages dont le projet dépend (tag <code>Imports</code> et <code>Remotes</code>). Avec ce fichier, plus besoin d’utiliser les fonctions <code>install.packages()</code> et <code>library()</code>. Elles seront remplacées respectivement par <code>devtools::install_deps()</code> et <code>devtools::load_all()</code>.</p>
+</div>
+<p><br /></p>
+<h2 id="choix-dune-licence">Choix d’une Licence</h2>
+<p>Tout matériel partagé en ligne doit disposé d’une licence qui décrit ce qu’il est
+possible de faire avec. Ainsi, nous vous recommandons d’ajouter <strong>dès le début du projet</strong> une licence. Pour savoir quelle licence est la plus appropriée à votre projet, rendez-vous sur cette page : <a href="https://choosealicense.com/" class="uri">https://choosealicense.com/</a>.</p>
+<p>Ajoutez la licence <a href="https://choosealicense.com/licenses/gpl-2.0/"><strong>GPL-2</strong></a> à votre projet :</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>## Ajout d'une licence ----</span></span>
+<span><span class='fu'>rcompendium</span><span class='fu'>::</span><span class='fu'><a href='https://frbcesab.github.io/rcompendium/reference/add_license.html'>add_license</a></span><span class='op'>(</span>license <span class='op'>=</span> <span class='st'>"GPL-2"</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<p>Notez qu’un nouveau fichier a été créé : <code>LICENSE.md</code>. Celui-ci détaille le contenu de la license choisie. Regardez aussi le contenu du fichier <code>DESCRIPTION</code> : la section <code>License</code> a été mise à jour.</p>
+<div class="box-info">
+<p><i class="far fa-lightbulb" role="presentation" aria-label="lightbulb icon"></i> <strong>Bonne pratique #3</strong>
+<br/>
+Toujours ajouter une <strong><code>LICENSE</code></strong> à un projet qui sera rendu public. Visitez le site <a href="https://choosealicense.com/appendix/"><strong>Choose a License</strong></a> pour choisir la plus appropriée à votre projet.</p>
+</div>
+<p><br /></p>
+<h2 id="ajout-du-compendium">Ajout du compendium</h2>
 <p>…</p>
+<div class="box-info">
+<p><i class="far fa-lightbulb" role="presentation" aria-label="lightbulb icon"></i> <strong>Bonne pratique #4</strong>
+<br/>
+…</p>
+</div>
+<p><br /></p>
+<h2 id="ajout-dun-readme">Ajout d’un <code>README</code></h2>
+<p>Les rôles d’un <code>README</code> sont de :</p>
+<ul>
+<li>décrire le projet (incluant sa citation),</li>
+<li>d’expliquer son contenu,</li>
+<li>d’expliquer son installation et son utilisation.</li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>## Ajout d'un README ----</span></span>
+<span><span class='fu'>rcompendium</span><span class='fu'>::</span><span class='fu'><a href='https://frbcesab.github.io/rcompendium/reference/add_readme_rmd.html'>add_readme_rmd</a></span><span class='op'>(</span>type <span class='op'>=</span> <span class='st'>"compendium"</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<div class="box-info">
+<p><i class="far fa-lightbulb" role="presentation" aria-label="lightbulb icon"></i> <strong>Bonne pratique #5</strong>
+<br/>
+…</p>
+</div>
 <p><br /></p>
 <h2 id="section">——</h2>
 <h2 id="étape-1-récupération-du-dépôt-des-exercices">Étape 1 : Récupération du dépôt des exercices</h2>
@@ -2382,7 +2451,7 @@ Source code is available at <a href="https://github.com/rdatatoolbox/rdatatoolbo
 <p>Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD &amp; Siberchicot A (2022)
 Workshop FRB-CESAB &amp; GdR EcoStat: Data Toolbox for Reproducible Research in Computational Ecology.
 Zenodo. <a href="http://doi.org/10.5281/zenodo.4262978" class="uri">http://doi.org/10.5281/zenodo.4262978</a>.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
