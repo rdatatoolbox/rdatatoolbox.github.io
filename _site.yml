@@ -40,7 +40,7 @@ navbar:
     - text: "Exercises"
       menu:
       - text: "Exercise 1. Research compendium"
-        href: ""
+        href: "ex-compendium.html"
       - text: "Exercise 2. Git & GitHub"
         href: ""
       - text: "Exercise 3. dplyr"
