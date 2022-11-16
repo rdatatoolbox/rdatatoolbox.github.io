@@ -1,0 +1,43 @@
+---
+title: "Git & GitHub"
+output: 
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
+```
+
+
+
+::: {.box-header}
+`r fontawesome::fa_i("bullseye")`
+L'objectif de cet exercice est de vous familiariser avec l'utilisation de `git` et `r fontawesome::fa_i("github")`.
+:::
+
+<br />
+
+## Partie I
+
+**Mettez-vous par groupe de 4 personnes**
+
+Chacun se crée un nouveau dépôt sur GitHub. Dans ce dépôt, ajoutez un fichier `.txt` qui contient votre recette de pizza. Le suivre, faire des changements, etc.
+
+Sur GitHub, ajoutez une personne de votre groupe comme collaborateur de votre projet (les recettes à deux c'est mieux)
+
+Horreur, vous vous rendez compte que les autres membres de votre groupe ont oublié des ingrédients importants dans leur recette : les olives noires, les anchois marinés et le gorgonzola. Mettez en oeuvre 3 solutions pour interagir et leur faire remarquer que leur recette peut être améliorée. En fonction de votre statut dans le projet et votre souhait de vous impliquer :
+
+- utilisez les issues pour dire au développeur que sa recette peut être améliorée
+- si vous êtes collaborateur, clonez le dépôt, faites les modifications et envoyez-les
+- si vous ne l'êtes pas, forkez, clonez, et essayez la pull request
+
+
+<br />
+
+## Partie II
+
+...
+

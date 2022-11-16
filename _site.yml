@@ -44,7 +44,7 @@ navbar:
       - text: "Exercise 1. Research compendium"
         href: "ex-compendium.html"
       - text: "Exercise 2. Git & GitHub"
-        href: ""
+        href: "ex-github.html"
       - text: "Exercise 3. R markdown"
         href: ""
       - text: "Exercise 4. Quarto"
