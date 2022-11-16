@@ -11,11 +11,6 @@ output:
 knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 ```
 
-<style>
-div.box-info p{padding:1em;margin:20px 0;background:#DDECF6;border:1px solid #CEE9F2;border-radius:10px;color:#487997;border-left:5px solid #487997;}
-div.box-header p{padding:1em;margin:20px 0;margin-top:0;background:#D5E6DE;border:1px solid #C0DACD;border-radius:10px;color:#567763;border-left:5px solid #567763;}
-</style>
-
 
 
 ::: {.box-header}
