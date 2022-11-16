@@ -24,14 +24,14 @@ L'objectif de cet exercice est de créer un _**research compendium**_, c.-à-d. 
 Ce _**research compendium**_ servira de base de travail tout au long de la formation.
 :::
 
-`r fontawesome::fa_i("lightbulb")` **Cet exercice s'inspire beaucoup du [workshop](https://annakrystalli.me/rrtools-repro-research/intro.html) proposé par [Anna Krystalli](https://annakrystalli.me/).**
+`r fontawesome::fa_i("lightbulb")` **Cet exercice s'inspire du [workshop](https://annakrystalli.me/rrtools-repro-research/intro.html) proposé par [Anna Krystalli](https://annakrystalli.me/).**
 
 <br/>
 
 Afin de nous assister dans la création de la structure de notre dossier de travail,
 nous allons utiliser le package `r fontawesome::fa_i("r-project")` [`rcompendium`](https://github.com/frbcesab/rcompendium), développé dans le cadre 
 de cette formation. Il permet d'automatiser la création des fichiers/répertoires
-spécifiques à un compendium/package. Le package `r fontawesome::fa_i("r-project")` `rcompendium` s'inspire en grande partie du package `r fontawesome::fa_i("r-project")` [`rrtools`](https://github.com/benmarwick/rrtools)
+spécifiques à un compendium/package `r fontawesome::fa_i("r-project")`. Le package `r fontawesome::fa_i("r-project")` `rcompendium` s'inspire en grande partie du package `r fontawesome::fa_i("r-project")` [`rrtools`](https://github.com/benmarwick/rrtools)
 et repose sur le package `r fontawesome::fa_i("r-project")` [`usethis`](https://usethis.r-lib.org/). Merci aux développeurs de ces packages.
 
 
@@ -65,7 +65,7 @@ Ces informations ont été stockées dans le fichier `~/.Renviron`, fichier qui 
 
 
 ```{r}
-## Vérification (après redemarrage de R) ----
+## Vérification (après redémarrage de R) ----
 options()$"email"
 # [1] "jane.doe@mail.me"
 ```
@@ -121,7 +121,7 @@ Vous éditerez les champs `Title` et `Description` plus loin.
 ::: {.box-info}
 `r fontawesome::fa_i("lightbulb")` **Bonne pratique #2**
 <br/>
-Toujours ajouter un fichier **`DESCRIPTION`** à la racine du projet. En plus de la description du projet, il permet de lister les packages dont le projet dépend (tag `Imports` et `Remotes`). Avec ce fichier, plus besoin d'utiliser les fonctions `install.packages()` et `library()`. Elles seront remplacées respectivement par `devtools::install_deps()` et `devtools::load_all()`.
+Toujours ajouter un fichier **`DESCRIPTION`** à la racine du projet. En plus de la description du projet, il permet de lister les packages dont le projet dépend (tags `Imports`, `Depends` et `Remotes`). Avec ce fichier, plus besoin d'utiliser les fonctions `install.packages()` et `library()`. Elles seront remplacées respectivement par `devtools::install_deps()` et `devtools::load_all()`.
 :::
 
 
@@ -153,182 +153,375 @@ Toujours ajouter une **`LICENSE`** à un projet qui sera rendu public. Visitez l
 
 <br />
 
-## Ajout du compendium
+## Ajout du Compendium
 
-...
+La prochaine étape consiste en la création de sous-répertoires, chacun ayant un rôle précis. Pour cela, utilisez la fonction `rcompendium::add_compendium()`.
+
+
+```{r}
+## Ajout de sous-répertoires ----
+rcompendium::add_compendium()
+```
+
+Naviguez à l'intérieur de chaque sous-répertoire et lisez les `README` associés pour comprendre leur rôle.
+
+**N.B.** Pour ce compendium, nous n'avons pas besoin des sous-répertoires `data/raw-data` et `data/derived-data`. Supprimez-les :
+
+```{r}
+unlink(here::here("data", "raw-data"), recursive = TRUE)
+unlink(here::here("data", "derived-data"), recursive = TRUE)
+```
+
+
 
 ::: {.box-info}
 `r fontawesome::fa_i("lightbulb")` **Bonne pratique #4**
 <br/>
-...
+Un bon _**Research compendium**_ sera composé de différents sous-répertoires, chacun destiné à accueillir un certain type de fichier. Le dossier **`data/`** contiendra toutes les données brutes nécessaires au projet. Le dossier **`outputs/`** contiendra tous les résultats générés (hors figures). Le dossier **`figures/`** contiendra toutes les figures produites par les analyses. Le dossier **`R/`** ne contiendra que des fonctions `r fontawesome::fa_i("r-project")` (et leurs documentations). Le dossier **`analyses/`** contiendra des scripts `r fontawesome::fa_i("r-project")` (ou des fichiers `.Rmd`) qui appeleront les fonctions `r fontawesome::fa_i("r-project")`. Cette structure peut bien sûr être adaptée selon les besoins.
 :::
+
 
 <br />
 
-## Ajout d'un `README`
+## Ajout de code `r fontawesome::fa_i("r-project")`
 
-Les rôles d'un `README` sont de :
+Nous voilà fin prêt à coder !
 
-- décrire le projet (incluant sa citation),
-- d'expliquer son contenu,
-- d'expliquer son installation et son utilisation.
+Le dépôt GitHub <https://github.com/rdatatoolbox/datarepo> contient les données que nous utiliserons tout au long de la formation. Celles-ci proviennent de deux bases de données : [PanTHERIA](https://esajournals.onlinelibrary.wiley.com/doi/10.1890/08-1494.1) et [WWF WildFinder](https://www.worldwildlife.org/pages/wildfinder-database). Lisez attentivement le [README](https://github.com/rdatatoolbox/datarepo#mortar_board-data-repository-) pour plus de détails.
 
 
-```{r}
-## Ajout d'un README ----
-rcompendium::add_readme_rmd(type = "compendium")
+<br />
+
+### Fonctions `r fontawesome::fa_i("r-project")`
+
+**Objectif : ** écrire 1, 2 ou 4 fonctions `r fontawesome::fa_i("r-project")`, qui vont permettre de télécharger les quatre fichiers de données hébergées sur le dépôt GitHub ci-dessus. Les fichiers seront enregistrés dans le dossier `data/` et le sous-dossier spécifique à leurs bases de données (`pantheria/` ou `wildfinder/`).
+
+Utilisez la fonction [`usethis::use_r()`](https://usethis.r-lib.org/reference/use_r.html) pour créer le/les fichiers `.R` dans le dossier `R/`.
+
+`r fontawesome::fa_i("lightbulb")` Utilisez les fonctions :
+`dir.create()`, `here::here()` et `utils::download.file()`
+
+
+**Proposition de fonction** (essayer de ne pas regarder)
+
+
+```{r code_folding=TRUE}
+dl_pantheria_data <- function(overwrite = FALSE) {
+  
+  ## Destination location ---- 
+  path <- here::here("data", "pantheria")
+  
+  ## File name ----
+  filename <- "PanTHERIA_1-0_WR05_Aug2008.txt"
+  
+  ## GitHub URL ----
+  url <- paste0("https://raw.githubusercontent.com/rdatatoolbox/datarepo/main/",
+                "data/pantheria/")
+  
+  if (file.exists(file.path(path, filename)) && !overwrite) {
+    
+    ## Check if exists locally ----
+    message("The filename already exists. Use 'overwrite = TRUE' to replace it")
+    
+  } else {
+    
+    ## Create destination folder ----
+    dir.create(path, showWarnings = FALSE, recursive = TRUE)
+    
+    ## Download file ----
+    utils::download.file(url = paste0(url, filename),
+                         destfile = file.path(path, filename))
+  }
+
+  invisible(NULL) 
+}
 ```
 
 
 ::: {.box-info}
 `r fontawesome::fa_i("lightbulb")` **Bonne pratique #5**
 <br/>
-...
+**Ecrivez des fonctions** : on parle de _Factorisation de code_. Cela rendra votre code plus clair et plus facilement réutilisable. Placez toujours vos fonctions `r fontawesome::fa_i("r-project")` dans le dossier **`R/`**. Si vous utilisez des fonctions de dépendances externes, priviligiez cette écriture : `package::fonction()`.
 :::
 
 <br />
 
-## ------
+### Documentation
 
-## Étape 1 : Récupération du dépôt des exercices
+Maintenant, documentez votre/vos fonctions. C'est **essentiel !** Pour cela,
+ajoutez un entête [**`roxygen2`**](https://roxygen2.r-lib.org/articles/roxygen2.html) à vos fonctions. Cette syntaxe permet de documenter efficacement toute fonction `r fontawesome::fa_i("r-project")`.
 
-Tout d'abord, il nous faut télécharger le dépôt GitHub des exercices de la formation
-dans notre ordinateur.
-
--> https://github.com/rdatatoolbox/datarepo
-
-. bouton vert "Code" > download zip
+Cette entête devra contenir (a minima) un titre, une description de chaque argument et le retour de la fonction.
 
 
-## Étape 2 : research compendium
+**Proposition de documentation** (essayer de ne pas regarder)
 
-Nous allons maintenant transformer notre dépôt en research compendium intégrant
-les éléments essentiels de la structure d'un package R. Cela nous permettra
-ensuite d'utiliser les outils de développement disponibles pour les packages R.
 
-1. Transformez votre dépôt en research compendium à l'aide de la fonction
-`rrtools::use_compendium()`. Lisez l'aide de cette fonction pour vous rendre compte
-que les meilleures valeurs de paramètres sont les suivantes :
+```{r code_folding=TRUE}
+#' Download PanTHERIA dataset
+#'
+#' @description 
+#' This function downloads the PanTHERIA dataset (text file) hosted on the 
+#' GitHub repository <https://github.com/rdatatoolbox/datarepo/>. The file
+#' won't be downloaded if already exists locally (except if `overwrite = TRUE`).
+#' The file `PanTHERIA_1-0_WR05_Aug2008.txt` will be stored in 
+#' `data/pantheria/`. This folder will be created if required.
+#' 
+#' @param overwrite a logical. If `TRUE`, the file will be downloaded again and
+#'   the previous version will be erased.
+#'
+#' @return No return value.
+#' 
+#' @export
 
-```{r eval = FALSE}
-rrtools::use_compendium("../datatoolboxexos2021/", open = FALSE)
+dl_pantheria_data <- function(overwrite = FALSE) { ... }
 ```
 
-2. Suivez les instructions de la sortie de la fonction et éditez le fichier `DESCRIPTION`
+
+Maintenant, transpilez vos entêtes `roxygen2` en fichiers `.Rd`, seuls fichiers acceptés par `r fontawesome::fa_i("r-project")` pour documenter des fonctions. Ces fichiers `.Rd` seront stockés dans le dossier `man/`.
+
+```{r}
+## Génération de la doc ----
+devtools::document()
+```
+
+L'aide de votre fonction est maintenant accessible via `?nom_fonction`.
 
 
-## Étape 3 : première fonction
-
-Dans la suite de la formation, vous utiliserez la base de données [**WildFinder**](https://www.worldwildlife.org/pages/wildfinder-database)
-du WWF. Nous allons maintenant écrire les fonctions qui nous permettrons d'importer les 3 fichiers qui se trouvent dans `data/wildfinder/`.
-
-1. Créez un fichier `R/data_wildfinder.R` à l'aide de la fonction `usethis::use_r()`
-
-2. Créez 3 fonctions dans ce document avec leur entête `Roxygen2`. Ces fonctions
-utiliseront le package `{readr}` pour lire les fichiers `.csv` qui seront localisés avec `{here}`
-
-3. Ajoutez ces dépendances (`{readr}` et `{here}`) dans le fichier `DESCRIPTION` grâce à la fonction `usethis::use_package()`
+::: {.box-info}
+`r fontawesome::fa_i("lightbulb")` **Bonne pratique #6**
+<br/>
+Pensez aux autres (et au vous du futur) : **documenter toujours** votre code. Un code sans documentation est inutile. Utilisez les entêtes **`roxygen2`** pour documenter vos fonctions, de simples commentaires pour documenter du code et des `README` pour tout le reste.
+:::
 
 
-## Étape 4 : petite pause ... ajout d'un README pour le compendium
+<br />
 
-Ajoutons un `README` au compendium.
+### Ajout des dépendances
 
-1. Déplacez le fichier `README.md` de la racine du projet vers le répertoire `data/`
+Nos fonctions contiennent des dépendances à deux packages externes : `utils` et `here`. Nous devons ajouter ces dépendances au fichier `DESCRIPTION`.
 
-2. Ajoutez un fichier `README.Rmd` à la racine du projet à l'aide de la fonction
-`rrtools::use_readme_rmd()` et modifiez-le pour qu'il corresponde un peu plus à
-la structure de votre compendium. Vous pouvez à la fin du `README.Rmd` afficher les informations de votre
-session (`utils::sessionInfo()`).
+```{r}
+## Ajout de dépendances ----
+rcompendium::add_dependencies(compendium = ".")
+```
 
-3. Re-compilez le fichier `README.Rmd` en `README.md`
-
-
-## Étape 5-1 : utiliser le workflow "package"
-
-Maintenant que notre compendium contient les éléments structurels d'un package R
-(c.-à-d. un fichier `DESCRIPTION` et un répertoire `R/`) nous pouvons avantageusement
-utiliser les outils de développement des packages R pour optimiser celui de notre
-compendium.
-
-1. Les packages nécessaires au bon déroulement de vos analyses
-(ainsi que leurs dépendences) peuvent être installés ou mis à jour à l'aide de la
-fonction `devtools::install_deps()` !
-
-(2. Documentez les fonctions qu'expose votre compendium à l'aide la fonction
-`devtools::document()`. Explorez le répertoire `man/` fraichement créé, et
-regardez-le contenu du fichier `NAMESPACE`) -> à vrai dire on ne le fait souvent qu'à la fin ... voir jamais.
+Regardez le contenu du fichier `DESCRIPTION`. Par défaut, les packages requis sont listés sous le tag `Imports`. Ainsi, pour utiliser une fonction externe, il faudra l'appeler par `package::fonction()`. Si vous remplacer le tag `Imports` par `Depends`, l'utilisation de la fonction `devtools::load_all()` (voir plus bas) aura le même effet qu'un `library()` et vous pourrez utiliser une fonction externe par `fonction()`.
 
 
-## Étape 5-2 : chargement des fonctions
-
-Pour rendre vos fonctions fraichement créées disponible à vos analyses, une solution est l'utilisation de la fonction `devtools::load_all()` qui a pour
-effet principal de charger tous les fichiers présents dans le répetoire `R/`
+La fonction [`rcompendium::add_dependencies()`](https://frbcesab.github.io/rcompendium/reference/add_dependencies.html) va scanner chaque fichier `.R` et `.Rmd` du compendium et détecter les packages externes utilisés pour les ajouter automatiquement au fichier `DESCRIPTION`.
 
 
-## Étape 5-3 : utiliser le workflow "package"
+::: {.box-info}
+`r fontawesome::fa_i("lightbulb")` **Bonne pratique #7**
+<br/>
+Listez toujours les **packages requis dans le fichier `DESCRIPTION`**. Ainsi, vous centralisez la liste des packages requis en un seul endroit et vous pourrez utiliser les fonctions `remotes::install_deps()` et `devtools::load_all()`.
+:::
 
 
-3. Regardez la doc `?datatoolboxexos::data_eco_list`, et testez la fonction
-`datatoolboxexos::data_eco_list()` (on pourrait automatiser ces tests en
-utilisant `{testthat}`)
+<br />
 
-La page d'aide de la fonction `datatoolboxexos::data_eco_list`.
+## Chargement du projet
+
+Maintenant que notre compendium contient les éléments clés d'un package `r fontawesome::fa_i("r-project")`, c.-à-d. un fichier `DESCRIPTION` et un répertoire `R/`, nous pouvons utiliser les outils de développement des packages `r fontawesome::fa_i("r-project")` pour réaliser deux tâches.
+
+1. Les packages requis peuvent être installés (ou mis à jour) à l'aide de la
+fonction **`remotes::install_deps()`**. Pour être plus reproductible, vous pouvez désactiver les mises à jour en ajoutant l'argument `upgrade = "never"`. Cette fonction vient remplacer la fonction **`install.packages()`**. Elle va lire le fichier `DESCRIPTION` pour récupérer la liste des packages requis. Il est donc important d'utiliser régulièrement la fonction `rcompendium::add_dependencies(".")` pour tenir ce fichier à jour.
+
+2. Les fonctions `r fontawesome::fa_i("r-project")` stockées dans le dossier `R/` peuvent être chargées avec la fonction **`devtools::load_all()`**. Cette fonction vient remplacer la fonction **`source()`** (et **`library()`** si les packages requis sont listés sous le tag `Depends` dans le fichier `DESCRIPTION`). Ce qui est pratique dans le cas où on doit charger de nombreux fonctions `r fontawesome::fa_i("r-project")`. Après chaque modification d'une fonction `r fontawesome::fa_i("r-project")`, n'oubliez pas d'exécuter la fonction **`devtools::load_all()`**.
 
 
----
+Essayez ces deux fonctions.
 
 
-## Étape 6 : Utilisation des fonctions pour nos analyses
 
-Nous avons maintenant 3 fonctions à disposition dans notre compendium. Nous pouvons
-créer un premier script d'analyses pour le premier exercice sur le Tidyverse :
-[**dplyr**](https://frbcesab.github.io/datatoolbox/exercises/dplyr/index.html)
+::: {.box-info}
+`r fontawesome::fa_i("lightbulb")` **Bonne pratique #8**
+<br/>
+Avec un fichier `DESCRIPTION` (listant les dépendances requises) et un dossier `R/`, vous pouvez utiliser les fonctions **`remotes::install_deps()`** (installation/mise à jour des dépendances) et **`devtools::load_all()`** (chargement du projet) au lieu de `install.packages()`, `library()` et `source()`.
+:::
+
+
+<br />
+
+## Ajout d'un make.R
+
+Afin d'automatiser notre projet, nous allons créer un script `r fontawesome::fa_i("r-project")` à la racine du projet. Nous l'appelerons, par convention, `make.R`. Celui-ci aura deux objectifs : 1) mettre en place le projet et 2) exécuter le projet. L'idée est de n'exécuter que ce script. Utilisez la fonction `rcompendium::add_makefile()` et lisez le contenu du nouveau fichier créé.
+
+```{r}
+## Ajout d'un makefile ----
+rcompendium::add_makefile()
+```
+
+
+::: {.box-info}
+`r fontawesome::fa_i("lightbulb")` **Bonne pratique #9**
+<br/>
+Bien que non essentiel, un fichier **`make.R`** placé à la racine du projet permet de facilement mettre en place le projet (installation et chargement des packages requis et des fonctions `r fontawesome::fa_i("r-project")`) et d'exécuter les différentes analyses de manière séquentielle (en sourçant les scripts `r fontawesome::fa_i("r-project")` qui appellent eux-même les fonctions `r fontawesome::fa_i("r-project")`). C'est la **porte d'entrée du projet**.
+:::
+
+
+<br />
+
+## Analyses
+
+Jusqu'à présent, nous n'avons fait que définir des fonctions `r fontawesome::fa_i("r-project")`, mais nous ne les avons pas exécutées. Nous allons créer notre premier script `r fontawesome::fa_i("r-project")` dans le dossier `analyses/`. Celui-ci aura pour objectif d'appeler les fonctions `r fontawesome::fa_i("r-project")` définies précédemment pour télécharger les données.
+
+Créez un nouveau script `r fontawesome::fa_i("r-project")` comme suit et éditez-le: 
+
+```{r}
+## Ajout d'un script R ----
+utils::file.edit(here::here("analyses", "download-data.R"))
+```
+
+
+**Proposition de contenu** (essayer de ne pas regarder)
+
+
+```{r code_folding=TRUE}
+# Download project raw data
+#
+# This script will download the PanTHERIA and WWF WildFinder datasets. The
+# four files will be stored in `data/`.
+# 
+# All functions used in the script have been developed for this project
+# and can be found in the folder R/.
+#
+# Jane Doe <jane.doe@mail.me>
+# 2022/11/16
+
+## Download PanTHERIA database ----
+
+dl_pantheria_data(overwrite = FALSE)
+
+
+## Download WWF WildFinder database ----
+
+# ...
+```
+
+
+**N.B.** Nous verrons plus tard comment transformer ce script `r fontawesome::fa_i("r-project")` en un fichier `Rmarkdown`.
+
+Finalement, ajoutez une ligne dans le fichier `make.R` qui sourcera ce script.
+Utilisez les fonctions `source()` et `here::here()` pour cela.
+
+Pour charger le projet et lancer les analyses, il suffit d'exécuter ce fichier `make.R`.
+
+
+::: {.box-info}
+`r fontawesome::fa_i("lightbulb")` **Bonne pratique #10**
+<br/>
+Le dossier **`analyses/`** contient les scripts `r fontawesome::fa_i("r-project")` qui appellent les fonctions `r fontawesome::fa_i("r-project")`. Il peut être ignoré dans le cas de simples analyses. Le code de l'analyse devra alors se trouver dans le **`make.R`**. A contrario, dans le cas d'analyses complexes, n'hésitez pas à multiplier les scripts `r fontawesome::fa_i("r-project")` (plutôt que d'avoir un seul gros script).
+:::
+
+<br />
+
+## Ajout d'un `README`
+
+Plus tard, vous verrez comment envoyer ce projet sur GitHub. Pour l'instant, nous allons légèrement anticiper les cours suivants, et ajouter un `README` à notre compendium. Ce sera la **vitrine du projet**. Les rôles d'un `README` sont : 1) de présenter le projet, 2) d'expliquer son contenu, et 3) d'expliquer comment l'installer et l'utiliser.
+
+Pour cela, vous allez ajouter un `README.Rmd` (fichier `Rmarkdown`) à la racine de votre projet.
+
+```{r}
+## Ajout d'un README ----
+rcompendium::add_readme_rmd(type = "compendium")
+```
+
+Adaptez son contenu et n'oubliez pas de transpiler ce fichier `.Rmd` en un fichier `.md` (fichier `Markdown` lu par GitHub). Utilisez le bouton **Knit** de RStudio ou : 
+
+
+```{r}
+## Conversion du README.Rmd en README.md ----
+rmarkdown::render("README.Rmd")
+```
+
+
+`r fontawesome::fa_i("warning")` N'oubliez pas aussi d'éditer les sections `Title` et `Description` du fichier `DESCRIPTION`.
+
+
+::: {.box-info}
+`r fontawesome::fa_i("lightbulb")` **Bonne pratique #11**
+<br/>
+Ajouter un **`README`** à votre projet afin d'aider l'utilisateur à comprendre votre projet. 
+:::
+
+
+<br />
+
+> **`r fontawesome::fa_i("thumbs-up")` Félicitation : votre research compendium est maintenant fonctionnel !**
+
+
+<br />
+
+## Bonus
+
+Ecrivez une fonction `r fontawesome::fa_i("r-project")` qui va télécharger le fichier [`README.md`](https://raw.githubusercontent.com/rdatatoolbox/datarepo/main/README.md) du dépôt <https://github.com/rdatatoolbox/datarepo/> et enregistrez-le dossier `data/`. Vous ajouterez ainsi la description des données à votre projet (conservez uniquement la section **Data description**).
+
+
+**Proposition de fonction** (essayer de ne pas regarder)
+
+
+```{r code_folding=TRUE}
+#' Download data description (README)
+#'
+#' @description 
+#' This function downloads the `README.md` of the GitHub repository
+#' <https://github.com/rdatatoolbox/datarepo/> providing data description.
+#' The file won't be downloaded if already exists locally (except if 
+#' `overwrite = TRUE`).
+#' The `README.md` will be stored in `data/`.
+#' 
+#' @param overwrite a logical. If `TRUE`, the file will be downloaded again and
+#'   the previous version will be erased.
+#'
+#' @return No return value.
+#' 
+#' @export
+
+dl_data_descr <- function(overwrite = FALSE) {
+  
+  ## Destination location ---- 
+  path <- here::here("data")
+  
+  ## File name ----
+  filename <- "README.md"
+  
+  ## GitHub URL ----
+  url <- "https://raw.githubusercontent.com/rdatatoolbox/datarepo/main/"
+  
+  if (file.exists(file.path(path, filename)) && !overwrite) {
+    
+    ## Check if exists locally ----
+    message("The filename already exists. Use 'overwrite = TRUE' to replace it")
+    
+  } else {
+    
+    ## Create destination folder ----
+    dir.create(path, showWarnings = FALSE, recursive = TRUE)
+    
+    ## Download file ----
+    utils::download.file(url = paste0(url, filename),
+                         destfile = file.path(path, filename))
+  }
+
+  invisible(NULL) 
+}
+```
+
+
 
 <br/>
 
-Ici, pour notre premier compendium, on va créer un fichier `.R` (ou plutôt `.Rmd` mais on le verra plus tard) par exercice dans un répertoire... `exercices/`
-<br/>
-
-On crééra aussi un répertoire `outputs/` dans lequel on pourra stocker les résultats de nos analyses.
-
-1. Créez le fichier `exercices/exo_dplyr.R`
-
-2. Modifiez-le pour afficher l'histogramme de la distribution du nombre d'espèces
-de mammifères par écoregion dans un fichier `.png` sauvegardé dans `outputs/`
-
-3. Exécutez le code de `exercices/exo_dplyr.R` et visualisez le `.png`
+::: {.box-header}
+`r fontawesome::fa_i("lightbulb")`
+L'ensemble de ces étapes peut être réalisé avec une seule fonction : 
+[**`rcompendium::new_compendium()`**](https://frbcesab.github.io/rcompendium/reference/new_compendium.html).<br />
+N'oubliez pas de créer un nouveau projet RStudio avant.
+:::
 
 
----
 
-## Étape 7 : automatisation...
-
-Il ne nous reste plus qu'à automatiser quelques étapes et nous aurons un
-compendium fonctionnel, intégré dans un workflow qui assure une
-reproductibilité minimale de nos analyses.
-
-1. Créez un fichier `make.R` à la racine de votre projet
-
-2. Modifiez-le de manière à enchainer les étapes suivantes :
-
-  - installation/mise à jour des packages nécessaires aux analyses
-
-  - chargement des fonctions
-
-  - exécution du script `exercices/exo_dplyr.R`
-
-3. Effacez le fichier `.png`
-
-4. Compilez votre compendium en sourçant intégralement le fichier `make.R`
-
-
-## Étape 8 : finalisation
-
-Modifiez le `README.Rmd` du compendium pour qu'il reflète un peu mieux ce qui
-se passe ici.
-
-Le compendium est maintenant fonctionnel.
 
 
 ## Corrections {.appendix}
