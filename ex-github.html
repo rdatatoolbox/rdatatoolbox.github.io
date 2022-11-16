@@ -2212,6 +2212,9 @@ Archives
 <ul>
 <li><a href="#partie-i" id="toc-partie-i">Partie I</a></li>
 <li><a href="#partie-ii" id="toc-partie-ii">Partie II</a></li>
+<li><a href="#corrections" id="toc-corrections">Corrections</a></li>
+<li><a href="#reuse" id="toc-reuse">Reuse</a></li>
+<li><a href="#citation" id="toc-citation">Citation</a></li>
 </ul>
 </nav>
 </div>
@@ -2221,18 +2224,55 @@ L’objectif de cet exercice est de vous familiariser avec l’utilisation de <c
 </div>
 <p><br /></p>
 <h2 id="partie-i">Partie I</h2>
-<p><strong>Mettez-vous par groupe de 4 personnes</strong></p>
-<p>Chacun se crée un nouveau dépôt sur GitHub. Dans ce dépôt, ajoutez un fichier <code>.txt</code> qui contient votre recette de pizza. Le suivre, faire des changements, etc.</p>
-<p>Sur GitHub, ajoutez une personne de votre groupe comme collaborateur de votre projet (les recettes à deux c’est mieux)</p>
-<p>Horreur, vous vous rendez compte que les autres membres de votre groupe ont oublié des ingrédients importants dans leur recette : les olives noires, les anchois marinés et le gorgonzola. Mettez en oeuvre 3 solutions pour interagir et leur faire remarquer que leur recette peut être améliorée. En fonction de votre statut dans le projet et votre souhait de vous impliquer :</p>
+<p><i class="far fa-hand-point-right" role="presentation" aria-label="hand-point-right icon"></i> <strong>Mettez-vous par groupe de 4 personnes</strong></p>
 <ul>
-<li>utilisez les issues pour dire au développeur que sa recette peut être améliorée</li>
-<li>si vous êtes collaborateur, clonez le dépôt, faites les modifications et envoyez-les</li>
-<li>si vous ne l’êtes pas, forkez, clonez, et essayez la pull request</li>
+<li><p>Chacun se crée un nouveau dépôt sur GitHub</p></li>
+<li><p>Sous RStudio, créez un nouveau projet à partir d’un dépôt GitHub (<em>Version control</em>)</p></li>
+<li><p>Ajoutez un fichier <code>.md</code> qui contient votre recette de pizza</p></li>
+<li><p>Le suivre (<code>stage</code>), faire des changements (<code>commit</code>), envoyer sur GitHub (<code>push</code>)</p></li>
+<li><p>Sur GitHub, allez dans les <strong>Settings</strong> et ajoutez une personne de votre groupe comme collaborateur de votre projet (les recettes à deux c’est mieux)</p></li>
+</ul>
+<p><strong>Horreur</strong> <i class="far fa-face-surprise" role="presentation" aria-label="face-surprise icon"></i> Vous vous rendez compte que les autres membres de votre groupe ont oublié des ingrédients importants dans leur recette : les olives noires, les anchois marinés et le gorgonzola.</p>
+<p><i class="far fa-hand-point-right" role="presentation" aria-label="hand-point-right icon"></i> Mettez en oeuvre 3 solutions pour interagir avec eux et leur faire remarquer que leur recette peut être améliorée. En fonction de votre statut dans le projet et votre souhait de vous impliquer :</p>
+<ul>
+<li>Utilisez les <strong>Issues</strong> pour dire au développeur que sa recette peut être améliorée</li>
+<li>Si vous êtes collaborateur, <strong>Clonez</strong> le dépôt, faites les modifications et envoyez-les</li>
+<li>Si vous ne l’êtes pas, <strong>Forkez</strong>, <strong>Clonez</strong>, et essayez la <strong>Pull request</strong></li>
 </ul>
 <p><br /></p>
 <h2 id="partie-ii">Partie II</h2>
-<p>…</p>
+<p><strong>Retour à l’exercice 1 (Research compendium)</strong></p>
+<p><i class="far fa-hand-point-right" role="presentation" aria-label="hand-point-right icon"></i> Vous allez envoyer votre <em><strong>research compendium</strong></em> créé à l’<a href="https://rdatatoolbox.github.io/ex-compendium.html">Exercice 1</a>
+sur votre compte GitHub.</p>
+<div class="box-info">
+<p><i class="far fa-lightbulb" role="presentation" aria-label="lightbulb icon"></i>
+Cette approche est appelée <strong>GitHub Last</strong> : on crée d’abord le projet en local, puis on crée le dépôt GitHub. L’exercice sur les pizzas présentait l’approche <strong>GitHub First</strong> : on crée d’abord le dépôt GitHub, puis on le clone localement. Pour plus d’information : <a href="https://happygitwithr.com/new-github-first.html">GitHub First</a> et
+<a href="https://happygitwithr.com/existing-github-last.html">GitHub Last</a>.</p>
+</div>
+<p>Vous pouvez utiliser la fonction <code>usethis::use_github()</code> qui va créer pour vous le dépôt GitHub correspondant (en utilisant l’API GitHub). Vous devez avoir sauvegarder localement votre GitHub Personal Access Token (PAT). Voir <a href="https://rdatatoolbox.github.io/instructions.html#github-pat">ici</a> pour plus d’information</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>## Création du dépôt GitHub ----</span></span>
+<span><span class='fu'>usethis</span><span class='fu'>::</span><span class='fu'><a href='https://usethis.r-lib.org/reference/use_github.html'>use_github</a></span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<p>Si cela ne fonctionne pas, rendez-vous sur GitHub, créez un nouveau projet <strong>VIDE</strong> (donnez juste un nom de dépôt) et copier les instructions (<em>Push an existing repository from the command line</em>) dans un terminal.</p>
+<p><br /></p>
+<blockquote>
+<p><strong><i class="far fa-thumbs-up" role="presentation" aria-label="thumbs-up icon"></i> Félicitation : votre research compendium est maintenant sur GitHub !</strong></p>
+</blockquote>
+<h2 class="appendix" id="corrections">Corrections</h2>
+<p>If you see mistakes or want to suggest changes, please
+<a href="https://github.com/rdatatoolbox/rdatatoolbox.github.io/issues">Create an issue</a>
+on the source repository.</p>
+<h2 class="appendix" id="reuse">Reuse</h2>
+<p>The material of this website is licensed under Creative Commons Attribution
+<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+Source code is available at <a href="https://github.com/rdatatoolbox/rdatatoolbox.github.io/" class="uri">https://github.com/rdatatoolbox/rdatatoolbox.github.io/</a>.</p>
+<h2 class="appendix" id="citation">Citation</h2>
+<p>Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD &amp; Siberchicot A (2022)
+Workshop FRB-CESAB &amp; GdR EcoStat: Data Toolbox for Reproducible Research in Computational Ecology.
+Zenodo. <a href="http://doi.org/10.5281/zenodo.4262978" class="uri">http://doi.org/10.5281/zenodo.4262978</a>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
