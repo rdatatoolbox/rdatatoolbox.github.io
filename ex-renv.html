@@ -88,27 +88,27 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Data Toolbox for Reproducible Research in Ecology: Git &amp; GitHub</title>
+  <title>Data Toolbox for Reproducible Research in Ecology: Renv</title>
 
 
   <link rel="icon" type="image/png" href="img/favicon.png"/>
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Data Toolbox for Reproducible Research in Ecology: Git &amp; GitHub"/>
+  <meta property="og:title" content="Data Toolbox for Reproducible Research in Ecology: Renv"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Data Toolbox for Reproducible Research in Ecology"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Data Toolbox for Reproducible Research in Ecology: Git &amp; GitHub"/>
+  <meta property="twitter:title" content="Data Toolbox for Reproducible Research in Ecology: Renv"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Git & GitHub"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth","toc_float"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Renv"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth","toc_float"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2118,7 +2118,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Git & GitHub","authors":[]}
+{"title":"Renv","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2197,7 +2197,7 @@ Archives
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Git &amp; GitHub</h1>
+<h1>Renv</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -2209,8 +2209,7 @@ Archives
 <nav class="l-text toc figcaption" id="TOC">
 <h3>Contents</h3>
 <ul>
-<li><a href="#partie-i" id="toc-partie-i">Partie I</a></li>
-<li><a href="#partie-ii" id="toc-partie-ii">Partie II</a></li>
+<li><a href="#consignes" id="toc-consignes">Consignes</a></li>
 <li><a href="#corrections" id="toc-corrections">Corrections</a></li>
 <li><a href="#reuse" id="toc-reuse">Reuse</a></li>
 <li><a href="#citation" id="toc-citation">Citation</a></li>
@@ -2219,47 +2218,19 @@ Archives
 </div>
 <div class="box-header">
 <p><i class="fas fa-bullseye" role="presentation" aria-label="bullseye icon"></i>
-L’objectif de cet exercice est de vous familiariser avec l’utilisation de <code>git</code> et <i class="fab fa-github" role="presentation" aria-label="github icon"></i>.</p>
+L’objectif de cet exercice est de vous familiariser avec l’utilisation de <strong><code>renv</code></strong>, package <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i> permettant de gérer les versions de packages requises par le projet.</p>
 </div>
 <p><br /></p>
-<h2 id="partie-i">Partie I</h2>
-<p><i class="far fa-hand-point-right" role="presentation" aria-label="hand-point-right icon"></i> <strong>Mettez-vous par groupe de 4 personnes</strong></p>
+<h2 id="consignes">Consignes</h2>
+<p>Nous allons intégrer <code>renv</code> au <strong>research compendium</strong> créé lors de l’exercice 4.</p>
 <ul>
-<li><p>Chacun se crée un nouveau dépôt sur GitHub</p></li>
-<li><p>Sous RStudio, créez un nouveau projet à partir d’un dépôt GitHub (<em>Version control</em>)</p></li>
-<li><p>Ajoutez un fichier <code>.md</code> qui contient votre recette de pizza</p></li>
-<li><p>Le suivre (<code>stage</code>), faire des changements (<code>commit</code>), envoyer sur GitHub (<code>push</code>)</p></li>
-<li><p>Sur GitHub, allez dans les <strong>Settings</strong> et ajoutez une personne de votre groupe comme collaborateur de votre projet (les recettes à deux c’est mieux)</p></li>
+<li>Utilisez la fonction <code>rcompendium::add_renv()</code></li>
+<li>Ajoutez le dossier <code>renv/</code> et le ficher <code>.Rprofile</code> au <code>.gitignore</code> (afin de ne pas envoyer sur GitHub les packages - seul le <code>renv.lock</code> suffit)</li>
+<li>Jouez avec les fonctions <code>renv::status()</code>, <code>renv::install()</code> et <code>renv::snapshot()</code> (n’oubliez pas de mettre à jour la liste des dépendances dans le fichiers <strong><code>DESCRIPTION</code></strong>)</li>
+<li>Modifiez le <code>make.R</code> de manière à installer les packages via <code>renv</code> plutôt qu’avec la fonction <code>devtools::install_deps()</code></li>
+<li>Vérifiez si votre projet est encore exécutable en source le <code>make.R</code></li>
 </ul>
-<p><strong>Horreur</strong> <i class="far fa-face-surprise" role="presentation" aria-label="face-surprise icon"></i> Vous vous rendez compte que les autres membres de votre groupe ont oublié des ingrédients importants dans leur recette : les olives noires, les anchois marinés et le gorgonzola.</p>
-<p><i class="far fa-hand-point-right" role="presentation" aria-label="hand-point-right icon"></i> Mettez en oeuvre 3 solutions pour interagir avec eux et leur faire remarquer que leur recette peut être améliorée. En fonction de votre statut dans le projet et votre souhait de vous impliquer :</p>
-<ul>
-<li>Utilisez les <strong>Issues</strong> pour dire au développeur que sa recette peut être améliorée</li>
-<li>Si vous êtes collaborateur, <strong>Clonez</strong> le dépôt, faites les modifications et envoyez-les</li>
-<li>Si vous ne l’êtes pas, <strong>Forkez</strong>, <strong>Clonez</strong>, et essayez la <strong>Pull request</strong></li>
-</ul>
-<p><br /></p>
-<h2 id="partie-ii">Partie II</h2>
-<p><strong>Retour à l’exercice 1 (Research compendium)</strong></p>
-<p><i class="far fa-hand-point-right" role="presentation" aria-label="hand-point-right icon"></i> Vous allez envoyer votre <em><strong>research compendium</strong></em> créé à l’<a href="https://rdatatoolbox.github.io/ex-compendium.html">Exercice 1</a>
-sur votre compte GitHub.</p>
-<div class="box-info">
-<p><i class="far fa-lightbulb" role="presentation" aria-label="lightbulb icon"></i>
-Cette approche est appelée <strong>GitHub Last</strong> : on crée d’abord le projet en local, puis on crée le dépôt GitHub. L’exercice sur les pizzas présentait l’approche <strong>GitHub First</strong> : on crée d’abord le dépôt GitHub, puis on le clone localement. Pour plus d’information : <a href="https://happygitwithr.com/new-github-first.html">GitHub First</a> et
-<a href="https://happygitwithr.com/existing-github-last.html">GitHub Last</a>.</p>
-</div>
-<p>Vous pouvez utiliser la fonction <code>usethis::use_github()</code> qui va créer pour vous le dépôt GitHub correspondant (en utilisant l’API GitHub). Vous devez avoir sauvegarder localement votre GitHub Personal Access Token (PAT). Voir <a href="https://rdatatoolbox.github.io/instructions.html#github-pat">ici</a> pour plus d’information</p>
-<div class="layout-chunk" data-layout="l-body">
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>## Création du dépôt GitHub ----</span></span>
-<span><span class='fu'>usethis</span><span class='fu'>::</span><span class='fu'><a href='https://usethis.r-lib.org/reference/use_github.html'>use_github</a></span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
-</div>
-</div>
-<p>Si cela ne fonctionne pas, rendez-vous sur GitHub, créez un nouveau projet <strong>VIDE</strong> (donnez juste un nom de dépôt) et copier les instructions (<em>Push an existing repository from the command line</em>) dans un terminal.</p>
-<p><br /></p>
-<blockquote>
-<p><strong><i class="far fa-thumbs-up" role="presentation" aria-label="thumbs-up icon"></i> Félicitation : votre research compendium est maintenant sur GitHub !</strong></p>
-</blockquote>
+<p><i class="far fa-lightbulb" role="presentation" aria-label="lightbulb icon"></i> Pensez aux <strong>commits</strong> !</p>
 <h2 class="appendix" id="corrections">Corrections</h2>
 <p>If you see mistakes or want to suggest changes, please
 <a href="https://github.com/rdatatoolbox/rdatatoolbox.github.io/issues">Create an issue</a>
