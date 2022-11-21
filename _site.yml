@@ -52,7 +52,7 @@ navbar:
       - text: "Exercise 5. renv"
         href: "ex-renv.html"
       - text: "Exercise 6. Docker"
-        href: ""
+        href: "ex-docker.html"
       - text: "Exercise 7. R package"
         href: ""
     - text: "Resources"

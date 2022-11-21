@@ -1,0 +1,63 @@
+---
+title: "Docker"
+output: 
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
+```
+
+
+
+::: {.box-header}
+`r fontawesome::fa_i("bullseye")`
+L'objectif de cet exercice est de vous familiariser avec l'utilisation de **`Docker`**, et plus particulièrement avec la création d'un **`Dockerfile`**.
+:::
+
+
+
+<br />
+
+## Consignes
+
+Nous allons ajouter un `Dockerfile` au **research compendium** créé lors de l'exercice 5.
+
+- Utilisez la fonction `rcompendium::add_dockerfile()` (désactivez temporairement `renv` avec `renv::deactivate()` le temps d'utiliser cette fonction, puis réactivez-le avec `renv::activate()`)
+- Réfléchissez si la version de l'image de base `rocker/rstudio:4.2.2` est la plus appropriée à votre projet
+- Regardez le contenu du `README.Rmd` (doit-il être transpilé ?)
+- Si vous avez `r fontawesome::fa_i("docker")` d'installé, suivez les instructions du `README.Rmd` pour construire votre image, démarrez un conteneur et relancer les analyses.
+
+
+`r fontawesome::fa_i("lightbulb")` Pensez aux **commits** !
+
+
+
+## Corrections {.appendix}
+
+
+If you see mistakes or want to suggest changes, please 
+[Create an issue](https://github.com/rdatatoolbox/rdatatoolbox.github.io/issues)
+on the source repository.
+
+
+
+## Reuse {.appendix}
+
+
+
+The material of this website is licensed under Creative Commons Attribution 
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+Source code is available at https://github.com/rdatatoolbox/rdatatoolbox.github.io/.
+
+
+## Citation {.appendix}
+
+
+
+Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD & Siberchicot A (2022) 
+Workshop FRB-CESAB & GdR EcoStat: Data Toolbox for Reproducible Research in Computational Ecology. 
+Zenodo. <http://doi.org/10.5281/zenodo.4262978>.
