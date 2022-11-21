@@ -32,7 +32,7 @@ Puis, procédez comme suit :
 
 - Ecrivez votre plan d'analyses dans un fichier `_targets.R` placé à la racine du projet. N'oubliez d'attacher les packages `targets` et `targetypes` avec la fonction `library()` et de sourcer les différentes fonctions avec `source()`.
 
-- Le dernier élément du pipeline sera le rapport `index.Rmd` vu à l'exercice précédent. Cependant, celui-ci n'exécutera aucune fonction créée (celles-ci seront gérées par `targets`). Le fichier `Rmd` se contentera d'importer les outputs : vous devrez exporter la figure (avec une nouvelle fonction) dans le dossier `figures/`. L'affichage du tableau résultat pourra se faire avec la fonction `targets::tar_load()`.
+- Le dernier élément du pipeline sera le rapport `index.Rmd` vu à l'exercice précédent. Cependant, celui-ci n'exécutera aucune fonction créée (celles-ci seront gérées par `targets`). Le fichier `Rmd` se contentera d'importer les outputs : vous devrez exporter la figure (avec une nouvelle fonction) dans le dossier `figures/`. L'affichage du tableau résultat pourra se faire avec la fonction `targets::tar_read()`.
 
 - Finalement, dans le fichier `make.R` remplacez la ligne `rmarkdown::render()` par `tar::tar_make()`
 
