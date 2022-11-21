@@ -1,0 +1,67 @@
+---
+title: "Targets"
+output: 
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
+```
+
+
+
+::: {.box-header}
+`r fontawesome::fa_i("bullseye")`
+L'objectif de cet exercice est de vous familiariser avec l'utilisation de **`targets`**, package `r fontawesome::fa_i("r-project")` permettant d'optimiser le flux de travail.
+:::
+
+
+
+<br />
+
+## Consignes
+
+Nous allons intégrer `targets` au **research compendium** créé lors de l'exercice 3.
+
+Avant toute chose, supprimez la ligne `devtools::load_all()` du fichier `make.R` : cette fonction n'est pas prise en compte par `targets` pour charger les fonctions.
+
+Puis, procédez comme suit : 
+
+- Ecrivez votre plan d'analyses dans un fichier `_targets.R` placé à la racine du projet. N'oubliez d'attacher les packages `targets` et `targetypes` avec la fonction `library()` et de sourcer les différentes fonctions avec `source()`.
+
+- Le dernier élément du pipeline sera le rapport `index.Rmd` vu à l'exercice précédent. Cependant, celui-ci n'exécutera aucune fonction créée (celles-ci seront gérées par `targets`). Le fichier `Rmd` se contentera d'importer les outputs : vous devrez exporter la figure (avec une nouvelle fonction) dans le dossier `figures/`. L'affichage du tableau résultat pourra se faire avec la fonction `targets::tar_load()`.
+
+- Finalement, dans le fichier `make.R` remplacez la ligne `rmarkdown::render()` par `tar::tar_make()`
+
+`r fontawesome::fa_i("lightbulb")` Pensez aux **commits** ! Pensez aussi à mettre à jour la liste des dépendances dans le fichiers **`DESCRIPTION`**.
+
+
+
+## Corrections {.appendix}
+
+
+If you see mistakes or want to suggest changes, please 
+[Create an issue](https://github.com/rdatatoolbox/rdatatoolbox.github.io/issues)
+on the source repository.
+
+
+
+## Reuse {.appendix}
+
+
+
+The material of this website is licensed under Creative Commons Attribution 
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+Source code is available at https://github.com/rdatatoolbox/rdatatoolbox.github.io/.
+
+
+## Citation {.appendix}
+
+
+
+Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD & Siberchicot A (2022) 
+Workshop FRB-CESAB & GdR EcoStat: Data Toolbox for Reproducible Research in Computational Ecology. 
+Zenodo. <http://doi.org/10.5281/zenodo.4262978>.

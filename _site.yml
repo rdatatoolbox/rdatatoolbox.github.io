@@ -48,7 +48,7 @@ navbar:
       - text: "Exercise 3. R markdown"
         href: "ex-rmarkdown.html"
       - text: "Exercise 4. Targets"
-        href: ""
+        href: "ex-targets.html"
       - text: "Exercise 5. renv"
         href: ""
       - text: "Exercise 6. Docker "

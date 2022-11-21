@@ -39,7 +39,7 @@ Puis, créez un fichier `index.Rmd` à la racine du projet qui appellera chaque 
 
 Finalement, ajoutez une ligne de code dans votre `make.R` qui permettra de transpiler votre `index.Rmd` en version `index.html` (fonction `rmarkdown::render()`).
 
-`r fontawesome::fa_i("lightbulb")` Pensez aux commits !
+`r fontawesome::fa_i("lightbulb")` Pensez aux **commits** ! Pensez aussi à mettre à jour la liste des dépendances dans le fichiers **`DESCRIPTION`**.
 
 
 <br />
