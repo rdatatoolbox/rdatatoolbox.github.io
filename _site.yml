@@ -26,7 +26,7 @@ navbar:
       - text: "Course 4. R markdown basics"
         href: "https://rdatatoolbox.github.io/course-rmarkdown"
       - text: "Course 5. Extending R markdown"
-        href: ""
+        href: "https://rdatatoolbox.github.io/course-extending-rmd"
       - text: "Course 6. Introduction to Quarto"
         href: ""
       - text: "Course 7. Pipeline toolkits"
@@ -37,8 +37,6 @@ navbar:
         href: "https://rdatatoolbox.github.io/course-docker"
       - text: "Course 10. R Package"
         href: "https://rdatatoolbox.github.io/course-rpackage"
-      - text: "Take home message"
-        href: "https://rdatatoolbox.github.io/take-home"
     - text: "Exercises"
       menu:
       - text: "Exercise 1. Research compendium"
