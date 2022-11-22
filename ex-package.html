@@ -2229,14 +2229,19 @@ L’objectif de cet exercice est de vous familiariser avec la création de <stro
 <li>Utilisez la fonction <code>rcompendium::add_to_gitignore()</code> pour créer un <code>.gitignore</code> spécifique à <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i></li>
 <li>Implémentez des fonctions <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i> dans le dossier <code>R/</code> et documentez-les. Vous pouvez réutiliser certaines fonctions développées lors des exercices précédents.</li>
 <li>Mettez à jour la documentation des fonctions avec <code>devtools::document()</code></li>
+<li>Mettez à jour les dépendances dans le fichier <code>DESCRIPTION</code> avec <code>rcompendium::add_dependencies()</code></li>
 <li>Vérifiez que votre package ne comporte pas d’erreur avec <code>devtools::check()</code></li>
 <li>Ajoutez un <code>README.Rmd</code> avec <code>rcompendium::add_readme_rmd()</code> et éditez-le (n’oubliez pas de le transpiler en <code>README.md</code>)</li>
 </ul>
 <p><i class="far fa-lightbulb" role="presentation" aria-label="lightbulb icon"></i> Pensez aux <strong>commits</strong> !</p>
 <p><br /></p>
 <h2 id="bonus">Bonus</h2>
-<p><i class="far fa-lightbulb" role="presentation" aria-label="lightbulb icon"></i> Mettez en place des GitHub Actions pour : 1) vérifiez votre package sur les serveurs GitHub après chaque push et 2) déployer le site Web du package. Pour cela, utilisez les fonctions <code>rcompendium::add_github_actions_check()</code> et <code>rcompendium::add_github_actions_pkgdown()</code>. Pensez à aller dans les <strong>Settings</strong> du dépôt GitHub et activer GitHub Pages (branche <code>gh-pages</code>).</p>
-<p>Ajoutez aussi les badges correspondants avec : <code>rcompendium::add_github_actions_pkgdown_badge()</code> et <code>rcompendium::add_github_actions_check_badge()</code>.</p>
+<p><i class="far fa-lightbulb" role="presentation" aria-label="lightbulb icon"></i> Mettez en place des GitHub Actions pour :</p>
+<ul>
+<li>Vérifiez votre package sur les serveurs GitHub après chaque push avec <code>rcompendium::add_github_actions_check()</code></li>
+<li>Déployer le site Web du package avec <code>rcompendium::add_github_actions_pkgdown()</code></li>
+</ul>
+<p>Ajoutez au <code>README</code> les badges correspondants avec : <code>rcompendium::add_github_actions_pkgdown_badge()</code> <code>rcompendium::add_github_actions_check_badge()</code></p>
 <p><br/></p>
 <div class="box-header">
 <p><i class="far fa-lightbulb" role="presentation" aria-label="lightbulb icon"></i>
