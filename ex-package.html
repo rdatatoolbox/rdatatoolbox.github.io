@@ -88,27 +88,27 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Data Toolbox for Reproducible Research in Ecology: Rmarkdown</title>
+  <title>Data Toolbox for Reproducible Research in Ecology: R Package</title>
 
 
   <link rel="icon" type="image/png" href="img/favicon.png"/>
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Data Toolbox for Reproducible Research in Ecology: Rmarkdown"/>
+  <meta property="og:title" content="Data Toolbox for Reproducible Research in Ecology: R Package"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Data Toolbox for Reproducible Research in Ecology"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Data Toolbox for Reproducible Research in Ecology: Rmarkdown"/>
+  <meta property="twitter:title" content="Data Toolbox for Reproducible Research in Ecology: R Package"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Rmarkdown"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth","toc_float"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["R Package"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth","toc_float"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2118,7 +2118,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Rmarkdown","authors":[]}
+{"title":"R Package","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2197,7 +2197,7 @@ Archives
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Rmarkdown</h1>
+<h1>R Package</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -2219,27 +2219,31 @@ Archives
 </div>
 <div class="box-header">
 <p><i class="fas fa-bullseye" role="presentation" aria-label="bullseye icon"></i>
-L’objectif de cet exercice est de vous familiariser à l’utilisation de <strong><code>Rmarkdown</code></strong>. Plus précisément, vous verrez comment exécuter l’ensemble des analyses et la rédaction dans un même fichier <code>.Rmd</code>.</p>
+L’objectif de cet exercice est de vous familiariser avec la création de <strong>package</strong> <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i>.</p>
 </div>
 <p><br /></p>
 <h2 id="consignes">Consignes</h2>
-<p>Nous allons utiliser les données WildFinder du WWF pour répondre à la question suivante :
-<strong><em>Dans combien d’écorégions différentes retrouve-t-on chaque espèce d’Ursidés ?</em></strong></p>
-<p>Pour ce faire, continuez à travailler dans le <strong>research compendium</strong> créé lors de l’exercice 1 et écrivez des fonctions
-<i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i> pour :</p>
+<p>Créez un nouveau projet RStudio et le dépôt GitHub correspondant (vice-versa).</p>
 <ul>
-<li>Importer chaque fichier <code>csv</code> (utiliser la fonction <code>readr::read_csv()</code>)</li>
-<li>Sélectionner uniquement les espèces de la famille des Ursidae</li>
-<li>Joindre les trois tables entre elles</li>
-<li>Compter le nombre d’écorégions où se retrouve chaque espèce</li>
-<li>Faire une visualisation graphique montrant le nombre d’écorégions par espèce</li>
+<li>Utilisez la fonction <code>rcompendium::add_description()</code> pour créer un fichier <code>DESCRIPTION</code></li>
+<li>Utilisez la fonction <code>rcompendium::add_to_gitignore()</code> pour créer un <code>.gitignore</code> spécifique à <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i></li>
+<li>Implémentez des fonctions <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i> dans le dossier <code>R/</code> et documentez-les. Vous pouvez réutiliser certaines fonctions développées lors des exercices précédents.</li>
+<li>Mettez à jour la documentation des fonctions avec <code>devtools::document()</code></li>
+<li>Vérifiez que votre package ne comporte pas d’erreur avec <code>devtools::check()</code></li>
+<li>Ajoutez un <code>README.Rmd</code> avec <code>rcompendium::add_readme_rmd()</code> et éditez-le (n’oubliez pas de le transpiler en <code>README.md</code>)</li>
 </ul>
-<p>Puis, créez un fichier <code>index.Rmd</code> à la racine du projet qui appellera chaque fonction créée précédemment. Devrons figurer dans le document final, a minima, le résultat demandé sous forme de tableau (fonction <code>knitr::kable()</code>) et de figure, ainsi que la source des données.</p>
-<p>Finalement, ajoutez une ligne de code dans votre <code>make.R</code> qui permettra de transpiler votre <code>index.Rmd</code> en version <code>index.html</code> (fonction <code>rmarkdown::render()</code>).</p>
-<p><i class="far fa-lightbulb" role="presentation" aria-label="lightbulb icon"></i> Pensez aux <strong>commits</strong> ! Pensez aussi à mettre à jour la liste des dépendances dans le fichiers <strong><code>DESCRIPTION</code></strong>.</p>
+<p><i class="far fa-lightbulb" role="presentation" aria-label="lightbulb icon"></i> Pensez aux <strong>commits</strong> !</p>
 <p><br /></p>
 <h2 id="bonus">Bonus</h2>
-<p>Si votre code est bien écrit, vous pouvez rapidement l’exécuter avec une autre famille de Mammifères !</p>
+<p><i class="far fa-lightbulb" role="presentation" aria-label="lightbulb icon"></i> Mettez en place des GitHub Actions pour : 1) vérifiez votre package sur les serveurs GitHub après chaque push et 2) déployer le site Web du package. Pour cela, utilisez les fonctions <code>rcompendium::add_github_actions_check()</code> et <code>rcompendium::add_github_actions_pkgdown()</code>. Pensez à aller dans les <strong>Settings</strong> du dépôt GitHub et activer GitHub Pages (branche <code>gh-pages</code>).</p>
+<p>Ajoutez aussi les badges correspondants avec : <code>rcompendium::add_github_actions_pkgdown_badge()</code> et <code>rcompendium::add_github_actions_check_badge()</code>.</p>
+<p><br/></p>
+<div class="box-header">
+<p><i class="far fa-lightbulb" role="presentation" aria-label="lightbulb icon"></i>
+L’ensemble de ces étapes (et bien d’autres) peut être réalisé avec une seule fonction :
+<a href="https://frbcesab.github.io/rcompendium/reference/new_package.html"><strong><code>rcompendium::new_package()</code></strong></a>.<br />
+N’oubliez pas de créer un nouveau projet RStudio avant si vous souhaitez la tester.</p>
+</div>
 <h2 class="appendix" id="corrections">Corrections</h2>
 <p>If you see mistakes or want to suggest changes, please
 <a href="https://github.com/rdatatoolbox/rdatatoolbox.github.io/issues">Create an issue</a>

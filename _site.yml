@@ -54,7 +54,7 @@ navbar:
       - text: "Exercise 6. Docker"
         href: "ex-docker.html"
       - text: "Exercise 7. R package"
-        href: ""
+        href: "ex-package.html"
     - text: "Resources"
       href: "img/the_degrees_of_reproductibility.pdf"
     - text: "Archives"

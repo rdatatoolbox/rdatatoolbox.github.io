@@ -1,0 +1,84 @@
+---
+title: "R Package"
+output: 
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
+```
+
+
+
+::: {.box-header}
+`r fontawesome::fa_i("bullseye")`
+L'objectif de cet exercice est de vous familiariser avec la création de **package** `r fontawesome::fa_i("r-project")`.
+:::
+
+
+
+<br />
+
+## Consignes
+
+Créez un nouveau projet RStudio et le dépôt GitHub correspondant (vice-versa).
+
+- Utilisez la fonction `rcompendium::add_description()` pour créer un fichier `DESCRIPTION`
+- Utilisez la fonction `rcompendium::add_to_gitignore()` pour créer un `.gitignore` spécifique à `r fontawesome::fa_i("r-project")`
+- Implémentez des fonctions `r fontawesome::fa_i("r-project")` dans le dossier `R/` et documentez-les. Vous pouvez réutiliser certaines fonctions développées lors des exercices précédents.
+- Mettez à jour la documentation des fonctions avec `devtools::document()`
+- Vérifiez que votre package ne comporte pas d'erreur avec `devtools::check()`
+- Ajoutez un `README.Rmd` avec `rcompendium::add_readme_rmd()` et éditez-le (n'oubliez pas de le transpiler en `README.md`)
+
+
+`r fontawesome::fa_i("lightbulb")` Pensez aux **commits** !
+
+
+<br />
+
+## Bonus
+
+`r fontawesome::fa_i("lightbulb")` Mettez en place des GitHub Actions pour : 1) vérifiez votre package sur les serveurs GitHub après chaque push et 2) déployer le site Web du package. Pour cela, utilisez les fonctions `rcompendium::add_github_actions_check()` et `rcompendium::add_github_actions_pkgdown()`. Pensez à aller dans les **Settings** du dépôt GitHub et activer GitHub Pages (branche `gh-pages`).
+
+Ajoutez aussi les badges correspondants avec : `rcompendium::add_github_actions_pkgdown_badge()` et `rcompendium::add_github_actions_check_badge()`.
+
+
+<br/>
+
+::: {.box-header}
+`r fontawesome::fa_i("lightbulb")`
+L'ensemble de ces étapes (et bien d'autres) peut être réalisé avec une seule fonction : 
+[**`rcompendium::new_package()`**](https://frbcesab.github.io/rcompendium/reference/new_package.html).<br />
+N'oubliez pas de créer un nouveau projet RStudio avant si vous souhaitez la tester.
+:::
+
+
+
+## Corrections {.appendix}
+
+
+If you see mistakes or want to suggest changes, please 
+[Create an issue](https://github.com/rdatatoolbox/rdatatoolbox.github.io/issues)
+on the source repository.
+
+
+
+## Reuse {.appendix}
+
+
+
+The material of this website is licensed under Creative Commons Attribution 
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+Source code is available at https://github.com/rdatatoolbox/rdatatoolbox.github.io/.
+
+
+## Citation {.appendix}
+
+
+
+Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD & Siberchicot A (2022) 
+Workshop FRB-CESAB & GdR EcoStat: Data Toolbox for Reproducible Research in Computational Ecology. 
+Zenodo. <http://doi.org/10.5281/zenodo.4262978>.
