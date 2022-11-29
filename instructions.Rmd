@@ -549,6 +549,7 @@ some `r fontawesome::fa_i("r-project")` packages (`sf`, `sp`, `rgdal`,
 sudo apt install libgdal-dev libproj-dev libgeos-dev libudunits2-dev libnetcdf-dev
 sudo apt install libcairo2-dev libmagick++-dev
 sudo apt install libpoppler-cpp-dev
+sudo apt install libharfbuzz-dev libfribidi-dev
 ```
 
 To keep your system up-to-date, do not forget to frequently run:
