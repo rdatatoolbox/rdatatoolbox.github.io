@@ -2,38 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>https://rdatatoolbox.github.io/ex-compendium.html</loc>
-    <lastmod>2022-11-16T14:35:49+01:00</lastmod>
+    <lastmod>2022-11-29T07:59:44+00:00</lastmod>
   </url>
   <url>
     <loc>https://rdatatoolbox.github.io/ex-docker.html</loc>
-    <lastmod>2022-11-21T17:37:25+01:00</lastmod>
+    <lastmod>2022-11-29T07:59:44+00:00</lastmod>
   </url>
   <url>
     <loc>https://rdatatoolbox.github.io/ex-github.html</loc>
-    <lastmod>2022-11-16T16:38:12+01:00</lastmod>
+    <lastmod>2022-11-29T07:59:44+00:00</lastmod>
   </url>
   <url>
     <loc>https://rdatatoolbox.github.io/ex-package.html</loc>
-    <lastmod>2022-11-22T09:59:30+01:00</lastmod>
+    <lastmod>2022-11-29T07:59:44+00:00</lastmod>
   </url>
   <url>
     <loc>https://rdatatoolbox.github.io/ex-renv.html</loc>
-    <lastmod>2022-11-21T17:25:03+01:00</lastmod>
+    <lastmod>2022-11-29T07:59:44+00:00</lastmod>
   </url>
   <url>
     <loc>https://rdatatoolbox.github.io/ex-rmarkdown.html</loc>
-    <lastmod>2022-11-21T15:23:01+01:00</lastmod>
+    <lastmod>2022-11-29T07:59:44+00:00</lastmod>
   </url>
   <url>
     <loc>https://rdatatoolbox.github.io/ex-targets.html</loc>
-    <lastmod>2022-11-21T17:40:31+01:00</lastmod>
+    <lastmod>2022-11-29T07:59:44+00:00</lastmod>
   </url>
   <url>
     <loc>https://rdatatoolbox.github.io/</loc>
-    <lastmod>2022-06-22T09:34:12+02:00</lastmod>
+    <lastmod>2022-11-29T07:59:44+00:00</lastmod>
   </url>
   <url>
     <loc>https://rdatatoolbox.github.io/instructions.html</loc>
-    <lastmod>2022-11-29T08:57:46+01:00</lastmod>
+    <lastmod>2022-11-29T07:59:44+00:00</lastmod>
   </url>
 </urlset>
