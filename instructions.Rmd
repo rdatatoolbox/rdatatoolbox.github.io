@@ -587,7 +587,7 @@ It's recommended to replace _master_ by _main_ (for more information read this
 On a terminal, run:
 
 ```sh
-git config --global init.defaultBranch "main"
+git config --global init.defaultBranch main
 ```
 
 From now when you will initialize `git` in a new project the default branch will be **main**.

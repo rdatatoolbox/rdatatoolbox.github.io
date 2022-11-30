@@ -2625,7 +2625,7 @@ Open a terminal (you can use the terminal of <strong>RStudio</strong>) and run:<
 It’s recommended to replace <em>master</em> by <em>main</em> (for more information read this
 <a href="https://www.zdnet.com/article/github-to-replace-master-with-alternative-term-to-avoid-slavery-references/">article</a>).</p>
 <p>On a terminal, run:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> init.defaultBranch <span class="st">&quot;main&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> init.defaultBranch main</span></code></pre></div>
 <p>From now when you will initialize <code>git</code> in a new project the default branch will be <strong>main</strong>.</p>
 <p><br/></p>
 <h3 id="github-ssh-keys"><i class="fab fa-github" role="presentation" aria-label="github icon"></i> GitHub SSH keys</h3>
@@ -2695,7 +2695,7 @@ Copy this token.</p>
 <span><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"usethis"</span><span class='op'>)</span></span>
 <span></span>
 <span><span class='co'>## Open ~/.Renviron file ----</span></span>
-<span><span class='fu'>usethis</span><span class='fu'>::</span><span class='fu'>edit_r_environ</span><span class='op'>(</span><span class='op'>)</span></span>
+<span><span class='fu'>usethis</span><span class='fu'>::</span><span class='fu'><a href='https://usethis.r-lib.org/reference/edit.html'>edit_r_environ</a></span><span class='op'>(</span><span class='op'>)</span></span>
 <span><span class='co'>## • Modify '~/.Renviron'</span></span>
 <span><span class='co'>## • Restart R for changes to take effect</span></span></code></pre>
 </div>
@@ -2710,7 +2710,7 @@ Do not forget to restart <i class="fab fa-r-project" role="presentation" aria-la
 <span><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"usethis"</span><span class='op'>)</span></span>
 <span></span>
 <span><span class='co'>## Open ~/.Rprofile file ----</span></span>
-<span><span class='fu'>usethis</span><span class='fu'>::</span><span class='fu'>edit_r_profile</span><span class='op'>(</span><span class='op'>)</span></span>
+<span><span class='fu'>usethis</span><span class='fu'>::</span><span class='fu'><a href='https://usethis.r-lib.org/reference/edit.html'>edit_r_profile</a></span><span class='op'>(</span><span class='op'>)</span></span>
 <span><span class='co'>## • Modify '~/.Rprofile'</span></span>
 <span><span class='co'>## • Restart R for changes to take effect</span></span></code></pre>
 </div>
