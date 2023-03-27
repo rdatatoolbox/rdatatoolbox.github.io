@@ -52,7 +52,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 
-![](img/banner-rdatatoolbox_150dpi.png)
+![](https://raw.githubusercontent.com/rdatatoolbox/.github/main/profile/banner-rdatatoolbox_150dpi.png)
 
 
 

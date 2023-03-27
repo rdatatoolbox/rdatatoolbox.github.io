@@ -1,6 +1,6 @@
 ## Workshop website
 
-![](https://raw.githubusercontent.com/rdatatoolbox/rdatatoolbox.github.io/main/img/banner-rdatatoolbox_150dpi.png)
+![](https://raw.githubusercontent.com/rdatatoolbox/.github/main/profile/banner-rdatatoolbox_150dpi.png)
 
 Website of the workshop **_Data Toolbox for Reproducible Research in Ecology_**
 co-organized by the
