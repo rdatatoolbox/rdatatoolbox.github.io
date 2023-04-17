@@ -18,3 +18,39 @@ div.box-header p {
   color: #567763;
   border-left: 5px solid #567763;
 }
+
+.d-title {
+  text-align: center;
+}
+/*
+.distill-site-nav {
+  background-color: #67516e;
+}
+*/
+
+
+.btn {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 85%;
+  font-weight: normal;
+  font-family: Monospace;
+  margin-left: 10px;
+  color: black;
+  border: 1px solid #ddecf6;
+  background-color: #ddecf6;
+  border-radius: 8px;
+  padding: 4px 8px 4px 8px;
+
+}
+
+.btn a:link, .btn a:hover, .btn a:focus, .btn a:visited {
+  text-decoration: none;
+  border: 0px;
+}
+
+.btn:hover, .btn:focus {
+  color: white;
+  border: 1px solid #487997;
+  background-color: #487997;
+}

@@ -1,11 +1,16 @@
 ---
-title: "Data Toolbox for Reproducible Research in Ecology"
-description: "FRB-CESAB & GdR EcoStat Workshop"
+title: "Reproducible Research in Computational Ecology"
+description: |
+  FRB-CESAB & GdR EcoStat training course
+  <br><br>
+  <a href="https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/develop-skills/best-practice-for-reproducible-research-in-computational-ecology/">
+    <img class="logo" src="https://raw.githubusercontent.com/rdatatoolbox/.github/main/profile/banner-rdatatoolbox_150dpi.png" style="width: 100%;" />
+  </a>
 author:
   - name: "Nicolas Casajus"
     url: https://nicolascasajus.fr
     affiliation: FRB-CESAB
-    affiliation_url: https://www.fondationbiodiversite.fr/la-fondation/le-cesab/
+    affiliation_url: https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/
     orcid_id: 0000-0002-5537-5294
   - name: "Iago Bonnici"
     url: https://isem-evolution.fr/en/membre/bonnici/
@@ -52,15 +57,14 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 
-![](https://raw.githubusercontent.com/rdatatoolbox/.github/main/profile/banner-rdatatoolbox_150dpi.png)
-
-
+::: {.box-info}
+`r fontawesome::fa_i("lightbulb")`&nbsp;
+**Pre-registration opens each spring and training course is provided each winter. Suscribe to the [FRB-CESAB newsletter](https://www.fondationbiodiversite.fr/en/newsletter/) to stay informed. More information is available on the  [FRB-CESAB website](https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/develop-skills/best-practice-for-reproducible-research-in-computational-ecology/).**
+:::
 
 <br />
 
-
-
-The objective of this five-day workshop, co-organized by the 
+The objective of this five-day training course, co-organized by the 
 [FRB-CESAB](https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/)
 and the
 [GdR EcoStat](https://sites.google.com/site/gdrecostat/), 
@@ -68,7 +72,10 @@ is to train young researchers in reproducibility, software development and
 version management tools (e.g. `Git`, `GitHub`, `R Markdown`, `Quarto`, `renv`, `Docker`), 
 applied to biodiversity research.
 
-More information available [here](https://www.fondationbiodiversite.fr/?post_type=evenement&p=16583)
+
+
+**N.B.** This training course is **in French**, but some slides are available in English in the tab `Courses/`.
+
 
 
 <br />
@@ -77,58 +84,58 @@ More information available [here](https://www.fondationbiodiversite.fr/?post_typ
 
 ## Program
 
-
-
-**Day 1**
-
-&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Icebreaker and introduction of the week
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Open science and Reproducible research
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Research compendium & Good practices
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Version control with `Git` & `GitHub`
-
-
-
-**Day 2**
-
-&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Basics of `R Markdown`
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Extending `R Markdown`: websites, slides and dashboards
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Introduction to `Quarto`
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Pipeline toolkit with `targets`
-
-
-
-**Day 3**
-
-&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Dealing with R package versions with `renv`
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Containerization with `Docker`
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Building an R package
-
-
-
-**Day 4**
-
-&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Subgroups projects
-
-
-
-**Day 5**
-
-&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Subgroups projects
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa_i("caret-right")` &nbsp;
-Projects presentation
+<table>
+  
+  <tr>
+    <td rowspan="4">**Monday**</td>
+    <td>Icebreaker & Introduction of the week</td>
+  </tr>
+  <tr>
+    <td>Open science & Reproducible research <span class="btn"><a href="https://rdatatoolbox.github.io/course-opensci">SLIDES</a></span></td>
+  </tr>
+  <tr>
+    <td>Research compendium & Good practices <span class="btn"><a href="https://rdatatoolbox.github.io/course-compendium">SLIDES</a></span></td>
+  </tr>
+  <tr>
+    <td>Version control with `Git` & `GitHub` <span class="btn"><a href="https://rdatatoolbox.github.io/course-git-iago.pdf">SLIDES</a></span><span class="btn"><a href="https://rdatatoolbox.github.io/course-github">SLIDES</a></span></td>
+  </tr>
+  
+  <tr>
+    <td rowspan="4">**Tuesday**</td>
+    <td>Basics of `R Markdown` <span class="btn"><a href="https://rdatatoolbox.github.io/course-rmarkdown">SLIDES</a></span></td>
+  </tr>
+  <tr>
+    <td>Extending `R Markdown`: websites, slides and dashboards</td>
+  </tr>
+  <tr>
+    <td>Introduction to `Quarto`</td>
+  </tr>
+  <tr>
+    <td>Pipeline toolkit with `targets` <span class="btn"><a href="https://rdatatoolbox.github.io/course-targets">SLIDES</a></span></td>
+  </tr>
+  
+  <tr>
+    <td rowspan="3">**Wednesday**</td>
+    <td>Dealing with R package versions with `renv` <span class="btn"><a href="https://rdatatoolbox.github.io/course-renv">SLIDES</a></span></td>
+  </tr>
+  <tr>
+    <td>Containerization with `Docker` <span class="btn"><a href="https://rdatatoolbox.github.io/course-docker">SLIDES</a></span></td>
+  </tr>
+  <tr>
+    <td>Building an R package <span class="btn"><a href="https://rdatatoolbox.github.io/course-rpackage">SLIDES</a></span></td>
+  </tr>
+  
+  <tr>
+    <td>**Thursday**</td>
+    <td>Subgroups projects</td>
+  </tr>
+  
+  <tr>
+    <td>**Friday**</td>
+    <td>Subgroups projects</td>
+  </tr>
+  
+</table>
 
 
 
@@ -138,39 +145,25 @@ Projects presentation
 
 ## Prerequisites
 
+Please follow this [tutorial](https://frbcesab.github.io/training-courses/installation.html) to install your working environment **before** attending the training course.
 
-The following software must be installed before the workshop:
-[R](https://cran.r-project.org/) (latest version), 
-[RStudio](https://rstudio.com/products/rstudio/download/) et 
-[Git](https://git-scm.com/downloads).
-Follow this [tutorial](instructions.html) to install your working environment.
+You also need to create an account on [GitHub](https://github.com/signup).
 
-You also need to create an account (free) on [GitHub](https://github.com/signup).
+
+<br/>
 
 
 
-## Corrections {.appendix}
+## See also
 
 
-If you see mistakes or want to suggest changes, please 
-[Create an issue](https://github.com/rdatatoolbox/rdatatoolbox.github.io/issues)
-on the source repository.
+Discover the other training courses provided by the FRB-CESAB and its partners: <https://frbcesab.github.io/training-courses/>
 
-
-
-## Reuse {.appendix}
-
-
-
-The material of this website is licensed under Creative Commons Attribution 
-[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-Source code is available at https://github.com/rdatatoolbox/rdatatoolbox.github.io/.
 
 
 ## Citation {.appendix}
 
-
-
-Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD & Siberchicot A (2022) 
-Workshop FRB-CESAB & GdR EcoStat: Data Toolbox for Reproducible Research in Computational Ecology. 
+Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD 
+& Siberchicot A (`r format(Sys.Date(), "%Y")`) 
+FRB-CESAB & GdR EcoStat training course: Reproducible Research in Computational Ecology. 
 Zenodo. <http://doi.org/10.5281/zenodo.4262978>.

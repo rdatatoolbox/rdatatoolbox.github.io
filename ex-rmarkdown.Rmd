@@ -48,28 +48,4 @@ Finalement, ajoutez une ligne de code dans votre `make.R` qui permettra de trans
 
 Si votre code est bien écrit, vous pouvez rapidement l'exécuter avec une autre famille de Mammifères !
 
-## Corrections {.appendix}
 
-
-If you see mistakes or want to suggest changes, please 
-[Create an issue](https://github.com/rdatatoolbox/rdatatoolbox.github.io/issues)
-on the source repository.
-
-
-
-## Reuse {.appendix}
-
-
-
-The material of this website is licensed under Creative Commons Attribution 
-[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-Source code is available at https://github.com/rdatatoolbox/rdatatoolbox.github.io/.
-
-
-## Citation {.appendix}
-
-
-
-Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD & Siberchicot A (2022) 
-Workshop FRB-CESAB & GdR EcoStat: Data Toolbox for Reproducible Research in Computational Ecology. 
-Zenodo. <http://doi.org/10.5281/zenodo.4262978>.
