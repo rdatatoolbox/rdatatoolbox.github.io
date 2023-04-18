@@ -65,8 +65,6 @@ navbar:
         href: "https://rdatatoolbox.github.io/course-rspatial"
       - text: "Data handling"
         href: "https://rdatatoolbox.github.io/course-tidyverse"
-    - icon: fab fa-github
-      href: https://github.com/rdatatoolbox/rdatatoolbox.github.io/
 output:
   distill::distill_article:
     css: css/theme.css

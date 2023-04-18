@@ -59,7 +59,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ::: {.box-info}
 `r fontawesome::fa_i("lightbulb")`&nbsp;
-**Pre-registration opens each spring and training course is provided each winter. Suscribe to the [FRB-CESAB newsletter](https://www.fondationbiodiversite.fr/en/newsletter/) to stay informed. More information is available on the  [FRB-CESAB website](https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/develop-skills/best-practice-for-reproducible-research-in-computational-ecology/).**
+**Pre-registration opens each spring and training course is provided each winter. Subscribe to the [FRB-CESAB newsletter](https://www.fondationbiodiversite.fr/en/newsletter/) to stay informed. More information is available on the  [FRB-CESAB website](https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/develop-skills/best-practice-for-reproducible-research-in-computational-ecology/).**
 :::
 
 <br />
@@ -88,7 +88,7 @@ applied to biodiversity research.
   
   <tr>
     <td rowspan="4">**Monday**</td>
-    <td>Icebreaker & Introduction of the week</td>
+    <td>Icebreaker & Introduction to the week</td>
   </tr>
   <tr>
     <td>Open science & Reproducible research <span class="btn"><a href="https://rdatatoolbox.github.io/course-opensci">SLIDES</a></span></td>
