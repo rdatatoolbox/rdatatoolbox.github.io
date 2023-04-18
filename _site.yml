@@ -1,7 +1,7 @@
 name: "rdatatoolbox"
-title: "Data Toolbox for Reproducible Research in Ecology"
+title: "Reproducible Research in Computational Ecology"
 description: |
-  Data Toolbox for Reproducible Research in Ecology Workshop
+  DReproducible Research in Computational Ecology
 base_url: https://rdatatoolbox.github.io
 repository_url: https://github.com/rdatatoolbox/rdatatoolbox.github.io
 creative_commons: CC BY
