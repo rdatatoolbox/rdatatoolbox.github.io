@@ -55,12 +55,21 @@ site: distill::distill_website
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-
+<!--
 
 ::: {.box-info}
 `r fontawesome::fa_i("lightbulb")`&nbsp;
 **Pre-registration opens each spring and training course is provided each winter. Subscribe to the [FRB-CESAB newsletter](https://www.fondationbiodiversite.fr/en/newsletter/) to stay informed. More information is available on the  [FRB-CESAB website](https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/develop-skills/best-practice-for-reproducible-research-in-computational-ecology/).**
 :::
+
+-->
+
+::: {.box-info}
+`r fontawesome::fa_i("lightbulb")`&nbsp;
+**Pre-registrations** for the 2023 training course session **are now open**!
+To pre-register, please visit this [page](https://www.fondationbiodiversite.fr/en/evenement/frb-cesab-data-toolbox-for-reproducible-research-in-computational-ecology-2023/).
+:::
+
 
 <br />
 
