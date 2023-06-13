@@ -66,8 +66,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ::: {.box-info}
 `r fontawesome::fa_i("lightbulb")`&nbsp;
-**Pre-registrations** for the 2023 training course session **are now open**!
-To pre-register, please visit this [page](https://www.fondationbiodiversite.fr/en/evenement/frb-cesab-data-toolbox-for-reproducible-research-in-computational-ecology-2023/).
+**Pre-registrations** for the 2023 training course session **are closed**.
 :::
 
 
