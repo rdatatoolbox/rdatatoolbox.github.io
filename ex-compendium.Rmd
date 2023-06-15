@@ -15,18 +15,23 @@ knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 
 ::: {.box-header}
 `r fontawesome::fa_i("bullseye")`
-L'objectif de cet exercice est de créer un _**research compendium**_, c.-à-d. un dossier de travail dont la structure est dérivée de celle d'un package `r fontawesome::fa_i("r-project")`.
+L'objectif de cet exercice est de créer un _**research compendium**_, c.-à-d. un 
+dossier de travail dont la structure est dérivée de celle d'un package `r fontawesome::fa_i("r-project")`.
 Ce _**research compendium**_ servira de base de travail tout au long de la formation.
 :::
 
-`r fontawesome::fa_i("lightbulb")` **Cet exercice s'inspire du [workshop](https://annakrystalli.me/rrtools-repro-research/intro.html) proposé par [Anna Krystalli](https://annakrystalli.me/).**
+`r fontawesome::fa_i("lightbulb")` **Cet exercice s'inspire du 
+[workshop](https://annakrystalli.me/rrtools-repro-research/intro.html) proposé par [Anna Krystalli](https://annakrystalli.me/).**
 
 <br/>
 
 Afin de nous assister dans la création de la structure de notre dossier de travail,
-nous allons utiliser le package `r fontawesome::fa_i("r-project")` [`rcompendium`](https://github.com/frbcesab/rcompendium), développé dans le cadre 
+nous allons utiliser le package `r fontawesome::fa_i("r-project")` 
+[`rcompendium`](https://github.com/frbcesab/rcompendium), développé dans le cadre 
 de cette formation. Il permet d'automatiser la création des fichiers/répertoires
-spécifiques à un compendium/package `r fontawesome::fa_i("r-project")`. Le package `r fontawesome::fa_i("r-project")` `rcompendium` s'inspire en grande partie du package `r fontawesome::fa_i("r-project")` [`rrtools`](https://github.com/benmarwick/rrtools)
+spécifiques à un compendium/package `r fontawesome::fa_i("r-project")`. 
+
+Le package `r fontawesome::fa_i("r-project")` `rcompendium` s'inspire en grande partie du package `r fontawesome::fa_i("r-project")` [`rrtools`](https://github.com/benmarwick/rrtools)
 et repose sur le package `r fontawesome::fa_i("r-project")` [`usethis`](https://usethis.r-lib.org/). Merci aux développeurs de ces packages.
 
 
@@ -43,8 +48,9 @@ install.packages("rcompendium")
 
 Une fois le package installé, vous devez exécuter la fonction [`set_credentials()`](https://frbcesab.github.io/rcompendium/reference/set_credentials.html) afin de stocker localement vos informations
 personnelles (prénom, nom, email, ORCID, protocole de communication avec GitHub).
-Ces informations permettront de remplir automatiquement certains fichiers. **Cette
-fonction n'est à utiliser qu'une seule fois**.
+Ces informations permettront de remplir automatiquement certains fichiers.
+
+**Cette fonction n'est à utiliser qu'une seule fois**.
 
 ```{r}
 ## Stockage de vos informations ----
@@ -55,8 +61,13 @@ rcompendium::set_credentials(given    = "Jane",
                              protocol = "ssh")
 ```
 
-Ces informations ont été stockées dans le fichier `~/.Renviron`, fichier qui est lu
-à chaque ouverture de `r fontawesome::fa_i("r-project")`.
+Ces informations ont été copiées dans le presse-papier. Collez son contenu dans 
+le fichier `~/.Renviron` (ouvert dans RStudio par cette fonction). Ce fichier est lu
+à chaque ouverture de `r fontawesome::fa_i("r-project")` et son contenu sera
+accessible aux fonctions du package `rcompendium`.
+
+Redémarrez la session `r fontawesome::fa_i("r-project")` et vérifiez que vos
+informations personnelles sont bien accessibles.
 
 
 ```{r}
@@ -66,7 +77,9 @@ options()$"email"
 ```
 
 
-Finalement, vérifiez que vous avez bien suivi les [instructions](https://rdatatoolbox.github.io/instructions.html) pour configurer **git** en exécutant la commande `gh::gh_whoami()`. Vous devriez voir s'afficher :
+Finalement, vérifiez que vous avez bien suivi les 
+[instructions](https://rdatatoolbox.github.io/instructions.html) 
+pour configurer **git** en exécutant la commande `gh::gh_whoami()`. Vous devriez voir s'afficher :
 
 ```
 {
@@ -102,7 +115,7 @@ Toujours travailler dans un **Projet RStudio**. Cela présente l'avantage de sim
 
 ## Fichier `DESCRIPTION`
 
-Le fichier `DESCRIPTION` décrit les métadonnées du projet (titre, auteur, description, packages requis, etc.). C'est un des éléments essentiels d'un package `r fontawesome::fa_i("r-project")`. Ici, nous allons le _détourner_ pour l'utiliser dans le cadre d'un compendium afin de bénéficier des outils de développement de packages `r fontawesome::fa_i("r-project")`.
+Le fichier `DESCRIPTION` décrit les métadonnées du projet (titre, auteur, description, dépendances requises, etc.). C'est un des éléments essentiels d'un package `r fontawesome::fa_i("r-project")`. Ici, nous allons le _détourner_ pour l'utiliser dans le cadre d'un compendium afin de bénéficier des outils de développement de packages `r fontawesome::fa_i("r-project")`.
 
 ```{r}
 ## Ajout d'un fichier DESCRIPTION ----
@@ -116,7 +129,7 @@ Vous éditerez les champs `Title` et `Description` plus loin.
 ::: {.box-info}
 `r fontawesome::fa_i("lightbulb")` **Bonne pratique #2**
 <br/>
-Toujours ajouter un fichier **`DESCRIPTION`** à la racine du projet. En plus de la description du projet, il permet de lister les packages dont le projet dépend (tags `Imports`, `Depends` et `Remotes`). Avec ce fichier, plus besoin d'utiliser les fonctions `install.packages()` et `library()`. Elles seront remplacées respectivement par `devtools::install_deps()` et `devtools::load_all()`.
+Toujours ajouter un fichier **`DESCRIPTION`** à la racine du projet. En plus de la description du projet, il permet de lister les packages dont le projet dépend (tags `Imports`, `Depends` et `Remotes`). Avec ce fichier, plus besoin d'utiliser les fonctions `install.packages()` et `library()`. Elles seront remplacées respectivement par `remotes::install_deps()` et `devtools::load_all()`.
 :::
 
 
@@ -203,7 +216,7 @@ Utilisez la fonction [`usethis::use_r()`](https://usethis.r-lib.org/reference/us
 ```{r code_folding=TRUE}
 dl_pantheria_data <- function(overwrite = FALSE) {
   
-  ## Destination location ---- 
+  ## Destination ---- 
   path <- here::here("data", "pantheria")
   
   ## File name ----
@@ -262,8 +275,8 @@ Cette entête devra contenir (a minima) un titre, une description de chaque argu
 #' The file `PanTHERIA_1-0_WR05_Aug2008.txt` will be stored in 
 #' `data/pantheria/`. This folder will be created if required.
 #' 
-#' @param overwrite a logical. If `TRUE`, the file will be downloaded again and
-#'   the previous version will be erased.
+#' @param overwrite a `logical`. If `TRUE`, the file will be downloaded again 
+#'   and the previous version will be erased.
 #'
 #' @return No return value.
 #' 
@@ -273,7 +286,7 @@ dl_pantheria_data <- function(overwrite = FALSE) { ... }
 ```
 
 
-Maintenant, transpilez vos entêtes `roxygen2` en fichiers `.Rd`, seuls fichiers acceptés par `r fontawesome::fa_i("r-project")` pour documenter des fonctions. Ces fichiers `.Rd` seront stockés dans le dossier `man/`.
+**Optionnel :** transpilez vos entêtes `roxygen2` en fichiers `.Rd`, seuls fichiers acceptés par `r fontawesome::fa_i("r-project")` pour documenter des fonctions. Ces fichiers `.Rd` seront stockés dans le dossier `man/`.
 
 ```{r}
 ## Génération de la doc ----
@@ -286,7 +299,7 @@ L'aide de votre fonction est maintenant accessible via `?nom_fonction`.
 ::: {.box-info}
 `r fontawesome::fa_i("lightbulb")` **Bonne pratique #6**
 <br/>
-Pensez aux autres (et au vous du futur) : **documenter toujours** votre code. Un code sans documentation est inutile. Utilisez les entêtes **`roxygen2`** pour documenter vos fonctions, de simples commentaires pour documenter du code et des `README` pour tout le reste.
+Pensez aux autres (et au vous du futur) : **documentez toujours** votre code. Un code sans documentation est inutile. Utilisez les entêtes **`roxygen2`** pour documenter vos fonctions, de simples commentaires pour documenter du code et des `README` pour tout le reste.
 :::
 
 
@@ -301,7 +314,7 @@ Nos fonctions contiennent des dépendances à deux packages externes : `utils` e
 rcompendium::add_dependencies(compendium = ".")
 ```
 
-Regardez le contenu du fichier `DESCRIPTION`. Par défaut, les packages requis sont listés sous le tag `Imports`. Ainsi, pour utiliser une fonction externe, il faudra l'appeler par `package::fonction()`. Si vous remplacer le tag `Imports` par `Depends`, l'utilisation de la fonction `devtools::load_all()` (voir plus bas) aura le même effet qu'un `library()` et vous pourrez utiliser une fonction externe par `fonction()`.
+Regardez le contenu du fichier `DESCRIPTION`. Par défaut, les packages requis sont listés sous le tag `Imports`. Ainsi, pour utiliser une fonction externe, il faudra l'appeler par `package::fonction()`. Si vous remplacer le tag `Imports` par `Depends`, l'utilisation de la fonction `remotes::load_all()` (voir plus bas) aura le même effet qu'un `library()` et vous pourrez utiliser une fonction externe par `fonction()`.
 
 
 La fonction [`rcompendium::add_dependencies()`](https://frbcesab.github.io/rcompendium/reference/add_dependencies.html) va scanner chaque fichier `.R` et `.Rmd` du compendium et détecter les packages externes utilisés pour les ajouter automatiquement au fichier `DESCRIPTION`.
@@ -438,7 +451,7 @@ rmarkdown::render("README.Rmd")
 ::: {.box-info}
 `r fontawesome::fa_i("lightbulb")` **Bonne pratique #11**
 <br/>
-Ajouter un **`README`** à votre projet afin d'aider l'utilisateur à comprendre votre projet. 
+Ajoutez un **`README`** à votre projet afin d'aider l'utilisateur à comprendre votre projet. 
 :::
 
 

@@ -2266,15 +2266,19 @@ Archives
 </div>
 <div class="box-header">
 <p><i class="fas fa-bullseye" role="presentation" aria-label="bullseye icon"></i>
-L’objectif de cet exercice est de créer un <em><strong>research compendium</strong></em>, c.-à-d. un dossier de travail dont la structure est dérivée de celle d’un package <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i>.
+L’objectif de cet exercice est de créer un <em><strong>research compendium</strong></em>, c.-à-d. un
+dossier de travail dont la structure est dérivée de celle d’un package <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i>.
 Ce <em><strong>research compendium</strong></em> servira de base de travail tout au long de la formation.</p>
 </div>
-<p><i class="far fa-lightbulb" role="presentation" aria-label="lightbulb icon"></i> <strong>Cet exercice s’inspire du <a href="https://annakrystalli.me/rrtools-repro-research/intro.html">workshop</a> proposé par <a href="https://annakrystalli.me/">Anna Krystalli</a>.</strong></p>
+<p><i class="far fa-lightbulb" role="presentation" aria-label="lightbulb icon"></i> <strong>Cet exercice s’inspire du
+<a href="https://annakrystalli.me/rrtools-repro-research/intro.html">workshop</a> proposé par <a href="https://annakrystalli.me/">Anna Krystalli</a>.</strong></p>
 <p><br/></p>
 <p>Afin de nous assister dans la création de la structure de notre dossier de travail,
-nous allons utiliser le package <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i> <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a>, développé dans le cadre
+nous allons utiliser le package <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i>
+<a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a>, développé dans le cadre
 de cette formation. Il permet d’automatiser la création des fichiers/répertoires
-spécifiques à un compendium/package <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i>. Le package <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i> <code>rcompendium</code> s’inspire en grande partie du package <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i> <a href="https://github.com/benmarwick/rrtools"><code>rrtools</code></a>
+spécifiques à un compendium/package <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i>.</p>
+<p>Le package <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i> <code>rcompendium</code> s’inspire en grande partie du package <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i> <a href="https://github.com/benmarwick/rrtools"><code>rrtools</code></a>
 et repose sur le package <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i> <a href="https://usethis.r-lib.org/"><code>usethis</code></a>. Merci aux développeurs de ces packages.</p>
 <p><br /></p>
 <h2 id="préambule">Préambule</h2>
@@ -2287,20 +2291,24 @@ et repose sur le package <i class="fab fa-r-project" role="presentation" aria-la
 </div>
 <p>Une fois le package installé, vous devez exécuter la fonction <a href="https://frbcesab.github.io/rcompendium/reference/set_credentials.html"><code>set_credentials()</code></a> afin de stocker localement vos informations
 personnelles (prénom, nom, email, ORCID, protocole de communication avec GitHub).
-Ces informations permettront de remplir automatiquement certains fichiers. <strong>Cette
-fonction n’est à utiliser qu’une seule fois</strong>.</p>
+Ces informations permettront de remplir automatiquement certains fichiers.</p>
+<p><strong>Cette fonction n’est à utiliser qu’une seule fois</strong>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>## Stockage de vos informations ----</span></span>
-<span><span class='fu'>rcompendium</span><span class='fu'>::</span><span class='fu'>set_credentials</span><span class='op'>(</span>given    <span class='op'>=</span> <span class='st'>"Jane"</span>,</span>
+<span><span class='fu'>rcompendium</span><span class='fu'>::</span><span class='fu'><a href='https://frbcesab.github.io/rcompendium/reference/set_credentials.html'>set_credentials</a></span><span class='op'>(</span>given    <span class='op'>=</span> <span class='st'>"Jane"</span>,</span>
 <span>                             family   <span class='op'>=</span> <span class='st'>"Doe"</span>, </span>
 <span>                             email    <span class='op'>=</span> <span class='st'>"jane.doe@mail.me"</span>, </span>
 <span>                             orcid    <span class='op'>=</span> <span class='st'>"0000-0000-0000-0000"</span>, </span>
 <span>                             protocol <span class='op'>=</span> <span class='st'>"ssh"</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
-<p>Ces informations ont été stockées dans le fichier <code>~/.Renviron</code>, fichier qui est lu
-à chaque ouverture de <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i>.</p>
+<p>Ces informations ont été copiées dans le presse-papier. Collez son contenu dans
+le fichier <code>~/.Renviron</code> (ouvert dans RStudio par cette fonction). Ce fichier est lu
+à chaque ouverture de <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i> et son contenu sera
+accessible aux fonctions du package <code>rcompendium</code>.</p>
+<p>Redémarrez la session <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i> et vérifiez que vos
+informations personnelles sont bien accessibles.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>## Vérification (après redémarrage de R) ----</span></span>
@@ -2308,7 +2316,9 @@ fonction n’est à utiliser qu’une seule fois</strong>.</p>
 <span><span class='co'># [1] "jane.doe@mail.me"</span></span></code></pre>
 </div>
 </div>
-<p>Finalement, vérifiez que vous avez bien suivi les <a href="https://rdatatoolbox.github.io/instructions.html">instructions</a> pour configurer <strong>git</strong> en exécutant la commande <code>gh::gh_whoami()</code>. Vous devriez voir s’afficher :</p>
+<p>Finalement, vérifiez que vous avez bien suivi les
+<a href="https://rdatatoolbox.github.io/instructions.html">instructions</a>
+pour configurer <strong>git</strong> en exécutant la commande <code>gh::gh_whoami()</code>. Vous devriez voir s’afficher :</p>
 <pre><code>{
   &quot;name&quot;: &quot;Jane Doe&quot;,
   &quot;login&quot;: &quot;jdoe&quot;,
@@ -2331,11 +2341,11 @@ Toujours travailler dans un <strong>Projet RStudio</strong>. Cela présente l’
 </div>
 <p><br /></p>
 <h2 id="fichier-description">Fichier <code>DESCRIPTION</code></h2>
-<p>Le fichier <code>DESCRIPTION</code> décrit les métadonnées du projet (titre, auteur, description, packages requis, etc.). C’est un des éléments essentiels d’un package <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i>. Ici, nous allons le <em>détourner</em> pour l’utiliser dans le cadre d’un compendium afin de bénéficier des outils de développement de packages <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i>.</p>
+<p>Le fichier <code>DESCRIPTION</code> décrit les métadonnées du projet (titre, auteur, description, dépendances requises, etc.). C’est un des éléments essentiels d’un package <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i>. Ici, nous allons le <em>détourner</em> pour l’utiliser dans le cadre d’un compendium afin de bénéficier des outils de développement de packages <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>## Ajout d'un fichier DESCRIPTION ----</span></span>
-<span><span class='fu'>rcompendium</span><span class='fu'>::</span><span class='fu'>add_description</span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
+<span><span class='fu'>rcompendium</span><span class='fu'>::</span><span class='fu'><a href='https://frbcesab.github.io/rcompendium/reference/add_description.html'>add_description</a></span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
 <p>Comme vous le voyez, ce fichier a été pré-rempli avec vos informations personnelles.
@@ -2343,7 +2353,7 @@ Vous éditerez les champs <code>Title</code> et <code>Description</code> plus lo
 <div class="box-info">
 <p><i class="far fa-lightbulb" role="presentation" aria-label="lightbulb icon"></i> <strong>Bonne pratique #2</strong>
 <br/>
-Toujours ajouter un fichier <strong><code>DESCRIPTION</code></strong> à la racine du projet. En plus de la description du projet, il permet de lister les packages dont le projet dépend (tags <code>Imports</code>, <code>Depends</code> et <code>Remotes</code>). Avec ce fichier, plus besoin d’utiliser les fonctions <code>install.packages()</code> et <code>library()</code>. Elles seront remplacées respectivement par <code>devtools::install_deps()</code> et <code>devtools::load_all()</code>.</p>
+Toujours ajouter un fichier <strong><code>DESCRIPTION</code></strong> à la racine du projet. En plus de la description du projet, il permet de lister les packages dont le projet dépend (tags <code>Imports</code>, <code>Depends</code> et <code>Remotes</code>). Avec ce fichier, plus besoin d’utiliser les fonctions <code>install.packages()</code> et <code>library()</code>. Elles seront remplacées respectivement par <code>remotes::install_deps()</code> et <code>devtools::load_all()</code>.</p>
 </div>
 <p><br /></p>
 <h2 id="choix-dune-licence">Choix d’une Licence</h2>
@@ -2353,7 +2363,7 @@ possible de faire avec. Ainsi, nous vous recommandons d’ajouter <strong>dès l
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>## Ajout d'une licence ----</span></span>
-<span><span class='fu'>rcompendium</span><span class='fu'>::</span><span class='fu'>add_license</span><span class='op'>(</span>license <span class='op'>=</span> <span class='st'>"GPL-2"</span><span class='op'>)</span></span></code></pre>
+<span><span class='fu'>rcompendium</span><span class='fu'>::</span><span class='fu'><a href='https://frbcesab.github.io/rcompendium/reference/add_license.html'>add_license</a></span><span class='op'>(</span>license <span class='op'>=</span> <span class='st'>"GPL-2"</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
 <p>Notez qu’un nouveau fichier a été créé : <code>LICENSE.md</code>. Celui-ci détaille le contenu de la license choisie. Regardez aussi le contenu du fichier <code>DESCRIPTION</code> : la section <code>License</code> a été mise à jour.</p>
@@ -2368,15 +2378,15 @@ Toujours ajouter une <strong><code>LICENSE</code></strong> à un projet qui sera
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>## Ajout de sous-répertoires ----</span></span>
-<span><span class='fu'>rcompendium</span><span class='fu'>::</span><span class='fu'>add_compendium</span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
+<span><span class='fu'>rcompendium</span><span class='fu'>::</span><span class='fu'><a href='https://frbcesab.github.io/rcompendium/reference/add_compendium.html'>add_compendium</a></span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
 <p>Naviguez à l’intérieur de chaque sous-répertoire et lisez les <code>README</code> associés pour comprendre leur rôle.</p>
 <p><strong>N.B.</strong> Pour ce compendium, nous n’avons pas besoin des sous-répertoires <code>data/raw-data</code> et <code>data/derived-data</code>. Supprimez-les :</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/unlink.html'>unlink</a></span><span class='op'>(</span><span class='fu'>here</span><span class='fu'>::</span><span class='fu'>here</span><span class='op'>(</span><span class='st'>"data"</span>, <span class='st'>"raw-data"</span><span class='op'>)</span>, recursive <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
-<span><span class='fu'><a href='https://rdrr.io/r/base/unlink.html'>unlink</a></span><span class='op'>(</span><span class='fu'>here</span><span class='fu'>::</span><span class='fu'>here</span><span class='op'>(</span><span class='st'>"data"</span>, <span class='st'>"derived-data"</span><span class='op'>)</span>, recursive <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/unlink.html'>unlink</a></span><span class='op'>(</span><span class='fu'>here</span><span class='fu'>::</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"data"</span>, <span class='st'>"raw-data"</span><span class='op'>)</span>, recursive <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/unlink.html'>unlink</a></span><span class='op'>(</span><span class='fu'>here</span><span class='fu'>::</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"data"</span>, <span class='st'>"derived-data"</span><span class='op'>)</span>, recursive <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
 <div class="box-info">
@@ -2403,8 +2413,8 @@ Show code
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>dl_pantheria_data</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>overwrite</span> <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span></span>
 <span>  </span>
-<span>  <span class='co'>## Destination location ---- </span></span>
-<span>  <span class='va'>path</span> <span class='op'>&lt;-</span> <span class='fu'>here</span><span class='fu'>::</span><span class='fu'>here</span><span class='op'>(</span><span class='st'>"data"</span>, <span class='st'>"pantheria"</span><span class='op'>)</span></span>
+<span>  <span class='co'>## Destination ---- </span></span>
+<span>  <span class='va'>path</span> <span class='op'>&lt;-</span> <span class='fu'>here</span><span class='fu'>::</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"data"</span>, <span class='st'>"pantheria"</span><span class='op'>)</span></span>
 <span>  </span>
 <span>  <span class='co'>## File name ----</span></span>
 <span>  <span class='va'>filename</span> <span class='op'>&lt;-</span> <span class='st'>"PanTHERIA_1-0_WR05_Aug2008.txt"</span></span>
@@ -2459,8 +2469,8 @@ Show code
 <span><span class='co'>#' The file `PanTHERIA_1-0_WR05_Aug2008.txt` will be stored in </span></span>
 <span><span class='co'>#' `data/pantheria/`. This folder will be created if required.</span></span>
 <span><span class='co'>#' </span></span>
-<span><span class='co'>#' @param overwrite a logical. If `TRUE`, the file will be downloaded again and</span></span>
-<span><span class='co'>#'   the previous version will be erased.</span></span>
+<span><span class='co'>#' @param overwrite a `logical`. If `TRUE`, the file will be downloaded again </span></span>
+<span><span class='co'>#'   and the previous version will be erased.</span></span>
 <span><span class='co'>#'</span></span>
 <span><span class='co'>#' @return No return value.</span></span>
 <span><span class='co'>#' </span></span>
@@ -2470,18 +2480,18 @@ Show code
 </div>
 </details>
 </div>
-<p>Maintenant, transpilez vos entêtes <code>roxygen2</code> en fichiers <code>.Rd</code>, seuls fichiers acceptés par <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i> pour documenter des fonctions. Ces fichiers <code>.Rd</code> seront stockés dans le dossier <code>man/</code>.</p>
+<p><strong>Optionnel :</strong> transpilez vos entêtes <code>roxygen2</code> en fichiers <code>.Rd</code>, seuls fichiers acceptés par <i class="fab fa-r-project" role="presentation" aria-label="r-project icon"></i> pour documenter des fonctions. Ces fichiers <code>.Rd</code> seront stockés dans le dossier <code>man/</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>## Génération de la doc ----</span></span>
-<span><span class='fu'>devtools</span><span class='fu'>::</span><span class='fu'>document</span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
+<span><span class='fu'>devtools</span><span class='fu'>::</span><span class='fu'><a href='https://devtools.r-lib.org/reference/document.html'>document</a></span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
 <p>L’aide de votre fonction est maintenant accessible via <code>?nom_fonction</code>.</p>
 <div class="box-info">
 <p><i class="far fa-lightbulb" role="presentation" aria-label="lightbulb icon"></i> <strong>Bonne pratique #6</strong>
 <br/>
-Pensez aux autres (et au vous du futur) : <strong>documenter toujours</strong> votre code. Un code sans documentation est inutile. Utilisez les entêtes <strong><code>roxygen2</code></strong> pour documenter vos fonctions, de simples commentaires pour documenter du code et des <code>README</code> pour tout le reste.</p>
+Pensez aux autres (et au vous du futur) : <strong>documentez toujours</strong> votre code. Un code sans documentation est inutile. Utilisez les entêtes <strong><code>roxygen2</code></strong> pour documenter vos fonctions, de simples commentaires pour documenter du code et des <code>README</code> pour tout le reste.</p>
 </div>
 <p><br /></p>
 <h3 id="ajout-des-dépendances">Ajout des dépendances</h3>
@@ -2489,10 +2499,10 @@ Pensez aux autres (et au vous du futur) : <strong>documenter toujours</strong> v
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>## Ajout de dépendances ----</span></span>
-<span><span class='fu'>rcompendium</span><span class='fu'>::</span><span class='fu'>add_dependencies</span><span class='op'>(</span>compendium <span class='op'>=</span> <span class='st'>"."</span><span class='op'>)</span></span></code></pre>
+<span><span class='fu'>rcompendium</span><span class='fu'>::</span><span class='fu'><a href='https://frbcesab.github.io/rcompendium/reference/add_dependencies.html'>add_dependencies</a></span><span class='op'>(</span>compendium <span class='op'>=</span> <span class='st'>"."</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
-<p>Regardez le contenu du fichier <code>DESCRIPTION</code>. Par défaut, les packages requis sont listés sous le tag <code>Imports</code>. Ainsi, pour utiliser une fonction externe, il faudra l’appeler par <code>package::fonction()</code>. Si vous remplacer le tag <code>Imports</code> par <code>Depends</code>, l’utilisation de la fonction <code>devtools::load_all()</code> (voir plus bas) aura le même effet qu’un <code>library()</code> et vous pourrez utiliser une fonction externe par <code>fonction()</code>.</p>
+<p>Regardez le contenu du fichier <code>DESCRIPTION</code>. Par défaut, les packages requis sont listés sous le tag <code>Imports</code>. Ainsi, pour utiliser une fonction externe, il faudra l’appeler par <code>package::fonction()</code>. Si vous remplacer le tag <code>Imports</code> par <code>Depends</code>, l’utilisation de la fonction <code>remotes::load_all()</code> (voir plus bas) aura le même effet qu’un <code>library()</code> et vous pourrez utiliser une fonction externe par <code>fonction()</code>.</p>
 <p>La fonction <a href="https://frbcesab.github.io/rcompendium/reference/add_dependencies.html"><code>rcompendium::add_dependencies()</code></a> va scanner chaque fichier <code>.R</code> et <code>.Rmd</code> du compendium et détecter les packages externes utilisés pour les ajouter automatiquement au fichier <code>DESCRIPTION</code>.</p>
 <div class="box-info">
 <p><i class="far fa-lightbulb" role="presentation" aria-label="lightbulb icon"></i> <strong>Bonne pratique #7</strong>
@@ -2519,7 +2529,7 @@ Avec un fichier <code>DESCRIPTION</code> (listant les dépendances requises) et 
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>## Ajout d'un makefile ----</span></span>
-<span><span class='fu'>rcompendium</span><span class='fu'>::</span><span class='fu'>add_makefile</span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
+<span><span class='fu'>rcompendium</span><span class='fu'>::</span><span class='fu'><a href='https://frbcesab.github.io/rcompendium/reference/add_makefile.html'>add_makefile</a></span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
 <div class="box-info">
@@ -2534,7 +2544,7 @@ Bien que non essentiel, un fichier <strong><code>make.R</code></strong> placé �
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>## Ajout d'un script R ----</span></span>
-<span><span class='fu'>utils</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/r/utils/file.edit.html'>file.edit</a></span><span class='op'>(</span><span class='fu'>here</span><span class='fu'>::</span><span class='fu'>here</span><span class='op'>(</span><span class='st'>"analyses"</span>, <span class='st'>"download-data.R"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+<span><span class='fu'>utils</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/r/utils/file.edit.html'>file.edit</a></span><span class='op'>(</span><span class='fu'>here</span><span class='fu'>::</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"analyses"</span>, <span class='st'>"download-data.R"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
 <p><strong>Proposition de contenu</strong> (essayer de ne pas regarder)</p>
@@ -2582,7 +2592,7 @@ Le dossier <strong><code>analyses/</code></strong> contient les scripts <i class
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>## Ajout d'un README ----</span></span>
-<span><span class='fu'>rcompendium</span><span class='fu'>::</span><span class='fu'>add_readme_rmd</span><span class='op'>(</span>type <span class='op'>=</span> <span class='st'>"compendium"</span><span class='op'>)</span></span></code></pre>
+<span><span class='fu'>rcompendium</span><span class='fu'>::</span><span class='fu'><a href='https://frbcesab.github.io/rcompendium/reference/add_readme_rmd.html'>add_readme_rmd</a></span><span class='op'>(</span>type <span class='op'>=</span> <span class='st'>"compendium"</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
 <p>Adaptez son contenu et n’oubliez pas de transpiler ce fichier <code>.Rmd</code> en un fichier <code>.md</code> (fichier <code>Markdown</code> lu par GitHub). Utilisez le bouton <strong>Knit</strong> de RStudio ou :</p>
@@ -2596,7 +2606,7 @@ Le dossier <strong><code>analyses/</code></strong> contient les scripts <i class
 <div class="box-info">
 <p><i class="far fa-lightbulb" role="presentation" aria-label="lightbulb icon"></i> <strong>Bonne pratique #11</strong>
 <br/>
-Ajouter un <strong><code>README</code></strong> à votre projet afin d’aider l’utilisateur à comprendre votre projet.</p>
+Ajoutez un <strong><code>README</code></strong> à votre projet afin d’aider l’utilisateur à comprendre votre projet.</p>
 </div>
 <p><br /></p>
 <blockquote>
@@ -2631,7 +2641,7 @@ Show code
 <span><span class='va'>dl_data_descr</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>overwrite</span> <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span></span>
 <span>  </span>
 <span>  <span class='co'>## Destination location ---- </span></span>
-<span>  <span class='va'>path</span> <span class='op'>&lt;-</span> <span class='fu'>here</span><span class='fu'>::</span><span class='fu'>here</span><span class='op'>(</span><span class='st'>"data"</span><span class='op'>)</span></span>
+<span>  <span class='va'>path</span> <span class='op'>&lt;-</span> <span class='fu'>here</span><span class='fu'>::</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"data"</span><span class='op'>)</span></span>
 <span>  </span>
 <span>  <span class='co'>## File name ----</span></span>
 <span>  <span class='va'>filename</span> <span class='op'>&lt;-</span> <span class='st'>"README.md"</span></span>
