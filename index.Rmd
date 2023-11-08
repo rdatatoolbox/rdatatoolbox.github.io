@@ -92,6 +92,8 @@ applied to biodiversity research.
 
 ## Program
 
+<!--
+
 <table>
   
   <tr>
@@ -145,6 +147,51 @@ applied to biodiversity research.
   
 </table>
 
+-->
+
+<table>
+  
+  <tr>
+    <td rowspan="3">**Monday**</td>
+    <td>Open science & Reproducible research</td>
+  </tr>
+  <tr>
+    <td>Research compendium & Good practices</td>
+  </tr>
+  <tr>
+    <td>Version control with `Git` & `GitHub`</td>
+  </tr>
+  
+  <tr>
+    <td rowspan="2">**Tuesday**</td>
+    <td>Literate programing: `R Markdown` & `Quarto`</td>
+  </tr>
+  <tr>
+    <td>Pipeline toolkit with `targets`</td>
+  </tr>
+  
+  <tr>
+    <td rowspan="3">**Wednesday**</td>
+    <td>Dealing with R package versions with `renv`</td>
+  </tr>
+  <tr>
+    <td>Containerization with `Docker`</td>
+  </tr>
+  <tr>
+    <td>Building an R package</td>
+  </tr>
+  
+  <tr>
+    <td>**Thursday**</td>
+    <td>Subgroups projects</td>
+  </tr>
+  
+  <tr>
+    <td>**Friday**</td>
+    <td>Subgroups projects</td>
+  </tr>
+  
+</table>
 
 
 <br/>
@@ -153,9 +200,10 @@ applied to biodiversity research.
 
 ## Prerequisites
 
-Please follow this [tutorial](https://frbcesab.github.io/training-courses/installation.html) to install your working environment **before** attending the training course.
+Please follow this [tutorial](https://frbcesab.github.io/rsetup/) to install 
+your working environment **before** attending the training course.
 
-You also need to create an account on [GitHub](https://github.com/signup).
+You also need to create an account on [GitHub](https://github.com/signup/).
 
 
 <br/>
