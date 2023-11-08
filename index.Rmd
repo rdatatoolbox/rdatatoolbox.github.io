@@ -97,10 +97,7 @@ applied to biodiversity research.
 <table>
   
   <tr>
-    <td rowspan="4">**Monday**</td>
-    <td>Icebreaker & Introduction to the week</td>
-  </tr>
-  <tr>
+    <td rowspan="3">**Monday**</td>
     <td>Open science & Reproducible research <span class="btn"><a href="https://rdatatoolbox.github.io/course-opensci">SLIDES</a></span></td>
   </tr>
   <tr>
@@ -111,14 +108,8 @@ applied to biodiversity research.
   </tr>
   
   <tr>
-    <td rowspan="4">**Tuesday**</td>
-    <td>Basics of `R Markdown` <span class="btn"><a href="https://rdatatoolbox.github.io/course-rmarkdown">SLIDES</a></span></td>
-  </tr>
-  <tr>
-    <td>Extending `R Markdown`: websites, slides and dashboards</td>
-  </tr>
-  <tr>
-    <td>Introduction to `Quarto`</td>
+    <td rowspan="2">**Tuesday**</td>
+    <td>Literate programing: `R Markdown` & `Quarto` <span class="btn"><a href="https://rdatatoolbox.github.io/course-rmarkdown">SLIDES</a></span></td>
   </tr>
   <tr>
     <td>Pipeline toolkit with `targets` <span class="btn"><a href="https://rdatatoolbox.github.io/course-targets">SLIDES</a></span></td>
