@@ -1,30 +1,37 @@
 on:
+  workflow_dispatch:
   push:
-    branches: main
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
 
-name: Render & Deploy Site
+name: Quarto Render and Publish
 
 jobs:
-  build:
-    runs-on: macOS-latest
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v3
+      - name: Check out repository
+        uses: actions/checkout@v4
 
-      - uses: r-lib/actions/setup-r@v2
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+      
+      - name: Install R packages
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages:
+            any::knitr
+            any::rmarkdown
 
-      - uses: r-lib/actions/setup-pandoc@v2
-
-      - name: Install dependencies
-        run: |
-          install.packages("rmarkdown")
-          install.packages("distill")
-          install.packages("fontawesome")
-        shell: Rscript {0}
-
-      - name: Render Site
-        run: Rscript -e 'rmarkdown::render_site(encoding = "UTF-8")'
-      - name: Commit results
-        run: |
-          git add -A
-          git commit -m 'Rebuild site' || echo "No changes to commit"
-          git push origin || echo "No changes to commit"
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
