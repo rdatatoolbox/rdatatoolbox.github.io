@@ -7,7 +7,7 @@ toc: true
 ::: {.callout-note}
 ## Registrations for the 2023 session are closed
 
-Registration open each spring and the training course is provided each winter. 
+Registrations open each spring and the training course takes place during winter. 
 
 {{< fa hand-point-right >}}&nbsp; Subscribe to the 
 [FRB-CESAB newsletter](https://www.fondationbiodiversite.fr/en/newsletter/) 
@@ -48,15 +48,15 @@ applied to biodiversity research.
 
 ## Prerequisites {.unnumbered}
 
-Please follow this [tutorial](https://frbcesab.github.io/rsetup/) to install 
+{{< fa hand-point-right >}}&nbsp; Please follow this [tutorial](https://frbcesab.github.io/rsetup/) to install 
 your working environment **before attending the training course**.
 
-You also need to create an account on [GitHub](https://github.com/signup/).
+{{< fa hand-point-right >}}&nbsp; You also need to create an account on [GitHub](https://github.com/signup/).
 
 
 ## Material {.unnumbered}
 
-All the material used in this training course (slides, data, exercises) is available on {{< fa brands github >}} at: <https://github.com/rdatatoolbox/>
+All the material used in this training course (slides, data, exercises) is available at: <https://github.com/rdatatoolbox/>
 
 
 
