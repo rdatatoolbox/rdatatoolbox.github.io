@@ -18,14 +18,14 @@
     "href": "index.html#prerequisites",
     "title": "Reproducible Research in Computational Ecology",
     "section": "Prerequisites",
-    "text": "Prerequisites\nPlease follow this tutorial to install your working environment before attending the training course.\nYou also need to create an account on GitHub."
+    "text": "Prerequisites\n  Please follow this tutorial to install your working environment before attending the training course.\n  You also need to create an account on GitHub."
   },
   {
     "objectID": "index.html#material",
     "href": "index.html#material",
     "title": "Reproducible Research in Computational Ecology",
     "section": "Material",
-    "text": "Material\nAll the material used in this training course (slides, data, exercises) is available on  at: https://github.com/rdatatoolbox/"
+    "text": "Material\nAll the material used in this training course (slides, data, exercises) is available at: https://github.com/rdatatoolbox/"
   },
   {
     "objectID": "index.html#citation",
@@ -135,7 +135,7 @@
   {
     "objectID": "chapters/ex-github.html",
     "href": "chapters/ex-github.html",
-    "title": "Git and GitHub",
+    "title": "Git & GitHub",
     "section": "",
     "text": "Objectif\n\n\n\nL’objectif de cet exercice est de vous familiariser avec l’utilisation de  et .\n\n\n\nTravailler seul\n  Vous allez envoyer le research compendium créé à l’Exercice 1 sur votre compte GitHub.\n\n\n\n\n\n\nGitHub First vs. GitHub Last\n\n\n\nCette approche est appelée GitHub Last : on crée d’abord le projet en local, puis on crée le dépôt distant. Pour plus d’information : GitHub First et GitHub Last.\n\n\n\nInitialiser git\nDans un premier temps, vous devez initialiser git dans votre projet. Entrez la ligne de commande suivante dans le terminal de RStudio :\n## Initialisation de git -----\ngit init\nVérifiez l’état de votre projet :\n## Statut des fichiers vu par git -----\ngit status\n\n\nAjout d’un .gitignore\nCertains fichiers sont inutiles à versionner et peuvent même parfois créer des conflits. C’est le cas notamment du fichier .Rproj. Nous allons les ajouter au .gitignore en utilisant la fonction  add_to_gitignore de rcompendium\n\n## Ajout d'un .gitignore pour les projets R -----\nrcompendium::add_to_gitignore()\n\n\n\nPremière version\nIl est temps de créer une première version. Cela se fera en deux temps : 1) sélection des fichiers (git add) et 2) enregistrement de la version (git commit).\n## Sélection de tous les fichiers ----\ngit add .\n\n## Création d'une nouvelle version ----\ngit commit -m \"init repo\"\nVérifiez le status des fichiers :\n## Statut des fichiers vu par git -----\ngit status\nAffichez l’historique :\n## Historique des versions -----\ngit log\n\n\nCréation du dépôt GitHub\nMaintenant, nous souhaitons envoyer notre projet sur GitHub. Rendez-vous sur GitHub et créez un nouveau dépôt VIDE : donnez juste un nom de dépôt et n’ajoutez aucun fichier supplémentaire (pas de licence, .gitignore, README). Le dépôt contient une série d’instructions correspondant à trois cas de figure. Nous allons suivre la section Push an existing repository from the command line.\nDans le terminal de RStudio :\n## Ajout du chemin vers le dépôt distant ----\ngit remote add origin git@github.com:your_account/your_repo.git\n\n## Envoi du dépôt local vers le dépôt distant ----\ngit push -u origin main\n\nFélicitation ! Votre research compendium est maintenant sur GitHub.\n\n\n\n\n\n\n\nGitHub API\n\n\n\nUne alternative est d’utiliser l’API GitHub via la fonction  use_github() du package usethis. Cette fonction va créer le dépôt distant sur GitHub et envoyer votre dépôt local sur GitHub (git push).\n\n## Création du dépôt public GitHub ----\nusethis::use_github()\n\n  Pour utiliser l’API GitHub, vous devez avoir sauvegardé localement votre GitHub Personal Access Token (PAT) tel quel indiqué ici.\n\n\nContinuez à modifier vos fichiers, créez de nouvelles versions (git add et git commit) et envoyez-les sur GitHub (git push).\n\n\n\nCollaborer\n  Mettez-vous par groupe de 2-3 personnes et déterminez un leader parmis vous : vous allez collaborer sur son projet.\nSur GitHub, le leader va allez dans les Settings et ajoutez une personne de votre groupe comme collaborateur de votre projet.\n  Mettez en oeuvre 3 solutions pour collaborer sur le même projet. En fonction de votre statut dans le projet et de votre objectif :\n\nUtilisez les Issues pour suggérer au leader des améliorations\nSi vous êtes collaborateur, Clonez le dépôt, faites les modifications et envoyez-les\nSi vous ne l’êtes pas, Forkez, Clonez, et essayez la Pull Request"
   },
