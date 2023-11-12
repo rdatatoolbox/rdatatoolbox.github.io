@@ -8,7 +8,7 @@
 
 ![](https://raw.githubusercontent.com/rdatatoolbox/.github/main/profile/banner-rdatatoolbox_150dpi.png)
 
-Source of the [workshop **_Reproducible Research in Computational Ecology_**](https://rdatatoolbox.github.io/)
+Source of the [workshop](https://rdatatoolbox.github.io/) **_Reproducible Research in Computational Ecology_**
 co-organized by the
 [FRB-CESAB](https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/)
 and the
