@@ -1,0 +1,45 @@
+## Package {.unnumbered}
+
+::: {.callout-note}
+## Objectif
+
+Dans cet exercice, vous allez créer un package {{< fa brands r-project >}}.
+:::
+
+
+### Consignes {.unnumbered}
+
+Créez un **nouveau projet RStudio**.
+
+- Utilisez la fonction [`rcompendium::add_description()`](https://frbcesab.github.io/rcompendium/reference/add_description.html) pour ajouter un fichier **DESCRIPTION**
+- Utilisez la fonction [`rcompendium::add_to_gitignore()`](https://frbcesab.github.io/rcompendium/reference/add_to_gitignore.html) pour ajouter un **.gitignore** spécifique à {{< fa brands r-project >}}
+- Implémentez des fonctions {{< fa brands r-project >}} dans le dossier **R/** et documentez-les avec la syntaxe [**roxygen2**](https://roxygen2.r-lib.org/articles/roxygen2.html). Vous pouvez réutiliser certaines fonctions développées lors des exercices précédents.
+- Mettez à jour la documentation des fonctions avec [`devtools::document()`](https://www.rdocumentation.org/packages/devtools/versions/2.4.5/topics/document)
+- Mettez à jour les dépendances dans le fichier **DESCRIPTION** avec [`rcompendium::add_dependencies()`](https://frbcesab.github.io/rcompendium/reference/add_dependencies.html)
+- Vérifiez que votre package ne comporte pas d'erreur avec [`devtools::check()`](https://devtools.r-lib.org/reference/check.html)
+- Ajoutez un **README.Rmd** avec [`rcompendium::add_readme_rmd()`](https://frbcesab.github.io/rcompendium/reference/add_readme_rmd.html) et éditez-le. N'oubliez pas de le transpiler en **README.md** avec [`rmarkdown::render()`](https://pkgs.rstudio.com/rmarkdown/reference/render.html)
+- Utilisez la fonction [`usethis::use_github()`](https://usethis.r-lib.org/reference/use_github.html) pour envoyer votre projet sur GitHub.
+
+{{< fa lightbulb >}}&nbsp; Pensez aux **commits** !
+
+
+
+### Bonus
+
+{{< fa hand-point-right >}}&nbsp; Mettez en place des [GitHub Actions](https://docs.github.com/en/actions) pour :
+
+- Vérifiez votre package sur les serveurs GitHub après chaque push avec [`rcompendium::add_github_actions_check()`](https://frbcesab.github.io/rcompendium/reference/add_github_actions_check.html)
+- Déployer le site Web du package avec [`rcompendium::add_github_actions_pkgdown()`](https://frbcesab.github.io/rcompendium/reference/add_github_actions_pkgdown.html)
+
+Ajoutez au **README.Rmd** les badges correspondants avec [`rcompendium::add_github_actions_check_badge()`](https://frbcesab.github.io/rcompendium/reference/add_github_actions_check_badge.html) et [`rcompendium::add_github_actions_pkgdown_badge()`](https://frbcesab.github.io/rcompendium/reference/add_github_actions_pkgdown_badge.html).
+
+
+
+::: {.callout-note}
+## La fonction [`new_package()`](https://frbcesab.github.io/rcompendium/reference/new_package.html)
+
+L'ensemble de ces étapes peut être réalisé avec une seule fonction : 
+[`new_package()`](https://frbcesab.github.io/rcompendium/reference/new_package.html) de [`rcompendium`](https://github.com/frbcesab/rcompendium).<br />
+N'oubliez pas de créer un nouveau projet RStudio avant si vous voulez l'utiliser.
+:::
+

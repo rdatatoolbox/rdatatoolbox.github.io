@@ -1,0 +1,18 @@
+## Research compendium {.unnumbered}
+
+
+::: {.callout-note icon=true appearance="simple"}
+## An introduction to research compendium
+
+<br />
+{{< fa user >}} &nbsp;**Author:** [François Guillaumon](https://fguilhaumon.gitlab.io/)<br/>
+{{< fa brands github >}} &nbsp;**Source:** <https://github.com/rdatatoolbox/course-compendium/><br/>
+{{< fa globe >}} &nbsp;**Slides:** <https://rdatatoolbox.github.io/course-compendium/>
+:::
+
+
+<br />
+
+<div class="container">
+  <iframe class="responsive-iframe" src="https://rdatatoolbox.github.io/course-compendium"></iframe>
+</div> 

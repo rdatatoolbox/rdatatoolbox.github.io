@@ -1,0 +1,25 @@
+## Targets {.unnumbered}
+
+::: {.callout-note}
+## Objectif
+
+L'objectif de cet exercice est de vous familiariser avec l'utilisation de `targets`, package {{< fa brands r-project >}} permettant d'optimiser le flux de travail.
+:::
+
+
+### Consignes {.unnumbered}
+
+Nous allons intégrer [`targets`](https://books.ropensci.org/targets/) au **research compendium** créé lors de l'[exercice 3](https://rdatatoolbox.github.io/chapters/ex-quarto.html).
+
+Avant toute chose, supprimez la ligne `devtools::load_all()` du fichier **make.R** : cette fonction n'est pas prise en compte par [`targets`](https://books.ropensci.org/targets/packages.html#package-based-invalidation) pour charger les fonctions.
+
+Puis, procédez comme suit : 
+
+- Ecrivez votre plan d'analyses dans un fichier **\_targets.R** placé à la racine du projet. N'oubliez d'attacher les packages [`targets`](https://books.ropensci.org/targets/) et [`tarchetypes`](https://docs.ropensci.org/tarchetypes/) avec la fonction [`library()`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/library) et de sourcer les différentes fonctions avec [`source()`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/source).
+
+- Le dernier élément du pipeline sera le rapport **index.qmd** vu à l'exercice précédent. Cependant, celui-ci n'exécutera aucune fonction créée (celles-ci seront gérées par [`targets`](https://books.ropensci.org/targets/)). Le fichier `.qmd` se contentera d'importer les outputs : vous devrez exporter la figure (avec une nouvelle fonction) dans le dossier **figures/**. L'affichage du tableau résultat pourra se faire avec les fonctions [`targets::tar_read()`](https://docs.ropensci.org/targets/reference/tar_read.html) et/ou [`targets::tar_load()`](https://docs.ropensci.org/targets/reference/tar_load.html).
+
+- Finalement, dans le fichier **make.R** remplacez la ligne [`quarto::quarto_render()`](https://rdrr.io/cran/quarto/man/quarto_render.html) par [`tar::tar_make()`](https://docs.ropensci.org/targets/reference/tar_make.html)
+
+{{< fa lightbulb >}}&nbsp; Pensez aux **commits** ! Pensez aussi à mettre à jour la liste des dépendances dans le fichiers **DESCRIPTION** avec la fonction [`add_dependencies()`](https://frbcesab.github.io/rcompendium/reference/add_dependencies.html) de [`rcompendium`](https://github.com/frbcesab/rcompendium).
+

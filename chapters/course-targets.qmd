@@ -1,0 +1,18 @@
+## Pipeline toolkits w/ `targets` {.unnumbered}
+
+
+::: {.callout-note icon=true appearance="simple"}
+## An introduction to pipeline toolkits w/ `targets`
+
+<br />
+{{< fa user >}} &nbsp;**Authors:** [François Guillaumon](https://fguilhaumon.gitlab.io/) & [Nina Schiettekatte](http://www.criobe.pf/pro/personnel/doctorants/nina-schiettekatte/)<br/>
+{{< fa brands github >}} &nbsp;**Source:** <https://github.com/rdatatoolbox/course-targets/><br/>
+{{< fa globe >}} &nbsp;**Slides:** <https://rdatatoolbox.github.io/course-targets/>
+:::
+
+
+<br />
+
+<div class="container-43">
+  <iframe class="responsive-iframe" src="https://rdatatoolbox.github.io/course-targets"></iframe>
+</div> 

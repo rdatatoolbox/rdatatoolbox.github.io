@@ -1,0 +1,18 @@
+## Reproducible research {.unnumbered}
+
+
+::: {.callout-note icon=true appearance="simple"}
+## An introduction to open science and reproducible research
+
+<br />
+{{< fa user >}} &nbsp;**Author:** [François Guillaumon](https://fguilhaumon.gitlab.io/)<br/>
+{{< fa brands github >}} &nbsp;**Source:** <https://github.com/rdatatoolbox/course-opensci/><br/>
+{{< fa globe >}} &nbsp;**Slides:** <https://rdatatoolbox.github.io/course-opensci/>
+:::
+
+
+<br />
+
+<div class="container">
+  <iframe class="responsive-iframe" src="https://rdatatoolbox.github.io/course-opensci"></iframe>
+</div> 

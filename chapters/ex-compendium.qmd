@@ -1,0 +1,554 @@
+## Research compendium {.unnumbered}
+
+::: {.callout-note}
+## Objectif
+
+L'objectif de cet exercice est de créer un _**research compendium**_, c.-à-d. un 
+dossier de travail dont la structure est dérivée de celle d'un package {{< fa brands r-project >}}.
+Vous allez découvrir les fichiers importants que nous vous recommandons d'ajouter à 
+un projet de recherche. Vous allez aussi apprendre à écrire et documenter des fonctions {{< fa brands r-project >}}.
+
+Ce _**research compendium**_ servira de base de travail tout au long de la formation.
+:::
+
+
+**NB.** Cet exercice s'inspire du 
+[workshop](https://annakrystalli.me/rrtools-repro-research/intro.html) proposé par [Anna Krystalli](https://annakrystalli.me/).
+
+
+Afin de nous assister dans la création de la structure de notre dossier de travail,
+nous allons utiliser le package {{< fa brands r-project >}} 
+[`rcompendium`](https://github.com/frbcesab/rcompendium), développé dans le cadre 
+de cette formation. Il permet d'automatiser la création des fichiers/répertoires
+spécifiques à un compendium/package {{< fa brands r-project >}}. 
+
+
+
+
+### Préambule
+
+Installez le package {{< fa brands r-project >}} [`rcompendium`](https://github.com/frbcesab/rcompendium) depuis le CRAN :
+
+```{r}
+#| echo: true
+#| eval: false
+
+## Installation de 'rcompendium' ----
+install.packages("rcompendium")
+
+## Chargement du package -----
+library("rcompendium")
+```
+
+{{< fa lightbulb >}}&nbsp; Si vous rencontrez des difficultés à installer le package, lisez attentivement le 
+[README](https://github.com/frbcesab/rcompendium).
+
+Une fois le package installé, vous devez exécuter la fonction [`set_credentials()`](https://frbcesab.github.io/rcompendium/reference/set_credentials.html) afin de stocker localement vos informations
+personnelles (prénom, nom, email, ORCID, protocole de communication avec GitHub).
+Ces informations permettront de remplir automatiquement certains fichiers.
+
+{{< fa hand-point-right >}}&nbsp; **Cette fonction n'est à utiliser qu'une seule fois**.
+
+```{r}
+#| echo: true
+#| eval: false
+
+## Stockage de vos informations ----
+set_credentials(given    = "Jane",
+                family   = "Doe", 
+                email    = "jane.doe@mail.me", 
+                orcid    = "0000-0000-0000-0000", 
+                protocol = "ssh")
+```
+
+Ces informations ont été copiées dans le presse-papier. Collez son contenu dans 
+le fichier **~/.Renviron** (ouvert dans RStudio par cette fonction). Ce fichier est lu
+à chaque ouverture de {{< fa brands r-project >}} et son contenu sera
+accessible aux fonctions du package [`rcompendium`](https://github.com/frbcesab/rcompendium).
+
+Redémarrez la session {{< fa brands r-project >}} et vérifiez que vos
+informations personnelles sont bien accessibles.
+
+
+```{r}
+#| echo: true
+#| eval: false
+
+## Vérification (après redémarrage de R) ----
+options()$"email"
+# [1] "jane.doe@mail.me"
+```
+
+
+Finalement, vérifiez que vous avez bien suivi les 
+[instructions](https://frbcesab.github.io/rsetup/chapters/git.html) 
+pour configurer **git** en exécutant la commande [`gh::gh_whoami()`](https://gh.r-lib.org/reference/gh_whoami.html). Vous devriez voir s'afficher :
+
+```
+{
+  "name": "Jane Doe",
+  "login": "jdoe",
+  "html_url": "https://github.com/jdoe",
+  "scopes": "repo, workflow",
+  "token": "ghp_...ZZ9z"
+} 
+```
+
+
+### Projet RStudio
+
+Créez un nouveau projet RStudio : **_File > New Project > New Directory > New Project_**
+
+- Choisissez un nom pour votre projet (sans signe de ponctuation)
+- Sélectionnez l'emplacement où le nouveau projet sera créé
+- Décochez toutes les autres cases et validez
+
+
+::: {.callout-tip}
+## Bonne pratique #1
+
+Toujours travailler dans un **Projet RStudio**. Cela présente l'avantage de simplifier les chemins d'accès aux fichiers, notamment avec le package {{< fa brands r-project >}} [`here`](https://here.r-lib.org/) et sa fonction [`here()`](https://here.r-lib.org/reference/here.html). Les chemins d'accès seront toujours construits par rapport au dossier contenant le fichier **.Rproj** (racine du projet). On parle de _chemin relatif_. N'utilisez **plus jamais** la fonction [`setwd()`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/getwd).
+:::
+
+
+
+### Fichier DESCRIPTION
+
+Le fichier **DESCRIPTION** décrit les métadonnées du projet (titre, auteur, description, dépendances requises, etc.). C'est un des éléments essentiels d'un package {{< fa brands r-project >}}. Ici, nous allons le _détourner_ pour l'utiliser dans le cadre d'un compendium afin de bénéficier des outils de développement de packages {{< fa brands r-project >}}. Ajoutons ce fichier avec la fonction [`add_description()`](https://frbcesab.github.io/rcompendium/reference/add_description.html) de [`rcompendium`](https://github.com/frbcesab/rcompendium).
+
+```{r}
+#| echo: true
+#| eval: false
+
+## Ajout d'un fichier DESCRIPTION ----
+add_description()
+```
+
+Comme vous le voyez, le fichier **DESCRIPTION** a été pré-rempli avec vos informations personnelles.
+Vous éditerez les champs **_Title_** et **_Description_** plus loin.
+
+
+::: {.callout-tip}
+## Bonne pratique #2
+
+Toujours ajouter un fichier **DESCRIPTION** à la racine du projet. En plus de la description du projet, il permet de lister les packages dont le projet dépend (tags **_Imports_**, **_Depends_** et **_Remotes_**). Avec ce fichier, plus besoin d'utiliser les fonctions [`install.packages()`](https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/install.packages) et [`library()`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/library). Elles seront remplacées respectivement par [`remotes::install_deps()`](https://remotes.r-lib.org/reference/install_deps.html) et [`devtools::load_all()`](https://www.rdocumentation.org/packages/devtools/versions/2.4.5/topics/load_all).
+:::
+
+
+
+### Choix d'une Licence
+
+Tout matériel partagé en ligne doit disposé d'une licence qui décrit ce qu'il est
+possible de faire avec. Ainsi, nous vous recommandons d'ajouter **dès le début du projet** une licence. Pour savoir quelle licence est la plus appropriée à votre projet, rendez-vous sur cette page : <https://choosealicense.com>.
+
+Ajoutons la licence [GPL-2](https://choosealicense.com/licenses/gpl-2.0/) à notre projet avec la fonction
+[`add_license()`](https://frbcesab.github.io/rcompendium/reference/add_license.html) de [`rcompendium`](https://github.com/frbcesab/rcompendium).
+
+```{r}
+#| echo: true
+#| eval: false
+
+## Ajout d'une licence ----
+add_license(license = "GPL-2")
+```
+
+Notez qu'un nouveau fichier a été créé : **LICENSE.md**. Celui-ci détaille le contenu de la license choisie et sera lu par GitHub. Regardez aussi le contenu du fichier **DESCRIPTION** : la section **_License_** a été mise à jour.
+
+
+::: {.callout-tip}
+## Bonne pratique #3
+
+Toujours ajouter une **LICENSE** à un projet qui sera rendu public. Visitez le site [**Choose a License**](https://choosealicense.com/appendix/) pour choisir la plus appropriée à votre projet.
+
+{{< fa lightbulb >}}&nbsp; Si aucune licence n'est renseignée, votre projet est soumis aux règles de la
+[No License](https://choosealicense.com/no-permission/) : aucune permission n'est accordée. En
+d'autres termes, personne ne peut rien faire avec votre projet (pas d'utilisation, pas de modification, pas de partage, etc.).
+:::
+
+
+### Ajout des répertoires
+
+La prochaine étape consiste en la création de sous-répertoires, chacun ayant un rôle précis. Pour cela, utilisez la fonction [`add_compendium()`](https://frbcesab.github.io/rcompendium/reference/add_compendium.html) de [`rcompendium`](https://github.com/frbcesab/rcompendium).
+
+
+```{r}
+#| echo: true
+#| eval: false
+
+## Ajout de sous-répertoires ----
+add_compendium(compendium = c("data", "analyses", "R", "figures", "outputs"))
+```
+
+
+::: {.callout-tip}
+## Bonne pratique #4
+
+Un bon _**Research compendium**_ sera composé de différents sous-répertoires, chacun destiné à accueillir un certain type de fichiers. Par ex., le dossier **data/** contiendra toutes les données brutes nécessaires au projet. Le dossier **outputs/** contiendra tous les résultats générés (hors figures). Le dossier **figures/** contiendra toutes les figures produites par les analyses. Le dossier **R/** ne contiendra que des fonctions {{< fa brands r-project >}} (et leurs documentations). Le dossier **analyses/** contiendra des scripts {{< fa brands r-project >}} (ou des fichiers `.Rmd` et/ou `.qmd`) qui appeleront les fonctions {{< fa brands r-project >}}. Cette structure peut bien sûr être adaptée selon les besoins et la complexité du projet.
+:::
+
+
+### Implémentation des fonctions {.unnumbered}
+
+Nous voilà fin prêt à coder !
+
+Le dépôt GitHub <https://github.com/rdatatoolbox/datarepo> contient les données que nous utiliserons tout au long de la formation. Celles-ci proviennent de deux bases de données : [PanTHERIA](https://esajournals.onlinelibrary.wiley.com/doi/10.1890/08-1494.1) et [WWF WildFinder](https://www.worldwildlife.org/publications/wildfinder-database). Lisez attentivement le [README](https://github.com/rdatatoolbox/datarepo#mortar_board-data-repository-) pour plus de détails.
+
+
+**Objectif :** écrire 1, 2 ou 4 fonctions {{< fa brands r-project >}}, qui vont permettre de télécharger les quatre fichiers de données hébergées sur le dépôt GitHub mentionné ci-dessus. Les fichiers seront enregistrés dans le dossier **data/** et le sous-dossier spécifique à leurs bases de données (**pantheria/** ou **wildfinder/**).
+
+Utilisez la fonction [`usethis::use_r()`](https://usethis.r-lib.org/reference/use_r.html) pour créer le/les fichiers `.R` dans le dossier **R/**.
+
+{{< fa lightbulb >}} Utilisez les fonctions 
+[`dir.create()`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/files2), 
+[`here::here()`](https://here.r-lib.org/reference/here.html) et 
+[`utils::download.file()`](https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/download.file).
+
+
+**Proposition de fonction** (essayer de ne pas regarder)
+
+
+```{r}
+#| echo: true
+#| eval: false
+#| code-fold: true
+
+dl_pantheria_data <- function(overwrite = FALSE) {
+  
+  ## Destination ---- 
+  path <- here::here("data", "pantheria")
+  
+  ## File name ----
+  filename <- "PanTHERIA_1-0_WR05_Aug2008.txt"
+  
+  ## GitHub URL ----
+  url <- paste0("https://raw.githubusercontent.com/rdatatoolbox/datarepo/main/",
+                "data/pantheria/")
+  
+  if (file.exists(file.path(path, filename)) && !overwrite) {
+    
+    ## Check if exists locally ----
+    message("The filename already exists. Use 'overwrite = TRUE' to replace it")
+    
+  } else {
+    
+    ## Create destination folder ----
+    dir.create(path, showWarnings = FALSE, recursive = TRUE)
+    
+    ## Download file ----
+    utils::download.file(url      = paste0(url, filename),
+                         destfile = file.path(path, filename),
+                         mode     = "wb")
+  }
+
+  invisible(NULL) 
+}
+```
+
+
+::: {.callout-tip}
+## Bonne pratique #5
+
+**Ecrivez des fonctions** : on parle de _Factorisation de code_. Cela rendra votre code plus clair et plus facilement réutilisable. Placez toujours vos fonctions {{< fa brands r-project >}} dans le dossier **R/**. Si vous utilisez des fonctions de dépendances externes, priviligiez cette écriture : `package::fonction()`.
+:::
+
+
+### Documentation {.unnumbered}
+
+Maintenant, documentez votre/vos fonctions. C'est **essentiel !** Pour cela,
+ajoutez un entête [**roxygen2**](https://roxygen2.r-lib.org/articles/roxygen2.html) à vos fonctions. Cette syntaxe permet de documenter efficacement toute fonction {{< fa brands r-project >}}.
+
+Cette entête devra contenir (a minima) un titre, une description de chaque argument et le retour de la fonction.
+
+
+**Proposition de documentation** (essayer de ne pas regarder)
+
+
+```{r}
+#| echo: true
+#| eval: false
+#| code-fold: true
+
+#' Download PanTHERIA dataset
+#'
+#' @description 
+#' This function downloads the PanTHERIA dataset (text file) hosted on the 
+#' GitHub repository <https://github.com/rdatatoolbox/datarepo/>. The file
+#' won't be downloaded if already exists locally (except if `overwrite = TRUE`).
+#' The file `PanTHERIA_1-0_WR05_Aug2008.txt` will be stored in 
+#' `data/pantheria/`. This folder will be created if required.
+#' 
+#' @param overwrite a `logical`. If `TRUE`, the file will be downloaded again 
+#'   and the previous version will be replaced.
+#'
+#' @return No return value.
+#' 
+#' @export
+
+dl_pantheria_data <- function(overwrite = FALSE) { ... }
+```
+
+
+**Optionnel :** transpilez vos entêtes **roxygen2** en fichiers `.Rd`, seuls fichiers acceptés par {{< fa brands r-project >}} pour documenter des fonctions. Ces fichiers `.Rd` seront stockés dans le dossier **man/**.
+
+```{r}
+#| echo: true
+#| eval: false
+
+## Génération de la doc ----
+devtools::document()
+```
+
+L'aide de votre fonction est maintenant accessible via `?nom_fonction`.
+
+
+::: {.callout-tip}
+## Bonne pratique #6
+
+Pensez aux autres (et au vous du futur) : **documentez toujours** votre code. Un code sans documentation est inutile. Utilisez les entêtes **roxygen2** pour documenter vos fonctions {{< fa brands r-project >}}, de simples commentaires pour documenter du code et des `README` pour tout le reste.
+:::
+
+
+
+### Ajout des dépendances {.unnumbered}
+
+Nos fonctions contiennent des dépendances à deux packages externes : [`utils`](https://www.rdocumentation.org/packages/utils/versions/3.6.2) et [`here`](https://here.r-lib.org/). Nous devons ajouter ces dépendances au fichier **DESCRIPTION**. Pour cela, nous allons utiliser la fonction [`add_dependencies()`](https://frbcesab.github.io/rcompendium/reference/add_dependencies.html) de [`rcompendium`](https://github.com/frbcesab/rcompendium).
+
+```{r}
+#| echo: true
+#| eval: false
+
+## Ajout de dépendances ----
+add_dependencies(compendium = ".")
+```
+
+Regardez le contenu du fichier **DESCRIPTION**. Par défaut, les packages requis sont listés sous le tag **_Imports_**. Ainsi, pour utiliser une fonction externe, il faudra l'appeler par `package::fonction()`. Si vous remplacer le tag **_Imports_** par **_Depends_**, l'utilisation de la fonction [`devtools::load_all()`](https://www.rdocumentation.org/packages/devtools/versions/2.4.5/topics/load_all) (voir plus bas) aura le même effet qu'un [`library()`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/library) et vous pourrez utiliser une fonction externe par `fonction()`.
+
+
+La fonction [`add_dependencies()`](https://frbcesab.github.io/rcompendium/reference/add_dependencies.html) va scanner chaque fichier `.R`, `.Rmd` et `.qmd` du projet et détecter les packages externes utilisés pour les ajouter automatiquement au fichier **DESCRIPTION**.
+
+
+::: {.callout-tip}
+## Bonne pratique #7
+
+Listez toujours les **packages requis dans le fichier DESCRIPTION**. Ainsi, vous centralisez la liste des packages requis en un seul endroit et vous pourrez utiliser les fonctions [`remotes::install_deps()`](https://remotes.r-lib.org/reference/install_deps.html) et [`devtools::load_all()`](https://www.rdocumentation.org/packages/devtools/versions/2.4.5/topics/load_all).
+:::
+
+
+### Chargement du projet {.unnumbered}
+
+Maintenant que notre compendium contient les éléments clés d'un package {{< fa brands r-project >}}, c.-à-d. un fichier **DESCRIPTION** et un répertoire **R/**, nous pouvons utiliser les outils de développement des packages {{< fa brands r-project >}} pour réaliser deux tâches.
+
+1. Les packages requis peuvent être installés (ou mis à jour) à l'aide de la
+fonction [`remotes::install_deps()`](https://remotes.r-lib.org/reference/install_deps.html). Pour être plus reproductible, vous pouvez désactiver les mises à jour en ajoutant l'argument `upgrade = "never"`. Cette fonction vient remplacer la fonction [`install.packages()`](https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/install.packages). Elle va lire le fichier **DESCRIPTION** pour récupérer la liste des packages requis. Il est donc important d'utiliser régulièrement la fonction [`add_dependencies()`](https://frbcesab.github.io/rcompendium/reference/add_dependencies.html) pour tenir ce fichier à jour.
+
+2. Les fonctions {{< fa brands r-project >}} stockées dans le dossier **R/** peuvent être chargées avec la fonction [`devtools::load_all()`](https://www.rdocumentation.org/packages/devtools/versions/2.4.5/topics/load_all). Cette fonction vient remplacer la fonction [`source()`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/source) (et [`library()`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/library) si les packages requis sont listés sous le tag **_Depends_** dans le fichier **DESCRIPTION**). Ce qui est pratique dans le cas où on doit charger de nombreux fonctions {{< fa brands r-project >}}. Après chaque modification d'une fonction {{< fa brands r-project >}}, n'oubliez pas d'exécuter la fonction [`devtools::load_all()`](https://www.rdocumentation.org/packages/devtools/versions/2.4.5/topics/load_all).
+
+
+Essayez ces deux fonctions.
+
+```{r}
+#| echo: true
+#| eval: false
+
+## Installation des packages manquants ----
+remotes::install_deps(upgrade = "never")
+
+## Chargement des packages et fonctions R ----
+devtools::load_all()
+```
+
+::: {.callout-tip}
+## Bonne pratique #8
+
+Avec un fichier **DESCRIPTION** (listant les dépendances requises) et un dossier **R/**, vous pouvez utiliser les fonctions [`remotes::install_deps()`](https://remotes.r-lib.org/reference/install_deps.html) (installation/mise à jour des packages) et [`devtools::load_all()`](https://www.rdocumentation.org/packages/devtools/versions/2.4.5/topics/load_all) (chargement du projet) au lieu de [`install.packages()`](https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/install.packages), [`library()`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/library) et [`source()`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/source).
+:::
+
+
+### Ajout d'un make.R {.unnumbered}
+
+Afin d'automatiser notre projet, nous allons créer un script {{< fa brands r-project >}} à la racine du projet. Nous l'appelerons, par convention, **make.R**. Celui-ci aura deux objectifs : 1) mettre en place le projet et 2) exécuter le projet. L'idée est de n'exécuter que ce script. Utilisez la fonction [`add_makefile()`](https://frbcesab.github.io/rcompendium/reference/add_makefile.html) de [`rcompendium`](https://github.com/frbcesab/rcompendium) et lisez le contenu du nouveau fichier créé.
+
+```{r}
+#| echo: true
+#| eval: false
+
+## Ajout d'un makefile ----
+add_makefile()
+```
+
+
+::: {.callout-tip}
+## Bonne pratique #9
+
+Bien que non essentiel, un **fichier make.R** placé à la racine du projet permet de facilement mettre en place le projet (installation et chargement des packages requis et des fonctions {{< fa brands r-project >}}) et d'exécuter les différentes analyses de manière séquentielle (en sourçant les scripts {{< fa brands r-project >}} qui appellent eux-même les fonctions {{< fa brands r-project >}}). C'est la **porte d'entrée des analyses**.
+:::
+
+
+### Appel aux fonctions {.unnumbered}
+
+Jusqu'à présent, nous n'avons fait que définir des fonctions {{< fa brands r-project >}}, mais nous ne les avons pas exécutées. Nous allons créer notre premier script {{< fa brands r-project >}} dans le dossier **analyses/**. Celui-ci aura pour objectif d'appeler les fonctions {{< fa brands r-project >}} définies précédemment pour télécharger les données.
+
+Créez un nouveau script {{< fa brands r-project >}} comme suit et éditez-le: 
+
+```{r}
+#| echo: true
+#| eval: false
+
+## Ajout d'un script R ----
+utils::file.edit(here::here("analyses", "download-data.R"))
+```
+
+
+**Proposition de contenu** (essayer de ne pas regarder)
+
+
+```{r}
+#| echo: true
+#| eval: false
+#| code-fold: true
+
+# Download project raw data
+#
+# This script will download the PanTHERIA and WWF WildFinder datasets. The
+# four files will be stored in `data/`.
+# 
+# All functions used in the script have been developed for this project
+# and can be found in the folder R/.
+#
+# Jane Doe <jane.doe@mail.me>
+# 2023/11/09
+
+## Download PanTHERIA database ----
+
+dl_pantheria_data(overwrite = FALSE)
+
+
+## Download WWF WildFinder database ----
+
+# ...
+```
+
+
+**N.B.** Nous verrons plus tard comment transformer ce script {{< fa brands r-project >}} en un fichier **Quarto** (`.qmd`).
+
+Finalement, ajoutez une ligne dans le fichier **make.R** qui permettra d'exécuter ce script {{< fa brands r-project >}}.
+Utilisez les fonctions [`source()`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/source) et [`here::here()`](https://here.r-lib.org/reference/here.html) pour cela.
+
+Pour charger le projet et lancer les analyses, il suffit d'exécuter ce fichier **make.R**.
+
+
+::: {.callout-tip}
+## Bonne pratique #10
+
+Le dossier **analyses/** contient les scripts {{< fa brands r-project >}} qui appellent les fonctions {{< fa brands r-project >}} stockées dans le dossier **R/**. Il peut être ignoré dans le cas de simples analyses. Le code de l'analyse devra alors se trouver dans le **make.R**. A contrario, dans le cas d'analyses complexes, n'hésitez pas à multiplier les scripts {{< fa brands r-project >}} (plutôt que d'avoir un seul gros script).
+:::
+
+
+### Ajout d'un README {.unnumbered}
+
+Plus tard, vous verrez comment envoyer ce projet sur GitHub. Pour l'instant, nous allons légèrement anticiper les cours suivants, et ajouter un `README` à notre compendium. Ce sera la **vitrine du projet**. Les rôles d'un `README` sont : 1) de présenter le projet, 2) d'expliquer son contenu, et 3) d'expliquer comment l'installer et l'utiliser.
+
+Pour cela, vous allez ajouter un `README.Rmd` (fichier **R Markdown**) à la racine de votre projet avec la fonction [`add_readme_rmd()`](https://frbcesab.github.io/rcompendium/reference/add_readme_rmd.html) de [`rcompendium`](https://github.com/frbcesab/rcompendium).
+
+```{r}
+#| echo: true
+#| eval: false
+
+## Ajout d'un README ----
+add_readme_rmd(type = "compendium")
+```
+
+Adaptez son contenu et n'oubliez pas de transpiler ce fichier `.Rmd` en un fichier `.md` (fichier **Markdown** lu par GitHub). Utilisez le bouton **Knit** de RStudio ou : 
+
+
+```{r}
+#| echo: true
+#| eval: false
+
+## Conversion du README.Rmd en README.md ----
+rmarkdown::render("README.Rmd")
+```
+
+
+{{< fa warning >}}&nbsp; N'oubliez pas aussi d'éditer les sections **_Title_** et **_Description_** du fichier **DESCRIPTION**.
+
+
+::: {.callout-tip}
+## Bonne pratique #11
+
+Ajoutez un **README** à votre projet afin d'aider l'utilisateur à comprendre votre projet. 
+:::
+
+
+> **Félicitation ! Votre research compendium est maintenant fonctionnel.**
+
+
+
+### Bonus {.unnumbered}
+
+Ecrivez une fonction {{< fa brands r-project >}} qui va télécharger le fichier [`README.md`](https://raw.githubusercontent.com/rdatatoolbox/datarepo/main/README.md) du dépôt <https://github.com/rdatatoolbox/datarepo/> et enregistrez-le dans le dossier **data/**. Vous ajouterez ainsi la description des données à votre projet.
+
+
+**Proposition de fonction** (essayer de ne pas regarder)
+
+
+```{r}
+#| echo: true
+#| eval: false
+#| code-fold: true
+
+#' Download data description (README)
+#'
+#' @description 
+#' This function downloads the `README.md` of the GitHub repository
+#' <https://github.com/rdatatoolbox/datarepo/> providing data description.
+#' The file won't be downloaded if already exists locally (except if 
+#' `overwrite = TRUE`).
+#' The `README.md` will be stored in `data/`.
+#' 
+#' @param overwrite a logical. If `TRUE`, the file will be downloaded again and
+#'   the previous version will be erased.
+#'
+#' @return No return value.
+#' 
+#' @export
+
+dl_data_descr <- function(overwrite = FALSE) {
+  
+  ## Destination location ---- 
+  path <- here::here("data")
+  
+  ## File name ----
+  filename <- "README.md"
+  
+  ## GitHub URL ----
+  url <- "https://raw.githubusercontent.com/rdatatoolbox/datarepo/main/"
+  
+  if (file.exists(file.path(path, filename)) && !overwrite) {
+    
+    ## Check if exists locally ----
+    message("The filename already exists. Use 'overwrite = TRUE' to replace it")
+    
+  } else {
+    
+    ## Create destination folder ----
+    dir.create(path, showWarnings = FALSE, recursive = TRUE)
+    
+    ## Download file ----
+    utils::download.file(url      = paste0(url, filename),
+                         destfile = file.path(path, filename),
+                         mode     = "wb")
+  }
+
+  invisible(NULL) 
+}
+```
+
+
+::: {.callout-note}
+## La fonction [`new_compendium()`](https://frbcesab.github.io/rcompendium/reference/new_compendium.html)
+
+L'ensemble de ces étapes peut être réalisé avec une seule fonction : 
+[`new_compendium()`](https://frbcesab.github.io/rcompendium/reference/new_compendium.html) de [`rcompendium`](https://github.com/frbcesab/rcompendium).<br />
+N'oubliez pas de créer un nouveau projet RStudio avant si vous voulez l'utiliser.
+:::

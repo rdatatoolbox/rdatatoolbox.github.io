@@ -1,0 +1,18 @@
+## Building an R package {.unnumbered}
+
+
+::: {.callout-note icon=true appearance="simple"}
+## An introduction how on to create an R package
+
+<br />
+{{< fa user >}} &nbsp;**Authors:** [Aurélie Siberchicot](https://lbbe.univ-lyon1.fr/fr/annuaires-des-membres/siberchicot-aurelie) & [Nicolas Casajus](https://nicolascasajus.fr/)<br/>
+{{< fa brands github >}} &nbsp;**Source:** <https://github.com/rdatatoolbox/course-rpackage/><br/>
+{{< fa globe >}} &nbsp;**Slides:** <https://rdatatoolbox.github.io/course-rpackage/>
+:::
+
+
+<br />
+
+<div class="container-43">
+  <iframe class="responsive-iframe" src="https://rdatatoolbox.github.io/course-rpackage"></iframe>
+</div> 

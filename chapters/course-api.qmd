@@ -1,0 +1,18 @@
+## API & web scraping {.unnumbered}
+
+
+::: {.callout-note icon=true appearance="simple"}
+## An introduction to data acquisition w/ API & Web scraping
+
+<br />
+{{< fa user >}} &nbsp;**Author:** [Nicolas Casajus](https://nicolascasajus.fr/)<br/>
+{{< fa brands github >}} &nbsp;**Source:** <https://github.com/rdatatoolbox/course-api/><br/>
+{{< fa globe >}} &nbsp;**Slides:** <https://rdatatoolbox.github.io/course-api/>
+:::
+
+
+<br />
+
+<div class="container-43">
+  <iframe class="responsive-iframe" src="https://rdatatoolbox.github.io/course-api"></iframe>
+</div> 

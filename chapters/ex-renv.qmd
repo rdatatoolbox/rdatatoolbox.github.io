@@ -1,0 +1,21 @@
+## Renv {.unnumbered}
+
+::: {.callout-note}
+## Objectif
+
+L'objectif de cet exercice est de vous familiariser avec l'utilisation de `renv`, package {{< fa brands r-project >}} permettant de gérer les versions de packages requis par le projet.
+:::
+
+
+### Consignes {.unnumbered}
+
+Nous allons intégrer [`renv`](https://rstudio.github.io/renv/articles/renv.html) au **research compendium** créé lors de l'[exercice 4](https://rdatatoolbox.github.io/chapters/ex-targets.html).
+
+- Utilisez la fonction [`renv::init()`](https://rstudio.github.io/renv/reference/init.html)
+- Ajoutez le dossier **renv/** et le ficher **.Rprofile** au **.gitignore** (afin de ne pas envoyer sur GitHub les packages - seul le **renv.lock** suffit)
+- Jouez avec les fonctions [`renv::status()`](https://rstudio.github.io/renv/reference/status.html), [`renv::install()`](https://rstudio.github.io/renv/reference/install.html) et [`renv::snapshot()`](https://rstudio.github.io/renv/reference/snapshot.html) (n'oubliez pas de mettre à jour la liste des dépendances dans le fichiers **DESCRIPTION** avec la fonction [`add_dependencies()`](https://frbcesab.github.io/rcompendium/reference/add_dependencies.html) de [`rcompendium`](https://github.com/frbcesab/rcompendium))
+- Modifiez le **make.R** de manière à installer les packages via [`renv`](https://rstudio.github.io/renv/articles/renv.html) plutôt qu'avec la fonction [`remotes::install_deps()`](https://rdrr.io/cran/remotes/man/install_deps.html)
+- Vérifiez si votre projet est encore fonctionnel en exécutant le **make.R**
+
+
+{{< fa lightbulb >}}&nbsp; Pensez aux **commits** !

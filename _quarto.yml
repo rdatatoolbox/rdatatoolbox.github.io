@@ -1,0 +1,114 @@
+project:
+  type: book
+
+book:
+  title: "Reproducible Research in Computational Ecology"
+  
+  author: 
+    - name: "Nicolas Casajus"
+      orcid: "0000-0002-5537-5294"
+      url: "https://nicolascasajus.fr"
+      affiliations: 
+        - name: FRB-CESAB
+          url: "https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/"
+    - name: "Iago Bonnici"
+      orcid: "0000-0003-2934-351X"
+      url: https://isem-evolution.fr/en/membre/bonnici/
+      affiliations: 
+        - name: CNRS ISEM
+          url: https://isem-evolution.fr/en/
+    - name: "Stéphane Dray"
+      orcid: "0000-0003-0153-1105"
+      url: https://lbbe.univ-lyon1.fr/fr/annuaires-des-membres/dray-stephane
+      affiliations: 
+        - name: CNRS LBBE
+          url: https://lbbe.univ-lyon1.fr/fr
+    - name: "Olivier Gimenez"
+      orcid: "0000-0001-7001-5142"
+      url: https://oliviergimenez.github.io
+      affiliations: 
+        - name: CNRS CEFE
+          url: https://www.cefe.cnrs.fr/fr/
+    - name: "Loreleï Guéry"
+      orcid: "0000-0003-3004-8462"
+      url: https://orcid.org/0000-0003-3004-8462
+      affiliations: 
+        - name: CIRAD PHIM
+          url: https://umr-phim.cirad.fr/
+    - name: "François Guilhaumon"
+      orcid: "0000-0003-4707-8932"
+      url: https://fguilhaumon.gitlab.io/
+      affiliations: 
+        - name: IRD ENTROPIE
+          url: https://www.ird.fr/umr/entropie
+    - name: "Nina Schiettekatte"
+      orcid: "0000-0002-1925-3484"
+      url: http://www.criobe.pf/pro/personnel/doctorants/nina-schiettekatte/
+      affiliations: 
+        - name: EPHE CRIOBE
+          url: http://www.criobe.pf/
+    - name: "Aurélie Siberchicot"
+      orcid: "0000-0002-7638-8318"
+      url: https://lbbe.univ-lyon1.fr/fr/annuaires-des-membres/siberchicot-aurelie
+      affiliations: 
+        - name: UCBL LBBE
+          url: https://lbbe.univ-lyon1.fr/en
+      
+  date: today
+  description:  |
+    FRB-CESAB & GdR EcoStat training course
+    <br /><br />
+    <a href="https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/develop-skills/best-practice-for-reproducible-research-in-computational-ecology/">
+      <img class="logo" src="https://raw.githubusercontent.com/rdatatoolbox/.github/main/profile/banner-rdatatoolbox_150dpi.png" style="width: 100%;" />
+    </a>
+
+  favicon: images/favicon.png
+  
+  page-footer: 
+    left: "&copy; CC-By [FRB-CESAB](https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/)"
+    center: "Code source available on [{{< fa brands github >}}](https://github.com/rdatatoolbox/rdatatoolbox.github.io/)"
+    right: "Built with [Quarto](https://quarto.org/)"
+    border: true
+  
+  reader-mode: false
+  search: false
+  
+  chapters:
+    - index.qmd
+    - part: "Prerequisites"
+      chapters: 
+        - chapters/setting-up-r.qmd
+    - part: "Courses"
+      chapters: 
+        - chapters/course-opensci.qmd
+        - chapters/course-compendium.qmd
+        - chapters/course-git.qmd
+        - chapters/course-github.qmd
+        - chapters/course-quarto.qmd
+        - chapters/course-targets.qmd
+        - chapters/course-renv.qmd
+        - chapters/course-docker.qmd
+        - chapters/course-package.qmd
+    - part: "Exercises"
+      chapters: 
+        - chapters/ex-compendium.qmd
+        - chapters/ex-github.qmd
+        - chapters/ex-quarto.qmd
+        - chapters/ex-targets.qmd
+        - chapters/ex-renv.qmd
+        - chapters/ex-docker.qmd
+        - chapters/ex-package.qmd
+    - part: "Resources"
+      chapters: 
+        - chapters/degrees-repro.qmd
+    - part: "Archives"
+      chapters: 
+        - chapters/course-api.qmd
+        - chapters/course-rspatial.qmd
+        - chapters/course-tidyverse.qmd
+    
+format:
+  html:
+    theme: [cosmo, css/styles.css]
+    code-copy: true
+    code-line-numbers: false

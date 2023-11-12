@@ -1,0 +1,18 @@
+## Spatial analyses w/ `sf` {.unnumbered}
+
+
+::: {.callout-note icon=true appearance="simple"}
+## An introduction to spatial analyses w/ `sf`
+
+<br />
+{{< fa user >}} &nbsp;**Author:** [Nicolas Casajus](https://nicolascasajus.fr/)<br/>
+{{< fa brands github >}} &nbsp;**Source:** <https://github.com/rdatatoolbox/course-rspatial/><br/>
+{{< fa globe >}} &nbsp;**Slides:** <https://rdatatoolbox.github.io/course-rspatial/>
+:::
+
+
+<br />
+
+<div class="container-43">
+  <iframe class="responsive-iframe" src="https://rdatatoolbox.github.io/course-rspatial"></iframe>
+</div> 

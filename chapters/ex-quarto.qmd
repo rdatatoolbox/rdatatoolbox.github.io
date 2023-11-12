@@ -1,0 +1,35 @@
+## Quarto {.unnumbered}
+
+::: {.callout-note}
+## Objectif
+
+L'objectif de cet exercice est de vous familiariser à l'utilisation de `Quarto`. Vous verrez comment exécuter l'ensemble des analyses et la rédaction dans un même fichier `.qmd`.
+:::
+
+
+### Consignes {.unnumbered}
+
+{{< fa hand-point-right >}}&nbsp; Nous allons utiliser les données WildFinder du WWF pour répondre à la question suivante :
+**_Dans combien d'écorégions différentes retrouve-t-on chaque espèce d'Ursidés ?_**
+
+Pour ce faire, continuez à travailler dans votre **research compendium** de l'[exercice 2](https://rdatatoolbox.github.io/chapters/ex-github.html) et écrivez des fonctions 
+{{< fa brands r-project >}} pour : 
+
+- Importer chaque fichier `.csv` (utiliser la fonction [`readr::read_csv()`](https://readr.tidyverse.org/reference/read_delim.html))
+- Sélectionner uniquement les espèces de la famille des Ursidae
+- Joindre les trois tables entre elles
+- Compter le nombre d'écorégions où se retrouve chaque espèce
+- Faire une visualisation graphique montrant le nombre d'écorégions par espèce
+
+Puis, créez un fichier **index.qmd** à la racine du projet qui appellera chaque fonction créée précédemment. Devrons figurer dans le document final, _a minima_, le résultat demandé sous forme de tableau (fonction [`knitr::kable()`](https://www.rdocumentation.org/packages/knitr/versions/1.45/topics/kable)) et de figure, ainsi que la source des données. Structurez votre document avec des titres et des paragraphes.
+
+Finalement, ajoutez une ligne de code dans votre **make.R** qui permettra de transpiler votre **index.qmd** en version **index.html** (fonction [`quarto::quarto_render()`](https://rdrr.io/cran/quarto/man/quarto_render.html)).
+
+{{< fa lightbulb >}}&nbsp; Pensez aux **commits** ! Pensez aussi à mettre à jour la liste des dépendances dans le fichiers **DESCRIPTION** avec la fonction [`add_dependencies()`](https://frbcesab.github.io/rcompendium/reference/add_dependencies.html) de [`rcompendium`](https://github.com/frbcesab/rcompendium).
+
+
+<br />
+
+## Bonus
+
+Si votre code est bien écrit, vous pouvez rapidement l'exécuter avec une autre famille de Mammifères !

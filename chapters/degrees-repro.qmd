@@ -1,0 +1,5 @@
+# The degrees of reproducibility {.unnumbered}
+
+[![](../images/degrees.png)](the_degrees_of_reproductibility.pdf)
+
+[Download the full size image](the_degrees_of_reproductibility.pdf)

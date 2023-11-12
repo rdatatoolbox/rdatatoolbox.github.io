@@ -1,0 +1,18 @@
+## Tidyverse {.unnumbered}
+
+
+::: {.callout-note icon=true appearance="simple"}
+## An introduction to the `tidyverse`
+
+<br />
+{{< fa user >}} &nbsp;**Author:** [Olivier Gimenez](https://oliviergimenez.github.io)<br/>
+{{< fa brands github >}} &nbsp;**Source:** <https://github.com/rdatatoolbox/course-tidyverse/><br/>
+{{< fa globe >}} &nbsp;**Slides:** <https://rdatatoolbox.github.io/course-tidyverse/>
+:::
+
+
+<br />
+
+<div class="container-43">
+  <iframe class="responsive-iframe" src="https://rdatatoolbox.github.io/course-tidyverse"></iframe>
+</div> 

@@ -1,0 +1,130 @@
+## Git and GitHub {.unnumbered}
+
+::: {.callout-note}
+## Objectif
+
+L'objectif de cet exercice est de vous familiariser avec l'utilisation de {{< fa brands git >}} et {{< fa brands github >}}.
+:::
+
+
+### Travailler seul
+
+{{< fa hand-point-right >}}&nbsp; Vous allez envoyer le _**research compendium**_ créé à l'[Exercice 1](https://rdatatoolbox.github.io/chapters/ex-compendium.html)
+sur votre compte GitHub.
+
+::: {.callout-tip}
+## GitHub First _vs._ GitHub Last
+
+Cette approche est appelée **GitHub Last** : on crée d'abord le projet en local, puis on crée le dépôt distant. Pour plus d'information : [GitHub First](https://happygitwithr.com/new-github-first.html) et 
+[GitHub Last](https://happygitwithr.com/existing-github-last.html).
+:::
+
+#### Initialiser git
+
+Dans un premier temps, vous devez initialiser **git** dans votre projet. Entrez la ligne de commande suivante dans le **terminal de RStudio** :
+
+```sh
+## Initialisation de git -----
+git init
+```
+
+
+Vérifiez l'état de votre projet :
+
+```sh
+## Statut des fichiers vu par git -----
+git status
+```
+
+#### Ajout d'un .gitignore
+
+Certains fichiers sont inutiles à versionner et peuvent même parfois 
+créer des conflits. C'est le cas notamment du fichier `.Rproj`.
+Nous allons les ajouter au `.gitignore` en utilisant la fonction {{< fa brands r-project >}} [`add_to_gitignore`](https://frbcesab.github.io/rcompendium/reference/add_to_gitignore.html) de [`rcompendium`](https://github.com/frbcesab/rcompendium)
+
+```{r}
+#| echo: true
+#| eval: false
+
+## Ajout d'un .gitignore pour les projets R -----
+rcompendium::add_to_gitignore()
+```
+
+#### Première version
+
+Il est temps de créer une première version. Cela se fera en deux temps : 1) sélection des fichiers (`git add`) et 2)
+enregistrement de la version (`git commit`).
+
+
+```sh
+## Sélection de tous les fichiers ----
+git add .
+
+## Création d'une nouvelle version ----
+git commit -m "init repo"
+```
+
+Vérifiez le status des fichiers : 
+
+```sh
+## Statut des fichiers vu par git -----
+git status
+```
+
+Affichez l'historique : 
+
+```sh
+## Historique des versions -----
+git log
+```
+
+
+#### Création du dépôt GitHub
+
+Maintenant, nous souhaitons envoyer notre projet sur GitHub. Rendez-vous sur GitHub et créez un nouveau dépôt **VIDE** : donnez juste un nom de dépôt et n'ajoutez **aucun fichier supplémentaire** (pas de licence, `.gitignore`, `README`). Le dépôt contient une série d'instructions correspondant à trois cas de figure. Nous allons suivre la section **_Push an existing repository from the command line_**.
+
+Dans le **terminal de RStudio** :
+
+```sh
+## Ajout du chemin vers le dépôt distant ----
+git remote add origin git@github.com:your_account/your_repo.git
+
+## Envoi du dépôt local vers le dépôt distant ----
+git push -u origin main
+```
+
+> **Félicitation ! Votre research compendium est maintenant sur GitHub.**
+
+
+::: {.callout-tip}
+## GitHub API
+
+Une alternative est d'utiliser l'[API GitHub](https://docs.github.com/en/rest?apiVersion=2022-11-28) via la fonction {{< fa brands r-project >}} [`use_github()`](https://usethis.r-lib.org/reference/use_github.html) du package [`usethis`](https://usethis.r-lib.org/).
+Cette fonction va créer le dépôt distant sur GitHub et envoyer votre dépôt local sur GitHub (`git push`).
+
+```{r}
+#| echo: true
+#| eval: false
+
+## Création du dépôt public GitHub ----
+usethis::use_github()
+```
+
+{{< fa hand-point-right >}}&nbsp; Pour utiliser l'API GitHub, vous devez avoir sauvegardé localement votre GitHub Personal Access Token (PAT) tel quel indiqué [ici](https://frbcesab.github.io/rsetup/chapters/github-token.html).
+:::
+
+Continuez à modifier vos fichiers, créez de nouvelles versions (`git add` et `git commit`) et envoyez-les sur GitHub (`git push`).
+
+
+### Collaborer
+
+{{< fa hand-point-right >}}&nbsp; Mettez-vous par **groupe de 2-3 personnes** et déterminez **un leader** parmis vous : vous allez collaborer sur son projet.
+
+Sur GitHub, le leader va allez dans les **Settings** et ajoutez **une personne** de votre groupe comme collaborateur de votre projet.
+
+{{< fa hand-point-right >}}&nbsp; Mettez en oeuvre **3 solutions pour collaborer sur le même projet**. En fonction de votre statut dans le projet et de votre objectif :
+
+- Utilisez les [**Issues**](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) pour suggérer au leader des améliorations
+- Si vous êtes collaborateur, [**Clonez**](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) le dépôt, faites les modifications et envoyez-les
+- Si vous ne l'êtes pas, [**Forkez**](https://docs.github.com/en/get-started/quickstart/fork-a-repo), [**Clonez**](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository), et essayez la [**Pull Request**](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
+

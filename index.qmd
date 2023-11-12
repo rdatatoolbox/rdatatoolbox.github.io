@@ -1,0 +1,86 @@
+---
+toc: true
+---
+
+# Welcome {.unnumbered}
+
+::: {.callout-note}
+## Registrations for the 2023 session are closed
+
+Registration open each spring and the training course is provided each winter. 
+
+{{< fa hand-point-right >}}&nbsp; Subscribe to the 
+[FRB-CESAB newsletter](https://www.fondationbiodiversite.fr/en/newsletter/) 
+to stay informed. More information is available on the  
+[FRB-CESAB website](https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/develop-skills/best-practice-for-reproducible-research-in-computational-ecology/).
+:::
+
+
+
+The objective of this five-day training course, co-organized by the 
+[FRB-CESAB](https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/)
+and the
+[GdR EcoStat](https://sites.google.com/site/gdrecostat/), 
+is to train young researchers in reproducibility, software development and 
+version management tools (e.g. `Git`, `GitHub`, `R Markdown`, `Quarto`, `renv`, `Docker`), 
+applied to biodiversity research.
+
+
+## Program {.unnumbered}
+
++---------------+-------------------------------------------------+
+| **Monday**    | - Open science & Reproducible research          |
+|               | - Research compendium & Good practices          |
+|               | - Version control with `Git` & `GitHub`         |
++---------------+-------------------------------------------------+
+| **Tuesday**   | - Literate programming: `R Markdown` & `Quarto` |
+|               | - Pipeline toolkit with `targets`               |
++---------------+-------------------------------------------------+
+| **Wednesday** | - Dealing with R package versions with `renv`   |
+|               | - Containerization with `Docker`                |
+|               | - Building an R package                         |
++---------------+-------------------------------------------------+
+| **Thursday**  | - Subgroups projects                            |
++---------------+-------------------------------------------------+
+| **Friday**    | - Subgroups projects                            |
++---------------+-------------------------------------------------+
+
+
+## Prerequisites {.unnumbered}
+
+Please follow this [tutorial](https://frbcesab.github.io/rsetup/) to install 
+your working environment **before attending the training course**.
+
+You also need to create an account on [GitHub](https://github.com/signup/).
+
+
+## Material {.unnumbered}
+
+All the material used in this training course (slides, data, exercises) is available on {{< fa brands github >}} at: <https://github.com/rdatatoolbox/>
+
+
+
+## Citation {.unnumbered}
+
+> Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD 
+& Siberchicot A (2023) 
+FRB-CESAB & GdR EcoStat training course: Reproducible Research in Computational Ecology. 
+Zenodo. URL: <http://doi.org/10.5281/zenodo.4262978>
+
+
+## Contributions {.unnumbered}
+
+If you see mistakes or want to suggest changes, please [create an issue](https://github.com/rdatatoolbox/rdatatoolbox.github.io/issues/new) on the source repository.
+
+
+## Reuse {.unnumbered}
+
+Text and figures are licensed under Creative Commons Attribution [CC By 4.0](https://creativecommons.org/licenses/by/4.0/), unless otherwise noted.
+
+
+## See also {.unnumbered}
+
+
+Discover the other training courses provided by the FRB-CESAB and its partners: <https://frbcesab.github.io/training-courses/>
+
+

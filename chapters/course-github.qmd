@@ -1,0 +1,18 @@
+## Introduction to `GitHub` {.unnumbered}
+
+
+::: {.callout-note icon=true appearance="simple"}
+## An introduction to code hosting platform w/ `GitHub`
+
+<br />
+{{< fa user >}} &nbsp;**Author:** [Aurélie Siberchicot](https://lbbe.univ-lyon1.fr/fr/annuaires-des-membres/siberchicot-aurelie)<br/>
+{{< fa brands github >}} &nbsp;**Source:** <https://github.com/rdatatoolbox/course-github/><br/>
+{{< fa globe >}} &nbsp;**Slides:** <https://rdatatoolbox.github.io/course-github/>
+:::
+
+
+<br />
+
+<div class="container-43">
+  <iframe class="responsive-iframe" src="https://rdatatoolbox.github.io/course-github"></iframe>
+</div> 
