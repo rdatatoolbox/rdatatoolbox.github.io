@@ -75,10 +75,10 @@ book:
   
   chapters:
     - index.qmd
-    - part: "Prerequisites"
+    - part: "PREREQUISITES"
       chapters: 
         - chapters/setting-up-r.qmd
-    - part: "Courses"
+    - part: "COURSES"
       chapters: 
         - chapters/course-opensci.qmd
         - chapters/course-compendium.qmd
@@ -89,7 +89,7 @@ book:
         - chapters/course-renv.qmd
         - chapters/course-docker.qmd
         - chapters/course-package.qmd
-    - part: "Exercises"
+    - part: "EXERCISES"
       chapters: 
         - chapters/ex-compendium.qmd
         - chapters/ex-github.qmd
@@ -98,10 +98,10 @@ book:
         - chapters/ex-renv.qmd
         - chapters/ex-docker.qmd
         - chapters/ex-package.qmd
-    - part: "Resources"
+    - part: "RESOURCES"
       chapters: 
         - chapters/degrees-repro.qmd
-    - part: "Archives"
+    - part: "ARCHIVES"
       chapters: 
         - chapters/course-api.qmd
         - chapters/course-rspatial.qmd
