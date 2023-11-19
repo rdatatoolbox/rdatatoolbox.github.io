@@ -21,7 +21,7 @@ Pour ce faire, continuez à travailler dans votre **research compendium** de l'[
 - Compter le nombre d'écorégions où se retrouve chaque espèce
 - Faire une visualisation graphique montrant le nombre d'écorégions par espèce
 
-Puis, créez un fichier **index.qmd** à la racine du projet qui appellera chaque fonction créée précédemment. Devrons figurer dans le document final, _a minima_, le résultat demandé sous forme de tableau (fonction [`knitr::kable()`](https://www.rdocumentation.org/packages/knitr/versions/1.45/topics/kable)) et de figure, ainsi que la source des données. Structurez votre document avec des titres et des paragraphes.
+Puis, créez un fichier **index.qmd** à la racine du projet qui appellera chaque fonction créée précédemment. Devront figurer dans le document final, _a minima_, le résultat demandé sous forme de tableau (fonction [`knitr::kable()`](https://www.rdocumentation.org/packages/knitr/versions/1.45/topics/kable)) et de figure, ainsi que la source des données. Structurez votre document avec des titres et des paragraphes.
 
 Finalement, ajoutez une ligne de code dans votre **make.R** qui permettra de transpiler votre **index.qmd** en version **index.html** (fonction [`quarto::quarto_render()`](https://rdrr.io/cran/quarto/man/quarto_render.html)).
 

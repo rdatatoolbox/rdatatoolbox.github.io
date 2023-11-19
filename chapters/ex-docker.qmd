@@ -14,9 +14,9 @@ Nous allons ajouter un [Dockerfile](https://docs.docker.com/engine/reference/bui
 - Utilisez la fonction [`rcompendium::add_dockerfile()`](https://frbcesab.github.io/rcompendium/reference/add_dockerfile.html) (désactivez temporairement [`renv`](https://rstudio.github.io/renv/articles/renv.html) avec [`renv::deactivate()`](https://rstudio.github.io/renv/reference/activate.html) le temps d'utiliser cette fonction, puis réactivez-le avec [`renv::activate()`](https://rstudio.github.io/renv/reference/activate.html))
 - Réfléchissez si la version de l'image de base `rocker/rstudio:4.3.2` est la plus appropriée à votre projet
 - Regardez le contenu du **README.Rmd** : doit-il être transpilé ?
-- Suivez les instructions du **README.md** pour construire votre image, démarrez un conteneur et relancer les analyses.
+- **Utilisez Docker :** suivez les instructions du **README.md** pour construire votre image, démarrer un conteneur et exécuter les analyses dans votre environnement **Docker**.
 
 
 {{< fa lightbulb >}}&nbsp; Pensez aux **commits** !
 
-> Félicitation ! Votre project est 99,99% reproductible.
+> **Félicitation ! Votre project est 99,99% reproductible.**

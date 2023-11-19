@@ -15,7 +15,7 @@ Avant toute chose, supprimez la ligne `devtools::load_all()` du fichier **make.R
 
 Puis, procédez comme suit : 
 
-- Ecrivez votre plan d'analyses dans un fichier **\_targets.R** placé à la racine du projet. N'oubliez d'attacher les packages [`targets`](https://books.ropensci.org/targets/) et [`tarchetypes`](https://docs.ropensci.org/tarchetypes/) avec la fonction [`library()`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/library) et de sourcer les différentes fonctions avec [`source()`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/source).
+- Ecrivez votre plan d'analyses dans un fichier **\_targets.R** placé à la racine du projet. N'oubliez pas d'attacher les packages [`targets`](https://books.ropensci.org/targets/) et [`tarchetypes`](https://docs.ropensci.org/tarchetypes/) avec la fonction [`library()`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/library) et de sourcer les différentes fonctions avec [`source()`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/source).
 
 - Le dernier élément du pipeline sera le rapport **index.qmd** vu à l'exercice précédent. Cependant, celui-ci n'exécutera aucune fonction créée (celles-ci seront gérées par [`targets`](https://books.ropensci.org/targets/)). Le fichier `.qmd` se contentera d'importer les outputs : vous devrez exporter la figure (avec une nouvelle fonction) dans le dossier **figures/**. L'affichage du tableau résultat pourra se faire avec les fonctions [`targets::tar_read()`](https://docs.ropensci.org/targets/reference/tar_read.html) et/ou [`targets::tar_load()`](https://docs.ropensci.org/targets/reference/tar_load.html).
 

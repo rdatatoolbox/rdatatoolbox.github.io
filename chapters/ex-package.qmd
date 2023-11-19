@@ -29,7 +29,7 @@ Créez un **nouveau projet RStudio**.
 {{< fa hand-point-right >}}&nbsp; Mettez en place des [GitHub Actions](https://docs.github.com/en/actions) pour :
 
 - Vérifiez votre package sur les serveurs GitHub après chaque push avec [`rcompendium::add_github_actions_check()`](https://frbcesab.github.io/rcompendium/reference/add_github_actions_check.html)
-- Déployer le site Web du package avec [`rcompendium::add_github_actions_pkgdown()`](https://frbcesab.github.io/rcompendium/reference/add_github_actions_pkgdown.html)
+- Déployez le site Web du package avec [`rcompendium::add_github_actions_pkgdown()`](https://frbcesab.github.io/rcompendium/reference/add_github_actions_pkgdown.html)
 
 Ajoutez au **README.Rmd** les badges correspondants avec [`rcompendium::add_github_actions_check_badge()`](https://frbcesab.github.io/rcompendium/reference/add_github_actions_check_badge.html) et [`rcompendium::add_github_actions_pkgdown_badge()`](https://frbcesab.github.io/rcompendium/reference/add_github_actions_pkgdown_badge.html).
 

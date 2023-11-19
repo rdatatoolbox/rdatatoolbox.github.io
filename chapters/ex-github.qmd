@@ -40,7 +40,7 @@ git status
 
 Certains fichiers sont inutiles à versionner et peuvent même parfois 
 créer des conflits. C'est le cas notamment du fichier `.Rproj`.
-Nous allons les ajouter au `.gitignore` en utilisant la fonction {{< fa brands r-project >}} [`add_to_gitignore`](https://frbcesab.github.io/rcompendium/reference/add_to_gitignore.html) de [`rcompendium`](https://github.com/frbcesab/rcompendium)
+Nous allons les ajouter au `.gitignore` en utilisant la fonction {{< fa brands r-project >}} [`add_to_gitignore()`](https://frbcesab.github.io/rcompendium/reference/add_to_gitignore.html) de [`rcompendium`](https://github.com/frbcesab/rcompendium)
 
 ```{r}
 #| echo: true
@@ -81,7 +81,7 @@ git log
 
 #### Création du dépôt GitHub
 
-Maintenant, nous souhaitons envoyer notre projet sur GitHub. Rendez-vous sur GitHub et créez un nouveau dépôt **VIDE** : donnez juste un nom de dépôt et n'ajoutez **aucun fichier supplémentaire** (pas de licence, `.gitignore`, `README`). Le dépôt contient une série d'instructions correspondant à trois cas de figure. Nous allons suivre la section **_Push an existing repository from the command line_**.
+Maintenant, nous souhaitons envoyer notre projet sur GitHub. Rendez-vous sur GitHub et créez un nouveau dépôt **VIDE** : donnez juste un nom de dépôt et n'ajoutez **aucun fichier supplémentaire** (pas de licence, `.gitignore`, `README`). La page du dépôt créé contient une série d'instructions correspondant à trois cas de figure. Nous allons suivre la section **_Push an existing repository from the command line_**.
 
 Dans le **terminal de RStudio** :
 
