@@ -381,7 +381,7 @@ GitHub First <em>vs.</em> GitHub Last
 </section>
 <section id="ajout-dun-.gitignore" class="level4">
 <h4 class="anchored" data-anchor-id="ajout-dun-.gitignore">Ajout d’un .gitignore</h4>
-<p>Certains fichiers sont inutiles à versionner et peuvent même parfois créer des conflits. C’est le cas notamment du fichier <code>.Rproj</code>. Nous allons les ajouter au <code>.gitignore</code> en utilisant la fonction <i class="fa-brands fa-r-project" aria-label="r-project"></i> <a href="https://frbcesab.github.io/rcompendium/reference/add_to_gitignore.html"><code>add_to_gitignore</code></a> de <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a></p>
+<p>Certains fichiers sont inutiles à versionner et peuvent même parfois créer des conflits. C’est le cas notamment du fichier <code>.Rproj</code>. Nous allons les ajouter au <code>.gitignore</code> en utilisant la fonction <i class="fa-brands fa-r-project" aria-label="r-project"></i> <a href="https://frbcesab.github.io/rcompendium/reference/add_to_gitignore.html"><code>add_to_gitignore()</code></a> de <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ajout d'un .gitignore pour les projets R -----</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>rcompendium<span class="sc">::</span><span class="fu">add_to_gitignore</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -404,7 +404,7 @@ GitHub First <em>vs.</em> GitHub Last
 </section>
 <section id="création-du-dépôt-github" class="level4">
 <h4 class="anchored" data-anchor-id="création-du-dépôt-github">Création du dépôt GitHub</h4>
-<p>Maintenant, nous souhaitons envoyer notre projet sur GitHub. Rendez-vous sur GitHub et créez un nouveau dépôt <strong>VIDE</strong> : donnez juste un nom de dépôt et n’ajoutez <strong>aucun fichier supplémentaire</strong> (pas de licence, <code>.gitignore</code>, <code>README</code>). Le dépôt contient une série d’instructions correspondant à trois cas de figure. Nous allons suivre la section <strong><em>Push an existing repository from the command line</em></strong>.</p>
+<p>Maintenant, nous souhaitons envoyer notre projet sur GitHub. Rendez-vous sur GitHub et créez un nouveau dépôt <strong>VIDE</strong> : donnez juste un nom de dépôt et n’ajoutez <strong>aucun fichier supplémentaire</strong> (pas de licence, <code>.gitignore</code>, <code>README</code>). La page du dépôt créé contient une série d’instructions correspondant à trois cas de figure. Nous allons suivre la section <strong><em>Push an existing repository from the command line</em></strong>.</p>
 <p>Dans le <strong>terminal de RStudio</strong> :</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Ajout du chemin vers le dépôt distant ----</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin git@github.com:your_account/your_repo.git</span>
