@@ -62,7 +62,7 @@ set_credentials(given    = "Jane",
 ```
 
 Ces informations ont été copiées dans le presse-papier. Collez son contenu dans 
-le fichier **~/.Renviron** (ouvert dans RStudio par cette fonction). Ce fichier est lu
+le fichier **~/.Rprofile** (ouvert dans RStudio par cette fonction). Ce fichier est lu
 à chaque ouverture de {{< fa brands r-project >}} et son contenu sera
 accessible aux fonctions du package [`rcompendium`](https://github.com/frbcesab/rcompendium).
 
