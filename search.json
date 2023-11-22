@@ -95,7 +95,7 @@
     "href": "chapters/course-quarto.html",
     "title": "Literate programming w/ Quarto",
     "section": "",
-    "text": "An introduction to literate programming w/ R Markdown & Quarto\n\n\n\n   Authors: François Guillaumon & Nicolas Casajus   Source: https://github.com/rdatatoolbox/course-rmarkdown/   Slides: https://rdatatoolbox.github.io/course-rmarkdown/"
+    "text": "An introduction to literate programming w/ Quarto (and R Markdown)\n\n\n\n   Authors: François Guillaumon   Source: https://github.com/rdatatoolbox/course-quarto/   Slides: https://rdatatoolbox.github.io/course-quarto/"
   },
   {
     "objectID": "chapters/course-targets.html",
