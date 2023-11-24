@@ -64,6 +64,10 @@ book:
 
   favicon: images/favicon.png
   
+  sidebar: 
+    style: "docked"
+    collapse-level: 1
+
   page-footer: 
     left: "&copy; CC-By [FRB-CESAB](https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/)"
     center: "Code source available on [{{< fa brands github >}}](https://github.com/rdatatoolbox/rdatatoolbox.github.io/)"
@@ -75,10 +79,10 @@ book:
   
   chapters:
     - index.qmd
-    - part: "PREREQUISITES"
+    - part: "Prerequisites"
       chapters: 
         - chapters/setting-up-r.qmd
-    - part: "COURSES"
+    - part: "Courses"
       chapters: 
         - chapters/course-opensci.qmd
         - chapters/course-compendium.qmd
@@ -89,7 +93,7 @@ book:
         - chapters/course-renv.qmd
         - chapters/course-docker.qmd
         - chapters/course-package.qmd
-    - part: "EXERCISES"
+    - part: "Exercises"
       chapters: 
         - chapters/ex-compendium.qmd
         - chapters/ex-github.qmd
@@ -98,14 +102,10 @@ book:
         - chapters/ex-renv.qmd
         - chapters/ex-docker.qmd
         - chapters/ex-package.qmd
-    - part: "RESOURCES"
+    - part: "Resources"
       chapters: 
-        - chapters/degrees-repro.qmd
-    - part: "ARCHIVES"
-      chapters: 
-        - chapters/course-api.qmd
-        - chapters/course-rspatial.qmd
-        - chapters/course-tidyverse.qmd
+        - chapters/biblio.qmd
+        - chapters/wrap-up.qmd
     
 format:
   html:

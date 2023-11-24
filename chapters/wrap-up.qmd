@@ -1,4 +1,4 @@
-# The degrees of reproducibility {.unnumbered}
+# Wrap up {.unnumbered}
 
 [![](../images/degrees.png)](the_degrees_of_reproductibility.pdf)
 

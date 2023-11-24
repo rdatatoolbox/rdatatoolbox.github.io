@@ -5,14 +5,13 @@ toc: true
 # Welcome {.unnumbered}
 
 ::: {.callout-note}
-## Registrations for the 2023 session are closed
+## Registrations for the 2024 session are not yet open
 
 Registrations open each spring and the training course takes place during winter. 
 
 {{< fa hand-point-right >}}&nbsp; Subscribe to the 
 [FRB-CESAB newsletter](https://www.fondationbiodiversite.fr/en/newsletter/) 
-to stay informed. More information is available on the  
-[FRB-CESAB website](https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/develop-skills/best-practice-for-reproducible-research-in-computational-ecology/).
+to stay informed. More information is available on the [FRB-CESAB website](https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/develop-skills/best-practice-for-reproducible-research-in-computational-ecology/).
 :::
 
 
@@ -28,22 +27,24 @@ applied to biodiversity research.
 
 ## Program {.unnumbered}
 
-+---------------+-------------------------------------------------+
-| **Monday**    | - Open science & Reproducible research          |
-|               | - Research compendium & Good practices          |
-|               | - Version control with `Git` & `GitHub`         |
-+---------------+-------------------------------------------------+
-| **Tuesday**   | - Literate programming: `R Markdown` & `Quarto` |
-|               | - Pipeline toolkit with `targets`               |
-+---------------+-------------------------------------------------+
-| **Wednesday** | - Dealing with R package versions with `renv`   |
-|               | - Containerization with `Docker`                |
-|               | - Building an R package                         |
-+---------------+-------------------------------------------------+
-| **Thursday**  | - Subgroups projects                            |
-+---------------+-------------------------------------------------+
-| **Friday**    | - Subgroups projects                            |
-+---------------+-------------------------------------------------+
++---------------+-----------------------------------------------------+
+| **Monday**    | - Open science & Reproducible research              |
+|               | - Project organization & Good practices             |
+|               | - Version control w/ `Git` (Part I)                 |
++---------------+-----------------------------------------------------+
+| **Tuesday**   | - Version control w/ `Git` (Part II)                |
+|               | - Collaboration & sharing w/ `GitHub`               |
++---------------+-----------------------------------------------------+
+| **Wednesday** | - Literate programming w/ `Quarto`                  |
+|               | - Pipeline optimization w/ `targets`                |
+|               | - Developing an {{< fa brands r-project >}} package |
++---------------+-----------------------------------------------------+
+| **Thursday**  | - Freezing package versions w/ `renv`               |
+|               | - Containerization w/ `Docker`                      |
+|               | - Subgroups projects                                |
++---------------+-----------------------------------------------------+
+| **Friday**    | - Subgroups projects                                |
++---------------+-----------------------------------------------------+
 
 
 ## Prerequisites {.unnumbered}
@@ -51,7 +52,7 @@ applied to biodiversity research.
 {{< fa hand-point-right >}}&nbsp; Please follow this [tutorial](https://frbcesab.github.io/rsetup/) to install 
 your working environment **before attending the training course**.
 
-{{< fa hand-point-right >}}&nbsp; You also need to create an account on [GitHub](https://github.com/signup/).
+{{< fa hand-point-right >}}&nbsp; You also need to create an account on [GitHub](https://github.com/signup/) (please edit your profile and enter your name).
 
 
 ## Material {.unnumbered}

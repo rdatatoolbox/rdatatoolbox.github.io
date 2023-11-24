@@ -1,0 +1,50 @@
+## Bibliography {.unnumbered}
+
+### Articles
+
+Alston JA & Rick JM (2021) **A Beginner's Guide to Conducting Reproducible Research**. _The Bulletin of the Ecological Society of America_, 102, e01801. DOI: [10.1002/bes2.1801](https://doi.org/10.1002/bes2.1801).
+
+Barba LA (2018) **Terminologies for Reproducible Research**. _arXiv_. arXix: [ 	arXiv:1802.03311](https://arxiv.org/abs/1802.03311v1).
+
+Blischak JD, Davenport ER & Wilson G (2016) **A Quick Introduction to Version Control with Git and GitHub**. _PLoS Computational Biology_, 12, e1004668. DOI: [10.1371/journal.pcbi.1004668](https://doi.org/10.1371/journal.pcbi.1004668).
+
+Braga PHP, Hébert K, Hudgins EJ, _et al._ (2023) **Not Just for Programmers: How GitHub Can Accelerate Collaborative and Reproducible Research in Ecology and Evolution**. _Methods in Ecology and Evolution_, 14, 1364-1380. DOI: [10.1111/2041-210x.14108](https://doi.org/10.1111/2041-210x.14108).
+
+Brousil MR, Filazzola A, Meyer MF, _et al._ (2023) **Improving Ecological Data Science with Workflow Management Software**, 14, 1381-1388. DOI: [10.1111/2041-210X.14113](https://doi.org/10.1111/2041-210X.14113).
+
+Bryan J (2017) **Excuse Me, Do You Have a Moment to Talk About Version Control?** _PeerJ Preprints_, 5, e3159v2. DOI: [10.7287/peerj.preprints.3159v2](https://doi.org/10.7287/peerj.preprints.3159v2).
+
+
+Lee BD (2018) **Ten Simple Rules for Documenting Scientific Software**. _PLoS Computational Biology_, 12, e1006561. DOI: [10.1371/journal.pcbi.1006561](https://doi.org/10.1371/journal.pcbi.1006561).
+
+Marwick B, Boettiger C & Mullen L (2018) **Packaging Data Analytical Work Reproducibly Using R (and Friends)**. _The American Statistician_, 72, 80-88. DOI: [10.1080/00031305.2017.1375986](https://doi.org/10.1080/00031305.2017.1375986).
+
+Nüst D, Sochat V, Marwick Ben _et al._ (2020) **Ten Simple Rules for Writing Dockerfiles for Reproducible Data Science**. _PLoS Computational Biology_, 16, e1008316 DOI: [10.1371/journal.pcbi.1008316](https://doi.org/10.1371/journal.pcbi.1008316).
+
+Peng RD & Hicks SC (2021) **Reproducible Research: A Retrospective**. _Annual Review of Public Health_, 42, 79-93. DOI: [10.1146/annurev-publhealth-012420-105110](https://doi.org/10.1146/annurev-publhealth-012420-105110)
+
+Perez-Riverol Y, Gatto L, Wang R _et al._ (2016) **Ten Simple Rules for Taking Advantage of Git and GitHub**. _PLoS Computational Biology_, 12, e1004947. DOI: [10.1371/journal.pcbi.1004947](https://doi.org/10.1371/journal.pcbi.1004947).
+
+Romano JD & Moore JH (2020) **Ten Simple Rules for Writing a Paper about Scientific Software**. _PLoS Computational Biology_, 16, e1008390 DOI: [10.1371/journal.pcbi.1008390](https://doi.org/10.1371/journal.pcbi.1008390).
+
+Sandve GK, Nekrutenko A, Taylor J _et al._ (2013) **Ten Simple Rules for Reproducible Computational Research**. _PLoS Computational Biology_, 9, e1003285. DOI: [10.1371/journal.pcbi.1003285](https://doi.org/10.1371/journal.pcbi.1003285).
+
+Wilson G & Bryan J & Cranston K _et al._ (2017) **Good Enough Practices in Scientific Computing**. _PLoS Computational Biology_, 13, e1005510. DOI: [10.1371/journal.pcbi.1005510](https://doi.org/10.1371/journal.pcbi.1005510).
+
+
+
+
+### Online books
+
+Bryan J (2023) **Happy Git and GitHub for the useR**. URL: <https://happygitwithr.com/>.
+
+Landau W (2023) **The targets R package user manual**. URL: <https://books.ropensci.org/targets/>.
+
+Wickham H (2019) **Advanced R**. URL: <https://adv-r.hadley.nz/>.
+
+Wickham H (2023) **R for Data Science**. URL: <https://r4ds.had.co.nz/>.
+
+Wickham H & Bryan J (2023) **R Packages: Organize, Test, Document, and Share Your Code**. URL: <https://r-pkgs.org/>.
+
+Yihui X, Allaire JJ & Grolemund G (2023) **R Markdown: The Definitive Guide**. URL: <https://bookdown.org/yihui/rmarkdown/>.
+
