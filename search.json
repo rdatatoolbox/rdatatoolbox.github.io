@@ -11,14 +11,14 @@
     "href": "index.html#program",
     "title": "Reproducible Research in Computational Ecology",
     "section": "Program",
-    "text": "Program\n\n\n\n\n\n\n\nMonday\n\nOpen science & Reproducible research\nResearch compendium & Good practices\nVersion control with Git & GitHub\n\n\n\nTuesday\n\nLiterate programming: R Markdown & Quarto\nPipeline toolkit with targets\n\n\n\nWednesday\n\nDealing with R package versions with renv\nContainerization with Docker\nBuilding an R package\n\n\n\nThursday\n\nSubgroups projects\n\n\n\nFriday\n\nSubgroups projects"
+    "text": "Program\n\n\n\n\n\n\n\nMonday\n\nOpen science & Reproducible research\nProject organization & Good practices\nVersion control w/ Git (Part I)\n\n\n\nTuesday\n\nVersion control w/ Git (Part II)\nCollaboration & sharing w/ GitHub\n\n\n\nWednesday\n\nLiterate programming w/ Quarto\nPipeline optimization w/ targets\nDeveloping an  package\n\n\n\nThursday\n\nFreezing package versions w/ renv\nContainerization w/ Docker\nSubgroups projects\n\n\n\nFriday\n\nSubgroups projects"
   },
   {
     "objectID": "index.html#prerequisites",
     "href": "index.html#prerequisites",
     "title": "Reproducible Research in Computational Ecology",
     "section": "Prerequisites",
-    "text": "Prerequisites\n  Please follow this tutorial to install your working environment before attending the training course.\n  You also need to create an account on GitHub."
+    "text": "Prerequisites\n  Please follow this tutorial to install your working environment before attending the training course.\n  You also need to create an account on GitHub (please edit your profile and enter your name)."
   },
   {
     "objectID": "index.html#material",
@@ -175,31 +175,17 @@
     "text": "Objectif\n\n\n\nDans cet exercice, vous allez créer un package .\n\n\n\nConsignes\nCréez un nouveau projet RStudio.\n\nUtilisez la fonction rcompendium::add_description() pour ajouter un fichier DESCRIPTION\nUtilisez la fonction rcompendium::add_to_gitignore() pour ajouter un .gitignore spécifique à \nImplémentez des fonctions  dans le dossier R/ et documentez-les avec la syntaxe roxygen2. Vous pouvez réutiliser certaines fonctions développées lors des exercices précédents.\nMettez à jour la documentation des fonctions avec devtools::document()\nMettez à jour les dépendances dans le fichier DESCRIPTION avec rcompendium::add_dependencies()\nVérifiez que votre package ne comporte pas d’erreur avec devtools::check()\nAjoutez un README.Rmd avec rcompendium::add_readme_rmd() et éditez-le. N’oubliez pas de le transpiler en README.md avec rmarkdown::render()\nUtilisez la fonction usethis::use_github() pour envoyer votre projet sur GitHub.\n\n  Pensez aux commits !\n\n\nBonus\n  Mettez en place des GitHub Actions pour :\n\nVérifiez votre package sur les serveurs GitHub après chaque push avec rcompendium::add_github_actions_check()\nDéployez le site Web du package avec rcompendium::add_github_actions_pkgdown()\n\nAjoutez au README.Rmd les badges correspondants avec rcompendium::add_github_actions_check_badge() et rcompendium::add_github_actions_pkgdown_badge().\n\n\n\n\n\n\nLa fonction new_package()\n\n\n\nL’ensemble de ces étapes peut être réalisé avec une seule fonction : new_package() de rcompendium. N’oubliez pas de créer un nouveau projet RStudio avant si vous voulez l’utiliser."
   },
   {
-    "objectID": "chapters/degrees-repro.html",
-    "href": "chapters/degrees-repro.html",
-    "title": "The degrees of reproducibility",
+    "objectID": "chapters/biblio.html",
+    "href": "chapters/biblio.html",
+    "title": "Bibliography",
+    "section": "",
+    "text": "Articles\nAlston JA & Rick JM (2021) A Beginner’s Guide to Conducting Reproducible Research. The Bulletin of the Ecological Society of America, 102, e01801. DOI: 10.1002/bes2.1801.\nBarba LA (2018) Terminologies for Reproducible Research. arXiv. arXix: arXiv:1802.03311.\nBlischak JD, Davenport ER & Wilson G (2016) A Quick Introduction to Version Control with Git and GitHub. PLoS Computational Biology, 12, e1004668. DOI: 10.1371/journal.pcbi.1004668.\nBraga PHP, Hébert K, Hudgins EJ, et al. (2023) Not Just for Programmers: How GitHub Can Accelerate Collaborative and Reproducible Research in Ecology and Evolution. Methods in Ecology and Evolution, 14, 1364-1380. DOI: 10.1111/2041-210x.14108.\nBrousil MR, Filazzola A, Meyer MF, et al. (2023) Improving Ecological Data Science with Workflow Management Software, 14, 1381-1388. DOI: 10.1111/2041-210X.14113.\nBryan J (2017) Excuse Me, Do You Have a Moment to Talk About Version Control? PeerJ Preprints, 5, e3159v2. DOI: 10.7287/peerj.preprints.3159v2.\nLee BD (2018) Ten Simple Rules for Documenting Scientific Software. PLoS Computational Biology, 12, e1006561. DOI: 10.1371/journal.pcbi.1006561.\nMarwick B, Boettiger C & Mullen L (2018) Packaging Data Analytical Work Reproducibly Using R (and Friends). The American Statistician, 72, 80-88. DOI: 10.1080/00031305.2017.1375986.\nNüst D, Sochat V, Marwick Ben et al. (2020) Ten Simple Rules for Writing Dockerfiles for Reproducible Data Science. PLoS Computational Biology, 16, e1008316 DOI: 10.1371/journal.pcbi.1008316.\nPeng RD & Hicks SC (2021) Reproducible Research: A Retrospective. Annual Review of Public Health, 42, 79-93. DOI: 10.1146/annurev-publhealth-012420-105110\nPerez-Riverol Y, Gatto L, Wang R et al. (2016) Ten Simple Rules for Taking Advantage of Git and GitHub. PLoS Computational Biology, 12, e1004947. DOI: 10.1371/journal.pcbi.1004947.\nRomano JD & Moore JH (2020) Ten Simple Rules for Writing a Paper about Scientific Software. PLoS Computational Biology, 16, e1008390 DOI: 10.1371/journal.pcbi.1008390.\nSandve GK, Nekrutenko A, Taylor J et al. (2013) Ten Simple Rules for Reproducible Computational Research. PLoS Computational Biology, 9, e1003285. DOI: 10.1371/journal.pcbi.1003285.\nWilson G & Bryan J & Cranston K et al. (2017) Good Enough Practices in Scientific Computing. PLoS Computational Biology, 13, e1005510. DOI: 10.1371/journal.pcbi.1005510.\n\n\nOnline books\nBryan J (2023) Happy Git and GitHub for the useR. URL: https://happygitwithr.com/.\nLandau W (2023) The targets R package user manual. URL: https://books.ropensci.org/targets/.\nWickham H (2019) Advanced R. URL: https://adv-r.hadley.nz/.\nWickham H (2023) R for Data Science. URL: https://r4ds.had.co.nz/.\nWickham H & Bryan J (2023) R Packages: Organize, Test, Document, and Share Your Code. URL: https://r-pkgs.org/.\nYihui X, Allaire JJ & Grolemund G (2023) R Markdown: The Definitive Guide. URL: https://bookdown.org/yihui/rmarkdown/."
+  },
+  {
+    "objectID": "chapters/wrap-up.html",
+    "href": "chapters/wrap-up.html",
+    "title": "Wrap up",
     "section": "",
     "text": "Download the full size image"
-  },
-  {
-    "objectID": "chapters/course-api.html",
-    "href": "chapters/course-api.html",
-    "title": "API & web scraping",
-    "section": "",
-    "text": "An introduction to data acquisition w/ API & Web scraping\n\n\n\n   Author: Nicolas Casajus   Source: https://github.com/rdatatoolbox/course-api/   Slides: https://rdatatoolbox.github.io/course-api/"
-  },
-  {
-    "objectID": "chapters/course-rspatial.html",
-    "href": "chapters/course-rspatial.html",
-    "title": "Spatial analyses w/ sf",
-    "section": "",
-    "text": "An introduction to spatial analyses w/ sf\n\n\n\n   Author: Nicolas Casajus   Source: https://github.com/rdatatoolbox/course-rspatial/   Slides: https://rdatatoolbox.github.io/course-rspatial/"
-  },
-  {
-    "objectID": "chapters/course-tidyverse.html",
-    "href": "chapters/course-tidyverse.html",
-    "title": "Tidyverse",
-    "section": "",
-    "text": "An introduction to the tidyverse\n\n\n\n   Author: Olivier Gimenez   Source: https://github.com/rdatatoolbox/course-tidyverse/   Slides: https://rdatatoolbox.github.io/course-tidyverse/"
   }
 ]
