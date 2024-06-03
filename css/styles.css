@@ -23,3 +23,11 @@
   width: 100%;
   height: 100%;
 }
+
+p.author a {
+  color: #343A40;
+}
+
+p.affiliation a {
+  color: #343A40;
+}

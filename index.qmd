@@ -23,24 +23,33 @@ applied to biodiversity research.
 
 ## Program {.unnumbered}
 
-+---------------+-----------------------------------------------------+
-| **Monday**    | - Open science & Reproducible research              |
-|               | - Project organization & Good practices             |
-|               | - Version control w/ `Git` (Part I)                 |
-+---------------+-----------------------------------------------------+
-| **Tuesday**   | - Version control w/ `Git` (Part II)                |
-|               | - Collaboration & sharing w/ `GitHub`               |
-+---------------+-----------------------------------------------------+
-| **Wednesday** | - Literate programming w/ `Quarto`                  |
-|               | - Pipeline optimization w/ `targets`                |
-|               | - Developing an {{< fa brands r-project >}} package |
-+---------------+-----------------------------------------------------+
-| **Thursday**  | - Freezing package versions w/ `renv`               |
-|               | - Containerization w/ `Docker`                      |
-|               | - Subgroups projects                                |
-+---------------+-----------------------------------------------------+
-| **Friday**    | - Subgroups projects                                |
-+---------------+-----------------------------------------------------+
+**Monday**
+
+- Open science & Reproducible research
+- Project organization & Good practices
+- Version control w/ `Git` (Part I)
+
+**Tuesday**
+
+- Version control w/ `Git` (Part II)
+- Collaboration & sharing w/ `GitHub`
+
+**Wednesday**
+
+- Literate programming w/ `Quarto`
+- Pipeline optimization w/ `targets`
+- Developing an {{< fa brands r-project >}} package
+
+**Thursday**
+
+- Freezing package versions w/ `renv`
+- Containerization w/ `Docker`
+- Subgroups projects
+
+**Friday**
+
+- Subgroups projects
+
 
 
 ## Prerequisites {.unnumbered}
