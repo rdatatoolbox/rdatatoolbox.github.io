@@ -14,7 +14,7 @@
     "href": "index.html#program",
     "title": "Reproducible Research in Computational Ecology",
     "section": "Program",
-    "text": "Program\n\n\n\n\n\n\n\n\nMonday\n\nOpen science & Reproducible research\nProject organization & Good practices\nVersion control w/ Git (Part I)\n\n\n\n\nTuesday\n\nVersion control w/ Git (Part II)\nCollaboration & sharing w/ GitHub\n\n\n\n\nWednesday\n\nLiterate programming w/ Quarto |\nPipeline optimization w/ targets |\nDeveloping an  package\n\n\n\nThursday\n\nFreezing package versions w/ renv\nContainerization w/ Docker\nSubgroups projects\n\n\n\n\nFriday\n\nSubgroups projects",
+    "text": "Program\nMonday\n\nOpen science & Reproducible research\nProject organization & Good practices\nVersion control w/ Git (Part I)\n\nTuesday\n\nVersion control w/ Git (Part II)\nCollaboration & sharing w/ GitHub\n\nWednesday\n\nLiterate programming w/ Quarto\nPipeline optimization w/ targets\nDeveloping an  package\n\nThursday\n\nFreezing package versions w/ renv\nContainerization w/ Docker\nSubgroups projects\n\nFriday\n\nSubgroups projects",
     "crumbs": [
       "Welcome"
     ]
