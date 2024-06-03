@@ -5,13 +5,17 @@ toc: true
 # Welcome {.unnumbered}
 
 ::: {.callout-note}
-## Registrations for the 2024 session are not yet open
+## Registrations for the 2024 session are now open
 
+{{< fa hand-point-right >}}&nbsp; The registration form is available [here](https://www.fondationbiodiversite.fr/evenement/frb-cesab-bonnes-pratiques-pour-une-recherche-reproductible-en-ecologie-numerique-2024/).
+
+<!--
 Registrations open each spring and the training course takes place during winter. 
 
 {{< fa hand-point-right >}}&nbsp; Subscribe to the 
 [FRB-CESAB newsletter](https://www.fondationbiodiversite.fr/en/newsletter/) 
 to stay informed. More information is available on the [FRB-CESAB website](https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/develop-skills/best-practice-for-reproducible-research-in-computational-ecology/).
+-->
 :::
 
 
