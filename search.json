@@ -44,7 +44,7 @@
     "href": "index.html#citation",
     "title": "Reproducible Research in Computational Ecology",
     "section": "Citation",
-    "text": "Citation\n\nCasajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD & Siberchicot A (2023) FRB-CESAB & GdR EcoStat training course: Reproducible Research in Computational Ecology. Zenodo. URL: http://doi.org/10.5281/zenodo.4262978",
+    "text": "Citation\n\nCasajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD & Siberchicot A (2024) FRB-CESAB & GdR EcoStat training course: Reproducible Research in Computational Ecology. Zenodo. URL: http://doi.org/10.5281/zenodo.4262978",
     "crumbs": [
       "Welcome"
     ]
@@ -82,12 +82,11 @@
   {
     "objectID": "chapters/setting-up-r.html",
     "href": "chapters/setting-up-r.html",
-    "title": "Setting up R",
+    "title": "Setup R",
     "section": "",
     "text": "The guide to correctly install and configure a working environment for data science with , , and  is available at: https://frbcesab.github.io/rsetup/",
     "crumbs": [
-      "Prerequisites",
-      "Setting up R"
+      "Setup R"
     ]
   },
   {
