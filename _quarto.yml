@@ -109,6 +109,6 @@ book:
     
 format:
   html:
-    theme: [cosmo, css/styles.css]
+    theme: [cosmo, css/styles.scss]
     code-copy: true
     code-line-numbers: false

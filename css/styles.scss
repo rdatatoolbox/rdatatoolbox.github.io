@@ -1,5 +1,13 @@
 /*-- scss:defaults --*/
 
+// fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+$font-family-monospace: "Fira Code", monospace !default;
+
+/*-- scss:rules --*/
+
 .container {
   position: relative;
   overflow: hidden;
