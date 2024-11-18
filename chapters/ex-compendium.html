@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="description" content="FRB-CESAB &amp; GdR EcoStat training course     ">
 
-<title>Reproducible Research in Computational Ecology - Research compendium</title>
+<title>Research compendium – Reproducible Research in Computational Ecology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -34,7 +34,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -90,6 +90,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -100,11 +103,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/ex-compendium.html">Exercises</a></li><li class="breadcrumb-item"><a href="../chapters/ex-compendium.html">Research compendium</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
   </nav>
@@ -128,9 +131,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Prerequisites</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -145,9 +148,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Courses</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -210,9 +213,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Exercises</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -263,9 +266,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
  <span class="menu-text">Resources</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -296,17 +299,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#préambule" id="toc-préambule" class="nav-link active" data-scroll-target="#préambule">Préambule</a></li>
   <li><a href="#projet-rstudio" id="toc-projet-rstudio" class="nav-link" data-scroll-target="#projet-rstudio">Projet RStudio</a></li>
+  <li><a href="#fichier-readme" id="toc-fichier-readme" class="nav-link" data-scroll-target="#fichier-readme">Fichier README</a></li>
   <li><a href="#fichier-description" id="toc-fichier-description" class="nav-link" data-scroll-target="#fichier-description">Fichier DESCRIPTION</a></li>
   <li><a href="#choix-dune-licence" id="toc-choix-dune-licence" class="nav-link" data-scroll-target="#choix-dune-licence">Choix d’une Licence</a></li>
-  <li><a href="#ajout-des-répertoires" id="toc-ajout-des-répertoires" class="nav-link" data-scroll-target="#ajout-des-répertoires">Ajout des répertoires</a></li>
-  <li><a href="#implémentation-des-fonctions" id="toc-implémentation-des-fonctions" class="nav-link" data-scroll-target="#implémentation-des-fonctions">Implémentation des fonctions</a></li>
+  <li><a href="#sous-répertoires" id="toc-sous-répertoires" class="nav-link" data-scroll-target="#sous-répertoires">Sous-répertoires</a></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code <i class="fa-brands fa-r-project" aria-label="r-project"></i></a></li>
+  <li><a href="#factorisation" id="toc-factorisation" class="nav-link" data-scroll-target="#factorisation">Factorisation</a></li>
   <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">Documentation</a></li>
+  <li><a href="#appel-aux-fonctions" id="toc-appel-aux-fonctions" class="nav-link" data-scroll-target="#appel-aux-fonctions">Appel aux fonctions</a></li>
   <li><a href="#ajout-des-dépendances" id="toc-ajout-des-dépendances" class="nav-link" data-scroll-target="#ajout-des-dépendances">Ajout des dépendances</a></li>
   <li><a href="#chargement-du-projet" id="toc-chargement-du-projet" class="nav-link" data-scroll-target="#chargement-du-projet">Chargement du projet</a></li>
   <li><a href="#ajout-dun-make.r" id="toc-ajout-dun-make.r" class="nav-link" data-scroll-target="#ajout-dun-make.r">Ajout d’un make.R</a></li>
-  <li><a href="#appel-aux-fonctions" id="toc-appel-aux-fonctions" class="nav-link" data-scroll-target="#appel-aux-fonctions">Appel aux fonctions</a></li>
-  <li><a href="#ajout-dun-readme" id="toc-ajout-dun-readme" class="nav-link" data-scroll-target="#ajout-dun-readme">Ajout d’un README</a></li>
-  <li><a href="#bonus" id="toc-bonus" class="nav-link" data-scroll-target="#bonus">Bonus</a></li>
+  <li><a href="#pour-finir" id="toc-pour-finir" class="nav-link" data-scroll-target="#pour-finir">Pour finir</a></li>
   </ul>
 </nav>
     </div>
@@ -347,20 +351,23 @@ Objectif
 </div>
 </div>
 <p><strong>NB.</strong> Cet exercice s’inspire du <a href="https://annakrystalli.me/rrtools-repro-research/intro.html">workshop</a> proposé par <a href="https://annakrystalli.me/">Anna Krystalli</a>.</p>
-<p>Afin de nous assister dans la création de la structure de notre dossier de travail, nous allons utiliser le package <i class="fa-brands fa-r-project" aria-label="r-project"></i> <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a>, développé dans le cadre de cette formation. Il permet d’automatiser la création des fichiers/répertoires spécifiques à un compendium/package <i class="fa-brands fa-r-project" aria-label="r-project"></i>.</p>
+<p><br></p>
 <section id="préambule" class="level3">
 <h3 class="anchored" data-anchor-id="préambule">Préambule</h3>
-<p>Installez le package <i class="fa-brands fa-r-project" aria-label="r-project"></i> <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a> depuis le CRAN :</p>
+<p>Afin de nous assister dans la création de la structure de notre dossier de travail, nous allons utiliser le package <i class="fa-brands fa-r-project" aria-label="r-project"></i> <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a>, développé dans le cadre de cette formation. Il permet d’automatiser la création des fichiers/répertoires spécifiques à un compendium/package <i class="fa-brands fa-r-project" aria-label="r-project"></i>.</p>
+<p>Installez le package <i class="fa-brands fa-r-project" aria-label="r-project"></i> <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a> depuis GitHub :</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Installation de 'rcompendium' ----</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"rcompendium"</span>)</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Installation de 'remotes' ----</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Chargement du package -----</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"rcompendium"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Installation de 'rcompendium' ----</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"frbcesab/rcompendium"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Chargement du package -----</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"rcompendium"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i>&nbsp; Si vous rencontrez des difficultés à installer le package, lisez attentivement le <a href="https://github.com/frbcesab/rcompendium">README</a>.</p>
-<p>Une fois le package installé, vous devez exécuter la fonction <a href="https://frbcesab.github.io/rcompendium/reference/set_credentials.html"><code>set_credentials()</code></a> afin de stocker localement vos informations personnelles (prénom, nom, email, ORCID, protocole de communication avec GitHub). Ces informations permettront de remplir automatiquement certains fichiers.</p>
-<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; <strong>Cette fonction n’est à utiliser qu’une seule fois</strong>.</p>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i>&nbsp; Si vous rencontrez des difficultés à installer le package, lisez attentivement la section <strong>Installation</strong> du <a href="https://github.com/frbcesab/rcompendium?tab=readme-ov-file#installation">README</a>.</p>
+<p>Une fois le package installé, vous devez exécuter la fonction <a href="https://frbcesab.github.io/rcompendium/reference/set_credentials.html"><code>set_credentials()</code></a> afin de stocker localement vos informations personnelles (prénom, nom, email, ORCID, protocole de communication avec GitHub). Ces informations permettront de remplir automatiquement certains fichiers du compendium. <strong>Cette fonction n’est à utiliser qu’une seule fois</strong>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Stockage de vos informations ----</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set_credentials</span>(<span class="at">given    =</span> <span class="st">"Jane"</span>,</span>
@@ -370,28 +377,26 @@ Objectif
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">protocol =</span> <span class="st">"ssh"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Ces informations ont été copiées dans le presse-papier. Collez son contenu dans le fichier <strong>~/.Rprofile</strong> (ouvert dans RStudio par cette fonction). Ce fichier est lu à chaque ouverture de <i class="fa-brands fa-r-project" aria-label="r-project"></i> et son contenu sera accessible aux fonctions du package <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a>.</p>
-<p>Redémarrez la session <i class="fa-brands fa-r-project" aria-label="r-project"></i> et vérifiez que vos informations personnelles sont bien accessibles.</p>
+<p>Redémarrez la session <i class="fa-brands fa-r-project" aria-label="r-project"></i> (<strong><em>Session &gt; Restart R</em></strong>) et vérifiez que vos informations personnelles sont bien accessibles.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Vérification (après redémarrage de R) ----</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>()<span class="sc">$</span><span class="st">"email"</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] "jane.doe@mail.me"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">getOption</span>(<span class="st">"email"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] "jane.doe@mail.me"</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">getOption</span>(<span class="st">"family"</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] "Doe"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Finalement, vérifiez que vous avez bien suivi les <a href="https://frbcesab.github.io/rsetup/chapters/git.html">instructions</a> pour configurer <strong>git</strong> en exécutant la commande <a href="https://gh.r-lib.org/reference/gh_whoami.html"><code>gh::gh_whoami()</code></a>. Vous devriez voir s’afficher :</p>
-<pre><code>{
-  "name": "Jane Doe",
-  "login": "jdoe",
-  "html_url": "https://github.com/jdoe",
-  "scopes": "repo, workflow",
-  "token": "ghp_...ZZ9z"
-} </code></pre>
+<p><br></p>
 </section>
 <section id="projet-rstudio" class="level3">
 <h3 class="anchored" data-anchor-id="projet-rstudio">Projet RStudio</h3>
-<p>Créez un nouveau projet RStudio : <strong><em>File &gt; New Project &gt; New Directory &gt; New Project</em></strong></p>
+<p>Lorsque vous démarrez un nouveau projet sous <i class="fa-brands fa-r-project" aria-label="r-project"></i>, il est vivement conseillé d’utiliser les <a href="https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects">Projets RStudio</a>.</p>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Créez un nouveau Projet RStudio : <strong><em>File &gt; New Project &gt; New Directory &gt; New Project</em></strong></p>
 <ul>
-<li>Choisissez un nom pour votre projet (sans signe de ponctuation)</li>
+<li>Choisissez un nom pour votre projet (sans signe de ponctuation), par ex. <code>practice</code></li>
 <li>Sélectionnez l’emplacement où le nouveau projet sera créé</li>
-<li>Décochez toutes les autres cases et validez</li>
+<li>Décochez toutes les autres cases</li>
+<li>Validez</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -406,15 +411,66 @@ Bonne pratique #1
 <p>Toujours travailler dans un <strong>Projet RStudio</strong>. Cela présente l’avantage de simplifier les chemins d’accès aux fichiers, notamment avec le package <i class="fa-brands fa-r-project" aria-label="r-project"></i> <a href="https://here.r-lib.org/"><code>here</code></a> et sa fonction <a href="https://here.r-lib.org/reference/here.html"><code>here()</code></a>. Les chemins d’accès seront toujours construits par rapport au dossier contenant le fichier <strong>.Rproj</strong> (racine du projet). On parle de <em>chemin relatif</em>. N’utilisez <strong>plus jamais</strong> la fonction <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/getwd"><code>setwd()</code></a>.</p>
 </div>
 </div>
+<blockquote class="blockquote">
+<p><strong>Structure du compendium</strong></p>
+<pre><code>practice/                        # Root of the compendium
+|
+└─ practice.Rproj                # RStudio project file</code></pre>
+</blockquote>
+<p><br></p>
 </section>
-<section id="fichier-description" class="level3">
-<h3 class="anchored" data-anchor-id="fichier-description">Fichier DESCRIPTION</h3>
-<p>Le fichier <strong>DESCRIPTION</strong> décrit les métadonnées du projet (titre, auteur, description, dépendances requises, etc.). C’est un des éléments essentiels d’un package <i class="fa-brands fa-r-project" aria-label="r-project"></i>. Ici, nous allons le <em>détourner</em> pour l’utiliser dans le cadre d’un compendium afin de bénéficier des outils de développement de packages <i class="fa-brands fa-r-project" aria-label="r-project"></i>. Ajoutons ce fichier avec la fonction <a href="https://frbcesab.github.io/rcompendium/reference/add_description.html"><code>add_description()</code></a> de <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a>.</p>
+<section id="fichier-readme" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="fichier-readme">Fichier README</h3>
+<p>Tout projet se doit de contenir un fichier <strong>README</strong>. C’est la <strong>vitrine du projet</strong>. Les rôles d’un <strong>README</strong> sont multiples :</p>
+<ol type="1">
+<li>présenter le projet</li>
+<li>expliquer son contenu</li>
+<li>expliquer comment l’installer</li>
+<li>expliquer comment l’utiliser</li>
+</ol>
+<p>C’est un simple fichier texte (<em>plain text-based file</em>) qui peut être écrit au format texte (<code>README.txt</code>), en Markdown (<code>README.md</code>), en R Markdown (<code>README.Rmd</code>), en Quarto (<code>README.qmd</code>), etc.</p>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Ici, vous allez créer un <strong><code>README.md</code></strong> (fichier texte écrit en <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax"><strong>Markdown</strong></a>) à la racine de votre projet.</p>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i>&nbsp; Utilisez la fonction <a href="https://rdrr.io/r/utils/file.edit.html"><code>file.edit()</code></a> qui permet d’ouvrir un fichier dans l’éditeur de RStudio. Si ce fichier n’existe pas, elle va aussi le créer.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ajout d'un fichier DESCRIPTION ----</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">add_description</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ajout d'un README ----</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">file.edit</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"README.md"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Comme vous le voyez, le fichier <strong>DESCRIPTION</strong> a été pré-rempli avec vos informations personnelles. Vous éditerez les champs <strong><em>Title</em></strong> et <strong><em>Description</em></strong> plus loin.</p>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Exécutez cette ligne de code dans la console : <code>here::here("README.md")</code> et essayez de comprendre ce que fait la fonction <code>here::here()</code>. Comparez avec votre voisin.e.</p>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Editez ce <code>README.md</code> en ajoutant les informations pertinentes.</p>
+<p><strong>Proposition de README</strong></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a># Practice</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>This project contains files to create a simple **research compendium** as </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>presented in the training course </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>[Reproducible Research in Computational Ecology](https://rdatatoolbox.github.io).</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>## Content</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>This project is structured as follow:</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>- `README.md`: presentation of the project</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>- `compendium.Rproj`: RStudio project file</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>## Installation</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>Coming soon...</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>## Usage</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>Coming soon...</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>## Citation</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>&gt; Doe J (2024) Minimal structure of a research compendium.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -425,19 +481,51 @@ Bonne pratique #2
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Toujours ajouter un fichier <strong>DESCRIPTION</strong> à la racine du projet. En plus de la description du projet, il permet de lister les packages dont le projet dépend (tags <strong><em>Imports</em></strong>, <strong><em>Depends</em></strong> et <strong><em>Remotes</em></strong>). Avec ce fichier, plus besoin d’utiliser les fonctions <a href="https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/install.packages"><code>install.packages()</code></a> et <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/library"><code>library()</code></a>. Elles seront remplacées respectivement par <a href="https://remotes.r-lib.org/reference/install_deps.html"><code>remotes::install_deps()</code></a> et <a href="https://www.rdocumentation.org/packages/devtools/versions/2.4.5/topics/load_all"><code>devtools::load_all()</code></a>.</p>
-</div>
-</div>
-</section>
-<section id="choix-dune-licence" class="level3">
-<h3 class="anchored" data-anchor-id="choix-dune-licence">Choix d’une Licence</h3>
-<p>Tout matériel partagé en ligne doit disposé d’une licence qui décrit ce qu’il est possible de faire avec. Ainsi, nous vous recommandons d’ajouter <strong>dès le début du projet</strong> une licence. Pour savoir quelle licence est la plus appropriée à votre projet, rendez-vous sur cette page : <a href="https://choosealicense.com" class="uri">https://choosealicense.com</a>.</p>
-<p>Ajoutons la licence <a href="https://choosealicense.com/licenses/gpl-2.0/">GPL-2</a> à notre projet avec la fonction <a href="https://frbcesab.github.io/rcompendium/reference/add_license.html"><code>add_license()</code></a> de <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a>.</p>
+<p>Ajoutez un <strong>README</strong> à votre projet afin d’aider l’utilisateur à comprendre votre projet. Si vous souhaitez exécuter du code <i class="fa-brands fa-r-project" aria-label="r-project"></i> à l’intérieur, écrivez-le en <a href="https://rmarkdown.rstudio.com/"><strong>R Markdown</strong></a> (<code>README.Rmd</code>) ou <a href="https://quarto.org/"><strong>Quarto</strong></a> (<code>README.qmd</code>), sinon utilisez simplement du <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax"><strong>Markdown</strong></a> (<code>README.md</code>).</p>
+<p><strong>NB.</strong> Si vous écrivez un <code>.Rmd</code> ou un <code>.qmd</code>, n’oubliez pas de le transpiler en <code>.md</code>. GitHub n’est capable d’interpréter que les <code>.md</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ajout d'une licence ----</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">add_license</span>(<span class="at">license =</span> <span class="st">"GPL-2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Conversion d'un Rmd en un md ----</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>rmarkdown<span class="sc">::</span><span class="fu">render</span>(<span class="st">"README.Rmd"</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Conversion d'un qmd en un md ----</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>quarto<span class="sc">::</span><span class="fu">quarto_render</span>(<span class="st">"README.qmd"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Notez qu’un nouveau fichier a été créé : <strong>LICENSE.md</strong>. Celui-ci détaille le contenu de la license choisie et sera lu par GitHub. Regardez aussi le contenu du fichier <strong>DESCRIPTION</strong> : la section <strong><em>License</em></strong> a été mise à jour.</p>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i>&nbsp; Vous pouvez aussi cliquer sur le bouton <strong><em>Render</em></strong> de RStudio.</p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Structure du compendium</strong></p>
+<pre><code>practice/                        # Root of the compendium
+|
+├─ practice.Rproj                # RStudio project file
+|
+└─ README.md                     # Presentation of the project</code></pre>
+</blockquote>
+<p><br></p>
+</section>
+<section id="fichier-description" class="level3">
+<h3 class="anchored" data-anchor-id="fichier-description">Fichier DESCRIPTION</h3>
+<p>Le fichier <strong>DESCRIPTION</strong> décrit les métadonnées du projet (titre, auteur, description, dépendances requises, etc.). C’est un des éléments essentiels d’un package <i class="fa-brands fa-r-project" aria-label="r-project"></i>. Ici, nous allons le <em>détourner</em> pour l’utiliser dans le cadre d’un compendium afin de bénéficier des outils de développement de packages <i class="fa-brands fa-r-project" aria-label="r-project"></i> (voir plus loin).</p>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Ajoutez un fichier <strong>DESCRIPTION</strong> avec la fonction <a href="https://frbcesab.github.io/rcompendium/reference/add_description.html"><code>add_description()</code></a> de <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ajout d'un fichier DESCRIPTION ----</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">add_description</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>Package: practice</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>Type: Package</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>Title: The Title of the Project</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>Version: 0.0.0.9000</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>Authors@R: c(</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    person(given   = "Jane",</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>           family  = "Doe",</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>           role    = c("aut", "cre", "cph"),</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>           email   = "jane.doe@mail.me",</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>           comment = c(ORCID = "0000-0000-0000-0000")))</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>Description: A paragraph providing a full description of the project (on </span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    several lines...)</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>License: {{license}}</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>Encoding: UTF-8</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Comme vous le voyez, le fichier <strong>DESCRIPTION</strong> a été pré-rempli avec vos informations personnelles. Vous éditerez les champs <strong><em>Title</em></strong> et <strong><em>Description</em></strong> plus loin.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -448,17 +536,69 @@ Bonne pratique #3
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Toujours ajouter une <strong>LICENSE</strong> à un projet qui sera rendu public. Visitez le site <a href="https://choosealicense.com/appendix/"><strong>Choose a License</strong></a> pour choisir la plus appropriée à votre projet.</p>
-<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i>&nbsp; Si aucune licence n’est renseignée, votre projet est soumis aux règles de la <a href="https://choosealicense.com/no-permission/">No License</a> : aucune permission n’est accordée. En d’autres termes, personne ne peut rien faire avec votre projet (pas d’utilisation, pas de modification, pas de partage, etc.).</p>
+<p>Toujours ajouter un fichier <strong>DESCRIPTION</strong> à la racine du projet. Il permet de descrire les <strong>métadonnées du projet</strong> : titre, auteur(s), description, licence, etc. Nous le verrons plus loin, mais c’est aussi l’endroit idéal pour <strong>lister les packages externes requis</strong>.</p>
 </div>
 </div>
+<blockquote class="blockquote">
+<p><strong>Structure du compendium</strong></p>
+<pre><code>practice/                        # Root of the compendium
+|
+├─ practice.Rproj                # RStudio project file
+|
+├─ README.md                     # Presentation of the project
+└─ DESCRIPTION                   # Project metadata</code></pre>
+</blockquote>
+<p><br></p>
 </section>
-<section id="ajout-des-répertoires" class="level3">
-<h3 class="anchored" data-anchor-id="ajout-des-répertoires">Ajout des répertoires</h3>
-<p>La prochaine étape consiste en la création de sous-répertoires, chacun ayant un rôle précis. Pour cela, utilisez la fonction <a href="https://frbcesab.github.io/rcompendium/reference/add_compendium.html"><code>add_compendium()</code></a> de <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a>.</p>
+<section id="choix-dune-licence" class="level3">
+<h3 class="anchored" data-anchor-id="choix-dune-licence">Choix d’une Licence</h3>
+<p>Tout matériel partagé en ligne doit disposer d’une licence qui décrit ce qu’il est possible de faire avec. Ainsi, nous vous recommandons d’ajouter <strong>dès le début du projet</strong> une licence. Pour savoir quelle licence est la plus appropriée à votre projet, vous pouvez vous rendre sur ce site : <a href="https://choosealicense.com" class="uri">https://choosealicense.com</a>.</p>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Ajoutez la licence <a href="https://choosealicense.com/licenses/gpl-2.0/">GPL-2</a> à votre projet à l’aide de la fonction <a href="https://frbcesab.github.io/rcompendium/reference/add_license.html"><code>add_license()</code></a> de <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ajout de sous-répertoires ----</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">add_compendium</span>(<span class="at">compendium =</span> <span class="fu">c</span>(<span class="st">"data"</span>, <span class="st">"analyses"</span>, <span class="st">"R"</span>, <span class="st">"figures"</span>, <span class="st">"outputs"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ajout d'une licence ----</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">add_license</span>(<span class="at">license =</span> <span class="st">"GPL-2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Notez qu’un nouveau fichier a été créé : <strong>LICENSE.md</strong>. Celui-ci détaille le contenu de la license choisie et sera lu par GitHub. Regardez aussi le contenu du fichier <strong>DESCRIPTION</strong> : la section <strong><em>License</em></strong> a été mise à jour grâce à <code>rcompendium</code>.</p>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Ajoutez une section au <strong>README.md</strong> mentionnant la licence.</p>
+<p><strong>Proposition de README</strong></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a># Practice</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>This project contains files to create a simple **research compendium** as </span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>presented in the training course </span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>[Reproducible Research in Computational Ecology](https://rdatatoolbox.github.io).</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>## Content</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>This project is structured as follow:</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>- `README.md`: presentation of the project</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>- `compendium.Rproj`: RStudio project file</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>## Installation</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>Coming soon...</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>## Usage</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>Coming soon...</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>## License</span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>This project is released under the </span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>[GPL-2 license](https://choosealicense.com/licenses/gpl-2.0/).</span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>## Citation</span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a>&gt; Doe J (2024) Minimal structure of a research compendium.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -470,52 +610,29 @@ Bonne pratique #4
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Un bon <em><strong>Research compendium</strong></em> sera composé de différents sous-répertoires, chacun destiné à accueillir un certain type de fichiers. Par ex., le dossier <strong>data/</strong> contiendra toutes les données brutes nécessaires au projet. Le dossier <strong>outputs/</strong> contiendra tous les résultats générés (hors figures). Le dossier <strong>figures/</strong> contiendra toutes les figures produites par les analyses. Le dossier <strong>R/</strong> ne contiendra que des fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i> (et leurs documentations). Le dossier <strong>analyses/</strong> contiendra des scripts <i class="fa-brands fa-r-project" aria-label="r-project"></i> (ou des fichiers <code>.Rmd</code> et/ou <code>.qmd</code>) qui appeleront les fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i>. Cette structure peut bien sûr être adaptée selon les besoins et la complexité du projet.</p>
+<p>Toujours ajouter une <strong>LICENCE</strong> à un projet qui sera rendu public. Visitez le site <a href="https://choosealicense.com/appendix/"><strong>Choose a License</strong></a> pour choisir la plus appropriée à votre projet.</p>
+<p><strong>NB.</strong> Si aucune licence n’est renseignée, votre projet sera soumis aux règles de la <a href="https://choosealicense.com/no-permission/">No License</a> : aucune permission n’est accordée. En d’autres termes, personne ne peut rien faire avec votre projet (pas d’utilisation, pas de modification, pas de partage, etc.).</p>
 </div>
 </div>
+<blockquote class="blockquote">
+<p><strong>Structure du compendium</strong></p>
+<pre><code>practice/                        # Root of the compendium
+|
+├─ practice.Rproj                # RStudio project file
+|
+├─ README.md                     # Presentation of the project
+├─ DESCRIPTION                   # Project metadata
+└─ LICENSE.md                    # License of the project</code></pre>
+</blockquote>
+<p><br></p>
 </section>
-<section id="implémentation-des-fonctions" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="implémentation-des-fonctions">Implémentation des fonctions</h3>
-<p>Nous voilà fin prêt à coder !</p>
-<p>Le dépôt GitHub <a href="https://github.com/rdatatoolbox/datarepo" class="uri">https://github.com/rdatatoolbox/datarepo</a> contient les données que nous utiliserons tout au long de la formation. Celles-ci proviennent de deux bases de données : <a href="https://esajournals.onlinelibrary.wiley.com/doi/10.1890/08-1494.1">PanTHERIA</a> et <a href="https://www.worldwildlife.org/publications/wildfinder-database">WWF WildFinder</a>. Lisez attentivement le <a href="https://github.com/rdatatoolbox/datarepo#mortar_board-data-repository-">README</a> pour plus de détails.</p>
-<p><strong>Objectif :</strong> écrire 1, 2 ou 4 fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i>, qui vont permettre de télécharger les quatre fichiers de données hébergées sur le dépôt GitHub mentionné ci-dessus. Les fichiers seront enregistrés dans le dossier <strong>data/</strong> et le sous-dossier spécifique à leurs bases de données (<strong>pantheria/</strong> ou <strong>wildfinder/</strong>).</p>
-<p>Utilisez la fonction <a href="https://usethis.r-lib.org/reference/use_r.html"><code>usethis::use_r()</code></a> pour créer le/les fichiers <code>.R</code> dans le dossier <strong>R/</strong>.</p>
-<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Utilisez les fonctions <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/files2"><code>dir.create()</code></a>, <a href="https://here.r-lib.org/reference/here.html"><code>here::here()</code></a> et <a href="https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/download.file"><code>utils::download.file()</code></a>.</p>
-<p><strong>Proposition de fonction</strong> (essayer de ne pas regarder)</p>
+<section id="sous-répertoires" class="level3">
+<h3 class="anchored" data-anchor-id="sous-répertoires">Sous-répertoires</h3>
+<p>La prochaine étape consiste en la création de sous-répertoires, chacun ayant un rôle précis. L’idée ici est de séparer les données, les résultats et le code.</p>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Pour cela, utilisez la fonction <a href="https://frbcesab.github.io/rcompendium/reference/add_compendium.html"><code>add_compendium()</code></a> de <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a>.</p>
 <div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>dl_pantheria_data <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">overwrite =</span> <span class="cn">FALSE</span>) {</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="do">## Destination ---- </span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  path <span class="ot">&lt;-</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"pantheria"</span>)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="do">## File name ----</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  filename <span class="ot">&lt;-</span> <span class="st">"PanTHERIA_1-0_WR05_Aug2008.txt"</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="do">## GitHub URL ----</span></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  url <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"https://raw.githubusercontent.com/rdatatoolbox/datarepo/main/"</span>,</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>                <span class="st">"data/pantheria/"</span>)</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">file.exists</span>(<span class="fu">file.path</span>(path, filename)) <span class="sc">&amp;&amp;</span> <span class="sc">!</span>overwrite) {</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Check if exists locally ----</span></span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">message</span>(<span class="st">"The filename already exists. Use 'overwrite = TRUE' to replace it"</span>)</span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Create destination folder ----</span></span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">dir.create</span>(path, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Download file ----</span></span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>    utils<span class="sc">::</span><span class="fu">download.file</span>(<span class="at">url      =</span> <span class="fu">paste0</span>(url, filename),</span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>                         <span class="at">destfile =</span> <span class="fu">file.path</span>(path, filename),</span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>                         <span class="at">mode     =</span> <span class="st">"wb"</span>)</span>
-<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">invisible</span>(<span class="cn">NULL</span>) </span>
-<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ajout de sous-répertoires ----</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">add_compendium</span>(<span class="at">compendium =</span> <span class="fu">c</span>(<span class="st">"data"</span>, <span class="st">"analyses"</span>, <span class="st">"R"</span>, <span class="st">"figures"</span>, <span class="st">"outputs"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -527,43 +644,75 @@ Bonne pratique #5
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Ecrivez des fonctions</strong> : on parle de <em>Factorisation de code</em>. Cela rendra votre code plus clair et plus facilement réutilisable. Placez toujours vos fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i> dans le dossier <strong>R/</strong>. Si vous utilisez des fonctions de dépendances externes, priviligiez cette écriture : <code>package::fonction()</code>.</p>
+<p>Un bon <em><strong>Research compendium</strong></em> sera composé de différents sous-répertoires, chacun destiné à accueillir un certain type de fichiers. Par ex.,</p>
+<ul>
+<li>le dossier <strong>data/</strong> contiendra toutes les données brutes nécessaires au projet</li>
+<li>le dossier <strong>outputs/</strong> contiendra tous les résultats générés (hors figures)</li>
+<li>le dossier <strong>figures/</strong> contiendra toutes les figures produites par les analyses</li>
+<li>le dossier <strong>R/</strong> ne contiendra que des fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i> (et leurs documentations). Voir plus loin</li>
+<li>le dossier <strong>analyses/</strong> contiendra des scripts <i class="fa-brands fa-r-project" aria-label="r-project"></i> (ou des fichiers <code>.Rmd</code> et/ou <code>.qmd</code>) qui appeleront les fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i></li>
+</ul>
+<p><strong>NB.</strong> Cette structure peut bien sûr être adaptée selon les besoins, les pratiques de chacun et la complexité du projet. A l’exception du dossier <strong>R/</strong>, tous les autres répertoires peuvent être nommés différemment.</p>
 </div>
 </div>
+<blockquote class="blockquote">
+<p><strong>Structure du compendium</strong></p>
+<pre><code>practice/                        # Root of the compendium
+|
+├─ practice.Rproj                # RStudio project file
+|
+├─ README.md                     # Presentation of the project
+├─ DESCRIPTION                   # Project metadata
+├─ LICENSE.md                    # License of the project
+|
+├─ data/                         # Contains raw data
+├─ outputs/                      # Contains results
+├─ figures/                      # Contains figures
+├─ R/                            # Contains R functions (only)
+└─ analyses/                     # Contains R scripts</code></pre>
+</blockquote>
+<p><br></p>
 </section>
-<section id="documentation" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="documentation">Documentation</h3>
-<p>Maintenant, documentez votre/vos fonctions. C’est <strong>essentiel !</strong> Pour cela, ajoutez un entête <a href="https://roxygen2.r-lib.org/articles/roxygen2.html"><strong>roxygen2</strong></a> à vos fonctions. Cette syntaxe permet de documenter efficacement toute fonction <i class="fa-brands fa-r-project" aria-label="r-project"></i>.</p>
-<p>Cette entête devra contenir (a minima) un titre, une description de chaque argument et le retour de la fonction.</p>
-<p><strong>Proposition de documentation</strong> (essayer de ne pas regarder)</p>
+<section id="code" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="code">Code <i class="fa-brands fa-r-project" aria-label="r-project"></i></h3>
+<p>Nous voilà fin prêt à coder !</p>
+<p>Le dépôt GitHub <a href="https://github.com/rdatatoolbox/datarepo" class="uri">https://github.com/rdatatoolbox/datarepo</a> contient les données que nous utiliserons tout au long de la formation. Celles-ci proviennent de deux bases de données : <a href="https://esajournals.onlinelibrary.wiley.com/doi/10.1890/08-1494.1">PanTHERIA</a> et <a href="https://www.worldwildlife.org/publications/wildfinder-database">WWF WildFinder</a>. Lisez attentivement le <a href="https://github.com/rdatatoolbox/datarepo#mortar_board-data-repository-">README</a> pour plus de détails.</p>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; L’objectif ici est d’écrire un code <i class="fa-brands fa-r-project" aria-label="r-project"></i>&nbsp; qui va télécharger les quatre fichiers hébergés sur le dépôt GitHub mentionné ci-dessus.</p>
+<p>Nous allons commencer par écrire notre code dans un <strong><em>script</em></strong>. Le fichier de données <strong>PanTHERIA</strong>, disponible <a href="https://github.com/rdatatoolbox/datarepo/tree/main/data/pantheria">ici</a>, sera enregistré dans le sous-répertoire <strong>data/pantheria/</strong> et les trois fichiers de données <strong>WWF WildFinder</strong>, disponibles <a href="https://github.com/rdatatoolbox/datarepo/tree/main/data/wildfinder">ici</a>, seront enregistrés dans le sous-répertoire <strong>data/wildfinder/</strong>.</p>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Créez, dans le dossier <strong>analyses/</strong>, le script <code>download-data.R</code> à l’aide de la fonction <a href="https://rdrr.io/r/utils/file.edit.html"><code>file.edit()</code></a>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ajout d'un script R ----</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">file.edit</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"analyses"</span>, <span class="st">"download-data.R"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Utilisez les fonctions <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/files2"><code>dir.create()</code></a> pour créer des sous-répertoires, <a href="https://here.r-lib.org/reference/here.html"><code>here::here()</code></a> pour construire vos chemins et <a href="https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/download.file"><code>utils::download.file()</code></a> pour télécharger les fichiers.</p>
+<p><strong>Proposition de code</strong> pour PanTHERIA (essayez de ne pas regarder)</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#' Download PanTHERIA dataset</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">#' @description </span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">#' This function downloads the PanTHERIA dataset (text file) hosted on the </span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">#' GitHub repository &lt;https://github.com/rdatatoolbox/datarepo/&gt;. The file</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">#' won't be downloaded if already exists locally (except if `overwrite = TRUE`).</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">#' The file `PanTHERIA_1-0_WR05_Aug2008.txt` will be stored in </span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co">#' `data/pantheria/`. This folder will be created if required.</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co">#' </span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co">#' @param overwrite a `logical`. If `TRUE`, the file will be downloaded again </span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co">#'   and the previous version will be replaced.</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="co">#' @return No return value.</span></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="co">#' </span></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co">#' @export</span></span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>dl_pantheria_data <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">overwrite =</span> <span class="cn">FALSE</span>) { ... }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Destination path ---- </span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>path <span class="ot">&lt;-</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"pantheria"</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Create destination directory ----</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(path, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="do">## File name ----</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>filename <span class="ot">&lt;-</span> <span class="st">"PanTHERIA_1-0_WR05_Aug2008.txt"</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="do">## GitHub base URL ----</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>base_url <span class="ot">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/rdatatoolbox/datarepo/main/data/pantheria/"</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="do">## Build full URL ----</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>full_url <span class="ot">&lt;-</span> <span class="fu">paste0</span>(base_url, filename)</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a><span class="do">## Build full path ----</span></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>dest_file <span class="ot">&lt;-</span> <span class="fu">file.path</span>(path, filename)</span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="do">## Download file ----</span></span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>utils<span class="sc">::</span><span class="fu">download.file</span>(<span class="at">url      =</span> full_url,</span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a>                     <span class="at">destfile =</span> dest_file,</span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a>                     <span class="at">mode     =</span> <span class="st">"wb"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p><strong>Optionnel :</strong> transpilez vos entêtes <strong>roxygen2</strong> en fichiers <code>.Rd</code>, seuls fichiers acceptés par <i class="fa-brands fa-r-project" aria-label="r-project"></i> pour documenter des fonctions. Ces fichiers <code>.Rd</code> seront stockés dans le dossier <strong>man/</strong>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Génération de la doc ----</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">document</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>L’aide de votre fonction est maintenant accessible via <code>?nom_fonction</code>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -574,19 +723,117 @@ Bonne pratique #6
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Pensez aux autres (et au vous du futur) : <strong>documentez toujours</strong> votre code. Un code sans documentation est inutile. Utilisez les entêtes <strong>roxygen2</strong> pour documenter vos fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i>, de simples commentaires pour documenter du code et des <code>README</code> pour tout le reste.</p>
+<p>Essayez de <strong>scripter l’intégralité du travail</strong>. Ici, nous avons vu comment créer des fichiers (<a href="https://rdrr.io/r/utils/file.edit.html"><code>file.edit()</code></a>) et des répertoires (<a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/files2"><code>dir.create()</code></a>), construire des chemins relatifs robustes (<a href="https://here.r-lib.org/reference/here.html"><code>here::here()</code></a>) et télécharger des fichiers (<a href="https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/download.file"><code>utils::download.file()</code></a>) directement à partir de <i class="fa-brands fa-r-project" aria-label="r-project"></i>.</p>
 </div>
 </div>
-</section>
-<section id="ajout-des-dépendances" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="ajout-des-dépendances">Ajout des dépendances</h3>
-<p>Nos fonctions contiennent des dépendances à deux packages externes : <a href="https://www.rdocumentation.org/packages/utils/versions/3.6.2"><code>utils</code></a> et <a href="https://here.r-lib.org/"><code>here</code></a>. Nous devons ajouter ces dépendances au fichier <strong>DESCRIPTION</strong>. Pour cela, nous allons utiliser la fonction <a href="https://frbcesab.github.io/rcompendium/reference/add_dependencies.html"><code>add_dependencies()</code></a> de <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a>.</p>
+<blockquote class="blockquote">
+<p><strong>Structure du compendium</strong></p>
+<pre><code>practice/                                     # Root of the compendium
+|
+├─ practice.Rproj                             # RStudio project file
+|
+├─ README.md                                  # Presentation of the project
+├─ DESCRIPTION                                # Project metadata
+├─ LICENSE.md                                 # License of the project
+|
+├─ data/                                      # Contains raw data
+|  ├─ pantheria/                              # PanTHERIA database
+|  |  └─ PanTHERIA_1-0_WR05_Aug2008.txt
+|  └─ wildfinder/                             # WWF WildFinder database
+|     ├─ wildfinder-ecoregions_list.csv
+|     ├─ wildfinder-ecoregions_species.csv
+|     └─ wildfinder-mammals_list.csv
+|
+├─ outputs/                                   # Contains results
+├─ figures/                                   # Contains figures
+├─ R/                                         # Contains R functions (only)
+|
+└─ analyses/                                  # Contains R scripts
+   └─ download-data.R                         # Script to download raw data</code></pre>
+</blockquote>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Packages externes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour utiliser une fonction d’un package externe, vous avez appris à utiliser <code>library("package")</code>. Sous <i class="fa-brands fa-r-project" aria-label="r-project"></i>, il existe une autre syntaxe pour appeler une fonction d’un package externe : <code>package::function()</code>. Alors que <code>library()</code> <strong>charge et attache</strong> un package (rendant ses fonctions accessible directement avec <code>function()</code>), la syntaxe <code>package::function()</code> <strong>charge uniquement</strong> un package dans l’environnement de <i class="fa-brands fa-r-project" aria-label="r-project"></i>, mais n’attache pas son contenu. Ainsi, on est obligé de spécifier le nom du package en appelant la fonction.</p>
+<p>Nous vous recommendons d’<strong>utiliser la syntaxe <code>package::function()</code></strong>. Et ce pour deux raisons :</p>
+<ul>
+<li><strong>meilleure lisibilité du code</strong> : en un coup d’oeil, on sait dans quel package se trouve la fonction</li>
+<li><strong>limitation de conflits entre packages</strong> : deux fonctions peuvent avoir le même nom dans deux packages différentes. Par ex., le package <code>dplyr</code> propose une fonction <code>filter()</code> qui se trouve également dans le package <code>stats</code> (attaché à l’ouverture de <i class="fa-brands fa-r-project" aria-label="r-project"></i>). Mais, les fonctions <code>filter()</code> de ces deux packages ne font pas la même chose.</li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ajout de dépendances ----</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">add_dependencies</span>(<span class="at">compendium =</span> <span class="st">"."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"dplyr"</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Attaching package: ‘dplyr’</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="do">## The following objects are masked from ‘package:stats’:</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="do">##     filter, lag</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="do">## The following objects are masked from ‘package:base’:</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="do">##     intersect, setdiff, setequal, union</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Regardez le contenu du fichier <strong>DESCRIPTION</strong>. Par défaut, les packages requis sont listés sous le tag <strong><em>Imports</em></strong>. Ainsi, pour utiliser une fonction externe, il faudra l’appeler par <code>package::fonction()</code>. Si vous remplacer le tag <strong><em>Imports</em></strong> par <strong><em>Depends</em></strong>, l’utilisation de la fonction <a href="https://www.rdocumentation.org/packages/devtools/versions/2.4.5/topics/load_all"><code>devtools::load_all()</code></a> (voir plus bas) aura le même effet qu’un <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/library"><code>library()</code></a> et vous pourrez utiliser une fonction externe par <code>fonction()</code>.</p>
-<p>La fonction <a href="https://frbcesab.github.io/rcompendium/reference/add_dependencies.html"><code>add_dependencies()</code></a> va scanner chaque fichier <code>.R</code>, <code>.Rmd</code> et <code>.qmd</code> du projet et détecter les packages externes utilisés pour les ajouter automatiquement au fichier <strong>DESCRIPTION</strong>.</p>
+<p>Si vous utilisez <code>library("dplyr")</code>, vous ne serez jamais sûr à 100% d’utiliser la fonction <code>filter()</code> du package <code>dplyr</code> ou celle du package <code>stats</code>.</p>
+<p>Cependant, pour des packages <em>très verbeux</em> (tels que <code>ggplot2</code>), vous pouvez utiliser la fonction <code>library()</code>, sinon votre code deviendra très vite fastidieux à écrire.</p>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i>&nbsp; Si vous souhaitez utiliser le pipe <code>%&gt;%</code>, attachez le package <code>magrittr</code> avec <code>library("magrittr")</code>.</p>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="factorisation" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="factorisation">Factorisation</h3>
+<p>On peut aller plus loin en découpant ce script en <strong>fonctions</strong> : on parle de <strong>factorisation de code</strong>. Une <a href="https://r4ds.hadley.nz/functions.html">fonction</a> est un ensemble de lignes de code regroupées en un seul bloc destiné à réaliser une tâche précise. Ecrire des fonctions rendra votre code <strong>plus clair</strong> et plus facilement <strong>réutilisable</strong> entre projets.</p>
+<p><i class="fa-solid fa-warning" aria-label="warning"></i>&nbsp; <strong>Placez toujours vos fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i>&nbsp; dans un dossier nommé R/</strong>.</p>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Factorisez le script précédent en deux fonctions :</p>
+<ul>
+<li>une fonction <code>dl_pantheria_data()</code> pour télécharger les données PanTHERIA, et</li>
+<li>une fonction <code>dl_wildfinder_data()</code> pour télécharger les données WWF WildFinder.</li>
+</ul>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i>&nbsp; Utilisez la fonction <a href="https://usethis.r-lib.org/reference/use_r.html"><code>usethis::use_r()</code></a> pour créer deux fichiers <code>.R</code> dans le dossier <strong>R/</strong>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Création du fichier pour la 1ere fonction ----</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_r</span>(<span class="st">"dl_pantheria_data"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Proposition de fonction</strong> (essayer de ne pas regarder)</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>dl_pantheria_data <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="do">## Destination path ---- </span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  path <span class="ot">&lt;-</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"pantheria"</span>)</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="do">## Create destination directory ----</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(path, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>  <span class="do">## File name ----</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>  filename <span class="ot">&lt;-</span> <span class="st">"PanTHERIA_1-0_WR05_Aug2008.txt"</span></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>  <span class="do">## GitHub base URL ----</span></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>  url <span class="ot">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/rdatatoolbox/datarepo/main/data/pantheria/"</span></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>  <span class="do">## Build full URL ----</span></span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>  full_url <span class="ot">&lt;-</span> <span class="fu">paste0</span>(base_url, filename)</span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>  <span class="do">## Build full path ----</span></span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>  dest_file <span class="ot">&lt;-</span> <span class="fu">file.path</span>(path, filename)</span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>  <span class="do">## Download file ----</span></span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>  utils<span class="sc">::</span><span class="fu">download.file</span>(<span class="at">url      =</span> full_url,</span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a>                       <span class="at">destfile =</span> dest_file,</span>
+<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a>                       <span class="at">mode     =</span> <span class="st">"wb"</span>)</span>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(dest_file)</span>
+<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -597,24 +844,61 @@ Bonne pratique #7
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Listez toujours les <strong>packages requis dans le fichier DESCRIPTION</strong>. Ainsi, vous centralisez la liste des packages requis en un seul endroit et vous pourrez utiliser les fonctions <a href="https://remotes.r-lib.org/reference/install_deps.html"><code>remotes::install_deps()</code></a> et <a href="https://www.rdocumentation.org/packages/devtools/versions/2.4.5/topics/load_all"><code>devtools::load_all()</code></a>.</p>
+<p><strong>Ecrivez des fonctions</strong> : on parle de <em>Factorisation de code</em>. Cela rendra votre code plus clair et plus facilement réutilisable. Placez toujours vos fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i> dans le dossier <strong>R/</strong>. Si vous utilisez des fonctions de dépendances externes, priviligiez cette écriture : <code>package::fonction()</code>.</p>
 </div>
 </div>
+<blockquote class="blockquote">
+<p><strong>Structure du compendium</strong></p>
+<pre><code>practice/                                     # Root of the compendium
+|
+├─ practice.Rproj                             # RStudio project file
+|
+├─ README.md                                  # Presentation of the project
+├─ DESCRIPTION                                # Project metadata
+├─ LICENSE.md                                 # License of the project
+|
+├─ data/                                      # Contains raw data
+|  ├─ pantheria/                              # PanTHERIA database
+|  |  └─ PanTHERIA_1-0_WR05_Aug2008.txt
+|  └─ wildfinder/                             # WWF WildFinder database
+|     ├─ wildfinder-ecoregions_list.csv
+|     ├─ wildfinder-ecoregions_species.csv
+|     └─ wildfinder-mammals_list.csv
+|
+├─ outputs/                                   # Contains results
+├─ figures/                                   # Contains figures
+├─ R/                                         # Contains R functions (only)
+|  ├─ dl_pantheria_data.R                     # Function to download PanTHERIA data
+|  └─ dl_wildfinder_data.R                    # Function to download WildFinder data
+|
+└─ analyses/                                  # Contains R scripts
+   └─ download-data.R                         # Script to download raw data</code></pre>
+</blockquote>
+<p><br></p>
 </section>
-<section id="chargement-du-projet" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="chargement-du-projet">Chargement du projet</h3>
-<p>Maintenant que notre compendium contient les éléments clés d’un package <i class="fa-brands fa-r-project" aria-label="r-project"></i>, c.-à-d.&nbsp;un fichier <strong>DESCRIPTION</strong> et un répertoire <strong>R/</strong>, nous pouvons utiliser les outils de développement des packages <i class="fa-brands fa-r-project" aria-label="r-project"></i> pour réaliser deux tâches.</p>
-<ol type="1">
-<li><p>Les packages requis peuvent être installés (ou mis à jour) à l’aide de la fonction <a href="https://remotes.r-lib.org/reference/install_deps.html"><code>remotes::install_deps()</code></a>. Pour être plus reproductible, vous pouvez désactiver les mises à jour en ajoutant l’argument <code>upgrade = "never"</code>. Cette fonction vient remplacer la fonction <a href="https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/install.packages"><code>install.packages()</code></a>. Elle va lire le fichier <strong>DESCRIPTION</strong> pour récupérer la liste des packages requis. Il est donc important d’utiliser régulièrement la fonction <a href="https://frbcesab.github.io/rcompendium/reference/add_dependencies.html"><code>add_dependencies()</code></a> pour tenir ce fichier à jour.</p></li>
-<li><p>Les fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i> stockées dans le dossier <strong>R/</strong> peuvent être chargées avec la fonction <a href="https://www.rdocumentation.org/packages/devtools/versions/2.4.5/topics/load_all"><code>devtools::load_all()</code></a>. Cette fonction vient remplacer la fonction <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/source"><code>source()</code></a> (et <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/library"><code>library()</code></a> si les packages requis sont listés sous le tag <strong><em>Depends</em></strong> dans le fichier <strong>DESCRIPTION</strong>). Ce qui est pratique dans le cas où on doit charger de nombreux fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i>. Après chaque modification d’une fonction <i class="fa-brands fa-r-project" aria-label="r-project"></i>, n’oubliez pas d’exécuter la fonction <a href="https://www.rdocumentation.org/packages/devtools/versions/2.4.5/topics/load_all"><code>devtools::load_all()</code></a>.</p></li>
-</ol>
-<p>Essayez ces deux fonctions.</p>
+<section id="documentation" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="documentation">Documentation</h3>
+<p>Il est temps de documenter vos fonctions. <strong>C’est essentiel !</strong> Pour cela, nous allons utiliser la syntaxe <a href="https://roxygen2.r-lib.org/articles/roxygen2.html"><strong>roxygen2</strong></a>. Celle-ci permet de documenter facilement les fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i> en plaçant un entête <strong>roxygen2</strong> avant chaque fonction. Cet entête doit contenir (a minima) un titre, une description de chaque argument et le retour de la fonction.</p>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Ajoutez un entête <a href="https://roxygen2.r-lib.org/articles/roxygen2.html"><strong>roxygen2</strong></a> à vos deux fonctions pour les documenter.</p>
+<p><strong>Proposition de documentation</strong> (essayer de ne pas regarder)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Installation des packages manquants ----</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_deps</span>(<span class="at">upgrade =</span> <span class="st">"never"</span>)</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Chargement des packages et fonctions R ----</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">load_all</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">#' Download PanTHERIA dataset</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="co">#' @description </span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="co">#' This function downloads the PanTHERIA dataset (text file) hosted on the </span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="co">#' GitHub repository &lt;https://github.com/rdatatoolbox/datarepo/&gt;.</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="co">#' The file `PanTHERIA_1-0_WR05_Aug2008.txt` will be stored in </span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="co">#' `data/pantheria/`. This folder will be created if required.</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="co">#' @return This function returns the path (`character`) to the downloaded file</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a><span class="co">#' (e.g. `data/pantheria/PanTHERIA_1-0_WR05_Aug2008.txt`).</span></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="co">#' </span></span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a><span class="co">#' @export</span></span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>dl_pantheria_data <span class="ot">&lt;-</span> <span class="cf">function</span>() { ... }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -626,16 +910,101 @@ Bonne pratique #8
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Avec un fichier <strong>DESCRIPTION</strong> (listant les dépendances requises) et un dossier <strong>R/</strong>, vous pouvez utiliser les fonctions <a href="https://remotes.r-lib.org/reference/install_deps.html"><code>remotes::install_deps()</code></a> (installation/mise à jour des packages) et <a href="https://www.rdocumentation.org/packages/devtools/versions/2.4.5/topics/load_all"><code>devtools::load_all()</code></a> (chargement du projet) au lieu de <a href="https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/install.packages"><code>install.packages()</code></a>, <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/library"><code>library()</code></a> et <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/source"><code>source()</code></a>.</p>
+<p>Pensez aux autres (et au vous du futur) : <strong>documentez toujours</strong> votre code. Un code sans documentation est inutile. Utilisez les entêtes <strong>roxygen2</strong> pour documenter vos fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i>, de simples commentaires pour documenter du code et des <code>README</code> pour tout le reste.</p>
 </div>
 </div>
-</section>
-<section id="ajout-dun-make.r" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="ajout-dun-make.r">Ajout d’un make.R</h3>
-<p>Afin d’automatiser notre projet, nous allons créer un script <i class="fa-brands fa-r-project" aria-label="r-project"></i> à la racine du projet. Nous l’appelerons, par convention, <strong>make.R</strong>. Celui-ci aura deux objectifs : 1) mettre en place le projet et 2) exécuter le projet. L’idée est de n’exécuter que ce script. Utilisez la fonction <a href="https://frbcesab.github.io/rcompendium/reference/add_makefile.html"><code>add_makefile()</code></a> de <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a> et lisez le contenu du nouveau fichier créé.</p>
+<blockquote class="blockquote">
+<p><strong>Structure du compendium</strong></p>
+<pre><code>practice/                                     # Root of the compendium
+|
+├─ practice.Rproj                             # RStudio project file
+|
+├─ README.md                                  # Presentation of the project
+├─ DESCRIPTION                                # Project metadata
+├─ LICENSE.md                                 # License of the project
+|
+├─ data/                                      # Contains raw data
+|  ├─ pantheria/                              # PanTHERIA database
+|  |  └─ PanTHERIA_1-0_WR05_Aug2008.txt
+|  └─ wildfinder/                             # WWF WildFinder database
+|     ├─ wildfinder-ecoregions_list.csv
+|     ├─ wildfinder-ecoregions_species.csv
+|     └─ wildfinder-mammals_list.csv
+|
+├─ outputs/                                   # Contains results
+├─ figures/                                   # Contains figures
+├─ R/                                         # Contains R functions (only)
+|  ├─ dl_pantheria_data.R                     # Function to download PanTHERIA data
+|  └─ dl_wildfinder_data.R                    # Function to download WildFinder data
+|
+└─ analyses/                                  # Contains R scripts
+   └─ download-data.R                         # Script to download raw data</code></pre>
+</blockquote>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Pour aller plus loin
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Vous pouvez transpiler vos entêtes <strong>roxygen2</strong> en fichiers <code>.Rd</code>, seuls fichiers acceptés par <i class="fa-brands fa-r-project" aria-label="r-project"></i> pour documenter des fonctions. Ces fichiers <code>.Rd</code> seront stockés dans le dossier <strong>man/</strong>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ajout d'un makefile ----</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">add_makefile</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Génération de la doc ----</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">document</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>L’aide de votre fonction sera accessible via <code>?nom_fonction</code>.</p>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="appel-aux-fonctions" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="appel-aux-fonctions">Appel aux fonctions</h3>
+<p>Jusqu’à présent, nous n’avons fait que <strong>définir</strong> (et documenter) des fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i>, mais nous ne les avons pas exécuté.</p>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Adaptez le contenu du script <strong>analyses/download-data.R</strong> créé précédemment afin qu’il appelle les fonctions <code>dl_pantheria_data()</code> et <code>dl_wildfinder_data()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ouverture du script précédent ----</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">file.edit</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"analyses"</span>, <span class="st">"download-data.R"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Proposition de contenu</strong> (essayer de ne pas regarder)</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Download project raw data</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="co"># This script will download the PanTHERIA and WWF WildFinder datasets. The</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="co"># four files will be stored in `data/`.</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="co"># All functions used in the script have been developed for this project</span></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="co"># and can be found in the folder R/.</span></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Jane Doe &lt;jane.doe@mail.me&gt;</span></span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="do">## Download PanTHERIA database ----</span></span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a><span class="fu">dl_pantheria_data</span>()</span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a><span class="do">## Download WWF WildFinder database ----</span></span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a><span class="fu">dl_wildfinder_data</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init:{'theme':'neutral','flowchart':{'htmlLabels':false}}}%%
+flowchart LR
+  B("analyses/download-data.R")
+  B --&gt; C("dl_pantheria_data()")
+  B --&gt; D("dl_wildfinder_data()")
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -647,46 +1016,38 @@ Bonne pratique #9
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Bien que non essentiel, un <strong>fichier make.R</strong> placé à la racine du projet permet de facilement mettre en place le projet (installation et chargement des packages requis et des fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i>) et d’exécuter les différentes analyses de manière séquentielle (en sourçant les scripts <i class="fa-brands fa-r-project" aria-label="r-project"></i> qui appellent eux-même les fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i>). C’est la <strong>porte d’entrée des analyses</strong>.</p>
+<p>Le dossier <strong>analyses/</strong> contient les scripts <i class="fa-brands fa-r-project" aria-label="r-project"></i> qui appellent les fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i> stockées dans le dossier <strong>R/</strong>. Dans le cas d’analyses complexes, n’hésitez pas à multiplier les scripts <i class="fa-brands fa-r-project" aria-label="r-project"></i> (plutôt que d’avoir un seul gros script).</p>
 </div>
 </div>
+<p><br></p>
 </section>
-<section id="appel-aux-fonctions" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="appel-aux-fonctions">Appel aux fonctions</h3>
-<p>Jusqu’à présent, nous n’avons fait que définir des fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i>, mais nous ne les avons pas exécutées. Nous allons créer notre premier script <i class="fa-brands fa-r-project" aria-label="r-project"></i> dans le dossier <strong>analyses/</strong>. Celui-ci aura pour objectif d’appeler les fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i> définies précédemment pour télécharger les données.</p>
-<p>Créez un nouveau script <i class="fa-brands fa-r-project" aria-label="r-project"></i> comme suit et éditez-le:</p>
+<section id="ajout-des-dépendances" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ajout-des-dépendances">Ajout des dépendances</h3>
+<p>Nos fonctions contiennent des dépendances à deux packages externes : <a href="https://www.rdocumentation.org/packages/utils/versions/3.6.2"><code>utils</code></a> et <a href="https://here.r-lib.org/"><code>here</code></a>. Comme dit précédemment, le fichier <strong>DESCRIPTION</strong> est l’endroit idéal pour centraliser la liste des packages requis.</p>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Ajoutez ces deux dépendances au fichier <strong>DESCRIPTION</strong> avec la fonction <a href="https://usethis.r-lib.org/reference/use_package.html"><code>usethis::use_package()</code></a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ajout d'un script R ----</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>utils<span class="sc">::</span><span class="fu">file.edit</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"analyses"</span>, <span class="st">"download-data.R"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ajout des dépendances dans DESCRIPTION ----</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_package</span>(<span class="at">package =</span> <span class="st">"here"</span>)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_package</span>(<span class="at">package =</span> <span class="st">"utils"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong>Proposition de contenu</strong> (essayer de ne pas regarder)</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Download project raw data</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># This script will download the PanTHERIA and WWF WildFinder datasets. The</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># four files will be stored in `data/`.</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co"># All functions used in the script have been developed for this project</span></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># and can be found in the folder R/.</span></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Jane Doe &lt;jane.doe@mail.me&gt;</span></span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 2023/11/09</span></span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="do">## Download PanTHERIA database ----</span></span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="fu">dl_pantheria_data</span>(<span class="at">overwrite =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="do">## Download WWF WildFinder database ----</span></span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="co"># ...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p><strong>N.B.</strong> Nous verrons plus tard comment transformer ce script <i class="fa-brands fa-r-project" aria-label="r-project"></i> en un fichier <strong>Quarto</strong> (<code>.qmd</code>).</p>
-<p>Finalement, ajoutez une ligne dans le fichier <strong>make.R</strong> qui permettra d’exécuter ce script <i class="fa-brands fa-r-project" aria-label="r-project"></i>. Utilisez les fonctions <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/source"><code>source()</code></a> et <a href="https://here.r-lib.org/reference/here.html"><code>here::here()</code></a> pour cela.</p>
-<p>Pour charger le projet et lancer les analyses, il suffit d’exécuter ce fichier <strong>make.R</strong>.</p>
+<p>Regardez le contenu du fichier <strong>DESCRIPTION</strong> : les deux packages requis sont listés dans la section <strong><em>Imports</em></strong>.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>Package: practice</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>Type: Package</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>Title: The Title of the Project</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>Version: 0.0.0.9000</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>Authors@R: c(</span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>    person(given   = "Jane",</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>           family  = "Doe",</span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>           role    = c("aut", "cre", "cph"),</span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>           email   = "jane.doe@mail.me",</span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>           comment = c(ORCID = "0000-0000-0000-0000")))</span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>Description: A paragraph providing a full description of the project (on </span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>    several lines...)</span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a>License: GPL-2</span>
+<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a>Encoding: UTF-8</span>
+<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a>Imports:</span>
+<span id="cb30-16"><a href="#cb30-16" aria-hidden="true" tabindex="-1"></a>    here,</span>
+<span id="cb30-17"><a href="#cb30-17" aria-hidden="true" tabindex="-1"></a>    utils</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -697,24 +1058,65 @@ Bonne pratique #10
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Le dossier <strong>analyses/</strong> contient les scripts <i class="fa-brands fa-r-project" aria-label="r-project"></i> qui appellent les fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i> stockées dans le dossier <strong>R/</strong>. Il peut être ignoré dans le cas de simples analyses. Le code de l’analyse devra alors se trouver dans le <strong>make.R</strong>. A contrario, dans le cas d’analyses complexes, n’hésitez pas à multiplier les scripts <i class="fa-brands fa-r-project" aria-label="r-project"></i> (plutôt que d’avoir un seul gros script).</p>
+<p>Listez toujours les <strong>packages requis dans le fichier DESCRIPTION</strong>. Ainsi, vous centralisez la liste des packages requis en un seul endroit et vous pourrez utiliser les fonctions <a href="https://remotes.r-lib.org/reference/install_deps.html"><code>devtools::install_deps()</code></a> et <a href="https://www.rdocumentation.org/packages/devtools/versions/2.4.5/topics/load_all"><code>devtools::load_all()</code></a> (voir la section <a href="#chargement-du-projet">Chargement du projet</a>).</p>
 </div>
 </div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Pour aller plus loin
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si, dans votre code <i class="fa-brands fa-r-project" aria-label="r-project"></i>, vous souhaitez attacher vos packages avec <code>library()</code>, utilisez la fonction <a href="https://usethis.r-lib.org/reference/use_package.html"><code>usethis::use_package()</code></a> comme suit :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ajout d'une dépendance forte ----</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_package</span>(<span class="at">package =</span> <span class="st">"ggplot2"</span>, <span class="at">type =</span> <span class="st">"Depends"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Le package sera ajouté dans la section <strong><em>Depends</em></strong> du fichier <strong>DESCRIPTION</strong>.</p>
+</div>
+</div>
+<p><br></p>
 </section>
-<section id="ajout-dun-readme" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="ajout-dun-readme">Ajout d’un README</h3>
-<p>Plus tard, vous verrez comment envoyer ce projet sur GitHub. Pour l’instant, nous allons légèrement anticiper les cours suivants, et ajouter un <code>README</code> à notre compendium. Ce sera la <strong>vitrine du projet</strong>. Les rôles d’un <code>README</code> sont : 1) de présenter le projet, 2) d’expliquer son contenu, et 3) d’expliquer comment l’installer et l’utiliser.</p>
-<p>Pour cela, vous allez ajouter un <code>README.Rmd</code> (fichier <strong>R Markdown</strong>) à la racine de votre projet avec la fonction <a href="https://frbcesab.github.io/rcompendium/reference/add_readme_rmd.html"><code>add_readme_rmd()</code></a> de <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ajout d'un README ----</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">add_readme_rmd</span>(<span class="at">type =</span> <span class="st">"compendium"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="chargement-du-projet" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="chargement-du-projet">Chargement du projet</h3>
+<p>Maintenant que notre compendium contient un fichier <strong>DESCRIPTION</strong> avec une liste de packages, nous pouvons utiliser les outils de développement des packages <i class="fa-brands fa-r-project" aria-label="r-project"></i> disponibles dans le package <a href="https://devtools.r-lib.org/"><code>devtools</code></a> pour :</p>
+<p><strong>1) Installer les packages</strong> avec la fonction <a href="https://devtools.r-lib.org/reference/install_deps.html"><code>devtools::install_deps()</code></a></p>
+<p>Cette fonction va lire le fichier <strong>DESCRIPTION</strong> pour récupérer la liste des packages requis dans les sections <strong><em>Depends</em></strong> et <strong><em>Imports</em></strong> et les installer (uniquement s’ils ne sont pas déjà installés). Cette fonction vient donc remplacer la fonction <a href="https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/install.packages"><code>install.packages()</code></a>.</p>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i>&nbsp; Par défaut, cette fonction va aussi vous demander de mettre à jour les packages (si une nouvelle version est disponible). Si vous souhaitez désactiver cette fonctionnalité, ajoutez l’argument <code>upgrade = "never"</code>.</p>
+<p><strong>2) Charger les packages</strong> avec la fonction <a href="https://www.rdocumentation.org/packages/devtools/versions/2.4.5/topics/load_all"><code>devtools::load_all()</code></a></p>
+<p>Cette fonction va aussi lire le fichier <strong>DESCRIPTION</strong> pour récupérer la liste des packages requis dans les sections <strong><em>Depends</em></strong> et <strong><em>Imports</em></strong>. Elle va <strong>charger</strong> les packages listés dans la section <strong><em>Imports</em></strong> et <strong>charger et attacher</strong> les packages listés dans la section <strong><em>Depends</em></strong>. Cette fonction vient donc remplacer la fonction <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/library"><code>library()</code></a>.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p>Adaptez son contenu et n’oubliez pas de transpiler ce fichier <code>.Rmd</code> en un fichier <code>.md</code> (fichier <strong>Markdown</strong> lu par GitHub). Utilisez le bouton <strong>Knit</strong> de RStudio ou :</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Conversion du README.Rmd en README.md ----</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>rmarkdown<span class="sc">::</span><span class="fu">render</span>(<span class="st">"README.Rmd"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout-title-container flex-fill">
+Important
 </div>
-<p><i class="fa-solid fa-warning" aria-label="warning"></i>&nbsp; N’oubliez pas aussi d’éditer les sections <strong><em>Title</em></strong> et <strong><em>Description</em></strong> du fichier <strong>DESCRIPTION</strong>.</p>
+</div>
+<div class="callout-body-container callout-body">
+<p>Mettez régulièrement à jour votre fichier <strong>DESCRIPTION</strong> en :</p>
+<ul>
+<li>ajoutant les nouveaux packages que vous utilisez</li>
+<li>retirant les packages que vous n’utilisez plus</li>
+</ul>
+</div>
+</div>
+<p><strong>3) Charger les fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i></strong> &nbsp; avec la fonction <a href="https://www.rdocumentation.org/packages/devtools/versions/2.4.5/topics/load_all"><code>devtools::load_all()</code></a></p>
+<p>La fonction <a href="https://www.rdocumentation.org/packages/devtools/versions/2.4.5/topics/load_all"><code>devtools::load_all()</code></a> présente un second avantage : elle va charger les fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i> stockées dans le dossier <strong>R/</strong> et les rendre accessibles dans la session. Elle vient donc remplacer la fonction <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/source"><code>source()</code></a>.</p>
+<p><i class="fa-solid fa-warning" aria-label="warning"></i> &nbsp; Après chaque modification d’une fonction <i class="fa-brands fa-r-project" aria-label="r-project"></i>, n’oubliez pas d’exécuter la fonction <a href="https://www.rdocumentation.org/packages/devtools/versions/2.4.5/topics/load_all"><code>devtools::load_all()</code></a>. Vous pouvez utiliser le raccourci clavier <code>Ctrl + Shift + L</code> dans RStudio.</p>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Essayez ces deux fonctions.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Installation des packages manquants ----</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_deps</span>(<span class="at">upgrade =</span> <span class="st">"never"</span>)</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Chargement des packages et des fonctions R ----</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">load_all</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -725,67 +1127,249 @@ Bonne pratique #11
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Ajoutez un <strong>README</strong> à votre projet afin d’aider l’utilisateur à comprendre votre projet.</p>
+<p>Avec un fichier <strong>DESCRIPTION</strong> (listant les dépendances requises) et un dossier <strong>R/</strong>, vous pouvez utiliser :</p>
+<ul>
+<li><a href="https://devtools.r-lib.org/reference/install_deps.html"><code>devtools::install_deps()</code></a> pour installer (et mettre à jour) les packages : n’utilisez plus <code>install.packages()</code></li>
+<li><a href="https://www.rdocumentation.org/packages/devtools/versions/2.4.5/topics/load_all"><code>devtools::load_all()</code></a> pour 1) charger (et attacher) les packages et 2) charger vos fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i> : n’utilisez plus <code>library()</code> ni <code>source()</code> (pour charger vos fonctions).</li>
+</ul>
 </div>
 </div>
-<blockquote class="blockquote">
-<p><strong>Félicitation ! Votre research compendium est maintenant fonctionnel.</strong></p>
-</blockquote>
+<p><br></p>
 </section>
-<section id="bonus" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="bonus">Bonus</h3>
-<p>Ecrivez une fonction <i class="fa-brands fa-r-project" aria-label="r-project"></i> qui va télécharger le fichier <a href="https://raw.githubusercontent.com/rdatatoolbox/datarepo/main/README.md"><code>README.md</code></a> du dépôt <a href="https://github.com/rdatatoolbox/datarepo/" class="uri">https://github.com/rdatatoolbox/datarepo/</a> et enregistrez-le dans le dossier <strong>data/</strong>. Vous ajouterez ainsi la description des données à votre projet.</p>
-<p><strong>Proposition de fonction</strong> (essayer de ne pas regarder)</p>
+<section id="ajout-dun-make.r" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ajout-dun-make.r">Ajout d’un make.R</h3>
+<p>Afin d’automatiser notre projet, nous allons créer un script <i class="fa-brands fa-r-project" aria-label="r-project"></i> à la racine du projet. Nous l’appelerons, par convention, <strong>make.R</strong>. Celui-ci aura deux objectifs :</p>
+<ul>
+<li><strong>mettre en place le projet</strong> en installant et chargeant les packages (et les fonctions)</li>
+<li><strong>exécuter le projet</strong> en sourçant les scripts <i class="fa-brands fa-r-project" aria-label="r-project"></i> de manière séquentielle</li>
+</ul>
+<p>L’idée est, qu’une fois le projet fini, l’utilisateur n’ait qu’à exécuter que ce script : c’est le <strong>chef d’orchestre</strong> du projet.</p>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Utilisez la fonction <a href="https://rdrr.io/r/utils/file.edit.html"><code>file.edit()</code></a> pour créer un script <i class="fa-brands fa-r-project" aria-label="r-project"></i>&nbsp; à la racine du projet.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ajout d'un makefile ----</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">file.edit</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"make.R"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Ajoutez-y les deux fonctions précédentes :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup project ----</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Install packages ----</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_deps</span>(<span class="at">upgrade =</span> <span class="st">"never"</span>)</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="do">## Load packages &amp; functions ----</span></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">load_all</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Finalement, ajoutez une ligne dans le fichier <strong>make.R</strong> qui permettra d’exécuter le script <strong>analyses/download-data.R</strong>.</p>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i>&nbsp; Utilisez les fonctions <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/source"><code>source()</code></a> et <a href="https://here.r-lib.org/reference/here.html"><code>here::here()</code></a> pour cela.</p>
+<p><strong>Proposition de make.R</strong> (essayer de ne pas regarder)</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#' Download data description (README)</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co">#' @description </span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co">#' This function downloads the `README.md` of the GitHub repository</span></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="co">#' &lt;https://github.com/rdatatoolbox/datarepo/&gt; providing data description.</span></span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="co">#' The file won't be downloaded if already exists locally (except if </span></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="co">#' `overwrite = TRUE`).</span></span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="co">#' The `README.md` will be stored in `data/`.</span></span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="co">#' </span></span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="co">#' @param overwrite a logical. If `TRUE`, the file will be downloaded again and</span></span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="co">#'   the previous version will be erased.</span></span>
-<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
-<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="co">#' @return No return value.</span></span>
-<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="co">#' </span></span>
-<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="co">#' @export</span></span>
-<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>dl_data_descr <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">overwrite =</span> <span class="cn">FALSE</span>) {</span>
-<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>  <span class="do">## Destination location ---- </span></span>
-<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>  path <span class="ot">&lt;-</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>)</span>
-<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a>  <span class="do">## File name ----</span></span>
-<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a>  filename <span class="ot">&lt;-</span> <span class="st">"README.md"</span></span>
-<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a>  <span class="do">## GitHub URL ----</span></span>
-<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a>  url <span class="ot">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/rdatatoolbox/datarepo/main/"</span></span>
-<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">file.exists</span>(<span class="fu">file.path</span>(path, filename)) <span class="sc">&amp;&amp;</span> <span class="sc">!</span>overwrite) {</span>
-<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Check if exists locally ----</span></span>
-<span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a>    <span class="fu">message</span>(<span class="st">"The filename already exists. Use 'overwrite = TRUE' to replace it"</span>)</span>
-<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb18-34"><a href="#cb18-34" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb18-35"><a href="#cb18-35" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Create destination folder ----</span></span>
-<span id="cb18-36"><a href="#cb18-36" aria-hidden="true" tabindex="-1"></a>    <span class="fu">dir.create</span>(path, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb18-37"><a href="#cb18-37" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb18-38"><a href="#cb18-38" aria-hidden="true" tabindex="-1"></a>    <span class="do">## Download file ----</span></span>
-<span id="cb18-39"><a href="#cb18-39" aria-hidden="true" tabindex="-1"></a>    utils<span class="sc">::</span><span class="fu">download.file</span>(<span class="at">url      =</span> <span class="fu">paste0</span>(url, filename),</span>
-<span id="cb18-40"><a href="#cb18-40" aria-hidden="true" tabindex="-1"></a>                         <span class="at">destfile =</span> <span class="fu">file.path</span>(path, filename),</span>
-<span id="cb18-41"><a href="#cb18-41" aria-hidden="true" tabindex="-1"></a>                         <span class="at">mode     =</span> <span class="st">"wb"</span>)</span>
-<span id="cb18-42"><a href="#cb18-42" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb18-43"><a href="#cb18-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-44"><a href="#cb18-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">invisible</span>(<span class="cn">NULL</span>) </span>
-<span id="cb18-45"><a href="#cb18-45" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Project title</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Project description</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ...</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Author: Jane Doe</span></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Date: 2024/12/02</span></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup project ----</span></span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a><span class="do">## Install packages ----</span></span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_deps</span>(<span class="at">upgrade =</span> <span class="st">"never"</span>)</span>
+<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a><span class="do">## Load packages &amp; functions ----</span></span>
+<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">load_all</span>()</span>
+<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-19"><a href="#cb35-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Run project ----</span></span>
+<span id="cb35-20"><a href="#cb35-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-21"><a href="#cb35-21" aria-hidden="true" tabindex="-1"></a><span class="do">## Download raw data ----</span></span>
+<span id="cb35-22"><a href="#cb35-22" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"analyses"</span>, <span class="st">"download-data.R"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init:{'theme':'neutral','flowchart':{'htmlLabels':false}}}%%
+flowchart LR
+  A("make.R") --&gt; B("analyses/download-data.R")
+  B --&gt; C("dl_pantheria_data()")
+  B --&gt; D("dl_wildfinder_data()")
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Bonne pratique #12
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un fichier <strong>make.R</strong> placé à la racine du projet permet de facilement mettre en place le projet (installation et chargement des packages requis et des fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i>) et d’exécuter les différentes analyses de manière séquentielle (en sourçant les scripts <i class="fa-brands fa-r-project" aria-label="r-project"></i> qui appellent eux-même les fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i>). C’est le <strong>chef d’orchestre</strong> du projet.</p>
+<p><strong>NB.</strong> Vu la simplicité de ce projet, nous aurions très bien pu placer le contenu du script <i class="fa-brands fa-r-project" aria-label="r-project"></i> (dossier <strong>analyses/</strong>) dans ce <strong>make.R</strong>. La structure d’un compendium n’est pas figé, mais nous vous recommandons d’utiliser a minima des fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i> et un <strong>make.R</strong>.</p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Structure du compendium</strong></p>
+<pre><code>practice/                                     # Root of the compendium
+|
+├─ practice.Rproj                             # RStudio project file
+|
+├─ README.md                                  # Presentation of the project
+├─ DESCRIPTION                                # Project metadata
+├─ LICENSE.md                                 # License of the project
+|
+├─ data/                                      # Contains raw data
+|  ├─ pantheria/                              # PanTHERIA database
+|  |  └─ PanTHERIA_1-0_WR05_Aug2008.txt
+|  └─ wildfinder/                             # WWF WildFinder database
+|     ├─ wildfinder-ecoregions_list.csv
+|     ├─ wildfinder-ecoregions_species.csv
+|     └─ wildfinder-mammals_list.csv
+|
+├─ outputs/                                   # Contains results
+├─ figures/                                   # Contains figures
+├─ R/                                         # Contains R functions (only)
+|  ├─ dl_pantheria_data.R                     # Function to download PanTHERIA data
+|  └─ dl_wildfinder_data.R                    # Function to download WildFinder data
+|
+├─ analyses/                                  # Contains R scripts
+|  └─ download-data.R                         # Script to download raw data
+|
+└─ make.R                                     # Script to setup &amp; run the project</code></pre>
+</blockquote>
+<p><br></p>
+</section>
+<section id="pour-finir" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="pour-finir">Pour finir</h3>
+<p>N’oubliez pas de finaliser la documentation de votre projet.</p>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Editez les sections <strong><em>Title</em></strong> et <strong><em>Description</em></strong> du fichier <strong>DESCRIPTION</strong>.</p>
+<p><strong>Proposition de DESCRIPTION</strong></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>Package: practice</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>Type: Package</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>Title: Download PanTHERIA and WWF WildFinder databases</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>Version: 0.0.0.9000</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>Authors@R: c(</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>    person(given   = "Jane",</span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>           family  = "Doe",</span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>           role    = c("aut", "cre", "cph"),</span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>           email   = "jane.doe@mail.me",</span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>           comment = c(ORCID = "0000-0000-0000-0000")))</span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>Description: This project aims to download PanTHERIA and WWF WildFinder </span>
+<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a>    databases. It is structured as a research compendium to be reproducible.</span>
+<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a>    This is the result of the Practice 1 of the training course Reproducible </span>
+<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a>    Research in Computational Ecology available at:</span>
+<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a>    &lt;https://rdatatoolbox.github.io/chapters/ex-compendium.html&gt;.</span>
+<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a>License: GPL-2</span>
+<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a>Encoding: UTF-8</span>
+<span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a>Imports:</span>
+<span id="cb37-19"><a href="#cb37-19" aria-hidden="true" tabindex="-1"></a>    here,</span>
+<span id="cb37-20"><a href="#cb37-20" aria-hidden="true" tabindex="-1"></a>    utils</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Editez le <strong>README</strong>.</p>
+<p><strong>Proposition de README</strong></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a># Practice</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>This project aims to download the [PanTHERIA](https://doi.org/10.1890/08-1494.1) </span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>database (Kate _et al._, 2009) and the </span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>[WWF WildFinder](https://www.worldwildlife.org/pages/wildfinder-database) </span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>database (World Wildlife Fund 2006). It is structured as a research compendium </span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>to be reproducible.</span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>**NB.** This is the result of the Practice 1 of the training course</span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>[Reproducible Research in Computational Ecology](https://rdatatoolbox.github.io).</span>
+<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-13"><a href="#cb38-13" aria-hidden="true" tabindex="-1"></a>## Content</span>
+<span id="cb38-14"><a href="#cb38-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-15"><a href="#cb38-15" aria-hidden="true" tabindex="-1"></a>This project is structured as follow:</span>
+<span id="cb38-16"><a href="#cb38-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-17"><a href="#cb38-17" aria-hidden="true" tabindex="-1"></a>.</span>
+<span id="cb38-18"><a href="#cb38-18" aria-hidden="true" tabindex="-1"></a>├─ practice.Rproj                             # RStudio project file</span>
+<span id="cb38-19"><a href="#cb38-19" aria-hidden="true" tabindex="-1"></a>|</span>
+<span id="cb38-20"><a href="#cb38-20" aria-hidden="true" tabindex="-1"></a>├─ README.md                                  # Presentation of the project</span>
+<span id="cb38-21"><a href="#cb38-21" aria-hidden="true" tabindex="-1"></a>├─ DESCRIPTION                                # Project metadata</span>
+<span id="cb38-22"><a href="#cb38-22" aria-hidden="true" tabindex="-1"></a>├─ LICENSE.md                                 # License of the project</span>
+<span id="cb38-23"><a href="#cb38-23" aria-hidden="true" tabindex="-1"></a>|</span>
+<span id="cb38-24"><a href="#cb38-24" aria-hidden="true" tabindex="-1"></a>├─ data/                                      # Contains raw data</span>
+<span id="cb38-25"><a href="#cb38-25" aria-hidden="true" tabindex="-1"></a>|  ├─ pantheria/                              # PanTHERIA database</span>
+<span id="cb38-26"><a href="#cb38-26" aria-hidden="true" tabindex="-1"></a>|  |  └─ PanTHERIA_1-0_WR05_Aug2008.txt</span>
+<span id="cb38-27"><a href="#cb38-27" aria-hidden="true" tabindex="-1"></a>|  └─ wildfinder/                             # WWF WildFinder database</span>
+<span id="cb38-28"><a href="#cb38-28" aria-hidden="true" tabindex="-1"></a>|     ├─ wildfinder-ecoregions_list.csv</span>
+<span id="cb38-29"><a href="#cb38-29" aria-hidden="true" tabindex="-1"></a>|     ├─ wildfinder-ecoregions_species.csv</span>
+<span id="cb38-30"><a href="#cb38-30" aria-hidden="true" tabindex="-1"></a>|     └─ wildfinder-mammals_list.csv</span>
+<span id="cb38-31"><a href="#cb38-31" aria-hidden="true" tabindex="-1"></a>|</span>
+<span id="cb38-32"><a href="#cb38-32" aria-hidden="true" tabindex="-1"></a>├─ outputs/                                   # Contains results</span>
+<span id="cb38-33"><a href="#cb38-33" aria-hidden="true" tabindex="-1"></a>├─ figures/                                   # Contains figures</span>
+<span id="cb38-34"><a href="#cb38-34" aria-hidden="true" tabindex="-1"></a>├─ R/                                         # Contains R functions (only)</span>
+<span id="cb38-35"><a href="#cb38-35" aria-hidden="true" tabindex="-1"></a>|  ├─ dl_pantheria_data.R                     # Function to download PanTHERIA data</span>
+<span id="cb38-36"><a href="#cb38-36" aria-hidden="true" tabindex="-1"></a>|  └─ dl_wildfinder_data.R                    # Function to download WildFinder data</span>
+<span id="cb38-37"><a href="#cb38-37" aria-hidden="true" tabindex="-1"></a>|</span>
+<span id="cb38-38"><a href="#cb38-38" aria-hidden="true" tabindex="-1"></a>├─ analyses/                                  # Contains R scripts</span>
+<span id="cb38-39"><a href="#cb38-39" aria-hidden="true" tabindex="-1"></a>|  └─ download-data.R                         # Script to download raw data</span>
+<span id="cb38-40"><a href="#cb38-40" aria-hidden="true" tabindex="-1"></a>|</span>
+<span id="cb38-41"><a href="#cb38-41" aria-hidden="true" tabindex="-1"></a>└─ make.R                                     # Script to setup &amp; run the project</span>
+<span id="cb38-42"><a href="#cb38-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-43"><a href="#cb38-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-44"><a href="#cb38-44" aria-hidden="true" tabindex="-1"></a>## Installation</span>
+<span id="cb38-45"><a href="#cb38-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-46"><a href="#cb38-46" aria-hidden="true" tabindex="-1"></a>Coming soon...</span>
+<span id="cb38-47"><a href="#cb38-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-48"><a href="#cb38-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-49"><a href="#cb38-49" aria-hidden="true" tabindex="-1"></a>## Usage</span>
+<span id="cb38-50"><a href="#cb38-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-51"><a href="#cb38-51" aria-hidden="true" tabindex="-1"></a>Open the `practice.Rproj` file in RStudio and run `source("make.R")` to launch </span>
+<span id="cb38-52"><a href="#cb38-52" aria-hidden="true" tabindex="-1"></a>analyses. </span>
+<span id="cb38-53"><a href="#cb38-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-54"><a href="#cb38-54" aria-hidden="true" tabindex="-1"></a>- All packages will be automatically installed and loaded</span>
+<span id="cb38-55"><a href="#cb38-55" aria-hidden="true" tabindex="-1"></a>- Datasets will be saved in the `data/` directory</span>
+<span id="cb38-56"><a href="#cb38-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-57"><a href="#cb38-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-58"><a href="#cb38-58" aria-hidden="true" tabindex="-1"></a>## License</span>
+<span id="cb38-59"><a href="#cb38-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-60"><a href="#cb38-60" aria-hidden="true" tabindex="-1"></a>This project is released under the </span>
+<span id="cb38-61"><a href="#cb38-61" aria-hidden="true" tabindex="-1"></a>[GPL-2](https://choosealicense.com/licenses/gpl-2.0/) license.</span>
+<span id="cb38-62"><a href="#cb38-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-63"><a href="#cb38-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-64"><a href="#cb38-64" aria-hidden="true" tabindex="-1"></a>## Citation</span>
+<span id="cb38-65"><a href="#cb38-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-66"><a href="#cb38-66" aria-hidden="true" tabindex="-1"></a>&gt; Doe J (2024) Download PanTHERIA and WWF WildFinder databases.</span>
+<span id="cb38-67"><a href="#cb38-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-68"><a href="#cb38-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-69"><a href="#cb38-69" aria-hidden="true" tabindex="-1"></a>## References</span>
+<span id="cb38-70"><a href="#cb38-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-71"><a href="#cb38-71" aria-hidden="true" tabindex="-1"></a>Kate EJ, Bielby J, Cardillo M _et al._ (2009) PanTHERIA: A </span>
+<span id="cb38-72"><a href="#cb38-72" aria-hidden="true" tabindex="-1"></a>species-level database of life history, ecology, and geography of extant and </span>
+<span id="cb38-73"><a href="#cb38-73" aria-hidden="true" tabindex="-1"></a>recently extinct mammals. _Ecology_, 90, 2648. </span>
+<span id="cb38-74"><a href="#cb38-74" aria-hidden="true" tabindex="-1"></a>DOI: [10.1890/08-1494.1](https://doi.org/10.1890/08-1494.1)</span>
+<span id="cb38-75"><a href="#cb38-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-76"><a href="#cb38-76" aria-hidden="true" tabindex="-1"></a>World Wildlife Fund (2006) WildFinder: Online database of species distributions. </span>
+<span id="cb38-77"><a href="#cb38-77" aria-hidden="true" tabindex="-1"></a>Version Jan-06. URL: https://www.worldwildlife.org/pages/wildfinder-database</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p><br></p>
+<blockquote class="blockquote">
+<p><strong>Félicitation</strong> <i class="fa-solid fa-wand-sparkles" aria-label="wand-sparkles"></i></p>
+<p>Votre projet est devenu un véritable research compendium <strong>fonctionnel</strong> et <strong>reproductible</strong>.</p>
+</blockquote>
+<p><br></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -796,7 +1380,7 @@ La fonction <a href="https://frbcesab.github.io/rcompendium/reference/new_compen
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>L’ensemble de ces étapes peut être réalisé avec une seule fonction : <a href="https://frbcesab.github.io/rcompendium/reference/new_compendium.html"><code>new_compendium()</code></a> de <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a>.<br> N’oubliez pas de créer un nouveau projet RStudio avant si vous voulez l’utiliser.</p>
+<p>L’ensemble de ces étapes peut être réalisé avec une seule fonction : <a href="https://frbcesab.github.io/rcompendium/reference/new_compendium.html"><code>new_compendium()</code></a> de <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a>. Lisez attentivement la documentation avant d’utiliser cette fonction.</p>
 </div>
 </div>
 
@@ -839,18 +1423,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -882,7 +1455,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -890,7 +1485,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
