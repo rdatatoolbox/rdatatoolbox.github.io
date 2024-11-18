@@ -5,9 +5,13 @@ toc: true
 # Welcome {.unnumbered}
 
 ::: {.callout-note}
-## Registrations for the 2024 session are now open
+## Registrations for the 2024 session are closed
 
-{{< fa hand-point-right >}}&nbsp; The registration form is available [here](https://www.fondationbiodiversite.fr/evenement/frb-cesab-bonnes-pratiques-pour-une-recherche-reproductible-en-ecologie-numerique-2024/).
+Registrations open each spring and the training course takes place during the fall. 
+
+{{< fa hand-point-right >}}&nbsp; Subscribe to the 
+[FRB-CESAB newsletter](https://www.fondationbiodiversite.fr/en/newsletter/) 
+to stay informed. More information is available on the [FRB-CESAB website](https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/develop-skills/best-practice-for-reproducible-research-in-computational-ecology/).
 :::
 
 
@@ -69,7 +73,7 @@ All the material used in this training course (slides, data, exercises) is avail
 ## Citation {.unnumbered}
 
 > Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD 
-& Siberchicot A (2023) 
+& Siberchicot A (2024) 
 FRB-CESAB & GdR EcoStat training course: Reproducible Research in Computational Ecology. 
 Zenodo. URL: <http://doi.org/10.5281/zenodo.4262978>
 

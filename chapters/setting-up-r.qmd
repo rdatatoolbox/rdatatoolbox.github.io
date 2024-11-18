@@ -1,6 +1,5 @@
-# Setting up R {.unnumbered}
+# Setup R {.unnumbered}
 
-[![](../images/rsetup.png)](https://frbcesab.github.io/rsetup/)
-
-The guide to correctly install and configure a working environment for data science with {{< fa brands r-project >}}, {{< fa brands github >}}, and {{< fa brands docker >}} is available at: <https://frbcesab.github.io/rsetup/>
+The guide to correctly install and configure a working environment for data science with {{< fa brands r-project >}}, {{< fa brands github >}}, and {{< fa brands docker >}} is available at:<br/>
+<https://frbcesab.github.io/rsetup/>
 
