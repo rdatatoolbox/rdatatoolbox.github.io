@@ -419,10 +419,10 @@ Bonne pratique #1
 </ol>
 <p>C’est un simple fichier texte (<em>plain text-based file</em>) qui peut être écrit au format texte (<code>README.txt</code>), en Markdown (<code>README.md</code>), en R Markdown (<code>README.Rmd</code>), en Quarto (<code>README.qmd</code>), etc.</p>
 <p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Ici, vous allez créer un <strong><code>README.md</code></strong> (fichier texte écrit en <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax"><strong>Markdown</strong></a>) à la racine de votre projet.</p>
-<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i>&nbsp; Utilisez la fonction <a href="https://rdrr.io/r/utils/file.edit.html"><code>file.edit()</code></a> qui permet d’ouvrir un fichier dans l’éditeur de RStudio. Si ce fichier n’existe pas, elle va aussi le créer.</p>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i>&nbsp; Utilisez la fonction <a href="https://rdrr.io/r/utils/file.edit.html"><code>utils::file.edit()</code></a> qui permet d’ouvrir un fichier dans l’éditeur de RStudio. Si ce fichier n’existe pas, elle va aussi le créer.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ajout d'un README ----</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">file.edit</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"README.md"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>utils<span class="sc">::</span><span class="fu">file.edit</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"README.md"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Exécutez cette ligne de code dans la console : <code>here::here("README.md")</code> et essayez de comprendre ce que fait la fonction <code>here::here()</code>. Comparez avec votre voisin.e.</p>
 <p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Editez ce <code>README.md</code> en ajoutant les informations pertinentes.</p>
@@ -525,7 +525,7 @@ Bonne pratique #3
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Toujours ajouter un fichier <strong>DESCRIPTION</strong> à la racine du projet. Il permet de descrire les <strong>métadonnées du projet</strong> : titre, auteur(s), description, licence, etc. Nous le verrons plus loin, mais c’est aussi l’endroit idéal pour <strong>lister les packages externes requis</strong>.</p>
+<p>Toujours ajouter un fichier <strong>DESCRIPTION</strong> à la racine du projet. Il permet de décrire les <strong>métadonnées du projet</strong> : titre, auteur(s), description, licence, etc. Nous le verrons plus loin, mais c’est aussi l’endroit idéal pour <strong>lister les packages externes requis</strong>.</p>
 </div>
 </div>
 <blockquote class="blockquote">
@@ -668,10 +668,10 @@ Bonne pratique #5
 <p>Le dépôt GitHub <a href="https://github.com/rdatatoolbox/datarepo" class="uri">https://github.com/rdatatoolbox/datarepo</a> contient les données que nous utiliserons tout au long de la formation. Celles-ci proviennent de deux bases de données : <a href="https://esajournals.onlinelibrary.wiley.com/doi/10.1890/08-1494.1">PanTHERIA</a> et <a href="https://www.worldwildlife.org/publications/wildfinder-database">WWF WildFinder</a>. Lisez attentivement le <a href="https://github.com/rdatatoolbox/datarepo#mortar_board-data-repository-">README</a> pour plus de détails.</p>
 <p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; L’objectif ici est d’écrire un code <i class="fa-brands fa-r-project" aria-label="r-project"></i>&nbsp; qui va télécharger les quatre fichiers hébergés sur le dépôt GitHub mentionné ci-dessus.</p>
 <p>Nous allons commencer par écrire notre code dans un <strong><em>script</em></strong>. Le fichier de données <strong>PanTHERIA</strong>, disponible <a href="https://github.com/rdatatoolbox/datarepo/tree/main/data/pantheria">ici</a>, sera enregistré dans le sous-répertoire <strong>data/pantheria/</strong> et les trois fichiers de données <strong>WWF WildFinder</strong>, disponibles <a href="https://github.com/rdatatoolbox/datarepo/tree/main/data/wildfinder">ici</a>, seront enregistrés dans le sous-répertoire <strong>data/wildfinder/</strong>.</p>
-<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Créez, dans le dossier <strong>analyses/</strong>, le script <code>download-data.R</code> à l’aide de la fonction <a href="https://rdrr.io/r/utils/file.edit.html"><code>file.edit()</code></a>.</p>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Créez, dans le dossier <strong>analyses/</strong>, le script <code>download-data.R</code> à l’aide de la fonction <a href="https://rdrr.io/r/utils/file.edit.html"><code>utils::file.edit()</code></a>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ajout d'un script R ----</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">file.edit</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"analyses"</span>, <span class="st">"download-data.R"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>utils<span class="sc">::</span><span class="fu">file.edit</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"analyses"</span>, <span class="st">"download-data.R"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> Utilisez les fonctions <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/files2"><code>dir.create()</code></a> pour créer des sous-répertoires, <a href="https://here.r-lib.org/reference/here.html"><code>here::here()</code></a> pour construire vos chemins et <a href="https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/download.file"><code>utils::download.file()</code></a> pour télécharger les fichiers.</p>
 <p><strong>Proposition de code</strong> pour PanTHERIA (essayez de ne pas regarder)</p>
@@ -712,7 +712,7 @@ Bonne pratique #6
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Essayez de <strong>scripter l’intégralité du travail</strong>. Ici, nous avons vu comment créer des fichiers (<a href="https://rdrr.io/r/utils/file.edit.html"><code>file.edit()</code></a>) et des répertoires (<a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/files2"><code>dir.create()</code></a>), construire des chemins relatifs robustes (<a href="https://here.r-lib.org/reference/here.html"><code>here::here()</code></a>) et télécharger des fichiers (<a href="https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/download.file"><code>utils::download.file()</code></a>) directement à partir de <i class="fa-brands fa-r-project" aria-label="r-project"></i>.</p>
+<p>Essayez de <strong>scripter l’intégralité du travail</strong>. Ici, nous avons vu comment créer des fichiers (<a href="https://rdrr.io/r/utils/file.edit.html"><code>utils::file.edit()</code></a>) et des répertoires (<a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/files2"><code>dir.create()</code></a>), construire des chemins relatifs robustes (<a href="https://here.r-lib.org/reference/here.html"><code>here::here()</code></a>) et télécharger des fichiers (<a href="https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/download.file"><code>utils::download.file()</code></a>) directement à partir de <i class="fa-brands fa-r-project" aria-label="r-project"></i>.</p>
 </div>
 </div>
 <blockquote class="blockquote">
@@ -955,7 +955,7 @@ Pour aller plus loin
 <p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Adaptez le contenu du script <strong>analyses/download-data.R</strong> créé précédemment afin qu’il appelle les fonctions <code>dl_pantheria_data()</code> et <code>dl_wildfinder_data()</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ouverture du script précédent ----</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">file.edit</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"analyses"</span>, <span class="st">"download-data.R"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>utils<span class="sc">::</span><span class="fu">file.edit</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"analyses"</span>, <span class="st">"download-data.R"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong>Proposition de contenu</strong> (essayer de ne pas regarder)</p>
 <div class="cell">
@@ -972,11 +972,11 @@ Pour aller plus loin
 <span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Jane Doe &lt;jane.doe@mail.me&gt;</span></span>
 <span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="do">## Download PanTHERIA database ----</span></span>
-<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a><span class="fu">dl_pantheria_data</span>()</span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>pantheria_path  <span class="ot">&lt;-</span> <span class="fu">dl_pantheria_data</span>()</span>
 <span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a><span class="do">## Download WWF WildFinder database ----</span></span>
-<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a><span class="fu">dl_wildfinder_data</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a>wildfinder_path <span class="ot">&lt;-</span> <span class="fu">dl_wildfinder_data</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell" data-layout-align="default">
@@ -1132,11 +1132,11 @@ Bonne pratique #11
 <li><strong>mettre en place le projet</strong> en installant et chargeant les packages (et les fonctions)</li>
 <li><strong>exécuter le projet</strong> en sourçant les scripts <i class="fa-brands fa-r-project" aria-label="r-project"></i> de manière séquentielle</li>
 </ul>
-<p>L’idée est, qu’une fois le projet fini, l’utilisateur n’ait qu’à exécuter que ce script : c’est le <strong>chef d’orchestre</strong> du projet.</p>
-<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Utilisez la fonction <a href="https://rdrr.io/r/utils/file.edit.html"><code>file.edit()</code></a> pour créer un script <i class="fa-brands fa-r-project" aria-label="r-project"></i>&nbsp; à la racine du projet.</p>
+<p>L’idée est, qu’une fois le projet fini, l’utilisateur n’exécute que ce script : c’est le <strong>chef d’orchestre</strong> du projet.</p>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Utilisez la fonction <a href="https://rdrr.io/r/utils/file.edit.html"><code>utils::file.edit()</code></a> pour créer un script <i class="fa-brands fa-r-project" aria-label="r-project"></i>&nbsp; à la racine du projet.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ajout d'un makefile ----</span></span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">file.edit</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"make.R"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>utils<span class="sc">::</span><span class="fu">file.edit</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"make.R"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Ajoutez-y les deux fonctions précédentes :</p>
 <div class="cell">
@@ -1205,7 +1205,7 @@ Bonne pratique #12
 </div>
 <div class="callout-body-container callout-body">
 <p>Un fichier <strong>make.R</strong> placé à la racine du projet permet de facilement mettre en place le projet (installation et chargement des packages requis et des fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i>) et d’exécuter les différentes analyses de manière séquentielle (en sourçant les scripts <i class="fa-brands fa-r-project" aria-label="r-project"></i> qui appellent eux-même les fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i>). C’est le <strong>chef d’orchestre</strong> du projet.</p>
-<p><strong>NB.</strong> Vu la simplicité de ce projet, nous aurions très bien pu placer le contenu du script <i class="fa-brands fa-r-project" aria-label="r-project"></i> (dossier <strong>analyses/</strong>) dans ce <strong>make.R</strong>. La structure d’un compendium n’est pas figé, mais nous vous recommandons d’utiliser a minima des fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i> et un <strong>make.R</strong>.</p>
+<p><strong>NB.</strong> Vu la simplicité de ce projet, nous aurions très bien pu placer le contenu du script <i class="fa-brands fa-r-project" aria-label="r-project"></i>&nbsp; <strong>analyses/download-data.R</strong>) dans ce <strong>make.R</strong>. La structure d’un compendium n’est pas figée, mais nous vous recommandons d’utiliser a minima des fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i> et un <strong>make.R</strong>.</p>
 </div>
 </div>
 <blockquote class="blockquote">
