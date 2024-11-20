@@ -133,14 +133,14 @@ C'est un simple fichier texte (_plain text-based file_) qui peut être écrit au
 
 {{< fa hand-point-right >}}&nbsp; Ici, vous allez créer un **`README.md`** (fichier texte écrit en [**Markdown**](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)) à la racine de votre projet.
 
-{{< fa lightbulb >}}&nbsp; Utilisez la fonction [`file.edit()`](https://rdrr.io/r/utils/file.edit.html) qui permet d'ouvrir un fichier dans l'éditeur de RStudio. Si ce fichier n'existe pas, elle va aussi le créer.
+{{< fa lightbulb >}}&nbsp; Utilisez la fonction [`utils::file.edit()`](https://rdrr.io/r/utils/file.edit.html) qui permet d'ouvrir un fichier dans l'éditeur de RStudio. Si ce fichier n'existe pas, elle va aussi le créer.
 
 ```{r}
 #| echo: true
 #| eval: false
 
 ## Ajout d'un README ----
-file.edit(here::here("README.md"))
+utils::file.edit(here::here("README.md"))
 ```
 
 {{< fa hand-point-right >}}&nbsp; Exécutez cette ligne de code dans la console : `here::here("README.md")` et essayez de comprendre ce que fait la fonction `here::here()`. Comparez avec votre voisin.e.
@@ -260,7 +260,7 @@ Vous éditerez les champs **_Title_** et **_Description_** plus loin.
 ::: {.callout-tip}
 ## Bonne pratique #3
 
-Toujours ajouter un fichier **DESCRIPTION** à la racine du projet. Il permet de descrire les **métadonnées du projet** : titre, auteur(s), description, licence, etc. Nous le verrons plus loin, mais c'est aussi l'endroit idéal pour **lister les packages externes requis**.
+Toujours ajouter un fichier **DESCRIPTION** à la racine du projet. Il permet de décrire les **métadonnées du projet** : titre, auteur(s), description, licence, etc. Nous le verrons plus loin, mais c'est aussi l'endroit idéal pour **lister les packages externes requis**.
 :::
 
 
@@ -440,7 +440,7 @@ Le dépôt GitHub <https://github.com/rdatatoolbox/datarepo> contient les donné
 Nous allons commencer par écrire notre code dans un **_script_**. Le fichier de données **PanTHERIA**, disponible [ici](https://github.com/rdatatoolbox/datarepo/tree/main/data/pantheria), sera enregistré dans le sous-répertoire **data/pantheria/** et les trois fichiers de données **WWF WildFinder**, disponibles [ici](https://github.com/rdatatoolbox/datarepo/tree/main/data/wildfinder), seront enregistrés dans le sous-répertoire **data/wildfinder/**.
 
 
-{{< fa hand-point-right >}}&nbsp; Créez, dans le dossier **analyses/**, le script `download-data.R` à l'aide de la fonction [`file.edit()`](https://rdrr.io/r/utils/file.edit.html).
+{{< fa hand-point-right >}}&nbsp; Créez, dans le dossier **analyses/**, le script `download-data.R` à l'aide de la fonction [`utils::file.edit()`](https://rdrr.io/r/utils/file.edit.html).
 
 
 ```{r}
@@ -448,7 +448,7 @@ Nous allons commencer par écrire notre code dans un **_script_**. Le fichier de
 #| eval: false
 
 ## Ajout d'un script R ----
-file.edit(here::here("analyses", "download-data.R"))
+utils::file.edit(here::here("analyses", "download-data.R"))
 ```
 
 {{< fa lightbulb >}} Utilisez les fonctions 
@@ -494,7 +494,7 @@ utils::download.file(url      = full_url,
 ::: {.callout-tip}
 ## Bonne pratique #6
 
-Essayez de **scripter l'intégralité du travail**. Ici, nous avons vu comment créer des fichiers ([`file.edit()`](https://rdrr.io/r/utils/file.edit.html)) et des répertoires ([`dir.create()`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/files2)), construire des chemins relatifs robustes ([`here::here()`](https://here.r-lib.org/reference/here.html)) et télécharger des fichiers ([`utils::download.file()`](https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/download.file)) directement à partir de {{< fa brands r-project >}}.
+Essayez de **scripter l'intégralité du travail**. Ici, nous avons vu comment créer des fichiers ([`utils::file.edit()`](https://rdrr.io/r/utils/file.edit.html)) et des répertoires ([`dir.create()`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/files2)), construire des chemins relatifs robustes ([`here::here()`](https://here.r-lib.org/reference/here.html)) et télécharger des fichiers ([`utils::download.file()`](https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/download.file)) directement à partir de {{< fa brands r-project >}}.
 :::
 
 
@@ -776,7 +776,7 @@ Jusqu'à présent, nous n'avons fait que **définir** (et documenter) des foncti
 #| eval: false
 
 ## Ouverture du script précédent ----
-file.edit(here::here("analyses", "download-data.R"))
+utils::file.edit(here::here("analyses", "download-data.R"))
 ```
 
 
@@ -799,11 +799,11 @@ file.edit(here::here("analyses", "download-data.R"))
 # Jane Doe <jane.doe@mail.me>
 
 ## Download PanTHERIA database ----
-dl_pantheria_data()
+pantheria_path  <- dl_pantheria_data()
 
 
 ## Download WWF WildFinder database ----
-dl_wildfinder_data()
+wildfinder_path <- dl_wildfinder_data()
 ```
 
 
@@ -964,16 +964,16 @@ Afin d'automatiser notre projet, nous allons créer un script {{< fa brands r-pr
 - **mettre en place le projet** en installant et chargeant les packages (et les fonctions)
 - **exécuter le projet** en sourçant les scripts {{< fa brands r-project >}} de manière séquentielle
 
-L'idée est, qu'une fois le projet fini, l'utilisateur n'ait qu'à exécuter que ce script : c'est le **chef d'orchestre** du projet. 
+L'idée est, qu'une fois le projet fini, l'utilisateur n'exécute que ce script : c'est le **chef d'orchestre** du projet. 
 
-{{< fa hand-point-right >}}&nbsp; Utilisez la fonction [`file.edit()`](https://rdrr.io/r/utils/file.edit.html) pour créer un script {{< fa brands r-project >}}&nbsp; à la racine du projet.
+{{< fa hand-point-right >}}&nbsp; Utilisez la fonction [`utils::file.edit()`](https://rdrr.io/r/utils/file.edit.html) pour créer un script {{< fa brands r-project >}}&nbsp; à la racine du projet.
 
 ```{r}
 #| echo: true
 #| eval: false
 
 ## Ajout d'un makefile ----
-file.edit(here::here("make.R"))
+utils::file.edit(here::here("make.R"))
 ```
 
 {{< fa hand-point-right >}}&nbsp; Ajoutez-y les deux fonctions précédentes : 
@@ -1046,7 +1046,7 @@ flowchart LR
 
 Un fichier **make.R** placé à la racine du projet permet de facilement mettre en place le projet (installation et chargement des packages requis et des fonctions {{< fa brands r-project >}}) et d'exécuter les différentes analyses de manière séquentielle (en sourçant les scripts {{< fa brands r-project >}} qui appellent eux-même les fonctions {{< fa brands r-project >}}). C'est le **chef d'orchestre** du projet.
 
-**NB.** Vu la simplicité de ce projet, nous aurions très bien pu placer le contenu du script {{< fa brands r-project >}} (dossier **analyses/**) dans ce **make.R**. La structure d'un compendium n'est pas figé, mais nous vous recommandons d'utiliser a minima des fonctions {{< fa brands r-project >}} et un **make.R**.
+**NB.** Vu la simplicité de ce projet, nous aurions très bien pu placer le contenu du script {{< fa brands r-project >}}&nbsp; **analyses/download-data.R**) dans ce **make.R**. La structure d'un compendium n'est pas figée, mais nous vous recommandons d'utiliser a minima des fonctions {{< fa brands r-project >}} et un **make.R**.
 :::
 
 
