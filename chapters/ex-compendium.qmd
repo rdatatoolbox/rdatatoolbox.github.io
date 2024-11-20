@@ -1215,6 +1215,10 @@ Version Jan-06. URL: https://www.worldwildlife.org/pages/wildfinder-database
 
 <br/>
 
+{{< fa lightbulb >}}&nbsp; The final compendium can be found [**here**](https://github.com/rdatatoolbox/practice-1).
+
+<br/>
+
 ::: {.callout-note}
 ## La fonction [`new_compendium()`](https://frbcesab.github.io/rcompendium/reference/new_compendium.html)
 
