@@ -9,6 +9,8 @@ L'objectif de cet exercice est de vous familiariser à l'utilisation de `Quarto`
 
 ### Consignes {.unnumbered}
 
+#### Analyses
+
 {{< fa hand-point-right >}}&nbsp; Nous allons utiliser les données WildFinder du WWF pour répondre à la question suivante :
 **_Dans combien d'écorégions différentes retrouve-t-on chaque espèce d'Ursidés ?_**
 
@@ -21,7 +23,15 @@ Pour ce faire, continuez à travailler dans votre **research compendium** de l'[
 - Compter le nombre d'écorégions où se retrouve chaque espèce
 - Faire une visualisation graphique montrant le nombre d'écorégions par espèce
 
-Puis, créez un fichier **index.qmd** à la racine du projet qui appellera chaque fonction créée précédemment. Devront figurer dans le document final, _a minima_, le résultat demandé sous forme de tableau (fonction [`knitr::kable()`](https://www.rdocumentation.org/packages/knitr/versions/1.45/topics/kable)) et de figure, ainsi que la source des données. Structurez votre document avec des titres et des paragraphes.
+{{< fa lightbulb >}}&nbsp; Si vous n'avez pas réussi à terminer l'exercice précédent, vous pouvez forker et cloner ce [dépôt Github](https://github.com/rdatatoolbox/practice-1).
+
+
+<br/>
+
+
+#### Programmation lettrée
+
+{{< fa hand-point-right >}}&nbsp; Créez un fichier **index.qmd** à la racine du projet qui appellera chaque fonction créée précédemment. Devront figurer dans le document final, _a minima_, le résultat demandé sous forme de tableaux (fonction [`knitr::kable()`](https://www.rdocumentation.org/packages/knitr/versions/1.45/topics/kable)) et de figures, ainsi que la source des données. Structurez votre document avec des titres et des paragraphes.
 
 Finalement, ajoutez une ligne de code dans votre **make.R** qui permettra de transpiler votre **index.qmd** en version **index.html** (fonction [`quarto::quarto_render()`](https://rdrr.io/cran/quarto/man/quarto_render.html)).
 
@@ -32,4 +42,17 @@ Finalement, ajoutez une ligne de code dans votre **make.R** qui permettra de tra
 
 ## Bonus
 
-Si votre code est bien écrit, vous pouvez rapidement l'exécuter avec une autre famille de Mammifères !
+
+::: {.callout-tip}
+## GitHub Pages
+
+L'option [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages) permet de déployer un site Web gratuitement sur GitHub. Avec un fichier **index.html** placé à la racine de votre dépôt (ou dans un dossier docs/), vous pouvez activer cette option afin d'afficher ce fichier comme une page Web.
+
+- Rendez-vous dans les **Settings** de votre dépôt
+- Cliquez sur **Pages**
+- Dans _Source_, sélectionnez **Deploy from a branch**
+- Dans _Branch_, sélectionnez **Main** et **/(root)**
+- Sauvegardez
+
+Après quelques minutes, votre page Web sera accessible à cette URL : `https://__github-account__.github.io/__github-repo__`
+:::
