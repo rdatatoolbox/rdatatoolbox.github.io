@@ -283,7 +283,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#travailler-seul" id="toc-travailler-seul" class="nav-link active" data-scroll-target="#travailler-seul">Travailler seul</a></li>
+  <li><a href="#préambule" id="toc-préambule" class="nav-link active" data-scroll-target="#préambule">Préambule</a></li>
+  <li><a href="#travailler-seul" id="toc-travailler-seul" class="nav-link" data-scroll-target="#travailler-seul">Travailler seul</a></li>
   <li><a href="#collaborer" id="toc-collaborer" class="nav-link" data-scroll-target="#collaborer">Collaborer</a></li>
   </ul>
 </nav>
@@ -323,6 +324,24 @@ Objectif
 <p>L’objectif de cet exercice est de vous familiariser avec l’utilisation de <i class="fa-brands fa-git" aria-label="git"></i> et <i class="fa-brands fa-github" aria-label="github"></i>.</p>
 </div>
 </div>
+<p><br></p>
+<section id="préambule" class="level3">
+<h3 class="anchored" data-anchor-id="préambule">Préambule</h3>
+<p>Avant toute chose, vérifiez que vous avez bien configuré <strong>git</strong> tel que mentionné <a href="https://frbcesab.github.io/rsetup/chapters/git.html">ici</a>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Installation de 'gert' ----</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"gert"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Configuration de git ----</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>gert<span class="sc">::</span><span class="fu">git_config_global</span>()</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="do">##   name                          value               level </span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="do">## 1 user.name                     Jane Doe            global</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="do">## 2 user.email                    jane.doe@mail.me    global</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="do">## 3 init.defaultbranch            main                global</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+</section>
 <section id="travailler-seul" class="level3">
 <h3 class="anchored" data-anchor-id="travailler-seul">Travailler seul</h3>
 <p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Vous allez envoyer le <em><strong>research compendium</strong></em> créé à l’<a href="https://rdatatoolbox.github.io/chapters/ex-compendium.html">Exercice 1</a> sur votre compte GitHub.</p>
@@ -339,47 +358,61 @@ GitHub First <em>vs.</em> GitHub Last
 <p>Cette approche est appelée <strong>GitHub Last</strong> : on crée d’abord le projet en local, puis on crée le dépôt distant. Pour plus d’information : <a href="https://happygitwithr.com/new-github-first.html">GitHub First</a> et <a href="https://happygitwithr.com/existing-github-last.html">GitHub Last</a>.</p>
 </div>
 </div>
+<p><br></p>
 <section id="initialiser-git" class="level4">
 <h4 class="anchored" data-anchor-id="initialiser-git">Initialiser git</h4>
-<p>Dans un premier temps, vous devez initialiser <strong>git</strong> dans votre projet. Entrez la ligne de commande suivante dans le <strong>terminal de RStudio</strong> :</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Initialisation de git -----</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Dans un premier temps, vous devez initialiser <strong>git</strong> dans votre projet. Entrez la ligne de commande suivante dans le <strong>Terminal de RStudio</strong> :</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Initialisation de git -----</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i>&nbsp; Redémarrez RStudio afin d’activer le panneau <strong>Git</strong> dans l’interface.</p>
 <p>Vérifiez l’état de votre projet :</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Statut des fichiers vu par git -----</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Statut des fichiers vu par git -----</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>L’ensemble des fichiers de votre compendium ne sont pas encore suivis par <strong>git</strong> (<code>untracked</code>).</p>
+<p><br></p>
 </section>
 <section id="ajout-dun-.gitignore" class="level4">
 <h4 class="anchored" data-anchor-id="ajout-dun-.gitignore">Ajout d’un .gitignore</h4>
-<p>Certains fichiers sont inutiles à versionner et peuvent même parfois créer des conflits. C’est le cas notamment du fichier <code>.Rproj</code>. Nous allons les ajouter au <code>.gitignore</code> en utilisant la fonction <i class="fa-brands fa-r-project" aria-label="r-project"></i> <a href="https://frbcesab.github.io/rcompendium/reference/add_to_gitignore.html"><code>add_to_gitignore()</code></a> de <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a></p>
+<p>Certains fichiers sont inutiles à versionner, voire dangereux (mots de passe, etc.). D’autres peuvent être à l’origine de conflits inutiles. C’est le cas notamment du fichier <code>.Rproj</code>.</p>
+<p>Nous allons ajouter un <code>.gitignore</code> à notre compendium. Pour cela, nous allons utiliser la fonction <i class="fa-brands fa-r-project" aria-label="r-project"></i> <a href="https://frbcesab.github.io/rcompendium/reference/add_to_gitignore.html"><code>add_to_gitignore()</code></a> du package <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a> qui propose un template de <code>.gitignore</code> pour les projets sous <i class="fa-brands fa-r-project" aria-label="r-project"></i>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ajout d'un .gitignore pour les projets R -----</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>rcompendium<span class="sc">::</span><span class="fu">add_to_gitignore</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ajout d'un .gitignore pour les projets R -----</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>rcompendium<span class="sc">::</span><span class="fu">add_to_gitignore</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p><br></p>
 </section>
 <section id="première-version" class="level4">
 <h4 class="anchored" data-anchor-id="première-version">Première version</h4>
-<p>Il est temps de créer une première version. Cela se fera en deux temps : 1) sélection des fichiers (<code>git add</code>) et 2) enregistrement de la version (<code>git commit</code>).</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Sélection de tous les fichiers ----</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">## Création d'une nouvelle version ----</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"init repo"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Il est temps de créer une première version. Cela se fera en deux temps :</p>
+<ol type="1">
+<li>sélection des fichiers avec <code>git add</code></li>
+<li>enregistrement de la version avec <code>git commit</code></li>
+</ol>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Sélection de tous les fichiers ----</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add <span class="at">-A</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">## Statut des fichiers vu par git -----</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">## Création d'une nouvelle version ----</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"init repo"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Vérifiez le status des fichiers :</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Statut des fichiers vu par git -----</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Statut des fichiers vu par git -----</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Affichez l’historique :</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Historique des versions -----</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Historique des versions -----</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br></p>
 </section>
 <section id="création-du-dépôt-github" class="level4">
 <h4 class="anchored" data-anchor-id="création-du-dépôt-github">Création du dépôt GitHub</h4>
 <p>Maintenant, nous souhaitons envoyer notre projet sur GitHub. Rendez-vous sur GitHub et créez un nouveau dépôt <strong>VIDE</strong> : donnez juste un nom de dépôt et n’ajoutez <strong>aucun fichier supplémentaire</strong> (pas de licence, <code>.gitignore</code>, <code>README</code>). La page du dépôt créé contient une série d’instructions correspondant à trois cas de figure. Nous allons suivre la section <strong><em>Push an existing repository from the command line</em></strong>.</p>
 <p>Dans le <strong>terminal de RStudio</strong> :</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Ajout du chemin vers le dépôt distant ----</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin git@github.com:your_account/your_repo.git</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">## Envoi du dépôt local vers le dépôt distant ----</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Ajout du chemin vers le dépôt distant ----</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin git@github.com:your_account/your_repo.git</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">## Envoi du dépôt local vers le dépôt distant ----</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <blockquote class="blockquote">
 <p><strong>Félicitation ! Votre research compendium est maintenant sur GitHub.</strong></p>
 </blockquote>
@@ -395,13 +428,14 @@ GitHub API
 <div class="callout-body-container callout-body">
 <p>Une alternative est d’utiliser l’<a href="https://docs.github.com/en/rest?apiVersion=2022-11-28">API GitHub</a> via la fonction <i class="fa-brands fa-r-project" aria-label="r-project"></i> <a href="https://usethis.r-lib.org/reference/use_github.html"><code>use_github()</code></a> du package <a href="https://usethis.r-lib.org/"><code>usethis</code></a>. Cette fonction va créer le dépôt distant sur GitHub et envoyer votre dépôt local sur GitHub (<code>git push</code>).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Création du dépôt public GitHub ----</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_github</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Création du dépôt public GitHub ----</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_github</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Pour utiliser l’API GitHub, vous devez avoir sauvegardé localement votre GitHub Personal Access Token (PAT) tel quel indiqué <a href="https://frbcesab.github.io/rsetup/chapters/github-token.html">ici</a>.</p>
 </div>
 </div>
 <p>Continuez à modifier vos fichiers, créez de nouvelles versions (<code>git add</code> et <code>git commit</code>) et envoyez-les sur GitHub (<code>git push</code>).</p>
+<p><br></p>
 </section>
 </section>
 <section id="collaborer" class="level3">
