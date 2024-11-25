@@ -1046,7 +1046,7 @@ flowchart LR
 
 Un fichier **make.R** placé à la racine du projet permet de facilement mettre en place le projet (installation et chargement des packages requis et des fonctions {{< fa brands r-project >}}) et d'exécuter les différentes analyses de manière séquentielle (en sourçant les scripts {{< fa brands r-project >}} qui appellent eux-même les fonctions {{< fa brands r-project >}}). C'est le **chef d'orchestre** du projet.
 
-**NB.** Vu la simplicité de ce projet, nous aurions très bien pu placer le contenu du script {{< fa brands r-project >}}&nbsp; **analyses/download-data.R**) dans ce **make.R**. La structure d'un compendium n'est pas figée, mais nous vous recommandons d'utiliser a minima des fonctions {{< fa brands r-project >}} et un **make.R**.
+**NB.** Vu la simplicité de ce projet, nous aurions très bien pu placer le contenu du script {{< fa brands r-project >}}&nbsp; **analyses/download-data.R** dans ce **make.R**. La structure d'un compendium n'est pas figée, mais nous vous recommandons d'utiliser a minima des fonctions {{< fa brands r-project >}} et un **make.R**.
 :::
 
 
@@ -1210,17 +1210,17 @@ Version Jan-06. URL: https://www.worldwildlife.org/pages/wildfinder-database
 
 > **Félicitation** {{< fa wand-sparkles >}}
 >
-> Votre projet est devenu un véritable research compendium **fonctionnel** et **reproductible**.
+> Votre projet est maintenant un véritable research compendium **fonctionnel** et **reproductible**.
 
 
 <br/>
 
-{{< fa lightbulb >}}&nbsp; The final compendium can be found [**here**](https://github.com/rdatatoolbox/practice-1).
+{{< fa lightbulb >}}&nbsp; La version complète du research compendium peut être trouvée [**ici**](https://github.com/rdatatoolbox/practice-1).
 
 <br/>
 
 ::: {.callout-note}
-## La fonction [`new_compendium()`](https://frbcesab.github.io/rcompendium/reference/new_compendium.html)
+## La fonction [`rcompendium::new_compendium()`](https://frbcesab.github.io/rcompendium/reference/new_compendium.html)
 
 L'ensemble de ces étapes peut être réalisé avec une seule fonction : 
 [`new_compendium()`](https://frbcesab.github.io/rcompendium/reference/new_compendium.html) de [`rcompendium`](https://github.com/frbcesab/rcompendium). Lisez attentivement la documentation avant d'utiliser cette fonction.
