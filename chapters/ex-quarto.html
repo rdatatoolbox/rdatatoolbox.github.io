@@ -291,6 +291,8 @@ Objectif
 </div>
 <section id="consignes" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="consignes">Consignes</h3>
+<section id="analyses" class="level4">
+<h4 class="anchored" data-anchor-id="analyses">Analyses</h4>
 <p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Nous allons utiliser les données WildFinder du WWF pour répondre à la question suivante : <strong><em>Dans combien d’écorégions différentes retrouve-t-on chaque espèce d’Ursidés ?</em></strong></p>
 <p>Pour ce faire, continuez à travailler dans votre <strong>research compendium</strong> de l’<a href="https://rdatatoolbox.github.io/chapters/ex-github.html">exercice 2</a> et écrivez des fonctions <i class="fa-brands fa-r-project" aria-label="r-project"></i> pour :</p>
 <ul>
@@ -300,14 +302,40 @@ Objectif
 <li>Compter le nombre d’écorégions où se retrouve chaque espèce</li>
 <li>Faire une visualisation graphique montrant le nombre d’écorégions par espèce</li>
 </ul>
-<p>Puis, créez un fichier <strong>index.qmd</strong> à la racine du projet qui appellera chaque fonction créée précédemment. Devront figurer dans le document final, <em>a minima</em>, le résultat demandé sous forme de tableau (fonction <a href="https://www.rdocumentation.org/packages/knitr/versions/1.45/topics/kable"><code>knitr::kable()</code></a>) et de figure, ainsi que la source des données. Structurez votre document avec des titres et des paragraphes.</p>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i>&nbsp; Si vous n’avez pas réussi à terminer l’exercice précédent, vous pouvez forker et cloner ce <a href="https://github.com/rdatatoolbox/practice-1">dépôt Github</a>.</p>
+<p><br></p>
+</section>
+<section id="programmation-lettrée" class="level4">
+<h4 class="anchored" data-anchor-id="programmation-lettrée">Programmation lettrée</h4>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Créez un fichier <strong>index.qmd</strong> à la racine du projet qui appellera chaque fonction créée précédemment. Devront figurer dans le document final, <em>a minima</em>, le résultat demandé sous forme de tableaux (fonction <a href="https://www.rdocumentation.org/packages/knitr/versions/1.45/topics/kable"><code>knitr::kable()</code></a>) et de figures, ainsi que la source des données. Structurez votre document avec des titres et des paragraphes.</p>
 <p>Finalement, ajoutez une ligne de code dans votre <strong>make.R</strong> qui permettra de transpiler votre <strong>index.qmd</strong> en version <strong>index.html</strong> (fonction <a href="https://rdrr.io/cran/quarto/man/quarto_render.html"><code>quarto::quarto_render()</code></a>).</p>
 <p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i>&nbsp; Pensez aux <strong>commits</strong> ! Pensez aussi à mettre à jour la liste des dépendances dans le fichiers <strong>DESCRIPTION</strong> avec la fonction <a href="https://frbcesab.github.io/rcompendium/reference/add_dependencies.html"><code>add_dependencies()</code></a> de <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a>.</p>
 <p><br></p>
 </section>
+</section>
 <section id="bonus" class="level2">
 <h2 class="anchored" data-anchor-id="bonus">Bonus</h2>
-<p>Si votre code est bien écrit, vous pouvez rapidement l’exécuter avec une autre famille de Mammifères !</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+GitHub Pages
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>L’option <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages">GitHub Pages</a> permet de déployer un site Web gratuitement sur GitHub. Avec un fichier <strong>index.html</strong> placé à la racine de votre dépôt (ou dans un dossier docs/), vous pouvez activer cette option afin d’afficher ce fichier comme une page Web.</p>
+<ul>
+<li>Rendez-vous dans les <strong>Settings</strong> de votre dépôt</li>
+<li>Cliquez sur <strong>Pages</strong></li>
+<li>Dans <em>Source</em>, sélectionnez <strong>Deploy from a branch</strong></li>
+<li>Dans <em>Branch</em>, sélectionnez <strong>Main</strong> et <strong>/(root)</strong></li>
+<li>Sauvegardez</li>
+</ul>
+<p>Après quelques minutes, votre page Web sera accessible à cette URL : <code>https://__github-account__.github.io/__github-repo__</code></p>
+</div>
+</div>
 
 
 </section>

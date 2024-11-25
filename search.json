@@ -215,7 +215,7 @@
     "href": "chapters/ex-quarto.html",
     "title": "Quarto",
     "section": "",
-    "text": "Consignes\nNous allons utiliser les données WildFinder du WWF pour répondre à la question suivante : Dans combien d’écorégions différentes retrouve-t-on chaque espèce d’Ursidés ?\nPour ce faire, continuez à travailler dans votre research compendium de l’exercice 2 et écrivez des fonctions  pour :\nPuis, créez un fichier index.qmd à la racine du projet qui appellera chaque fonction créée précédemment. Devront figurer dans le document final, a minima, le résultat demandé sous forme de tableau (fonction knitr::kable()) et de figure, ainsi que la source des données. Structurez votre document avec des titres et des paragraphes.\nFinalement, ajoutez une ligne de code dans votre make.R qui permettra de transpiler votre index.qmd en version index.html (fonction quarto::quarto_render()).\nPensez aux commits ! Pensez aussi à mettre à jour la liste des dépendances dans le fichiers DESCRIPTION avec la fonction add_dependencies() de rcompendium.",
+    "text": "Consignes",
     "crumbs": [
       "Exercises",
       "Quarto"
@@ -226,7 +226,7 @@
     "href": "chapters/ex-quarto.html#bonus",
     "title": "Quarto",
     "section": "Bonus",
-    "text": "Bonus\nSi votre code est bien écrit, vous pouvez rapidement l’exécuter avec une autre famille de Mammifères !",
+    "text": "Bonus\n\n\n\n\n\n\nGitHub Pages\n\n\n\nL’option GitHub Pages permet de déployer un site Web gratuitement sur GitHub. Avec un fichier index.html placé à la racine de votre dépôt (ou dans un dossier docs/), vous pouvez activer cette option afin d’afficher ce fichier comme une page Web.\n\nRendez-vous dans les Settings de votre dépôt\nCliquez sur Pages\nDans Source, sélectionnez Deploy from a branch\nDans Branch, sélectionnez Main et /(root)\nSauvegardez\n\nAprès quelques minutes, votre page Web sera accessible à cette URL : https://__github-account__.github.io/__github-repo__",
     "crumbs": [
       "Exercises",
       "Quarto"
