@@ -7,6 +7,33 @@ L'objectif de cet exercice est de vous familiariser avec l'utilisation de {{< fa
 :::
 
 
+<br/>
+
+
+### Préambule
+
+Avant toute chose, vérifiez que vous avez bien configuré **git** tel que mentionné [ici](https://frbcesab.github.io/rsetup/chapters/git.html).
+
+
+```{r}
+#| echo: true
+#| eval: false
+
+## Installation de 'gert' ----
+install.packages("gert")
+
+## Configuration de git ----
+gert::git_config_global()
+
+##   name                          value               level 
+## 1 user.name                     Jane Doe            global
+## 2 user.email                    jane.doe@mail.me    global
+## 3 init.defaultbranch            main                global
+```
+
+<br/>
+
+
 ### Travailler seul
 
 {{< fa hand-point-right >}}&nbsp; Vous allez envoyer le _**research compendium**_ créé à l'[Exercice 1](https://rdatatoolbox.github.io/chapters/ex-compendium.html)
@@ -19,14 +46,21 @@ Cette approche est appelée **GitHub Last** : on crée d'abord le projet en loca
 [GitHub Last](https://happygitwithr.com/existing-github-last.html).
 :::
 
+
+<br/>
+
+
 #### Initialiser git
 
-Dans un premier temps, vous devez initialiser **git** dans votre projet. Entrez la ligne de commande suivante dans le **terminal de RStudio** :
+Dans un premier temps, vous devez initialiser **git** dans votre projet. Entrez la ligne de commande suivante dans le **Terminal de RStudio** :
 
 ```sh
 ## Initialisation de git -----
 git init
 ```
+
+{{< fa lightbulb >}}&nbsp; Redémarrez RStudio afin d'activer le panneau **Git** dans l'interface.
+
 
 
 Vérifiez l'état de votre projet :
@@ -36,11 +70,18 @@ Vérifiez l'état de votre projet :
 git status
 ```
 
+L'ensemble des fichiers de votre compendium ne sont pas encore suivis par **git** (`untracked`).
+
+
+
+<br/>
+
+
 #### Ajout d'un .gitignore
 
-Certains fichiers sont inutiles à versionner et peuvent même parfois 
-créer des conflits. C'est le cas notamment du fichier `.Rproj`.
-Nous allons les ajouter au `.gitignore` en utilisant la fonction {{< fa brands r-project >}} [`add_to_gitignore()`](https://frbcesab.github.io/rcompendium/reference/add_to_gitignore.html) de [`rcompendium`](https://github.com/frbcesab/rcompendium)
+Certains fichiers sont inutiles à versionner, voire dangereux (mots de passe, etc.). D'autres peuvent être à l'origine de conflits inutiles. C'est le cas notamment du fichier `.Rproj`.
+
+Nous allons ajouter un `.gitignore` à notre compendium. Pour cela, nous allons utiliser la fonction {{< fa brands r-project >}} [`add_to_gitignore()`](https://frbcesab.github.io/rcompendium/reference/add_to_gitignore.html) du package [`rcompendium`](https://github.com/frbcesab/rcompendium) qui propose un template de `.gitignore` pour les projets sous {{< fa brands r-project >}}.
 
 ```{r}
 #| echo: true
@@ -50,15 +91,24 @@ Nous allons les ajouter au `.gitignore` en utilisant la fonction {{< fa brands r
 rcompendium::add_to_gitignore()
 ```
 
+
+<br/>
+
+
 #### Première version
 
-Il est temps de créer une première version. Cela se fera en deux temps : 1) sélection des fichiers (`git add`) et 2)
-enregistrement de la version (`git commit`).
+Il est temps de créer une première version. Cela se fera en deux temps :
+
+1. sélection des fichiers avec `git add`
+2. enregistrement de la version avec `git commit`
 
 
 ```sh
 ## Sélection de tous les fichiers ----
-git add .
+git add -A
+
+## Statut des fichiers vu par git -----
+git status
 
 ## Création d'une nouvelle version ----
 git commit -m "init repo"
@@ -77,6 +127,8 @@ Affichez l'historique :
 ## Historique des versions -----
 git log
 ```
+
+<br/>
 
 
 #### Création du dépôt GitHub
@@ -114,6 +166,9 @@ usethis::use_github()
 :::
 
 Continuez à modifier vos fichiers, créez de nouvelles versions (`git add` et `git commit`) et envoyez-les sur GitHub (`git push`).
+
+
+<br/>
 
 
 ### Collaborer
