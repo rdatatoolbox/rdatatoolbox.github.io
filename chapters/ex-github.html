@@ -336,18 +336,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><br></p>
 <section id="préambule" class="level3">
 <h3 class="anchored" data-anchor-id="préambule">Préambule</h3>
-<p>Avant toute chose, vérifiez que vous avez bien configuré <strong>git</strong> tel que mentionné <a href="https://frbcesab.github.io/rsetup/chapters/git.html">ici</a>.</p>
+<p>Avant toute chose, vérifiez que vous avez bien configuré <strong>git</strong> tel que mentionné <a href="https://frbcesab.github.io/rsetup/chapters/reproducible-research.html#git">ici</a>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Installation de 'gert' ----</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"gert"</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Print git global configuration ----</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>gert<span class="sc">::</span><span class="fu">git_config_global</span>()</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Configuration de git ----</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>gert<span class="sc">::</span><span class="fu">git_config_global</span>()</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="do">##   name                          value               level </span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="do">## 1 user.name                     Jane Doe            global</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="do">## 2 user.email                    jane.doe@mail.me    global</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="do">## 3 init.defaultbranch            main                global</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#               name                 value      level</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#          user.name              Jane Doe     global</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#         user.email     jane.doe@mail.com     global</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># init.defaultbranch                  main     global</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#        core.editor                  nano     global</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><br></p>
 </section>
@@ -370,10 +368,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><br></p>
 <section id="initialiser-git" class="level4">
 <h4 class="anchored" data-anchor-id="initialiser-git">Initialiser git</h4>
-<p>Dans un premier temps, vous devez initialiser <strong>git</strong> dans votre projet. Entrez la ligne de commande suivante dans le <strong>Terminal de RStudio</strong> :</p>
+<p>Dans un premier temps, vous devez initialiser <strong>git</strong> dans votre projet. Entrez la ligne de commande suivante dans le <strong>Terminal de Positron</strong> :</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Initialisation de git -----</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i>&nbsp; Redémarrez RStudio afin d’activer le panneau <strong>Git</strong> dans l’interface.</p>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i>&nbsp; Redémarrez Positron afin d’activer le panneau <strong>Git</strong> dans l’interface.</p>
 <p>Vérifiez l’état de votre projet :</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Statut des fichiers vu par git -----</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -382,7 +380,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="ajout-dun-.gitignore" class="level4">
 <h4 class="anchored" data-anchor-id="ajout-dun-.gitignore">Ajout d’un .gitignore</h4>
-<p>Certains fichiers sont inutiles à versionner, voire dangereux (mots de passe, etc.). D’autres peuvent être à l’origine de conflits inutiles. C’est le cas notamment du fichier <code>.Rproj</code>.</p>
+<p>Certains fichiers sont inutiles à versionner, voire dangereux (mots de passe, etc.). D’autres peuvent être à l’origine de conflits inutiles.</p>
 <p>Nous allons ajouter un <code>.gitignore</code> à notre compendium. Pour cela, nous allons utiliser la fonction <i class="fa-brands fa-r-project" aria-label="r-project"></i> <a href="https://frbcesab.github.io/rcompendium/reference/add_to_gitignore.html"><code>add_to_gitignore()</code></a> du package <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a> qui propose un template de <code>.gitignore</code> pour les projets sous <i class="fa-brands fa-r-project" aria-label="r-project"></i>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ajout d'un .gitignore pour les projets R -----</span></span>
@@ -394,8 +392,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h4 class="anchored" data-anchor-id="première-version">Première version</h4>
 <p>Il est temps de créer une première version. Cela se fera en deux temps :</p>
 <ol type="1">
-<li>sélection des fichiers avec <code>git add</code></li>
-<li>enregistrement de la version avec <code>git commit</code></li>
+<li>Sélection des fichiers avec <code>git add</code></li>
+<li>Enregistrement de la version avec <code>git commit</code></li>
 </ol>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Sélection de tous les fichiers ----</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add <span class="at">-A</span></span>
@@ -416,7 +414,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="création-du-dépôt-github" class="level4">
 <h4 class="anchored" data-anchor-id="création-du-dépôt-github">Création du dépôt GitHub</h4>
 <p>Maintenant, nous souhaitons envoyer notre projet sur GitHub. Rendez-vous sur GitHub et créez un nouveau dépôt <strong>VIDE</strong> : donnez juste un nom de dépôt et n’ajoutez <strong>aucun fichier supplémentaire</strong> (pas de licence, <code>.gitignore</code>, <code>README</code>). La page du dépôt créé contient une série d’instructions correspondant à trois cas de figure. Nous allons suivre la section <strong><em>Push an existing repository from the command line</em></strong>.</p>
-<p>Dans le <strong>terminal de RStudio</strong> :</p>
+<p>Dans le <strong>terminal de Positron</strong> :</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Ajout du chemin vers le dépôt distant ----</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin git@github.com:your_account/your_repo.git</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -440,7 +438,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Création du dépôt public GitHub ----</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_github</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Pour utiliser l’API GitHub, vous devez avoir sauvegardé localement votre GitHub Personal Access Token (PAT) tel quel indiqué <a href="https://frbcesab.github.io/rsetup/chapters/github-token.html">ici</a>.</p>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Pour utiliser l’API GitHub, vous devez avoir sauvegardé localement votre GitHub Personal Access Token (PAT) tel quel indiqué <a href="https://frbcesab.github.io/rsetup/chapters/reproducible-research.html#github-api-token">ici</a>.</p>
 </div>
 </div>
 <p>Continuez à modifier vos fichiers, créez de nouvelles versions (<code>git add</code> et <code>git commit</code>) et envoyez-les sur GitHub (<code>git push</code>).</p>
