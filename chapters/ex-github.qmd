@@ -12,23 +12,21 @@ L'objectif de cet exercice est de vous familiariser avec l'utilisation de {{< fa
 
 ### Préambule
 
-Avant toute chose, vérifiez que vous avez bien configuré **git** tel que mentionné [ici](https://frbcesab.github.io/rsetup/chapters/git.html).
+Avant toute chose, vérifiez que vous avez bien configuré **git** tel que mentionné [ici](https://frbcesab.github.io/rsetup/chapters/reproducible-research.html#git).
 
 
 ```{r}
 #| echo: true
 #| eval: false
 
-## Installation de 'gert' ----
-install.packages("gert")
-
-## Configuration de git ----
+# Print git global configuration ----
 gert::git_config_global()
 
-##   name                          value               level 
-## 1 user.name                     Jane Doe            global
-## 2 user.email                    jane.doe@mail.me    global
-## 3 init.defaultbranch            main                global
+#               name                 value      level
+#          user.name              Jane Doe     global
+#         user.email     jane.doe@mail.com     global
+# init.defaultbranch                  main     global
+#        core.editor                  nano     global
 ```
 
 <br/>
@@ -52,14 +50,14 @@ Cette approche est appelée **GitHub Last** : on crée d'abord le projet en loca
 
 #### Initialiser git
 
-Dans un premier temps, vous devez initialiser **git** dans votre projet. Entrez la ligne de commande suivante dans le **Terminal de RStudio** :
+Dans un premier temps, vous devez initialiser **git** dans votre projet. Entrez la ligne de commande suivante dans le **Terminal de Positron** :
 
 ```sh
 ## Initialisation de git -----
 git init
 ```
 
-{{< fa lightbulb >}}&nbsp; Redémarrez RStudio afin d'activer le panneau **Git** dans l'interface.
+{{< fa lightbulb >}}&nbsp; Redémarrez Positron afin d'activer le panneau **Git** dans l'interface.
 
 
 
@@ -79,7 +77,7 @@ L'ensemble des fichiers de votre compendium ne sont pas encore suivis par **git*
 
 #### Ajout d'un .gitignore
 
-Certains fichiers sont inutiles à versionner, voire dangereux (mots de passe, etc.). D'autres peuvent être à l'origine de conflits inutiles. C'est le cas notamment du fichier `.Rproj`.
+Certains fichiers sont inutiles à versionner, voire dangereux (mots de passe, etc.). D'autres peuvent être à l'origine de conflits inutiles.
 
 Nous allons ajouter un `.gitignore` à notre compendium. Pour cela, nous allons utiliser la fonction {{< fa brands r-project >}} [`add_to_gitignore()`](https://frbcesab.github.io/rcompendium/reference/add_to_gitignore.html) du package [`rcompendium`](https://github.com/frbcesab/rcompendium) qui propose un template de `.gitignore` pour les projets sous {{< fa brands r-project >}}.
 
@@ -99,8 +97,8 @@ rcompendium::add_to_gitignore()
 
 Il est temps de créer une première version. Cela se fera en deux temps :
 
-1. sélection des fichiers avec `git add`
-2. enregistrement de la version avec `git commit`
+1. Sélection des fichiers avec `git add`
+2. Enregistrement de la version avec `git commit`
 
 
 ```sh
@@ -135,7 +133,7 @@ git log
 
 Maintenant, nous souhaitons envoyer notre projet sur GitHub. Rendez-vous sur GitHub et créez un nouveau dépôt **VIDE** : donnez juste un nom de dépôt et n'ajoutez **aucun fichier supplémentaire** (pas de licence, `.gitignore`, `README`). La page du dépôt créé contient une série d'instructions correspondant à trois cas de figure. Nous allons suivre la section **_Push an existing repository from the command line_**.
 
-Dans le **terminal de RStudio** :
+Dans le **terminal de Positron** :
 
 ```sh
 ## Ajout du chemin vers le dépôt distant ----
@@ -162,7 +160,7 @@ Cette fonction va créer le dépôt distant sur GitHub et envoyer votre dépôt 
 usethis::use_github()
 ```
 
-{{< fa hand-point-right >}}&nbsp; Pour utiliser l'API GitHub, vous devez avoir sauvegardé localement votre GitHub Personal Access Token (PAT) tel quel indiqué [ici](https://frbcesab.github.io/rsetup/chapters/github-token.html).
+{{< fa hand-point-right >}}&nbsp; Pour utiliser l'API GitHub, vous devez avoir sauvegardé localement votre GitHub Personal Access Token (PAT) tel quel indiqué [ici](https://frbcesab.github.io/rsetup/chapters/reproducible-research.html#github-api-token).
 :::
 
 Continuez à modifier vos fichiers, créez de nouvelles versions (`git add` et `git commit`) et envoyez-les sur GitHub (`git push`).

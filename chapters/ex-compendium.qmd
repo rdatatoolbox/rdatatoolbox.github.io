@@ -20,66 +20,17 @@ Ce _**research compendium**_ servira de base de travail tout au long de la forma
 <br/>
 
 
-
 ### Préambule
 
-Afin de nous assister dans la création de la structure de notre dossier de travail,
-nous allons utiliser le package {{< fa brands r-project >}} 
-[`rcompendium`](https://github.com/frbcesab/rcompendium), développé dans le cadre 
-de cette formation. Il permet d'automatiser la création des fichiers/répertoires
-spécifiques à un compendium/package {{< fa brands r-project >}}. 
+Afin de nous assister dans la création de la structure de notre dossier de travail, nous allons utiliser le package {{< fa brands r-project >}} [**rcompendium**](https://github.com/frbcesab/rcompendium). Il permet d'automatiser la création des fichiers/répertoires spécifiques à un compendium/package .
 
-
-Installez le package {{< fa brands r-project >}} [`rcompendium`](https://github.com/frbcesab/rcompendium) depuis GitHub :
+Avant toute chose, vérifiez que vous avez bien configuré `rcompendium` tel que mentionné [ici](https://frbcesab.github.io/rsetup/chapters/reproducible-research.html#the-rcompendium-package).
 
 ```{r}
 #| echo: true
 #| eval: false
 
-## Installation de 'remotes' ----
-install.packages("remotes")
-
-## Installation de 'rcompendium' ----
-remotes::install_github("frbcesab/rcompendium")
-
-## Chargement du package -----
-library("rcompendium")
-```
-
-{{< fa lightbulb >}}&nbsp; Si vous rencontrez des difficultés à installer le package, lisez attentivement la section **Installation** du 
-[README](https://github.com/frbcesab/rcompendium?tab=readme-ov-file#installation).
-
-Une fois le package installé, vous devez exécuter la fonction [`set_credentials()`](https://frbcesab.github.io/rcompendium/reference/set_credentials.html) afin de stocker localement vos informations
-personnelles (prénom, nom, email, ORCID, protocole de communication avec GitHub).
-Ces informations permettront de remplir automatiquement certains fichiers du compendium.
-**Cette fonction n'est à utiliser qu'une seule fois**.
-
-```{r}
-#| echo: true
-#| eval: false
-
-## Stockage de vos informations ----
-set_credentials(given    = "Jane",
-                family   = "Doe", 
-                email    = "jane.doe@mail.me", 
-                orcid    = "0000-0000-0000-0000", 
-                protocol = "ssh")
-```
-
-Ces informations ont été copiées dans le presse-papier. Collez son contenu dans 
-le fichier **~/.Rprofile** (ouvert dans RStudio par cette fonction). Ce fichier est lu
-à chaque ouverture de {{< fa brands r-project >}} et son contenu sera
-accessible aux fonctions du package [`rcompendium`](https://github.com/frbcesab/rcompendium).
-
-Redémarrez la session {{< fa brands r-project >}} (**_Session > Restart R_**) et vérifiez que vos
-informations personnelles sont bien accessibles.
-
-
-```{r}
-#| echo: true
-#| eval: false
-
-## Vérification (après redémarrage de R) ----
+## Vérification ----
 getOption("email")
 # [1] "jane.doe@mail.me"
 
@@ -90,22 +41,40 @@ getOption("family")
 
 <br/>
 
-### Projet RStudio
+### Projet {{< fa brands r-project >}}
 
-Lorsque vous démarrez un nouveau projet sous {{< fa brands r-project >}}, il est vivement conseillé d'utiliser les [Projets RStudio](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects).
+Lorsque vous démarrez un nouveau projet sous {{< fa brands r-project >}}, il est vivement conseillé d'utiliser les [Projets RStudio](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects). Cette fonctionnalité a été supprimée (et simplifiée) sous **Positron** : on parle de simple [**Folder Template**](https://positron.posit.co/folder-templates.html). Par commodité, nous parlerons de **Projet Positron**.
 
-{{< fa hand-point-right >}}&nbsp; Créez un nouveau Projet RStudio : **_File > New Project > New Directory > New Project_**
+{{< fa hand-point-right >}}&nbsp; Créez un nouveau Projet Positron : **_New Folder from Template_** > **_R Project_**
 
 - Choisissez un nom pour votre projet (sans signe de ponctuation), par ex. `practice`
 - Sélectionnez l'emplacement où le nouveau projet sera créé
-- Décochez toutes les autres cases
-- Validez
+- N'initialisez pas **git**
+- Cliquez sur **Next**
+- Vérifiez que la dernière version de {{< fa brands r-project >}} est bien sélectionnée
+- N'initialisez pas **renv**
+- Cliquez sur **Create**
+
+Comme vous le voyez, aucun fichier n'est créé (contrairement à RStudio qui crée un fichier **.Rproj**). Or, les packages `rcompendium` et `here` doivent pouvoir vérifier que le dossier actuel est bien la racine du projet.
+
+{{< fa hand-point-right >}}&nbsp; Créez un fichier vide nommé `.here`:
+
+
+```{r}
+#| echo: true
+#| eval: false
+
+## Création d'un 'dummy file' ----
+file.create(".here")
+```
+
+Ce fichier sera détecté par `rcompendium` et permettra de créer les fichiers/dossiers aux bons endroits.
 
 
 ::: {.callout-tip}
 ## Bonne pratique #1
 
-Toujours travailler dans un **Projet RStudio**. Cela présente l'avantage de simplifier les chemins d'accès aux fichiers, notamment avec le package {{< fa brands r-project >}} [`here`](https://here.r-lib.org/) et sa fonction [`here()`](https://here.r-lib.org/reference/here.html). Les chemins d'accès seront toujours construits par rapport au dossier contenant le fichier **.Rproj** (racine du projet). On parle de _chemin relatif_. N'utilisez **plus jamais** la fonction [`setwd()`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/getwd).
+Toujours travailler dans un **Projet RStudio/Positron**. Cela présente l'avantage de simplifier les chemins d'accès aux fichiers, notamment avec le package {{< fa brands r-project >}} [`here`](https://here.r-lib.org/) et sa fonction [`here()`](https://here.r-lib.org/reference/here.html). Les chemins d'accès seront toujours construits par rapport au dossier contenant le fichier **.Rproj** (ou le fichier **.here**). On parle de _chemin relatif_ (au dossier racine du projet). N'utilisez **plus jamais** la fonction [`setwd()`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/getwd).
 :::
 
 
@@ -114,7 +83,7 @@ Toujours travailler dans un **Projet RStudio**. Cela présente l'avantage de sim
 > ```
 > practice/                        # Root of the compendium
 > |
-> └─ practice.Rproj                # RStudio project file
+> └─ .here                         # Dummy file used by here/rcompendium
 > ```
 
 
@@ -146,7 +115,7 @@ utils::file.edit(here::here("README.md"))
 {{< fa hand-point-right >}}&nbsp; Exécutez cette ligne de code dans la console : `here::here("README.md")` et essayez de comprendre ce que fait la fonction `here::here()`. Comparez avec votre voisin.e.
 
 
-{{< fa hand-point-right >}}&nbsp; Editez ce `README.md` en ajoutant les informations pertinentes.
+{{< fa hand-point-right >}}&nbsp; Editez ce `README.md` en ajoutant quelques informations pertinentes.
 
 **Proposition de README**
 
@@ -165,7 +134,7 @@ presented in the training course
 This project is structured as follow:
 
 - `README.md`: presentation of the project
-- `compendium.Rproj`: RStudio project file
+- `.here`: file used to manage the project
 
 
 ## Installation
@@ -203,7 +172,7 @@ rmarkdown::render("README.Rmd")
 quarto::quarto_render("README.qmd")
 ```
 
-{{< fa lightbulb >}}&nbsp; Vous pouvez aussi cliquer sur le bouton **_Render_** de RStudio.
+{{< fa lightbulb >}}&nbsp; Vous pouvez aussi cliquer sur le bouton **_Render_** de RStudio/Positron.
 :::
 
 
@@ -212,7 +181,7 @@ quarto::quarto_render("README.qmd")
 > ```
 > practice/                        # Root of the compendium
 > |
-> ├─ practice.Rproj                # RStudio project file
+> ├─ .here                         # Dummy file used by here/rcompendium
 > |
 > └─ README.md                     # Presentation of the project
 > ```
@@ -237,7 +206,6 @@ add_description()
 
 ```txt
 Package: practice
-Type: Package
 Title: The Title of the Project
 Version: 0.0.0.9000
 Authors@R: c(
@@ -270,7 +238,7 @@ Toujours ajouter un fichier **DESCRIPTION** à la racine du projet. Il permet de
 > ```
 > practice/                        # Root of the compendium
 > |
-> ├─ practice.Rproj                # RStudio project file
+> ├─ .here                         # Dummy file used by here/rcompendium
 > |
 > ├─ README.md                     # Presentation of the project
 > └─ DESCRIPTION                   # Project metadata
@@ -317,7 +285,8 @@ presented in the training course
 This project is structured as follow:
 
 - `README.md`: presentation of the project
-- `compendium.Rproj`: RStudio project file
+- `.here`: file used to manage the project
+- `LICENSE.md`: content of the license
 
 
 ## Installation
@@ -360,7 +329,7 @@ d'autres termes, personne ne peut rien faire avec votre projet (pas d'utilisatio
 > ```
 > practice/                        # Root of the compendium
 > |
-> ├─ practice.Rproj                # RStudio project file
+> ├─ .here                         # Dummy file used by here/rcompendium
 > |
 > ├─ README.md                     # Presentation of the project
 > ├─ DESCRIPTION                   # Project metadata
@@ -410,7 +379,7 @@ Un bon _**Research compendium**_ sera composé de différents sous-répertoires,
 > ```
 > practice/                        # Root of the compendium
 > |
-> ├─ practice.Rproj                # RStudio project file
+> ├─ .here                         # Dummy file used by here/rcompendium
 > |
 > ├─ README.md                     # Presentation of the project
 > ├─ DESCRIPTION                   # Project metadata
@@ -432,12 +401,12 @@ Un bon _**Research compendium**_ sera composé de différents sous-répertoires,
 
 Nous voilà fin prêt à coder !
 
-Le dépôt GitHub <https://github.com/rdatatoolbox/datarepo> contient les données que nous utiliserons tout au long de la formation. Celles-ci proviennent de deux bases de données : [PanTHERIA](https://esajournals.onlinelibrary.wiley.com/doi/10.1890/08-1494.1) et [WWF WildFinder](https://www.worldwildlife.org/publications/wildfinder-database). Lisez attentivement le [README](https://github.com/rdatatoolbox/datarepo#mortar_board-data-repository-) pour plus de détails.
+Le dépôt GitHub <https://github.com/rdatatoolbox/datarepo> contient les données que nous utiliserons tout au long de la formation. Celles-ci proviennent de la base de données [WWF WildFinder](https://www.worldwildlife.org/publications/wildfinder-database). Lisez attentivement le [README](https://github.com/rdatatoolbox/datarepo#mortar_board-data-repository-) pour plus de détails.
 
 
-{{< fa hand-point-right >}}&nbsp; L'objectif ici est d'écrire un code {{< fa brands r-project >}}&nbsp; qui va télécharger les quatre fichiers hébergés sur le dépôt GitHub mentionné ci-dessus.
+{{< fa hand-point-right >}}&nbsp; L'objectif ici est d'écrire un code {{< fa brands r-project >}}&nbsp; qui va télécharger les trois fichiers hébergés sur le dépôt GitHub mentionné ci-dessus.
 
-Nous allons commencer par écrire notre code dans un **_script_**. Le fichier de données **PanTHERIA**, disponible [ici](https://github.com/rdatatoolbox/datarepo/tree/main/data/pantheria), sera enregistré dans le sous-répertoire **data/pantheria/** et les trois fichiers de données **WWF WildFinder**, disponibles [ici](https://github.com/rdatatoolbox/datarepo/tree/main/data/wildfinder), seront enregistrés dans le sous-répertoire **data/wildfinder/**.
+Nous allons commencer par écrire notre code dans un **_script_**. Les trois fichiers de données **WWF WildFinder**, disponibles [ici](https://github.com/rdatatoolbox/datarepo/tree/main/data/wildfinder), seront enregistrés dans le sous-répertoire **data/wildfinder/**.
 
 
 {{< fa hand-point-right >}}&nbsp; Créez, dans le dossier **analyses/**, le script `download-data.R` à l'aide de la fonction [`utils::file.edit()`](https://rdrr.io/r/utils/file.edit.html).
@@ -452,13 +421,13 @@ utils::file.edit(here::here("analyses", "download-data.R"))
 ```
 
 {{< fa lightbulb >}} Utilisez les fonctions 
-[`dir.create()`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/files2) pour créer des sous-répertoires, 
+[`dir.create()`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/files2) pour créer le sous-répertoire, 
 [`here::here()`](https://here.r-lib.org/reference/here.html) pour construire vos chemins et 
 [`utils::download.file()`](https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/download.file) pour télécharger les fichiers.
 
 
 
-**Proposition de code** pour PanTHERIA (essayez de ne pas regarder)
+**Proposition de code** pour un fichier du **WWF WildFinder** (essayez de ne pas regarder)
 
 
 ```{r}
@@ -467,16 +436,16 @@ utils::file.edit(here::here("analyses", "download-data.R"))
 #| code-fold: true
 
 ## Destination path ---- 
-path <- here::here("data", "pantheria")
+path <- here::here("data", "wildfinder")
 
 ## Create destination directory ----
 dir.create(path, showWarnings = FALSE, recursive = TRUE)
 
 ## File name ----
-filename <- "PanTHERIA_1-0_WR05_Aug2008.txt"
+filename <- "wildfinder-ecoregions_list.csv"
   
 ## GitHub base URL ----
-base_url <- "https://raw.githubusercontent.com/rdatatoolbox/datarepo/main/data/pantheria/"
+base_url <- "https://raw.githubusercontent.com/rdatatoolbox/datarepo/main/data/wildfinder/"
 
 ## Build full URL ----
 full_url <- paste0(base_url, filename)
@@ -485,9 +454,7 @@ full_url <- paste0(base_url, filename)
 dest_file <- file.path(path, filename)
 
 ## Download file ----
-utils::download.file(url      = full_url,
-                     destfile = dest_file,
-                     mode     = "wb")
+utils::download.file(url = full_url, destfile = dest_file, mode = "wb")
 ```
 
 
@@ -505,15 +472,13 @@ Essayez de **scripter l'intégralité du travail**. Ici, nous avons vu comment c
 > ```
 > practice/                                     # Root of the compendium
 > |
-> ├─ practice.Rproj                             # RStudio project file
+> ├─ .here                                      # Dummy file used by here/rcompendium
 > |
 > ├─ README.md                                  # Presentation of the project
 > ├─ DESCRIPTION                                # Project metadata
 > ├─ LICENSE.md                                 # License of the project
 > |
 > ├─ data/                                      # Contains raw data
-> |  ├─ pantheria/                              # PanTHERIA database
-> |  |  └─ PanTHERIA_1-0_WR05_Aug2008.txt
 > |  └─ wildfinder/                             # WWF WildFinder database
 > |     ├─ wildfinder-ecoregions_list.csv
 > |     ├─ wildfinder-ecoregions_species.csv
@@ -531,9 +496,9 @@ Essayez de **scripter l'intégralité du travail**. Ici, nous avons vu comment c
 ::: {.callout-note}
 ## Packages externes
 
-Pour utiliser une fonction d'un package externe, vous avez appris à utiliser `library("package")`. Sous {{< fa brands r-project >}}, il existe une autre syntaxe pour appeler une fonction d'un package externe : `package::function()`. Alors que `library()` **charge et attache** un package (rendant ses fonctions accessible directement avec `function()`), la syntaxe `package::function()` **charge uniquement** un package dans l'environnement de {{< fa brands r-project >}}, mais n'attache pas son contenu. Ainsi, on est obligé de spécifier le nom du package en appelant la fonction.
+Pour utiliser une fonction d'un package externe, vous avez appris à utiliser `library("foo")`. Sous {{< fa brands r-project >}}, il existe une autre syntaxe pour appeler une fonction d'un package externe : `foo::bar()`. Alors que `library()` **charge et attache** un package (rendant ses fonctions accessible directement avec `bar()`), la syntaxe `foo::bar()` **charge uniquement** un package dans l'environnement de {{< fa brands r-project >}}, mais n'attache pas son contenu. Ainsi, on est obligé de spécifier le nom du package en appelant la fonction.
 
-Nous vous recommendons d'**utiliser la syntaxe `package::function()`**. Et ce pour deux raisons : 
+Nous vous recommendons d'**utiliser la syntaxe `foo::bar()`**. Et ce pour deux raisons : 
 
 - **meilleure lisibilité du code** : en un coup d'oeil, on sait dans quel package se trouve la fonction
 - **limitation de conflits entre packages** : deux fonctions peuvent avoir le même nom dans deux packages différentes. Par ex., le package `dplyr` propose une fonction `filter()` qui se trouve également dans le package `stats` (attaché à l'ouverture de {{< fa brands r-project >}}). Mais, les fonctions `filter()` de ces deux packages ne font pas la même chose.
@@ -575,12 +540,9 @@ On peut aller plus loin en découpant ce script en **fonctions** : on parle de *
 
 {{< fa warning >}}&nbsp; **Placez toujours vos fonctions {{< fa brands r-project >}}&nbsp; dans un dossier nommé R/**.
 
-{{< fa hand-point-right >}}&nbsp; Factorisez le script précédent en deux fonctions : 
+{{< fa hand-point-right >}}&nbsp; Factorisez le script précédent en une fonction : `dl_wildfinder_data()` qui téléchargera les trois fichiers du WWF WildFinder.
 
-- une fonction `dl_pantheria_data()` pour télécharger les données PanTHERIA, et 
-- une fonction `dl_wildfinder_data()` pour télécharger les données WWF WildFinder.
-
-{{< fa lightbulb >}}&nbsp; Utilisez la fonction [`usethis::use_r()`](https://usethis.r-lib.org/reference/use_r.html) pour créer deux fichiers `.R` dans le dossier **R/**.
+{{< fa lightbulb >}}&nbsp; Utilisez la fonction [`usethis::use_r()`](https://usethis.r-lib.org/reference/use_r.html) pour créer le fichier `.R` dans le dossier **R/**.
 
 ```{r}
 #| echo: true
@@ -591,48 +553,11 @@ usethis::use_r("dl_pantheria_data")
 ```
 
 
-**Proposition de fonction** (essayer de ne pas regarder)
-
-
-```{r}
-#| echo: true
-#| eval: false
-#| code-fold: true
-
-dl_pantheria_data <- function() {
-  
-  ## Destination path ---- 
-  path <- here::here("data", "pantheria")
-  
-  ## Create destination directory ----
-  dir.create(path, showWarnings = FALSE, recursive = TRUE)
-  
-  ## File name ----
-  filename <- "PanTHERIA_1-0_WR05_Aug2008.txt"
-    
-  ## GitHub base URL ----
-  url <- "https://raw.githubusercontent.com/rdatatoolbox/datarepo/main/data/pantheria/"
-  
-  ## Build full URL ----
-  full_url <- paste0(base_url, filename)
-  
-  ## Build full path ----
-  dest_file <- file.path(path, filename)
-
-  ## Download file ----
-  utils::download.file(url      = full_url,
-                       destfile = dest_file,
-                       mode     = "wb")
-  
-  return(dest_file)
-}
-```
-
 
 ::: {.callout-tip}
 ## Bonne pratique #7
 
-**Ecrivez des fonctions** : on parle de _Factorisation de code_. Cela rendra votre code plus clair et plus facilement réutilisable. Placez toujours vos fonctions {{< fa brands r-project >}} dans le dossier **R/**. Si vous utilisez des fonctions de dépendances externes, priviligiez cette écriture : `package::fonction()`.
+**Ecrivez des fonctions** : on parle de _Factorisation de code_. Cela rendra votre code plus clair et plus facilement réutilisable. Placez toujours vos fonctions {{< fa brands r-project >}} dans le dossier **R/**. Si vous utilisez des fonctions de dépendances externes, priviligiez cette écriture : `foo::bar()`.
 :::
 
 
@@ -642,15 +567,13 @@ dl_pantheria_data <- function() {
 > ```
 > practice/                                     # Root of the compendium
 > |
-> ├─ practice.Rproj                             # RStudio project file
+> ├─ .here                                      # Dummy file used by here/rcompendium
 > |
 > ├─ README.md                                  # Presentation of the project
 > ├─ DESCRIPTION                                # Project metadata
 > ├─ LICENSE.md                                 # License of the project
 > |
 > ├─ data/                                      # Contains raw data
-> |  ├─ pantheria/                              # PanTHERIA database
-> |  |  └─ PanTHERIA_1-0_WR05_Aug2008.txt
 > |  └─ wildfinder/                             # WWF WildFinder database
 > |     ├─ wildfinder-ecoregions_list.csv
 > |     ├─ wildfinder-ecoregions_species.csv
@@ -659,7 +582,6 @@ dl_pantheria_data <- function() {
 > ├─ outputs/                                   # Contains results
 > ├─ figures/                                   # Contains figures
 > ├─ R/                                         # Contains R functions (only)
-> |  ├─ dl_pantheria_data.R                     # Function to download PanTHERIA data
 > |  └─ dl_wildfinder_data.R                    # Function to download WildFinder data
 > |
 > └─ analyses/                                  # Contains R scripts
@@ -675,40 +597,13 @@ dl_pantheria_data <- function() {
 
 Il est temps de documenter vos fonctions. **C'est essentiel !** Pour cela, nous allons utiliser la syntaxe [**roxygen2**](https://roxygen2.r-lib.org/articles/roxygen2.html). Celle-ci permet de documenter facilement les fonctions {{< fa brands r-project >}} en plaçant un entête **roxygen2** avant chaque fonction. Cet entête doit contenir (a minima) un titre, une description de chaque argument et le retour de la fonction.
 
-{{< fa hand-point-right >}}&nbsp; Ajoutez un entête [**roxygen2**](https://roxygen2.r-lib.org/articles/roxygen2.html) à vos deux fonctions pour les documenter.
-
-
-
-
-**Proposition de documentation** (essayer de ne pas regarder)
-
-
-```{r}
-#| echo: true
-#| eval: false
-#| code-fold: true
-
-#' Download PanTHERIA dataset
-#'
-#' @description 
-#' This function downloads the PanTHERIA dataset (text file) hosted on the 
-#' GitHub repository <https://github.com/rdatatoolbox/datarepo/>.
-#' The file `PanTHERIA_1-0_WR05_Aug2008.txt` will be stored in 
-#' `data/pantheria/`. This folder will be created if required.
-#'
-#' @return This function returns the path (`character`) to the downloaded file
-#' (e.g. `data/pantheria/PanTHERIA_1-0_WR05_Aug2008.txt`).
-#' 
-#' @export
-
-dl_pantheria_data <- function() { ... }
-```
+{{< fa hand-point-right >}}&nbsp; Ajoutez un entête [**roxygen2**](https://roxygen2.r-lib.org/articles/roxygen2.html) à votre fonction pour la documenter.
 
 
 ::: {.callout-tip}
 ## Bonne pratique #8
 
-Pensez aux autres (et au vous du futur) : **documentez toujours** votre code. Un code sans documentation est inutile. Utilisez les entêtes **roxygen2** pour documenter vos fonctions {{< fa brands r-project >}}, de simples commentaires pour documenter du code et des `README` pour tout le reste.
+Pensez aux autres (et à votre vous du futur) : **documentez toujours** votre code. Un code sans documentation est inutile. Utilisez les entêtes **roxygen2** pour documenter vos fonctions {{< fa brands r-project >}}, de simples commentaires pour documenter du code et des `README` pour tout le reste.
 :::
 
 
@@ -718,15 +613,13 @@ Pensez aux autres (et au vous du futur) : **documentez toujours** votre code. Un
 > ```
 > practice/                                     # Root of the compendium
 > |
-> ├─ practice.Rproj                             # RStudio project file
+> ├─ .here                                      # Dummy file used by here/rcompendium
 > |
 > ├─ README.md                                  # Presentation of the project
 > ├─ DESCRIPTION                                # Project metadata
 > ├─ LICENSE.md                                 # License of the project
 > |
 > ├─ data/                                      # Contains raw data
-> |  ├─ pantheria/                              # PanTHERIA database
-> |  |  └─ PanTHERIA_1-0_WR05_Aug2008.txt
 > |  └─ wildfinder/                             # WWF WildFinder database
 > |     ├─ wildfinder-ecoregions_list.csv
 > |     ├─ wildfinder-ecoregions_species.csv
@@ -735,29 +628,11 @@ Pensez aux autres (et au vous du futur) : **documentez toujours** votre code. Un
 > ├─ outputs/                                   # Contains results
 > ├─ figures/                                   # Contains figures
 > ├─ R/                                         # Contains R functions (only)
-> |  ├─ dl_pantheria_data.R                     # Function to download PanTHERIA data
 > |  └─ dl_wildfinder_data.R                    # Function to download WildFinder data
 > |
 > └─ analyses/                                  # Contains R scripts
 >    └─ download-data.R                         # Script to download raw data
 > ```
-
-
-::: {.callout-note}
-## Pour aller plus loin
-
-Vous pouvez transpiler vos entêtes **roxygen2** en fichiers `.Rd`, seuls fichiers acceptés par {{< fa brands r-project >}} pour documenter des fonctions. Ces fichiers `.Rd` seront stockés dans le dossier **man/**.
-
-```{r}
-#| echo: true
-#| eval: false
-
-## Génération de la doc ----
-devtools::document()
-```
-
-L'aide de votre fonction sera accessible via `?nom_fonction`.
-:::
 
 
 <br/>
@@ -768,7 +643,7 @@ L'aide de votre fonction sera accessible via `?nom_fonction`.
 
 Jusqu'à présent, nous n'avons fait que **définir** (et documenter) des fonctions {{< fa brands r-project >}}, mais nous ne les avons pas exécuté.
 
-{{< fa hand-point-right >}}&nbsp; Adaptez le contenu du script **analyses/download-data.R** créé précédemment afin qu'il appelle les fonctions `dl_pantheria_data()` et `dl_wildfinder_data()`.
+{{< fa hand-point-right >}}&nbsp; Adaptez le contenu du script **analyses/download-data.R** créé précédemment afin qu'il appelle la fonction `dl_wildfinder_data()`.
 
 
 ```{r}
@@ -790,17 +665,13 @@ utils::file.edit(here::here("analyses", "download-data.R"))
 
 # Download project raw data
 #
-# This script will download the PanTHERIA and WWF WildFinder datasets. The
-# four files will be stored in `data/`.
+# This script will download the WWF WildFinder datasets. The three files will 
+# be stored in `data/`.
 # 
 # All functions used in the script have been developed for this project
 # and can be found in the folder R/.
 #
 # Jane Doe <jane.doe@mail.me>
-
-## Download PanTHERIA database ----
-pantheria_path  <- dl_pantheria_data()
-
 
 ## Download WWF WildFinder database ----
 wildfinder_path <- dl_wildfinder_data()
@@ -812,7 +683,6 @@ wildfinder_path <- dl_wildfinder_data()
 %%{init:{'theme':'neutral','flowchart':{'htmlLabels':false}}}%%
 flowchart LR
   B("analyses/download-data.R")
-  B --> C("dl_pantheria_data()")
   B --> D("dl_wildfinder_data()")
 ```
 
@@ -847,7 +717,6 @@ Regardez le contenu du fichier **DESCRIPTION** : les deux packages requis sont l
 
 ```txt
 Package: practice
-Type: Package
 Title: The Title of the Project
 Version: 0.0.0.9000
 Authors@R: c(
@@ -928,7 +797,7 @@ Mettez régulièrement à jour votre fichier **DESCRIPTION** en :
 La fonction [`devtools::load_all()`](https://www.rdocumentation.org/packages/devtools/versions/2.4.5/topics/load_all) présente un second avantage : elle va charger les fonctions {{< fa brands r-project >}} stockées dans le dossier **R/** et les rendre accessibles dans la session. Elle vient donc remplacer la fonction [`source()`](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/source).
 
 
-{{< fa warning >}} &nbsp; Après chaque modification d'une fonction {{< fa brands r-project >}}, n'oubliez pas d'exécuter la fonction [`devtools::load_all()`](https://www.rdocumentation.org/packages/devtools/versions/2.4.5/topics/load_all). Vous pouvez utiliser le raccourci clavier `Ctrl + Shift + L` dans RStudio.
+{{< fa warning >}} &nbsp; Après chaque modification d'une fonction {{< fa brands r-project >}}, n'oubliez pas d'exécuter la fonction [`devtools::load_all()`](https://www.rdocumentation.org/packages/devtools/versions/2.4.5/topics/load_all). Vous pouvez utiliser le raccourci clavier `Ctrl + Shift + L` dans RStudio/Positron.
 
 
 {{< fa hand-point-right >}}&nbsp; Essayez ces deux fonctions.
@@ -947,7 +816,7 @@ devtools::load_all()
 ::: {.callout-tip}
 ## Bonne pratique #11
 
-Avec un fichier **DESCRIPTION** (listant les dépendances requises) et un dossier **R/**, vous pouvez utiliser : 
+Avec un fichier **DESCRIPTION** (listant les dépendances requises) et un dossier **R/** (contenant vos fonctions), vous pouvez utiliser : 
 
 - [`devtools::install_deps()`](https://devtools.r-lib.org/reference/install_deps.html) pour installer (et mettre à jour) les packages : n'utilisez plus `install.packages()`
 - [`devtools::load_all()`](https://www.rdocumentation.org/packages/devtools/versions/2.4.5/topics/load_all) pour 1) charger (et attacher) les packages et 2) charger vos fonctions {{< fa brands r-project >}} : n'utilisez plus `library()` ni `source()` (pour charger vos fonctions).
@@ -1013,7 +882,7 @@ devtools::load_all()
 # ...
 #
 # Author: Jane Doe
-# Date: 2024/12/02
+# Date: 2025/12/01
 
 
 # Setup project ----
@@ -1036,7 +905,6 @@ source(here::here("analyses", "download-data.R"))
 %%{init:{'theme':'neutral','flowchart':{'htmlLabels':false}}}%%
 flowchart LR
   A("make.R") --> B("analyses/download-data.R")
-  B --> C("dl_pantheria_data()")
   B --> D("dl_wildfinder_data()")
 ```
 
@@ -1055,15 +923,13 @@ Un fichier **make.R** placé à la racine du projet permet de facilement mettre 
 > ```
 > practice/                                     # Root of the compendium
 > |
-> ├─ practice.Rproj                             # RStudio project file
+> ├─ .here                                      # Dummy file used by here/rcompendium
 > |
 > ├─ README.md                                  # Presentation of the project
 > ├─ DESCRIPTION                                # Project metadata
 > ├─ LICENSE.md                                 # License of the project
 > |
 > ├─ data/                                      # Contains raw data
-> |  ├─ pantheria/                              # PanTHERIA database
-> |  |  └─ PanTHERIA_1-0_WR05_Aug2008.txt
 > |  └─ wildfinder/                             # WWF WildFinder database
 > |     ├─ wildfinder-ecoregions_list.csv
 > |     ├─ wildfinder-ecoregions_species.csv
@@ -1072,7 +938,6 @@ Un fichier **make.R** placé à la racine du projet permet de facilement mettre 
 > ├─ outputs/                                   # Contains results
 > ├─ figures/                                   # Contains figures
 > ├─ R/                                         # Contains R functions (only)
-> |  ├─ dl_pantheria_data.R                     # Function to download PanTHERIA data
 > |  └─ dl_wildfinder_data.R                    # Function to download WildFinder data
 > |
 > ├─ analyses/                                  # Contains R scripts
@@ -1097,8 +962,7 @@ N'oubliez pas de finaliser la documentation de votre projet.
 #| code-fold: true
 
 Package: practice
-Type: Package
-Title: Download PanTHERIA and WWF WildFinder databases
+Title: Download WWF WildFinder database
 Version: 0.0.0.9000
 Authors@R: c(
     person(given   = "Jane",
@@ -1106,8 +970,8 @@ Authors@R: c(
            role    = c("aut", "cre", "cph"),
            email   = "jane.doe@mail.me",
            comment = c(ORCID = "0000-0000-0000-0000")))
-Description: This project aims to download PanTHERIA and WWF WildFinder 
-    databases. It is structured as a research compendium to be reproducible.
+Description: This project aims to download WWF WildFinder database. It is 
+    structured as a research compendium to be reproducible.
     This is the result of the Practice 1 of the training course Reproducible 
     Research in Computational Ecology available at:
     <https://rdatatoolbox.github.io/chapters/ex-compendium.html>.
@@ -1128,8 +992,7 @@ Imports:
 
 # Practice
 
-This project aims to download the [PanTHERIA](https://doi.org/10.1890/08-1494.1) 
-database (Kate _et al._, 2009) and the 
+This project aims to download the 
 [WWF WildFinder](https://www.worldwildlife.org/pages/wildfinder-database) 
 database (World Wildlife Fund 2006). It is structured as a research compendium 
 to be reproducible.
@@ -1143,15 +1006,13 @@ to be reproducible.
 This project is structured as follow:
 
 .
-├─ practice.Rproj                             # RStudio project file
+├─ .here                                      # Dummy file used by here/rcompendium
 |
 ├─ README.md                                  # Presentation of the project
 ├─ DESCRIPTION                                # Project metadata
 ├─ LICENSE.md                                 # License of the project
 |
 ├─ data/                                      # Contains raw data
-|  ├─ pantheria/                              # PanTHERIA database
-|  |  └─ PanTHERIA_1-0_WR05_Aug2008.txt
 |  └─ wildfinder/                             # WWF WildFinder database
 |     ├─ wildfinder-ecoregions_list.csv
 |     ├─ wildfinder-ecoregions_species.csv
@@ -1160,7 +1021,6 @@ This project is structured as follow:
 ├─ outputs/                                   # Contains results
 ├─ figures/                                   # Contains figures
 ├─ R/                                         # Contains R functions (only)
-|  ├─ dl_pantheria_data.R                     # Function to download PanTHERIA data
 |  └─ dl_wildfinder_data.R                    # Function to download WildFinder data
 |
 ├─ analyses/                                  # Contains R scripts
@@ -1176,8 +1036,7 @@ Coming soon...
 
 ## Usage
 
-Open the `practice.Rproj` file in RStudio and run `source("make.R")` to launch 
-analyses. 
+Open this project in Positron and run `source("make.R")` to launch analyses. 
 
 - All packages will be automatically installed and loaded
 - Datasets will be saved in the `data/` directory
@@ -1191,15 +1050,10 @@ This project is released under the
 
 ## Citation
 
-> Doe J (2024) Download PanTHERIA and WWF WildFinder databases.
+> Doe J (2025) Download WWF WildFinder databases. URL: Coming soon...
 
 
 ## References
-
-Kate EJ, Bielby J, Cardillo M _et al._ (2009) PanTHERIA: A 
-species-level database of life history, ecology, and geography of extant and 
-recently extinct mammals. _Ecology_, 90, 2648. 
-DOI: [10.1890/08-1494.1](https://doi.org/10.1890/08-1494.1)
 
 World Wildlife Fund (2006) WildFinder: Online database of species distributions. 
 Version Jan-06. URL: https://www.worldwildlife.org/pages/wildfinder-database
@@ -1222,6 +1076,6 @@ Version Jan-06. URL: https://www.worldwildlife.org/pages/wildfinder-database
 ::: {.callout-note}
 ## La fonction [`rcompendium::new_compendium()`](https://frbcesab.github.io/rcompendium/reference/new_compendium.html)
 
-L'ensemble de ces étapes peut être réalisé avec une seule fonction : 
-[`new_compendium()`](https://frbcesab.github.io/rcompendium/reference/new_compendium.html) de [`rcompendium`](https://github.com/frbcesab/rcompendium). Lisez attentivement la documentation avant d'utiliser cette fonction.
+La création d'un research compendium peut être réalisée avec une seule fonction : 
+[`new_compendium()`](https://frbcesab.github.io/rcompendium/reference/new_compendium.html) du package [`rcompendium`](https://github.com/frbcesab/rcompendium). Lisez attentivement la documentation avant d'utiliser cette fonction.
 :::
