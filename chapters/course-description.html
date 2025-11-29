@@ -8,7 +8,7 @@
 
 <meta name="description" content="FRB-CESAB &amp; GdR EcoStat training course     ">
 
-<title>7&nbsp; Literate programming – Reproducible Research in Computational Ecology</title>
+<title>4&nbsp; The DESCRIPTION file – Reproducible Research in Computational Ecology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,8 +26,8 @@ ul.task-list li input[type="checkbox"] {
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<link href="../chapters/course-targets.html" rel="next">
-<link href="../chapters/course-github.html" rel="prev">
+<link href="../chapters/course-git.html" rel="next">
+<link href="../chapters/course-functions.html" rel="prev">
 <link href="../images/favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/course-opensci.html">Courses</a></li><li class="breadcrumb-item"><a href="../chapters/course-quarto.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Literate programming</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/course-opensci.html">Courses</a></li><li class="breadcrumb-item"><a href="../chapters/course-description.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The <code>DESCRIPTION</code> file</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -123,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/course-description.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/course-description.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The <code>DESCRIPTION</code> file</span></span></a>
   </div>
 </li>
@@ -141,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/course-quarto.html" class="sidebar-item-text sidebar-link active">
+  <a href="../chapters/course-quarto.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Literate programming</span></span></a>
   </div>
 </li>
@@ -258,9 +258,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/course-opensci.html">Courses</a></li><li class="breadcrumb-item"><a href="../chapters/course-quarto.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Literate programming</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/course-opensci.html">Courses</a></li><li class="breadcrumb-item"><a href="../chapters/course-description.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The <code>DESCRIPTION</code> file</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Literate programming</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">The <code>DESCRIPTION</code> file</span></h1>
 </div>
 
 
@@ -283,16 +283,16 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>An introduction to literate programming w/ <code>Quarto</code>
+<span class="screen-reader-only">Note</span>The <code>DESCRIPTION</code> file
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><br> <i class="fa-solid fa-user" aria-label="user"></i> &nbsp;<strong>Authors:</strong> <a href="https://fguilhaumon.gitlab.io/">François Guillaumon</a><br> <i class="fa-brands fa-github" aria-label="github"></i> &nbsp;<strong>Source:</strong> <a href="https://github.com/rdatatoolbox/course-quarto/" class="uri">https://github.com/rdatatoolbox/course-quarto/</a><br> <i class="fa-solid fa-globe" aria-label="globe"></i> &nbsp;<strong>Slides:</strong> <a href="https://rdatatoolbox.github.io/course-quarto/" class="uri">https://rdatatoolbox.github.io/course-quarto/</a></p>
+<p><br> <i class="fa-solid fa-user" aria-label="user"></i> &nbsp;<strong>Author:</strong> <a href="https://nicolascasajus.fr/">Nicolas Casajus</a><br> <i class="fa-brands fa-github" aria-label="github"></i> &nbsp;<strong>Source:</strong> <a href="https://github.com/rdatatoolbox/description-file/" class="uri">https://github.com/rdatatoolbox/description-file/</a><br> <i class="fa-solid fa-globe" aria-label="globe"></i> &nbsp;<strong>Slides:</strong> <a href="https://rdatatoolbox.github.io/description-file/" class="uri">https://rdatatoolbox.github.io/description-file/</a></p>
 </div>
 </div>
 <p><br></p>
 <div class="container">
-<p><iframe class="responsive-iframe" src="https://rdatatoolbox.github.io/course-quarto"></iframe></p>
+<p><iframe class="responsive-iframe" src="https://rdatatoolbox.github.io/description-file"></iframe></p>
 </div>
 
 
@@ -700,13 +700,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/course-github.html" class="pagination-link" aria-label="Introduction to `GitHub`">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Introduction to <code>GitHub</code></span></span>
+      <a href="../chapters/course-functions.html" class="pagination-link" aria-label="Writing **R** functions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Writing <strong>R</strong> functions</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/course-targets.html" class="pagination-link" aria-label="Introduction to `targets`">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Introduction to <code>targets</code></span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/course-git.html" class="pagination-link" aria-label="Version control w/ `git`">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Version control w/ <code>git</code></span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
