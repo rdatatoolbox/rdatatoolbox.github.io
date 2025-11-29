@@ -1,8 +1,8 @@
-## Building an R package {.unnumbered}
+## Building an **R** package
 
 
 ::: {.callout-note icon=true appearance="simple"}
-## An introduction how on to create an R package
+## An introduction how on to create an {{< fa brands r-project >}}&nbsp; package
 
 <br />
 {{< fa user >}} &nbsp;**Authors:** [Aurélie Siberchicot](https://lbbe.univ-lyon1.fr/fr/annuaires-des-membres/siberchicot-aurelie) & [Nicolas Casajus](https://nicolascasajus.fr/)<br/>

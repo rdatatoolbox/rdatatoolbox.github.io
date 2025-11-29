@@ -5,7 +5,7 @@ toc: true
 # Welcome {.unnumbered}
 
 ::: {.callout-note}
-## Registrations for the 2024 session are closed
+## Registrations to the training course
 
 Registrations open each spring and the training course takes place during the fall. 
 
@@ -20,8 +20,8 @@ The objective of this five-day training course, co-organized by the
 [FRB-CESAB](https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/)
 and the
 [GdR EcoStat](https://sites.google.com/site/gdrecostat/), 
-is to train young researchers in reproducibility, software development and 
-version management tools (e.g. `Git`, `GitHub`, `R Markdown`, `Quarto`, `renv`, `Docker`), 
+is to train researchers in reproducibility, software development and 
+version control tools (e.g. `git`, `GitHub`, `Quarto`, `renv` & `Docker`), 
 applied to biodiversity research.
 
 
@@ -30,18 +30,19 @@ applied to biodiversity research.
 **Monday**
 
 - Open science & Reproducible research
-- Project organization & Good practices
-- Version control w/ `Git` (Part I)
+- **_Research compendium_** (i.e. project organisation)
+- Writing & documenting {{< fa brands r-project >}} functions
+- The `DESCRIPTION` file
 
 **Tuesday**
 
-- Version control w/ `Git` (Part II)
+- Version control w/ `git`
 - Collaboration & sharing w/ `GitHub`
 
 **Wednesday**
 
 - Literate programming w/ `Quarto`
-- Pipeline optimization w/ `targets`
+- Pipeline optimisation w/ `targets`
 - Developing an {{< fa brands r-project >}} package
 
 **Thursday**
@@ -73,7 +74,7 @@ All the material used in this training course (slides, data, exercises) is avail
 ## Citation {.unnumbered}
 
 > Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD 
-& Siberchicot A (2024) 
+& Siberchicot A (2025) 
 FRB-CESAB & GdR EcoStat training course: Reproducible Research in Computational Ecology. 
 Zenodo. URL: <http://doi.org/10.5281/zenodo.4262978>
 
@@ -85,7 +86,7 @@ If you see mistakes or want to suggest changes, please [create an issue](https:/
 
 ## Reuse {.unnumbered}
 
-Text and figures are licensed under Creative Commons Attribution [CC By 4.0](https://creativecommons.org/licenses/by/4.0/), unless otherwise noted.
+Text and figures are licensed under Creative Commons Attribution [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), unless otherwise noted.
 
 
 ## See also {.unnumbered}

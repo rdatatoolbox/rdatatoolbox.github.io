@@ -1,0 +1,18 @@
+## The `DESCRIPTION` file
+
+
+::: {.callout-note icon=true appearance="simple"}
+## The `DESCRIPTION` file
+
+<br />
+{{< fa user >}} &nbsp;**Author:** [Nicolas Casajus](https://nicolascasajus.fr/)<br/>
+{{< fa brands github >}} &nbsp;**Source:** <https://github.com/rdatatoolbox/description-file/><br/>
+{{< fa globe >}} &nbsp;**Slides:** <https://rdatatoolbox.github.io/description-file/>
+:::
+
+
+<br />
+
+<div class="container">
+  <iframe class="responsive-iframe" src="https://rdatatoolbox.github.io/description-file"></iframe>
+</div> 

@@ -69,7 +69,7 @@ book:
     collapse-level: 1
 
   page-footer: 
-    left: "&copy; CC-By [FRB-CESAB](https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/)"
+    left: "&copy; CC BY 4.0 [FRB-CESAB](https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/)"
     center: "Code source available on [{{< fa brands github >}}](https://github.com/rdatatoolbox/rdatatoolbox.github.io/)"
     right: "Built with [Quarto](https://quarto.org/)"
     border: true
@@ -79,11 +79,13 @@ book:
   
   chapters:
     - index.qmd
-    - chapters/setting-up-r.qmd
+    # - chapters/setting-up-r.qmd
     - part: "Courses"
       chapters: 
         - chapters/course-opensci.qmd
         - chapters/course-compendium.qmd
+        - chapters/course-functions.qmd
+        - chapters/course-description.qmd
         - chapters/course-git.qmd
         - chapters/course-github.qmd
         - chapters/course-quarto.qmd

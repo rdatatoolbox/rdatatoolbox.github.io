@@ -1,4 +1,4 @@
-## Containerization w/ `Docker` {.unnumbered}
+## Containerization
 
 
 ::: {.callout-note icon=true appearance="simple"}

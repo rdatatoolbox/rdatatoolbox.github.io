@@ -1,8 +1,8 @@
-## Literate programming w/ `Quarto` {.unnumbered}
+## Literate programming
 
 
 ::: {.callout-note icon=true appearance="simple"}
-## An introduction to literate programming w/ `Quarto` (and `R Markdown`)
+## An introduction to literate programming w/ `Quarto`
 
 <br />
 {{< fa user >}} &nbsp;**Authors:** [François Guillaumon](https://fguilhaumon.gitlab.io/)<br/>

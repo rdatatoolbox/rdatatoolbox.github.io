@@ -1,4 +1,4 @@
-## Research compendium {.unnumbered}
+## Research compendium
 
 
 ::: {.callout-note icon=true appearance="simple"}

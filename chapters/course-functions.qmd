@@ -1,0 +1,18 @@
+## Writing **R** functions
+
+
+::: {.callout-note icon=true appearance="simple"}
+## Writing & documenting {{< fa brands r-project >}}&nbsp; functions
+
+<br />
+{{< fa user >}} &nbsp;**Author:** [Nicolas Casajus](https://nicolascasajus.fr/)<br/>
+{{< fa brands github >}} &nbsp;**Source:** <https://github.com/rdatatoolbox/r-functions/><br/>
+{{< fa globe >}} &nbsp;**Slides:** <https://rdatatoolbox.github.io/r-functions/>
+:::
+
+
+<br />
+
+<div class="container">
+  <iframe class="responsive-iframe" src="https://rdatatoolbox.github.io/r-functions"></iframe>
+</div> 

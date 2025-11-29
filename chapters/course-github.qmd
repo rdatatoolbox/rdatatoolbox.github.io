@@ -1,4 +1,4 @@
-## Introduction to `GitHub` {.unnumbered}
+## Introduction to `GitHub`
 
 
 ::: {.callout-note icon=true appearance="simple"}

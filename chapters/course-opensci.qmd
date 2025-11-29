@@ -1,4 +1,4 @@
-## Reproducible research {.unnumbered}
+## Reproducible research
 
 
 ::: {.callout-note icon=true appearance="simple"}

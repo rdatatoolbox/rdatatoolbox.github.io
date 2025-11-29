@@ -1,8 +1,8 @@
-## Virtual environments w/ `renv` {.unnumbered}
+## Virtual environments
 
 
 ::: {.callout-note icon=true appearance="simple"}
-## An introduction to `renv`: dealing with R package versions
+## An introduction to `renv`: Dealing with {{< fa brands r-project >}}&nbsp; package versions
 
 <br />
 {{< fa user >}} &nbsp;**Author:** [Nicolas Casajus](https://nicolascasajus.fr/)<br/>
