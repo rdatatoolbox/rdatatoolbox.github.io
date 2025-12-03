@@ -200,7 +200,7 @@ Le fichier **DESCRIPTION** décrit les métadonnées du projet (titre, auteur, d
 #| eval: false
 
 ## Ajout d'un fichier DESCRIPTION ----
-add_description()
+rcompendium::add_description()
 ```
 
 
@@ -261,7 +261,7 @@ possible de faire avec. Ainsi, nous vous recommandons d'ajouter **dès le début
 #| eval: false
 
 ## Ajout d'une licence ----
-add_license(license = "GPL-2")
+rcompendium::add_license(license = "GPL-2")
 ```
 
 Notez qu'un nouveau fichier a été créé : **LICENSE.md**. Celui-ci détaille le contenu de la license choisie et sera lu par GitHub. Regardez aussi le contenu du fichier **DESCRIPTION** : la section **_License_** a été mise à jour grâce à `rcompendium`.
@@ -352,7 +352,9 @@ La prochaine étape consiste en la création de sous-répertoires, chacun ayant 
 #| eval: false
 
 ## Ajout de sous-répertoires ----
-add_compendium(compendium = c("data", "analyses", "R", "figures", "outputs"))
+rcompendium::add_compendium(
+  compendium = c("data", "analyses", "R", "figures", "outputs")
+)
 ```
 
 
