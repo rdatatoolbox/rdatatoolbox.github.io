@@ -495,7 +495,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Ajoutez un fichier <strong>DESCRIPTION</strong> avec la fonction <a href="https://frbcesab.github.io/rcompendium/reference/add_description.html"><code>add_description()</code></a> de <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ajout d'un fichier DESCRIPTION ----</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">add_description</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>rcompendium<span class="sc">::</span><span class="fu">add_description</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Package: practice</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>Title: The Title of the Project</span>
@@ -541,7 +541,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Ajoutez la licence <a href="https://choosealicense.com/licenses/gpl-2.0/">GPL-2</a> à votre projet à l’aide de la fonction <a href="https://frbcesab.github.io/rcompendium/reference/add_license.html"><code>add_license()</code></a> de <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ajout d'une licence ----</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">add_license</span>(<span class="at">license =</span> <span class="st">"GPL-2"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>rcompendium<span class="sc">::</span><span class="fu">add_license</span>(<span class="at">license =</span> <span class="st">"GPL-2"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Notez qu’un nouveau fichier a été créé : <strong>LICENSE.md</strong>. Celui-ci détaille le contenu de la license choisie et sera lu par GitHub. Regardez aussi le contenu du fichier <strong>DESCRIPTION</strong> : la section <strong><em>License</em></strong> a été mise à jour grâce à <code>rcompendium</code>.</p>
 <p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Ajoutez une section au <strong>README.md</strong> mentionnant la licence.</p>
@@ -618,7 +618,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Pour cela, utilisez la fonction <a href="https://frbcesab.github.io/rcompendium/reference/add_compendium.html"><code>add_compendium()</code></a> de <a href="https://github.com/frbcesab/rcompendium"><code>rcompendium</code></a>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Ajout de sous-répertoires ----</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">add_compendium</span>(<span class="at">compendium =</span> <span class="fu">c</span>(<span class="st">"data"</span>, <span class="st">"analyses"</span>, <span class="st">"R"</span>, <span class="st">"figures"</span>, <span class="st">"outputs"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>rcompendium<span class="sc">::</span><span class="fu">add_compendium</span>(</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">compendium =</span> <span class="fu">c</span>(<span class="st">"data"</span>, <span class="st">"analyses"</span>, <span class="st">"R"</span>, <span class="st">"figures"</span>, <span class="st">"outputs"</span>)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
