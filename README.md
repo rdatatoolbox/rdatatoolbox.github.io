@@ -12,14 +12,14 @@ Source of the [workshop](https://rdatatoolbox.github.io/) **_Reproducible Resear
 co-organized by the
 [FRB-CESAB](https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/)
 and the
-[GdR EcoStat](https://sites.google.com/site/gdrecostat/).
+[RT EcoStat](https://sites.google.com/site/gdrecostat/).
 
 
 ### Citation
 
 > Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD 
-& Siberchicot A (2025) 
-FRB-CESAB & GdR EcoStat training course: Reproducible Research in Computational Ecology. 
+& Siberchicot A (2026) 
+FRB-CESAB & RT EcoStat training course: Reproducible Research in Computational Ecology. 
 Zenodo. URL: <http://doi.org/10.5281/zenodo.4262978>
 
 

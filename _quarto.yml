@@ -56,7 +56,7 @@ book:
       
   date: today
   description:  |
-    FRB-CESAB & GdR EcoStat training course
+    FRB-CESAB & RT EcoStat Training Course
     <br /><br />
     <a href="https://www.fondationbiodiversite.fr/en/the-frb-in-action/programs-and-projects/le-cesab/develop-skills/best-practice-for-reproducible-research-in-computational-ecology/">
       <img class="logo" src="https://raw.githubusercontent.com/rdatatoolbox/.github/main/profile/banner-rdatatoolbox_150dpi.png" style="width: 100%;" />

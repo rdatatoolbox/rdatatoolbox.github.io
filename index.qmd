@@ -19,7 +19,7 @@ to stay informed. More information is available on the [FRB-CESAB website](https
 The objective of this five-day training course, co-organized by the 
 [FRB-CESAB](https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/)
 and the
-[GdR EcoStat](https://sites.google.com/site/gdrecostat/), 
+[RT EcoStat](https://sites.google.com/site/gdrecostat/), 
 is to train researchers in reproducibility, software development and 
 version control tools (e.g. `git`, `GitHub`, `Quarto`, `renv` & `Docker`), 
 applied to biodiversity research.
@@ -27,67 +27,111 @@ applied to biodiversity research.
 
 ## Program {.unnumbered}
 
-**Monday**
+**MONDAY** - Open science, Research compendium, Functions & Packages
 
-- Welcome & Opening remarks
-- Open Science & Reproducible research
-- _Coffee break_
-- Introduction to Positron
-- Organizing your project as a research compendium
-- _Hands-on session:_ Building my first research compendium
-- _Lunch break_
-- Refactoring scripts into functions
-- _Hands-on session:_ Refactoring the research compendium scripts into functions
-- The `DESCRIPTION` file
-- _Hands-on session:_ Adding a `DESCRIPTION` file to your research compendium
-- _Coffee break_
-- Developing an R package
-
-
-
-**Tuesday**
-
-- Introduction to `git` – Part 1 (initialization & commits)
-- _Hands-on session:_ Initializing and using `git` in your research compendium
-- _Coffee break_
-- Introduction to `git` – Part 2 (pushing to GitHub)
-- _Hands-on session:_ Publishing your research compendium on GitHub
-- _Lunch break_
-- Optimizing your workflow with `{targets}`
-- _Coffee break_
-- _Hands-on session:_ Integrating `{targets}` into your research compendium
+{{< fa display >}} &nbsp; Welcome & Opening remarks
+<br/>
+{{< fa display >}} &nbsp; **Open science** & **Reproducible research**
+<br/>
+[Coffee break]{.gray}
+<br/>
+{{< fa display >}} &nbsp; Introduction to **Positron IDE**
+<br/>
+{{< fa display >}} &nbsp; Organizing your project as a **Research compendium**
+<br/>
+{{< fa code >}} &nbsp; **Hands-on session:** Building my first research compendium
+<br/>
+[Lunch break]{.gray}
+<br/>
+{{< fa display >}} &nbsp; Refactoring scripts into **R Functions**
+<br/>
+{{< fa code >}} &nbsp; **Hands-on session:** Refactoring the research compendium scripts into functions
+<br/>
+{{< fa display >}} &nbsp; The **`DESCRIPTION`** file
+<br/>
+{{< fa code >}} &nbsp; **Hands-on session:** Adding a `DESCRIPTION` file to your research compendium
+<br/>
+[Coffee break]{.gray}
+<br/>
+{{< fa display >}} &nbsp; Developing an **R Package**
 
 
-
-**Wednesday**
-
-- Introduction to `git` – Part 3 (collaboration and conflict resolution)
-- _Coffee break_
-- _Hands-on session:_ Collaborating on the Same Project
-- _Lunch break_
-- Code hosting platforms: GitHub, GitLab & Codeberg
-- Literate programming with Quarto
-- _Coffee break_
-- _Hands-on session:_ Adding Quarto to your research compendium
+<br/>
 
 
+**TUESDAY** - Version control & targets
 
-**Thursday**
+{{< fa display >}} &nbsp; Introduction to **`git`** – Part 1: **Initialization & Commits**
+<br/>
+{{< fa code >}} &nbsp; **Hands-on session:** Initializing and using `git` in your research compendium
+<br/>
+[Coffee break]{.gray}
+<br/>
+{{< fa display >}} &nbsp; Introduction to **`git`** – Part 2: **Pushing to GitHub**
+<br/>
+{{< fa code >}} &nbsp; **Hands-on session:** Publishing your research compendium on GitHub
+<br/>
+[Lunch break]{.gray}
+<br/>
+{{< fa display >}} &nbsp; Optimizing your workflow with **`{targets}`**
+<br/>
+[Coffee break]{.gray}
+<br/>
+{{< fa code >}} &nbsp; **Hands-on session:** Integrating `{targets}` into your research compendium
 
-- Managing packages and their versions with `{renv}`
-- _Hands-on session:_ Adding `{renv}` to your research compendium
-- _Coffee break_
-- Containerizing your project with Docker
-- Week recap and formation of project groups
-- _Lunch break_
-- Group projects
+
+<br/>
 
 
+**WEDNESDAY** - Version control, GitHub & Quarto
 
-**Friday**
+{{< fa display >}} &nbsp; Introduction to **`git`** – Part 3: **Collaboration and Conflict resolution**
+<br/>
+[Coffee break]{.gray}
+<br/>
+{{< fa code >}} &nbsp; **Hands-on session:** Collaborating on the same project
+<br/>
+[Lunch break]{.gray}
+<br/>
+{{< fa display >}} &nbsp; Code hosting platforms: **GitHub**, **GitLab** & **Codeberg**
+<br/>
+{{< fa display >}} &nbsp; Literate programming with **Quarto**
+<br/>
+[Coffee break]{.gray}
+<br/>
+{{< fa code >}} &nbsp; **Hands-on session:** Adding Quarto to your research compendium
 
-- Group projects
-- Group project presentations
+
+<br/>
+
+
+**THURSDAY** - renv, Docker & Group projects
+
+{{< fa display >}} &nbsp; Managing packages and their versions with **`{renv}`**
+<br/>
+{{< fa code >}} &nbsp; **Hands-on session:** Adding `{renv}` to your research compendium
+<br/>
+[Coffee break]{.gray}
+<br/>
+{{< fa display >}} &nbsp; Containerizing your project with **Docker**
+<br/>
+{{< fa display >}} &nbsp; Week recap and formation of project groups
+<br/>
+[Lunch break]{.gray}
+<br/>
+{{< fa users-line >}} &nbsp; Group projects
+
+
+<br/>
+
+
+**FRIDAY** - Group projects
+
+{{< fa users-line >}} &nbsp; Group projects
+<br/>
+[Lunch break]{.gray}
+<br/>
+{{< fa users-line >}} &nbsp; Group project presentations
 
 
 
