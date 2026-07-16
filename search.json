@@ -14,7 +14,7 @@
     "href": "index.html#program",
     "title": "Reproducible Research in Computational Ecology",
     "section": "Program",
-    "text": "Program\nMonday\n\nOpen science & Reproducible research\nResearch compendium (i.e. project organisation)\nWriting & documenting  functions\nThe DESCRIPTION file\n\nTuesday\n\nVersion control w/ git\nCollaboration & sharing w/ GitHub\n\nWednesday\n\nLiterate programming w/ Quarto\nPipeline optimisation w/ targets\nDeveloping an  package\n\nThursday\n\nFreezing package versions w/ renv\nContainerization w/ Docker\nSubgroups projects\n\nFriday\n\nSubgroups projects",
+    "text": "Program\nMonday\n\nWelcome & Opening remarks\nOpen Science & Reproducible research\nCoffee break\nIntroduction to Positron\nOrganizing your project as a research compendium\nHands-on session: Building my first research compendium\nLunch break\nRefactoring scripts into functions\nHands-on session: Refactoring the research compendium scripts into functions\nThe DESCRIPTION file\nHands-on session: Adding a DESCRIPTION file to your research compendium\nCoffee break\nDeveloping an R package\n\nTuesday\n\nIntroduction to git – Part 1 (initialization & commits)\nHands-on session: Initializing and using git in your research compendium\nCoffee break\nIntroduction to git – Part 2 (pushing to GitHub)\nHands-on session: Publishing your research compendium on GitHub\nLunch break\nOptimizing your workflow with {targets}\nCoffee break\nHands-on session: Integrating {targets} into your research compendium\n\nWednesday\n\nIntroduction to git – Part 3 (collaboration and conflict resolution)\nCoffee break\nHands-on session: Collaborating on the Same Project\nLunch break\nCode hosting platforms: GitHub, GitLab & Codeberg\nLiterate programming with Quarto\nCoffee break\nHands-on session: Adding Quarto to your research compendium\n\nThursday\n\nManaging packages and their versions with {renv}\nHands-on session: Adding {renv} to your research compendium\nCoffee break\nContainerizing your project with Docker\nWeek recap and formation of project groups\nLunch break\nGroup projects\n\nFriday\n\nGroup projects\nGroup project presentations",
     "crumbs": [
       "Welcome"
     ]
@@ -44,7 +44,7 @@
     "href": "index.html#citation",
     "title": "Reproducible Research in Computational Ecology",
     "section": "Citation",
-    "text": "Citation\n\nCasajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD & Siberchicot A (2025) FRB-CESAB & GdR EcoStat training course: Reproducible Research in Computational Ecology. Zenodo. URL: http://doi.org/10.5281/zenodo.4262978",
+    "text": "Citation\n\nCasajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD & Siberchicot A (2026) FRB-CESAB & RT EcoStat Training Course: Reproducible Research in Computational Ecology. Zenodo. URL: http://doi.org/10.5281/zenodo.4262978",
     "crumbs": [
       "Welcome"
     ]

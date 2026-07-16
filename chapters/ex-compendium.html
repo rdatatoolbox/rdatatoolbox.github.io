@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,6 +10,9 @@
 
 <title>Research compendium – Reproducible Research in Computational Ecology</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -67,15 +70,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-97518418a90fc88b02415e07228183d3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-8fed3dfe6b587c089b51ffb784f7ced3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-88a63f51ee66f9c865bf599ccfb9b2e3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a663d5c6589e9662171999596058a3b7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -296,12 +298,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#préambule" id="toc-préambule" class="nav-link active" data-scroll-target="#préambule">Préambule</a></li>
-  <li><a href="#projet" id="toc-projet" class="nav-link" data-scroll-target="#projet">Projet <i class="fa-brands fa-r-project" aria-label="r-project"></i></a></li>
+  <li><a href="#projet-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d" id="toc-projet-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d" class="nav-link" data-scroll-target="#projet-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d">Projet <i class="fa-brands fa-r-project" aria-label="r-project"></i></a></li>
   <li><a href="#fichier-readme" id="toc-fichier-readme" class="nav-link" data-scroll-target="#fichier-readme">Fichier README</a></li>
   <li><a href="#fichier-description" id="toc-fichier-description" class="nav-link" data-scroll-target="#fichier-description">Fichier DESCRIPTION</a></li>
   <li><a href="#choix-dune-licence" id="toc-choix-dune-licence" class="nav-link" data-scroll-target="#choix-dune-licence">Choix d’une Licence</a></li>
   <li><a href="#sous-répertoires" id="toc-sous-répertoires" class="nav-link" data-scroll-target="#sous-répertoires">Sous-répertoires</a></li>
-  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code <i class="fa-brands fa-r-project" aria-label="r-project"></i></a></li>
+  <li><a href="#code-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d" id="toc-code-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d" class="nav-link" data-scroll-target="#code-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d">Code <i class="fa-brands fa-r-project" aria-label="r-project"></i></a></li>
   <li><a href="#factorisation" id="toc-factorisation" class="nav-link" data-scroll-target="#factorisation">Factorisation</a></li>
   <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">Documentation</a></li>
   <li><a href="#appel-aux-fonctions" id="toc-appel-aux-fonctions" class="nav-link" data-scroll-target="#appel-aux-fonctions">Appel aux fonctions</a></li>
@@ -364,8 +366,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><br></p>
 </section>
-<section id="projet" class="level3">
-<h3 class="anchored" data-anchor-id="projet">Projet <i class="fa-brands fa-r-project" aria-label="r-project"></i></h3>
+<section id="projet-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d" class="level3">
+<h3 class="anchored" data-anchor-id="projet-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d">Projet <i class="fa-brands fa-r-project" aria-label="r-project"></i></h3>
 <p>Lorsque vous démarrez un nouveau projet sous <i class="fa-brands fa-r-project" aria-label="r-project"></i>, il est vivement conseillé d’utiliser les <a href="https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects">Projets RStudio</a>. Cette fonctionnalité a été supprimée (et simplifiée) sous <strong>Positron</strong> : on parle de simple <a href="https://positron.posit.co/folder-templates.html"><strong>Folder Template</strong></a>. Par commodité, nous parlerons de <strong>Projet Positron</strong>.</p>
 <p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Créez un nouveau Projet Positron : <strong><em>New Folder from Template</em></strong> &gt; <strong><em>R Project</em></strong></p>
 <ul>
@@ -661,8 +663,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 <p><br></p>
 </section>
-<section id="code" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="code">Code <i class="fa-brands fa-r-project" aria-label="r-project"></i></h3>
+<section id="code-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="code-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206272616e647320722d70726f6a656374203e7d7d">Code <i class="fa-brands fa-r-project" aria-label="r-project"></i></h3>
 <p>Nous voilà fin prêt à coder !</p>
 <p>Le dépôt GitHub <a href="https://github.com/rdatatoolbox/datarepo" class="uri">https://github.com/rdatatoolbox/datarepo</a> contient les données que nous utiliserons tout au long de la formation. Celles-ci proviennent de la base de données <a href="https://www.worldwildlife.org/publications/wildfinder-database">WWF WildFinder</a>. Lisez attentivement le <a href="https://github.com/rdatatoolbox/datarepo#mortar_board-data-repository-">README</a> pour plus de détails.</p>
 <p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; L’objectif ici est d’écrire un code <i class="fa-brands fa-r-project" aria-label="r-project"></i>&nbsp; qui va télécharger les trois fichiers hébergés sur le dépôt GitHub mentionné ci-dessus.</p>

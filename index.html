@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -14,11 +14,14 @@
 <meta name="author" content="François Guilhaumon">
 <meta name="author" content="Nina Schiettekatte">
 <meta name="author" content="Aurélie Siberchicot">
-<meta name="dcterms.date" content="2025-12-03">
+<meta name="dcterms.date" content="2026-07-16">
 <meta name="description" content="FRB-CESAB &amp; GdR EcoStat training course     ">
 
 <title>Reproducible Research in Computational Ecology</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -40,15 +43,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-97518418a90fc88b02415e07228183d3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-8fed3dfe6b587c089b51ffb784f7ced3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-88a63f51ee66f9c865bf599ccfb9b2e3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a663d5c6589e9662171999596058a3b7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -384,7 +386,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 3, 2025</p>
+      <p class="date">July 16, 2026</p>
     </div>
   </div>
   
@@ -417,36 +419,62 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="unnumbered anchored" data-anchor-id="program">Program</h2>
 <p><strong>Monday</strong></p>
 <ul>
-<li>Open science &amp; Reproducible research</li>
-<li><strong><em>Research compendium</em></strong> (i.e.&nbsp;project organisation)</li>
-<li>Writing &amp; documenting <i class="fa-brands fa-r-project" aria-label="r-project"></i> functions</li>
+<li>Welcome &amp; Opening remarks</li>
+<li>Open Science &amp; Reproducible research</li>
+<li><em>Coffee break</em></li>
+<li>Introduction to Positron</li>
+<li>Organizing your project as a research compendium</li>
+<li><em>Hands-on session:</em> Building my first research compendium</li>
+<li><em>Lunch break</em></li>
+<li>Refactoring scripts into functions</li>
+<li><em>Hands-on session:</em> Refactoring the research compendium scripts into functions</li>
 <li>The <code>DESCRIPTION</code> file</li>
+<li><em>Hands-on session:</em> Adding a <code>DESCRIPTION</code> file to your research compendium</li>
+<li><em>Coffee break</em></li>
+<li>Developing an R package</li>
 </ul>
 <p><strong>Tuesday</strong></p>
 <ul>
-<li>Version control w/ <code>git</code></li>
-<li>Collaboration &amp; sharing w/ <code>GitHub</code></li>
+<li>Introduction to <code>git</code> – Part 1 (initialization &amp; commits)</li>
+<li><em>Hands-on session:</em> Initializing and using <code>git</code> in your research compendium</li>
+<li><em>Coffee break</em></li>
+<li>Introduction to <code>git</code> – Part 2 (pushing to GitHub)</li>
+<li><em>Hands-on session:</em> Publishing your research compendium on GitHub</li>
+<li><em>Lunch break</em></li>
+<li>Optimizing your workflow with <code>{targets}</code></li>
+<li><em>Coffee break</em></li>
+<li><em>Hands-on session:</em> Integrating <code>{targets}</code> into your research compendium</li>
 </ul>
 <p><strong>Wednesday</strong></p>
 <ul>
-<li>Literate programming w/ <code>Quarto</code></li>
-<li>Pipeline optimisation w/ <code>targets</code></li>
-<li>Developing an <i class="fa-brands fa-r-project" aria-label="r-project"></i> package</li>
+<li>Introduction to <code>git</code> – Part 3 (collaboration and conflict resolution)</li>
+<li><em>Coffee break</em></li>
+<li><em>Hands-on session:</em> Collaborating on the Same Project</li>
+<li><em>Lunch break</em></li>
+<li>Code hosting platforms: GitHub, GitLab &amp; Codeberg</li>
+<li>Literate programming with Quarto</li>
+<li><em>Coffee break</em></li>
+<li><em>Hands-on session:</em> Adding Quarto to your research compendium</li>
 </ul>
 <p><strong>Thursday</strong></p>
 <ul>
-<li>Freezing package versions w/ <code>renv</code></li>
-<li>Containerization w/ <code>Docker</code></li>
-<li>Subgroups projects</li>
+<li>Managing packages and their versions with <code>{renv}</code></li>
+<li><em>Hands-on session:</em> Adding <code>{renv}</code> to your research compendium</li>
+<li><em>Coffee break</em></li>
+<li>Containerizing your project with Docker</li>
+<li>Week recap and formation of project groups</li>
+<li><em>Lunch break</em></li>
+<li>Group projects</li>
 </ul>
 <p><strong>Friday</strong></p>
 <ul>
-<li>Subgroups projects</li>
+<li>Group projects</li>
+<li>Group project presentations</li>
 </ul>
 </section>
 <section id="prerequisites" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="prerequisites">Prerequisites</h2>
-<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Please follow this <a href="https://frbcesab.github.io/rsetup/">tutorial</a> to install your working environment <strong>before attending the training course</strong>.</p>
+<p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; Please follow this <a href="https://frbcesab.github.io/rsetup/chapters/reproducible-research.html">tutorial</a> to install your working environment <strong>before attending the training course</strong>.</p>
 <p><i class="fa-solid fa-hand-point-right" aria-label="hand-point-right"></i>&nbsp; You also need to create an account on <a href="https://github.com/signup/">GitHub</a> (please edit your profile and enter your name).</p>
 </section>
 <section id="material" class="level2 unnumbered">
@@ -456,7 +484,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="citation" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="citation">Citation</h2>
 <blockquote class="blockquote">
-<p>Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD &amp; Siberchicot A (2025) FRB-CESAB &amp; GdR EcoStat training course: Reproducible Research in Computational Ecology. Zenodo. URL: <a href="http://doi.org/10.5281/zenodo.4262978" class="uri">http://doi.org/10.5281/zenodo.4262978</a></p>
+<p>Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD &amp; Siberchicot A (2026) FRB-CESAB &amp; RT EcoStat Training Course: Reproducible Research in Computational Ecology. Zenodo. URL: <a href="http://doi.org/10.5281/zenodo.4262978" class="uri">http://doi.org/10.5281/zenodo.4262978</a></p>
 </blockquote>
 </section>
 <section id="contributions" class="level2 unnumbered">
