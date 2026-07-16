@@ -29,37 +29,71 @@ applied to biodiversity research.
 
 **Monday**
 
-- Open science & Reproducible research
-- **_Research compendium_** (i.e. project organisation)
-- Writing & documenting {{< fa brands r-project >}} functions
+- Welcome & Opening remarks
+- Open Science & Reproducible research
+- _Coffee break_
+- Introduction to Positron
+- Organizing your project as a research compendium
+- _Hands-on session:_ Building my first research compendium
+- _Lunch break_
+- Refactoring scripts into functions
+- _Hands-on session:_ Refactoring the research compendium scripts into functions
 - The `DESCRIPTION` file
+- _Hands-on session:_ Adding a `DESCRIPTION` file to your research compendium
+- _Coffee break_
+- Developing an R package
+
+
 
 **Tuesday**
 
-- Version control w/ `git`
-- Collaboration & sharing w/ `GitHub`
+- Introduction to `git` – Part 1 (initialization & commits)
+- _Hands-on session:_ Initializing and using `git` in your research compendium
+- _Coffee break_
+- Introduction to `git` – Part 2 (pushing to GitHub)
+- _Hands-on session:_ Publishing your research compendium on GitHub
+- _Lunch break_
+- Optimizing your workflow with `{targets}`
+- _Coffee break_
+- _Hands-on session:_ Integrating `{targets}` into your research compendium
+
+
 
 **Wednesday**
 
-- Literate programming w/ `Quarto`
-- Pipeline optimisation w/ `targets`
-- Developing an {{< fa brands r-project >}} package
+- Introduction to `git` – Part 3 (collaboration and conflict resolution)
+- _Coffee break_
+- _Hands-on session:_ Collaborating on the Same Project
+- _Lunch break_
+- Code hosting platforms: GitHub, GitLab & Codeberg
+- Literate programming with Quarto
+- _Coffee break_
+- _Hands-on session:_ Adding Quarto to your research compendium
+
+
 
 **Thursday**
 
-- Freezing package versions w/ `renv`
-- Containerization w/ `Docker`
-- Subgroups projects
+- Managing packages and their versions with `{renv}`
+- _Hands-on session:_ Adding `{renv}` to your research compendium
+- _Coffee break_
+- Containerizing your project with Docker
+- Week recap and formation of project groups
+- _Lunch break_
+- Group projects
+
+
 
 **Friday**
 
-- Subgroups projects
+- Group projects
+- Group project presentations
 
 
 
 ## Prerequisites {.unnumbered}
 
-{{< fa hand-point-right >}}&nbsp; Please follow this [tutorial](https://frbcesab.github.io/rsetup/) to install 
+{{< fa hand-point-right >}}&nbsp; Please follow this [tutorial](https://frbcesab.github.io/rsetup/chapters/reproducible-research.html) to install 
 your working environment **before attending the training course**.
 
 {{< fa hand-point-right >}}&nbsp; You also need to create an account on [GitHub](https://github.com/signup/) (please edit your profile and enter your name).
@@ -74,8 +108,8 @@ All the material used in this training course (slides, data, exercises) is avail
 ## Citation {.unnumbered}
 
 > Casajus N, Bonnici I, Dray S, Gimenez O, Guéry L, Guilhaumon F, Schiettekatte NMD 
-& Siberchicot A (2025) 
-FRB-CESAB & GdR EcoStat training course: Reproducible Research in Computational Ecology. 
+& Siberchicot A (2026) 
+FRB-CESAB & RT EcoStat Training Course: Reproducible Research in Computational Ecology. 
 Zenodo. URL: <http://doi.org/10.5281/zenodo.4262978>
 
 
@@ -93,5 +127,3 @@ Text and figures are licensed under Creative Commons Attribution [CC BY 4.0](htt
 
 
 Discover the other training courses provided by the FRB-CESAB and its partners: <https://frbcesab.github.io/training-courses/>
-
-

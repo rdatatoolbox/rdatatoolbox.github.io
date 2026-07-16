@@ -79,7 +79,6 @@ book:
   
   chapters:
     - index.qmd
-    # - chapters/setting-up-r.qmd
     - part: "Courses"
       chapters: 
         - chapters/course-opensci.qmd
