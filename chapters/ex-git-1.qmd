@@ -1,4 +1,4 @@
-## Git & GitHub {.unnumbered}
+## git – Part 1 {.unnumbered}
 
 ::: {.callout-note}
 ## Objectif

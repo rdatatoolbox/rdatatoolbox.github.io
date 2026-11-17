@@ -84,23 +84,25 @@ book:
         - chapters/course-opensci.qmd
         - chapters/course-compendium.qmd
         - chapters/course-functions.qmd
+        - chapters/course-package.qmd
         - chapters/course-description.qmd
         - chapters/course-git.qmd
+        - chapters/course-targets.qmd
         - chapters/course-github.qmd
         - chapters/course-quarto.qmd
-        - chapters/course-targets.qmd
         - chapters/course-renv.qmd
         - chapters/course-docker.qmd
-        - chapters/course-package.qmd
     - part: "Exercises"
       chapters: 
         - chapters/ex-compendium.qmd
-        - chapters/ex-github.qmd
-        - chapters/ex-quarto.qmd
+        - chapters/ex-functions.qmd
+        - chapters/ex-description.qmd
+        - chapters/ex-git-1.qmd
+        - chapters/ex-git-2.qmd
         - chapters/ex-targets.qmd
+        - chapters/ex-git-3.qmd
+        - chapters/ex-quarto.qmd
         - chapters/ex-renv.qmd
-        - chapters/ex-docker.qmd
-        - chapters/ex-package.qmd
     - part: "Resources"
       chapters: 
         - chapters/biblio.qmd

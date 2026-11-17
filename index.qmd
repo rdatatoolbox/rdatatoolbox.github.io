@@ -25,114 +25,11 @@ version control tools (e.g. `git`, `GitHub`, `Quarto`, `renv` & `Docker`),
 applied to biodiversity research.
 
 
-## Program {.unnumbered}
+```{r}
+#| child: "chapters/program.qmd"
+```
 
-**MONDAY** - Open science, Research compendium, Functions & Packages
-
-{{< fa display >}} &nbsp; Welcome & Opening remarks
-<br/>
-{{< fa display >}} &nbsp; **Open science** & **Reproducible research**
-<br/>
-[Coffee break]{.gray}
-<br/>
-{{< fa display >}} &nbsp; Introduction to **Positron IDE**
-<br/>
-{{< fa display >}} &nbsp; Organizing your project as a **Research compendium**
-<br/>
-{{< fa code >}} &nbsp; **Hands-on session:** Building my first research compendium
-<br/>
-[Lunch break]{.gray}
-<br/>
-{{< fa display >}} &nbsp; Refactoring scripts into **R Functions**
-<br/>
-{{< fa code >}} &nbsp; **Hands-on session:** Refactoring the research compendium scripts into functions
-<br/>
-{{< fa display >}} &nbsp; The **`DESCRIPTION`** file
-<br/>
-{{< fa code >}} &nbsp; **Hands-on session:** Adding a `DESCRIPTION` file to your research compendium
-<br/>
-[Coffee break]{.gray}
-<br/>
-{{< fa display >}} &nbsp; Developing an **R Package**
-
-
-<br/>
-
-
-**TUESDAY** - Version control & targets
-
-{{< fa display >}} &nbsp; Introduction to **`git`** – Part 1: **Initialization & Commits**
-<br/>
-{{< fa code >}} &nbsp; **Hands-on session:** Initializing and using `git` in your research compendium
-<br/>
-[Coffee break]{.gray}
-<br/>
-{{< fa display >}} &nbsp; Introduction to **`git`** – Part 2: **Pushing to GitHub**
-<br/>
-{{< fa code >}} &nbsp; **Hands-on session:** Publishing your research compendium on GitHub
-<br/>
-[Lunch break]{.gray}
-<br/>
-{{< fa display >}} &nbsp; Optimizing your workflow with **`{targets}`**
-<br/>
-[Coffee break]{.gray}
-<br/>
-{{< fa code >}} &nbsp; **Hands-on session:** Integrating `{targets}` into your research compendium
-
-
-<br/>
-
-
-**WEDNESDAY** - Version control, GitHub & Quarto
-
-{{< fa display >}} &nbsp; Introduction to **`git`** – Part 3: **Collaboration and Conflict resolution**
-<br/>
-[Coffee break]{.gray}
-<br/>
-{{< fa code >}} &nbsp; **Hands-on session:** Collaborating on the same project
-<br/>
-[Lunch break]{.gray}
-<br/>
-{{< fa display >}} &nbsp; Code hosting platforms: **GitHub**, **GitLab** & **Codeberg**
-<br/>
-{{< fa display >}} &nbsp; Literate programming with **Quarto**
-<br/>
-[Coffee break]{.gray}
-<br/>
-{{< fa code >}} &nbsp; **Hands-on session:** Adding Quarto to your research compendium
-
-
-<br/>
-
-
-**THURSDAY** - renv, Docker & Group projects
-
-{{< fa display >}} &nbsp; Managing packages and their versions with **`{renv}`**
-<br/>
-{{< fa code >}} &nbsp; **Hands-on session:** Adding `{renv}` to your research compendium
-<br/>
-[Coffee break]{.gray}
-<br/>
-{{< fa display >}} &nbsp; Containerizing your project with **Docker**
-<br/>
-{{< fa display >}} &nbsp; Week recap and formation of project groups
-<br/>
-[Lunch break]{.gray}
-<br/>
-{{< fa users-line >}} &nbsp; Group projects
-
-
-<br/>
-
-
-**FRIDAY** - Group projects
-
-{{< fa users-line >}} &nbsp; Group projects
-<br/>
-[Lunch break]{.gray}
-<br/>
-{{< fa users-line >}} &nbsp; Group project presentations
-
+<br>
 
 
 ## Prerequisites {.unnumbered}

@@ -1,4 +1,4 @@
-## Targets {.unnumbered}
+## targets {.unnumbered}
 
 ::: {.callout-note}
 ## Objectif
