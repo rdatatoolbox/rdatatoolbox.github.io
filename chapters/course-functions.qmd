@@ -1,8 +1,8 @@
-## Writing **R** functions
+## Writing R functions
 
 
 ::: {.callout-note icon=true appearance="simple"}
-## Writing & documenting {{< fa brands r-project >}}&nbsp; functions
+## Refactoring scripts into modular and reusable code
 
 <br />
 {{< fa user >}} &nbsp;**Author:** [Nicolas Casajus](https://nicolascasajus.fr/)<br/>
