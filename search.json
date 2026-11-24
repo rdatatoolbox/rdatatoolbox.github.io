@@ -106,7 +106,7 @@
     "href": "chapters/course-functions.html",
     "title": "3  Writing R functions",
     "section": "",
-    "text": "NoteWriting & documenting   functions\n\n\n\n   Author: Nicolas Casajus   Source: https://github.com/rdatatoolbox/r-functions/   Slides: https://rdatatoolbox.github.io/r-functions/",
+    "text": "NoteWriting & documenting   functions\n\n\n\n   Author: Nicolas Casajus   Source: https://github.com/rdatatoolbox/course-functions/   Slides: https://rdatatoolbox.github.io/course-functions/",
     "crumbs": [
       "Courses",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Writing **R** functions</span>"
