@@ -120,7 +120,7 @@
     "text": "NoteAn introduction how on to create an   package\n\n\n\n   Authors: Aurélie Siberchicot & Nicolas Casajus   Source: https://github.com/rdatatoolbox/course-rpackage/   Slides: https://rdatatoolbox.github.io/course-rpackage/",
     "crumbs": [
       "Courses",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Building an **R** package</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Building an R package</span>"
     ]
   },
   {
@@ -142,7 +142,7 @@
     "text": "NoteAn introduction to version control w/ git\n\n\n\n   Author: Iago Bonnici   Source: https://github.com/rdatatoolbox/course-git-iago/   Slides: https://rdatatoolbox.github.io/chapters/course-git.pdf",
     "crumbs": [
       "Courses",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Version control w/ `git`</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Version control w/ git</span>"
     ]
   },
   {
@@ -153,7 +153,7 @@
     "text": "NoteAn introduction to pipeline toolkits w/ targets\n\n\n\n   Authors: François Guillaumon & Nina Schiettekatte   Source: https://github.com/rdatatoolbox/course-targets/   Slides: https://rdatatoolbox.github.io/course-targets/",
     "crumbs": [
       "Courses",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Introduction to `targets`</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Introduction to targets</span>"
     ]
   },
   {
@@ -164,7 +164,7 @@
     "text": "NoteAn introduction to code hosting platform w/ GitHub\n\n\n\n   Author: Aurélie Siberchicot   Source: https://github.com/rdatatoolbox/course-github/   Slides: https://rdatatoolbox.github.io/course-github/",
     "crumbs": [
       "Courses",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Introduction to `GitHub`</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Introduction to GitHub</span>"
     ]
   },
   {
