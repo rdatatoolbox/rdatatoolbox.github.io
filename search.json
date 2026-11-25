@@ -128,10 +128,10 @@
     "href": "chapters/course-description.html",
     "title": "5  The DESCRIPTION file",
     "section": "",
-    "text": "NoteThe DESCRIPTION file\n\n\n\n   Author: Nicolas Casajus   Source: https://github.com/rdatatoolbox/description-file/   Slides: https://rdatatoolbox.github.io/description-file/",
+    "text": "NoteA central place for project metadata and dependencies\n\n\n\n   Author: Nicolas Casajus   Source: https://github.com/rdatatoolbox/course-description/   Slides: https://rdatatoolbox.github.io/course-description/",
     "crumbs": [
       "Courses",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>The `DESCRIPTION` file</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>The DESCRIPTION file</span>"
     ]
   },
   {
