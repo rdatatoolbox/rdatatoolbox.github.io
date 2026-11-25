@@ -1,8 +1,8 @@
-## Introduction to `GitHub`
+## Introduction to GitHub
 
 
 ::: {.callout-note icon=true appearance="simple"}
-## An introduction to code hosting platform w/ `GitHub`
+## An introduction to code hosting platform w/ GitHub
 
 <br />
 {{< fa user >}} &nbsp;**Author:** [Aurélie Siberchicot](https://lbbe.univ-lyon1.fr/fr/annuaires-des-membres/siberchicot-aurelie)<br/>

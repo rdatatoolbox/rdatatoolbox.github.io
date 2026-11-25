@@ -1,8 +1,8 @@
-## Version control w/ `git`
+## Version control w/ git
 
 
 ::: {.callout-note icon=true appearance="simple"}
-## An introduction to version control w/ `git`
+## An introduction to version control w/ git
 
 <br />
 {{< fa user >}} &nbsp;**Author:** [Iago Bonnici](https://isem-evolution.fr/en/membre/bonnici/)<br/>

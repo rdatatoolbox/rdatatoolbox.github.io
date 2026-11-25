@@ -1,8 +1,8 @@
-## Introduction to `targets`
+## Introduction to targets
 
 
 ::: {.callout-note icon=true appearance="simple"}
-## An introduction to pipeline toolkits w/ `targets`
+## An introduction to pipeline toolkits w/ targets
 
 <br />
 {{< fa user >}} &nbsp;**Authors:** [François Guillaumon](https://fguilhaumon.gitlab.io/) & [Nina Schiettekatte](http://www.criobe.pf/pro/personnel/doctorants/nina-schiettekatte/)<br/>

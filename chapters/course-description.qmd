@@ -14,5 +14,5 @@
 <br />
 
 <div class="container">
-  <iframe class="responsive-iframe" src="https://rdatatoolbox.github.io/course-description"></iframe>
+  <iframe class="responsive-iframe" src="https://rdatatoolbox.github.io/course-description/"></iframe>
 </div> 
